@@ -623,27 +623,7 @@ if prompt := st.chat_input("Enter your research or clinical query..."):
                 start_time = time.time()
                 
                 # Dynamic Routing Simulation
-                # ==========================================
-# CORRECTED STREAMLIT CHAT INPUT LOGIC
-# ==========================================
-
-if prompt := st.chat_input("Enter your research or clinical query..."):
-    # 1. User Message Display
-    st.chat_message("user").markdown(prompt)
-    st.session_state.messages.append({"role": "user", "content": prompt})
-
-    # 2. Run Guardrails Check
-    is_valid, clean_prompt, guardrail_msg = GuardrailEngine.sanitize_input(prompt)
-    
-    with st.chat_message("assistant"):
-        if not is_valid:
-            st.warning(guardrail_msg)
-            st.session_state.messages.append({"role": "assistant", "content": guardrail_msg})
-        else:
-            with st.spinner("Orchestrating agents and gathering insights..."):
-                start_time = time.time()
-                
-                # 🔥 FIX: Direct call to Orchestration Pipeline instead of hardcoded if/else
+              # 🔥 FIX: Direct call to Orchestration Pipeline instead of hardcoded if/else
                 try:
                     response_text = orchestrate_multi_agent_system(clean_prompt)
                 except Exception as e:
