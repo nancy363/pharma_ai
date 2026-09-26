@@ -1,0 +1,97 @@
+[
+  {
+    "name": "sql_query_tool",
+    "description": "Executes a read-only SQL query against the SQLite database.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "A valid SELECT SQL statement."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "vector_search_tool",
+    "description": "Searches unstructured research papers using vector similarity.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "The search question or topic."
+        },
+        "k": {
+          "type": "integer",
+          "description": "Number of top matching passages to retrieve.",
+          "default": 3
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "ae_severity_classifier_tool",
+    "description": "Classifies the severity level of a given adverse event description.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "event_description": {
+          "type": "string",
+          "description": "Detailed text describing the patient side effect."
+        }
+      },
+      "required": [
+        "event_description"
+      ]
+    }
+  },
+  {
+    "name": "simulated_escalation_notifier_tool",
+    "description": "Logs an escalation trigger for human safety team review when serious adverse events occur.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "event_id": {
+          "type": "string",
+          "description": "Unique identifier of the adverse event."
+        },
+        "reason": {
+          "type": "string",
+          "description": "Why this event was escalated."
+        }
+      },
+      "required": [
+        "event_id",
+        "reason"
+      ]
+    }
+  },
+  {
+    "name": "compound_similarity_tool",
+    "description": "Calculates structural similarity between two compound IDs.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "compound_a": {
+          "type": "string",
+          "description": "First compound ID (e.g. DKU-1042)."
+        },
+        "compound_b": {
+          "type": "string",
+          "description": "Second compound ID."
+        }
+      },
+      "required": [
+        "compound_a",
+        "compound_b"
+      ]
+    }
+  }
+]

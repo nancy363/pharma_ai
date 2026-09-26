@@ -1,0 +1,376 @@
+site_id,trial_id,site_name,country,principal_investigator,enrollment_count,site_status
+SITE-00001,TRL-0001,South Jessicaview Medical Center,India,Dr. Johnson,375,Pending Activation
+SITE-00002,TRL-0001,Lake Mary Community Health Network,United Kingdom,Dr. Johnston,193,Closed
+SITE-00003,TRL-0002,Port Emilyview Regional Cancer Center,Brazil,Dr. Johnston,84,Active
+SITE-00004,TRL-0002,South April University Hospital,Japan,Dr. Ramos,60,Pending Activation
+SITE-00005,TRL-0002,Howardshire University Hospital,Spain,Dr. Graham,93,Pending Activation
+SITE-00006,TRL-0002,Costafort Medical Center,United States,Dr. Bailey,46,Active
+SITE-00007,TRL-0003,Manuelville Community Health Network,United States,Dr. Hodge,16,Pending Activation
+SITE-00008,TRL-0003,Robertfort Medical Center,Japan,Dr. Roberts,10,Closed
+SITE-00009,TRL-0004,Cervantesside Regional Cancer Center,Australia,Dr. Johnson,63,Pending Activation
+SITE-00010,TRL-0004,West Johnnyville Regional Cancer Center,Canada,Dr. Cordova,49,Closed
+SITE-00011,TRL-0004,Hancocktown Clinical Research Institute,South Africa,Dr. Sandoval,58,Active
+SITE-00012,TRL-0004,Gutierrezborough University Hospital,Canada,Dr. Stone,88,Active
+SITE-00013,TRL-0004,Garrettton University Hospital,Spain,Dr. Harris,72,Closed
+SITE-00014,TRL-0004,West Samuel Community Health Network,Japan,Dr. Wolfe,115,Active
+SITE-00015,TRL-0005,North Teresabury Regional Cancer Center,Spain,Dr. Mckinney,14,Active
+SITE-00016,TRL-0005,Andreaside Medical Center,United Kingdom,Dr. Russell,11,Closed
+SITE-00017,TRL-0006,Port Robin Clinical Research Institute,Japan,Dr. Murray,218,Closed
+SITE-00018,TRL-0006,Lake Marilynfort University Hospital,India,Dr. Cantu,235,Active
+SITE-00019,TRL-0007,Williamview Regional Cancer Center,Germany,Dr. Perry,82,Active
+SITE-00020,TRL-0007,Bairdbury Regional Cancer Center,South Africa,Dr. Bryant,82,Pending Activation
+SITE-00021,TRL-0007,South James Clinical Research Institute,South Africa,Dr. Greene,66,Pending Activation
+SITE-00022,TRL-0007,Port Chad University Hospital,India,Dr. Barton,152,Closed
+SITE-00023,TRL-0008,Morganhaven Medical Center,Canada,Dr. Adams,8,Active
+SITE-00024,TRL-0008,West Jessicashire Regional Cancer Center,India,Dr. Carpenter,6,Closed
+SITE-00025,TRL-0008,Grimesmouth Community Health Network,Canada,Dr. Ryan,9,Pending Activation
+SITE-00026,TRL-0008,Martinside Regional Cancer Center,Canada,Dr. Bennett,9,Closed
+SITE-00027,TRL-0008,Mollybury Medical Center,Canada,Dr. Armstrong,7,Active
+SITE-00028,TRL-0008,Port Kimberly University Hospital,Germany,Dr. Williams,9,Pending Activation
+SITE-00029,TRL-0009,Thorntonfurt University Hospital,India,Dr. Hughes,62,Closed
+SITE-00030,TRL-0009,South Tammie Medical Center,United Kingdom,Dr. Martinez,54,Closed
+SITE-00031,TRL-0009,Mollymouth Community Health Network,Canada,Dr. Garcia,68,Pending Activation
+SITE-00032,TRL-0009,Smithberg Medical Center,Canada,Dr. Ortiz,49,Closed
+SITE-00033,TRL-0010,North Terrance University Hospital,United Kingdom,Dr. Costa,70,Closed
+SITE-00034,TRL-0010,Cindyfurt Clinical Research Institute,India,Dr. Santos,98,Pending Activation
+SITE-00035,TRL-0010,Melissaside Medical Center,South Africa,Dr. James,36,Pending Activation
+SITE-00036,TRL-0010,Courtneyfort Clinical Research Institute,Brazil,Dr. Brennan,42,Closed
+SITE-00037,TRL-0010,New Caseyport Clinical Research Institute,United Kingdom,Dr. Bright,65,Active
+SITE-00038,TRL-0010,South Tiffanyville Clinical Research Institute,Japan,Dr. Wallace,98,Active
+SITE-00039,TRL-0011,Rebeccaton Community Health Network,Germany,Dr. Nguyen,130,Pending Activation
+SITE-00040,TRL-0011,West Michaelchester Medical Center,Germany,Dr. Thomas,160,Pending Activation
+SITE-00041,TRL-0012,Knightburgh Regional Cancer Center,Spain,Dr. Jackson,10,Pending Activation
+SITE-00042,TRL-0012,New Monicabury Regional Cancer Center,Spain,Dr. Jimenez,12,Pending Activation
+SITE-00043,TRL-0012,East Steven Community Health Network,Brazil,Dr. King,29,Pending Activation
+SITE-00044,TRL-0012,Elizabethmouth University Hospital,Germany,Dr. Santana,28,Closed
+SITE-00045,TRL-0013,North Scott Regional Cancer Center,Australia,Dr. Reed,54,Pending Activation
+SITE-00046,TRL-0014,Daniellechester University Hospital,Spain,Dr. Vaughn,23,Active
+SITE-00047,TRL-0014,Bruceborough University Hospital,South Africa,Dr. Kidd,18,Active
+SITE-00048,TRL-0014,Rodriguezfurt University Hospital,Australia,Dr. Armstrong,21,Closed
+SITE-00049,TRL-0015,Victoriaport Medical Center,Brazil,Dr. Johnson,505,Closed
+SITE-00050,TRL-0016,Hillshire Medical Center,Spain,Dr. Grimes,297,Pending Activation
+SITE-00051,TRL-0017,New Julieport Regional Cancer Center,Australia,Dr. Parsons,45,Pending Activation
+SITE-00052,TRL-0017,New Laurie Community Health Network,United States,Dr. Robinson,54,Closed
+SITE-00053,TRL-0017,New John Community Health Network,United Kingdom,Dr. Campos,29,Closed
+SITE-00054,TRL-0017,Lake Colton Community Health Network,Australia,Dr. Burton,24,Pending Activation
+SITE-00055,TRL-0017,West Kristinaton Clinical Research Institute,United States,Dr. Riley,37,Closed
+SITE-00056,TRL-0018,North Renee University Hospital,India,Dr. Murphy,228,Pending Activation
+SITE-00057,TRL-0019,Thompsonberg Clinical Research Institute,United States,Dr. Buchanan,6,Active
+SITE-00058,TRL-0019,Alyssaview Regional Cancer Center,Australia,Dr. Rivas,11,Pending Activation
+SITE-00059,TRL-0019,Robinfort Community Health Network,Spain,Dr. Coffey,13,Active
+SITE-00060,TRL-0019,Juliemouth University Hospital,Brazil,Dr. Brock,5,Closed
+SITE-00061,TRL-0019,Mccartyberg Regional Cancer Center,Canada,Dr. Webster,11,Closed
+SITE-00062,TRL-0019,Port Erica Community Health Network,United States,Dr. Craig,8,Pending Activation
+SITE-00063,TRL-0020,Coffeyside University Hospital,India,Dr. Diaz,23,Closed
+SITE-00064,TRL-0020,Smithside Medical Center,South Africa,Dr. Martinez,11,Pending Activation
+SITE-00065,TRL-0020,Emilyview Regional Cancer Center,Japan,Dr. Richards,20,Closed
+SITE-00066,TRL-0020,Danielbury Community Health Network,Germany,Dr. Ruiz,23,Closed
+SITE-00067,TRL-0020,Rosebury Medical Center,Spain,Dr. Holland,25,Pending Activation
+SITE-00068,TRL-0020,Blankenshipport Clinical Research Institute,Brazil,Dr. Banks,20,Closed
+SITE-00069,TRL-0021,East Brandonton Regional Cancer Center,Germany,Dr. Torres,82,Pending Activation
+SITE-00070,TRL-0021,Wilsonbury Medical Center,Japan,Dr. Clay,92,Pending Activation
+SITE-00071,TRL-0021,South Shawn Regional Cancer Center,Brazil,Dr. Santiago,113,Active
+SITE-00072,TRL-0021,Matthewsberg Community Health Network,India,Dr. Mcclure,88,Pending Activation
+SITE-00073,TRL-0021,Port Tracychester Regional Cancer Center,South Africa,Dr. Crosby,43,Closed
+SITE-00074,TRL-0021,Antoniostad Medical Center,Brazil,Dr. Robinson,118,Closed
+SITE-00075,TRL-0022,Sampsonstad Clinical Research Institute,Brazil,Dr. Garcia,38,Closed
+SITE-00076,TRL-0022,Amystad Clinical Research Institute,United Kingdom,Dr. Brown,37,Active
+SITE-00077,TRL-0023,Jamesville Medical Center,Japan,Dr. Rush,38,Active
+SITE-00078,TRL-0023,Davisborough Community Health Network,South Africa,Dr. May,62,Pending Activation
+SITE-00079,TRL-0024,North Kristinbury Medical Center,Brazil,Dr. Zhang,77,Pending Activation
+SITE-00080,TRL-0024,North Maria Clinical Research Institute,Spain,Dr. Spencer,100,Closed
+SITE-00081,TRL-0024,Port Molly Clinical Research Institute,Germany,Dr. Murphy,52,Active
+SITE-00082,TRL-0024,Port Rachel Community Health Network,Germany,Dr. Smith,100,Pending Activation
+SITE-00083,TRL-0024,East Amber Regional Cancer Center,United States,Dr. Lindsey,130,Closed
+SITE-00084,TRL-0025,Lake Michelleberg Clinical Research Institute,Australia,Dr. Smith,42,Pending Activation
+SITE-00085,TRL-0025,New Mario University Hospital,Australia,Dr. Thompson,115,Active
+SITE-00086,TRL-0025,East Judyhaven Community Health Network,United Kingdom,Dr. Wilson,71,Closed
+SITE-00087,TRL-0026,South Shanestad Clinical Research Institute,Brazil,Dr. Palmer,119,Pending Activation
+SITE-00088,TRL-0026,South Williamton Community Health Network,Australia,Dr. Acosta,111,Closed
+SITE-00089,TRL-0026,Stephentown University Hospital,Canada,Dr. Brown,92,Pending Activation
+SITE-00090,TRL-0026,Boonechester Community Health Network,Canada,Dr. Parks,107,Active
+SITE-00091,TRL-0027,Josephmouth Community Health Network,Germany,Dr. Jones,237,Closed
+SITE-00092,TRL-0027,West Charleneland Medical Center,Australia,Dr. Martinez,155,Closed
+SITE-00093,TRL-0028,Oscarhaven Medical Center,South Africa,Dr. Phillips,68,Active
+SITE-00094,TRL-0028,Garciaville University Hospital,India,Dr. Farrell,97,Active
+SITE-00095,TRL-0028,South Shannon University Hospital,Australia,Dr. Perez,109,Pending Activation
+SITE-00096,TRL-0028,Mariafurt Clinical Research Institute,Canada,Dr. Perry,105,Active
+SITE-00097,TRL-0028,West Ronaldview Clinical Research Institute,Australia,Dr. Brooks,108,Closed
+SITE-00098,TRL-0029,Lake Sandra Regional Cancer Center,United States,Dr. Jones,181,Closed
+SITE-00099,TRL-0030,North Ryanstad University Hospital,United Kingdom,Dr. Cain,122,Closed
+SITE-00100,TRL-0030,New Sueside Medical Center,Brazil,Dr. Rivera,57,Active
+SITE-00101,TRL-0030,South Michaelchester Medical Center,Brazil,Dr. Parrish,97,Active
+SITE-00102,TRL-0030,West Carolinestad University Hospital,Germany,Dr. Garcia,47,Active
+SITE-00103,TRL-0030,East Diane Medical Center,Japan,Dr. Walker,76,Closed
+SITE-00104,TRL-0031,West Meganstad Clinical Research Institute,Australia,Dr. Wilson,72,Closed
+SITE-00105,TRL-0031,Audreychester Community Health Network,United States,Dr. Bruce,74,Active
+SITE-00106,TRL-0031,New Sarahview Medical Center,Japan,Dr. Johnson,99,Active
+SITE-00107,TRL-0031,Jacquelineport Clinical Research Institute,South Africa,Dr. Dorsey,74,Pending Activation
+SITE-00108,TRL-0031,Adamberg Community Health Network,South Africa,Dr. Knight,79,Closed
+SITE-00109,TRL-0031,Jonestown Medical Center,Japan,Dr. Davis,61,Active
+SITE-00110,TRL-0032,South Robert Medical Center,United States,Dr. Peterson,49,Active
+SITE-00111,TRL-0032,Larrymouth Regional Cancer Center,Spain,Dr. Frank,40,Closed
+SITE-00112,TRL-0032,North Ericton Medical Center,India,Dr. Craig,32,Closed
+SITE-00113,TRL-0033,Scottchester Community Health Network,United States,Dr. Tucker,95,Pending Activation
+SITE-00114,TRL-0033,Perryborough Community Health Network,Spain,Dr. Fischer,100,Active
+SITE-00115,TRL-0033,West Russellport Clinical Research Institute,Japan,Dr. Gregory,96,Closed
+SITE-00116,TRL-0033,Roseport Medical Center,Spain,Dr. Williams,83,Closed
+SITE-00117,TRL-0033,Joyceton Clinical Research Institute,Spain,Dr. Smith,76,Closed
+SITE-00118,TRL-0034,Sierraberg Medical Center,South Africa,Dr. Duran,58,Closed
+SITE-00119,TRL-0034,Marktown Medical Center,South Africa,Dr. Jimenez,43,Pending Activation
+SITE-00120,TRL-0035,Thompsonfurt Community Health Network,South Africa,Dr. Patel,79,Active
+SITE-00121,TRL-0035,New Angelica Regional Cancer Center,Australia,Dr. Barnett,42,Active
+SITE-00122,TRL-0035,Charleston Regional Cancer Center,Brazil,Dr. Graham,68,Closed
+SITE-00123,TRL-0035,Morsemouth Medical Center,Brazil,Dr. Johnston,71,Active
+SITE-00124,TRL-0035,Mckinneychester University Hospital,United Kingdom,Dr. Roberts,72,Pending Activation
+SITE-00125,TRL-0036,Smithmouth Medical Center,Spain,Dr. Jackson,18,Pending Activation
+SITE-00126,TRL-0036,Collierstad University Hospital,Germany,Dr. Davis,17,Active
+SITE-00127,TRL-0036,East Ryanfurt University Hospital,South Africa,Dr. Warren,18,Closed
+SITE-00128,TRL-0036,Harrellmouth Clinical Research Institute,Australia,Dr. Walker,21,Pending Activation
+SITE-00129,TRL-0036,North William Regional Cancer Center,Germany,Dr. Wilson,22,Active
+SITE-00130,TRL-0036,Port Michael Medical Center,Australia,Dr. Luna,20,Active
+SITE-00131,TRL-0037,East Curtis Clinical Research Institute,United States,Dr. Scott,102,Active
+SITE-00132,TRL-0037,New Eric Medical Center,Brazil,Dr. Malone,36,Closed
+SITE-00133,TRL-0037,East Stephaniefort Community Health Network,Canada,Dr. Marshall,49,Pending Activation
+SITE-00134,TRL-0038,Maldonadoshire University Hospital,United States,Dr. Day,11,Pending Activation
+SITE-00135,TRL-0038,Michellemouth Clinical Research Institute,Japan,Dr. Hernandez,25,Closed
+SITE-00136,TRL-0038,South Scottport Medical Center,Brazil,Dr. Hogan,31,Closed
+SITE-00137,TRL-0038,West Williamport Medical Center,Brazil,Dr. Murray,16,Closed
+SITE-00138,TRL-0039,North Miguelport Regional Cancer Center,Canada,Dr. Jones,42,Closed
+SITE-00139,TRL-0039,New Brookefurt Clinical Research Institute,Australia,Dr. Ford,16,Pending Activation
+SITE-00140,TRL-0039,South Reginashire Regional Cancer Center,Brazil,Dr. Pearson,42,Pending Activation
+SITE-00141,TRL-0039,Cassidyhaven University Hospital,India,Dr. Hernandez,25,Pending Activation
+SITE-00142,TRL-0040,South Dalemouth Medical Center,Canada,Dr. Haas,39,Pending Activation
+SITE-00143,TRL-0040,New Debbieton Clinical Research Institute,South Africa,Dr. Wright,64,Closed
+SITE-00144,TRL-0040,Ritterhaven University Hospital,India,Dr. Mills,49,Active
+SITE-00145,TRL-0040,West Nathan University Hospital,Japan,Dr. Campbell,51,Closed
+SITE-00146,TRL-0041,Schroederton Community Health Network,Canada,Dr. Mccormick,90,Active
+SITE-00147,TRL-0041,Cameronville Regional Cancer Center,Brazil,Dr. Grant,146,Closed
+SITE-00148,TRL-0041,Mitchellberg Medical Center,Brazil,Dr. Cook,116,Pending Activation
+SITE-00149,TRL-0041,West Kyle Regional Cancer Center,Japan,Dr. Douglas,91,Pending Activation
+SITE-00150,TRL-0042,Andersonland Medical Center,Canada,Dr. Collins,379,Closed
+SITE-00151,TRL-0043,Schneidermouth Clinical Research Institute,United States,Dr. Li,56,Active
+SITE-00152,TRL-0043,Lake Ellenhaven Community Health Network,Australia,Dr. Cox,36,Active
+SITE-00153,TRL-0043,Kyleborough Clinical Research Institute,India,Dr. Peterson,42,Active
+SITE-00154,TRL-0043,Leeberg University Hospital,Brazil,Dr. Moore,28,Closed
+SITE-00155,TRL-0043,Meganville Community Health Network,United States,Dr. Romero,31,Pending Activation
+SITE-00156,TRL-0044,Lake Matthewberg Regional Cancer Center,Brazil,Dr. Harper,304,Closed
+SITE-00157,TRL-0044,East Henry Regional Cancer Center,India,Dr. Schwartz,175,Pending Activation
+SITE-00158,TRL-0045,Lake Samuel Community Health Network,Brazil,Dr. Jenkins,81,Closed
+SITE-00159,TRL-0045,South Cheryl University Hospital,Japan,Dr. Goodwin,96,Active
+SITE-00160,TRL-0046,Youngbury Medical Center,Germany,Dr. Collins,69,Closed
+SITE-00161,TRL-0047,Mckeeborough Regional Cancer Center,South Africa,Dr. Richardson,35,Active
+SITE-00162,TRL-0047,Murrayport University Hospital,Japan,Dr. Strickland,25,Pending Activation
+SITE-00163,TRL-0047,Burchborough Regional Cancer Center,United Kingdom,Dr. Solis,48,Pending Activation
+SITE-00164,TRL-0047,Port John University Hospital,Australia,Dr. Davidson,32,Active
+SITE-00165,TRL-0047,Angelaville Medical Center,Germany,Dr. Dawson,43,Active
+SITE-00166,TRL-0048,West Christopherburgh Clinical Research Institute,Australia,Dr. Nelson,115,Active
+SITE-00167,TRL-0048,Port Samuel University Hospital,Brazil,Dr. Potts,59,Pending Activation
+SITE-00168,TRL-0048,Port Shannon Medical Center,South Africa,Dr. Bailey,124,Pending Activation
+SITE-00169,TRL-0048,South Brianhaven University Hospital,Japan,Dr. Brooks,160,Active
+SITE-00170,TRL-0049,Vangstad Clinical Research Institute,Brazil,Dr. Walker,27,Pending Activation
+SITE-00171,TRL-0049,Sarahmouth Clinical Research Institute,India,Dr. Moody,33,Active
+SITE-00172,TRL-0049,North Justin Clinical Research Institute,United Kingdom,Dr. Gallegos,35,Closed
+SITE-00173,TRL-0049,Port Janice Medical Center,Brazil,Dr. West,18,Pending Activation
+SITE-00174,TRL-0049,North Andrewborough Community Health Network,Brazil,Dr. Conley,18,Closed
+SITE-00175,TRL-0049,Rodriguezport Community Health Network,Germany,Dr. Young,28,Pending Activation
+SITE-00176,TRL-0050,North Johnmouth Medical Center,Japan,Dr. Brown,210,Closed
+SITE-00177,TRL-0051,Carlsontown Regional Cancer Center,South Africa,Dr. Chen,10,Closed
+SITE-00178,TRL-0051,Lake Douglas Regional Cancer Center,Spain,Dr. Patterson,10,Active
+SITE-00179,TRL-0051,Johnchester Clinical Research Institute,Brazil,Dr. Lopez,6,Pending Activation
+SITE-00180,TRL-0051,New Theresaland Medical Center,Australia,Dr. Ashley,5,Closed
+SITE-00181,TRL-0051,South Morganton Community Health Network,Brazil,Dr. Reid,9,Active
+SITE-00182,TRL-0051,Jontown Community Health Network,Spain,Dr. Kelly,5,Active
+SITE-00183,TRL-0052,West Johnville Regional Cancer Center,South Africa,Dr. Ingram,54,Active
+SITE-00184,TRL-0052,Dennisstad Medical Center,South Africa,Dr. Payne,38,Active
+SITE-00185,TRL-0053,Port Kimberly Clinical Research Institute,Germany,Dr. Marshall,115,Closed
+SITE-00186,TRL-0053,Welchberg Clinical Research Institute,Brazil,Dr. Brown,59,Pending Activation
+SITE-00187,TRL-0053,Johnsonborough University Hospital,India,Dr. Williams,111,Closed
+SITE-00188,TRL-0054,North Leslie Community Health Network,Japan,Dr. Collins,121,Active
+SITE-00189,TRL-0054,Haysside University Hospital,Spain,Dr. Kennedy,138,Pending Activation
+SITE-00190,TRL-0055,Port Deborahport Community Health Network,Germany,Dr. Kelly,28,Pending Activation
+SITE-00191,TRL-0056,Port Dianaview Clinical Research Institute,Germany,Dr. Martinez,21,Pending Activation
+SITE-00192,TRL-0056,Samuelfurt Community Health Network,Spain,Dr. Paul,23,Closed
+SITE-00193,TRL-0056,Morganburgh Community Health Network,United States,Dr. Crawford,12,Active
+SITE-00194,TRL-0056,Richardsonhaven Medical Center,United States,Dr. Adams,10,Pending Activation
+SITE-00195,TRL-0056,Lake Rogerchester Community Health Network,Japan,Dr. Morrison,9,Pending Activation
+SITE-00196,TRL-0057,New Kelly Community Health Network,Canada,Dr. Garcia,14,Pending Activation
+SITE-00197,TRL-0057,Donnaport Medical Center,Australia,Dr. Griffin,13,Pending Activation
+SITE-00198,TRL-0058,Jacksonmouth University Hospital,Japan,Dr. Bell,88,Closed
+SITE-00199,TRL-0058,Lake Mollystad Clinical Research Institute,Canada,Dr. Mendez,62,Closed
+SITE-00200,TRL-0058,Hillton Regional Cancer Center,India,Dr. Jones,75,Pending Activation
+SITE-00201,TRL-0058,Coxburgh Medical Center,Germany,Dr. Cisneros,92,Closed
+SITE-00202,TRL-0058,Port Cathy Regional Cancer Center,Australia,Dr. Harrington,84,Closed
+SITE-00203,TRL-0059,East Carlosstad University Hospital,Spain,Dr. Cox,121,Active
+SITE-00204,TRL-0059,New Ericmouth University Hospital,Brazil,Dr. Rush,52,Pending Activation
+SITE-00205,TRL-0060,Scottland Regional Cancer Center,Germany,Dr. Berry,37,Closed
+SITE-00206,TRL-0060,Raymondview Community Health Network,South Africa,Dr. Wright,28,Active
+SITE-00207,TRL-0060,North Jillfort University Hospital,United Kingdom,Dr. Holmes,29,Closed
+SITE-00208,TRL-0061,West Kimberlymouth University Hospital,Australia,Dr. Lewis,310,Active
+SITE-00209,TRL-0062,Heatherfort Medical Center,United States,Dr. Gonzalez,113,Closed
+SITE-00210,TRL-0062,Port Charles Regional Cancer Center,Spain,Dr. Thompson,141,Closed
+SITE-00211,TRL-0063,Osbornmouth Clinical Research Institute,Brazil,Dr. Contreras,11,Pending Activation
+SITE-00212,TRL-0063,New Amberport University Hospital,United Kingdom,Dr. York,11,Active
+SITE-00213,TRL-0064,Port Michael Community Health Network,Australia,Dr. Walker,68,Closed
+SITE-00214,TRL-0064,Port Dominic University Hospital,Australia,Dr. Tyler,60,Active
+SITE-00215,TRL-0064,West Angelastad Medical Center,Canada,Dr. Mcdonald,43,Pending Activation
+SITE-00216,TRL-0064,New Nicole Regional Cancer Center,United Kingdom,Dr. Jones,32,Active
+SITE-00217,TRL-0065,Keyfort University Hospital,United States,Dr. Fox,19,Active
+SITE-00218,TRL-0065,Morrowland University Hospital,Australia,Dr. Martinez,46,Pending Activation
+SITE-00219,TRL-0065,Dawnmouth Regional Cancer Center,Japan,Dr. Owens,23,Pending Activation
+SITE-00220,TRL-0065,Davidside Medical Center,India,Dr. Bowman,27,Closed
+SITE-00221,TRL-0065,Port Tammy Clinical Research Institute,Japan,Dr. Reynolds,24,Pending Activation
+SITE-00222,TRL-0066,Port Davidberg Regional Cancer Center,Brazil,Dr. Torres,63,Active
+SITE-00223,TRL-0066,West Sarah Regional Cancer Center,United States,Dr. Perez,42,Pending Activation
+SITE-00224,TRL-0066,Meghanview Community Health Network,United Kingdom,Dr. Gonzalez,75,Closed
+SITE-00225,TRL-0067,Davidport University Hospital,India,Dr. Mendez,9,Closed
+SITE-00226,TRL-0067,New Danielleshire Community Health Network,Australia,Dr. David,22,Pending Activation
+SITE-00227,TRL-0067,East Donna University Hospital,Spain,Dr. Le,12,Pending Activation
+SITE-00228,TRL-0067,Meganshire Community Health Network,India,Dr. Williams,17,Active
+SITE-00229,TRL-0067,North Brandonshire Medical Center,Canada,Dr. Baker,23,Closed
+SITE-00230,TRL-0068,Port Ashley Community Health Network,Brazil,Dr. Montgomery,18,Active
+SITE-00231,TRL-0068,South Pamelaside Clinical Research Institute,Spain,Dr. Roberts,16,Pending Activation
+SITE-00232,TRL-0068,Timothyfurt Regional Cancer Center,South Africa,Dr. Evans,13,Active
+SITE-00233,TRL-0069,Lake Brianmouth Medical Center,Germany,Dr. Perry,429,Pending Activation
+SITE-00234,TRL-0070,Harrisberg Regional Cancer Center,South Africa,Dr. Edwards,37,Closed
+SITE-00235,TRL-0070,Jessicastad Clinical Research Institute,Spain,Dr. Hester,47,Pending Activation
+SITE-00236,TRL-0070,Port Mitchell Clinical Research Institute,Brazil,Dr. Hoffman,36,Pending Activation
+SITE-00237,TRL-0071,Johnville Clinical Research Institute,Canada,Dr. Adams,39,Pending Activation
+SITE-00238,TRL-0071,East Colin University Hospital,Spain,Dr. Roberts,45,Closed
+SITE-00239,TRL-0071,Linchester Community Health Network,South Africa,Dr. Wright,36,Pending Activation
+SITE-00240,TRL-0072,Port Mark Community Health Network,Japan,Dr. Lane,80,Closed
+SITE-00241,TRL-0072,Jamesburgh Medical Center,Brazil,Dr. Jimenez,152,Closed
+SITE-00242,TRL-0072,Jimenezport Medical Center,Canada,Dr. Jimenez,208,Pending Activation
+SITE-00243,TRL-0072,South Williambury University Hospital,United States,Dr. Lewis,96,Pending Activation
+SITE-00244,TRL-0073,Brandonport University Hospital,Spain,Dr. Simpson,112,Pending Activation
+SITE-00245,TRL-0073,Mitchelltown Clinical Research Institute,United States,Dr. Boone,66,Pending Activation
+SITE-00246,TRL-0073,Andersonview Regional Cancer Center,Germany,Dr. Luna,97,Pending Activation
+SITE-00247,TRL-0073,Diazfurt Community Health Network,Canada,Dr. Williams,56,Active
+SITE-00248,TRL-0074,West Angela Clinical Research Institute,United States,Dr. Jones,5,Pending Activation
+SITE-00249,TRL-0074,Duranview Medical Center,United Kingdom,Dr. Bryan,6,Active
+SITE-00250,TRL-0074,East Theresafurt Regional Cancer Center,Brazil,Dr. Brooks,4,Closed
+SITE-00251,TRL-0074,Angelastad Clinical Research Institute,Canada,Dr. Fischer,6,Pending Activation
+SITE-00252,TRL-0074,New William Clinical Research Institute,Canada,Dr. Porter,7,Pending Activation
+SITE-00253,TRL-0074,North Derrickmouth Community Health Network,Australia,Dr. Brock,7,Pending Activation
+SITE-00254,TRL-0075,Hernandezhaven Medical Center,Germany,Dr. Taylor,63,Pending Activation
+SITE-00255,TRL-0075,Franciscoport Clinical Research Institute,South Africa,Dr. Wheeler,77,Closed
+SITE-00256,TRL-0075,Ericksonport Regional Cancer Center,South Africa,Dr. Wells,56,Closed
+SITE-00257,TRL-0075,West Markville University Hospital,Germany,Dr. Whitney,128,Closed
+SITE-00258,TRL-0075,Lauratown Community Health Network,Brazil,Dr. Carlson,122,Pending Activation
+SITE-00259,TRL-0075,Tammyshire University Hospital,Japan,Dr. Lane,89,Pending Activation
+SITE-00260,TRL-0076,New Timothyhaven Clinical Research Institute,United Kingdom,Dr. Fuller,25,Closed
+SITE-00261,TRL-0076,Hernandezbury Community Health Network,Japan,Dr. Johnson,19,Active
+SITE-00262,TRL-0076,East Andrewmouth University Hospital,Japan,Dr. Barnes,21,Pending Activation
+SITE-00263,TRL-0076,Vaughnchester Clinical Research Institute,Australia,Dr. Shaw,11,Closed
+SITE-00264,TRL-0077,Salaston University Hospital,South Africa,Dr. Thornton,68,Pending Activation
+SITE-00265,TRL-0077,New Mark University Hospital,Japan,Dr. Bates,34,Active
+SITE-00266,TRL-0077,Edwardsburgh Community Health Network,South Africa,Dr. Stevens,72,Closed
+SITE-00267,TRL-0077,Amyview Regional Cancer Center,Brazil,Dr. Bishop,70,Active
+SITE-00268,TRL-0078,East Joshua Medical Center,Japan,Dr. Evans,204,Pending Activation
+SITE-00269,TRL-0078,Kellieborough Medical Center,Brazil,Dr. Vaughn,90,Closed
+SITE-00270,TRL-0078,Stewartstad University Hospital,Australia,Dr. Castro,135,Active
+SITE-00271,TRL-0079,Keithshire Community Health Network,Japan,Dr. Rhodes,50,Pending Activation
+SITE-00272,TRL-0079,Huangfurt University Hospital,Germany,Dr. Cardenas,56,Active
+SITE-00273,TRL-0080,West Bobby Community Health Network,United Kingdom,Dr. Moses,32,Active
+SITE-00274,TRL-0080,West Sandraview Medical Center,South Africa,Dr. Burgess,80,Active
+SITE-00275,TRL-0080,East Maria Clinical Research Institute,United States,Dr. Nelson,58,Active
+SITE-00276,TRL-0080,Derrickshire Regional Cancer Center,Brazil,Dr. Allen,44,Pending Activation
+SITE-00277,TRL-0080,Lake Rebeccabury Regional Cancer Center,India,Dr. Little,50,Pending Activation
+SITE-00278,TRL-0081,North Robertfort Medical Center,South Africa,Dr. Garcia,61,Active
+SITE-00279,TRL-0081,North Tamara Regional Cancer Center,Australia,Dr. Spence,71,Closed
+SITE-00280,TRL-0082,South Denise Clinical Research Institute,Japan,Dr. Gilmore,12,Closed
+SITE-00281,TRL-0082,Woodsborough University Hospital,United States,Dr. Avila,17,Active
+SITE-00282,TRL-0082,Manuelton Community Health Network,United Kingdom,Dr. Velez,12,Pending Activation
+SITE-00283,TRL-0082,Lake Audreyside Medical Center,Germany,Dr. Rodgers,18,Closed
+SITE-00284,TRL-0082,East Robertburgh Clinical Research Institute,United States,Dr. Peck,17,Closed
+SITE-00285,TRL-0082,Port Randyfort Regional Cancer Center,Germany,Dr. Lopez,8,Pending Activation
+SITE-00286,TRL-0083,Nancytown Medical Center,United States,Dr. Evans,37,Closed
+SITE-00287,TRL-0083,West Justinside Community Health Network,Spain,Dr. Warren,16,Active
+SITE-00288,TRL-0083,Port William University Hospital,Japan,Dr. Nelson,34,Closed
+SITE-00289,TRL-0084,West Franciscomouth Community Health Network,South Africa,Dr. Wong,8,Closed
+SITE-00290,TRL-0084,North Jill Clinical Research Institute,South Africa,Dr. Gibbs,13,Closed
+SITE-00291,TRL-0084,East Cheryl University Hospital,United Kingdom,Dr. Fowler,13,Active
+SITE-00292,TRL-0084,Wilcoxhaven University Hospital,Germany,Dr. Murphy,12,Pending Activation
+SITE-00293,TRL-0084,Caldwellburgh Regional Cancer Center,Japan,Dr. Holden,12,Pending Activation
+SITE-00294,TRL-0084,Morrisbury Clinical Research Institute,United States,Dr. Smith,7,Pending Activation
+SITE-00295,TRL-0085,Youngview University Hospital,Spain,Dr. Finley,15,Pending Activation
+SITE-00296,TRL-0085,Brandishire Clinical Research Institute,Germany,Dr. Smith,24,Pending Activation
+SITE-00297,TRL-0085,Heatherton Regional Cancer Center,Canada,Dr. Contreras,18,Pending Activation
+SITE-00298,TRL-0086,Parkerfurt Medical Center,Canada,Dr. Parks,12,Pending Activation
+SITE-00299,TRL-0086,Hannahport Medical Center,Germany,Dr. Richardson,8,Active
+SITE-00300,TRL-0086,East Susan Regional Cancer Center,Brazil,Dr. Mendoza,15,Active
+SITE-00301,TRL-0087,Adkinsstad University Hospital,Canada,Dr. Perry,200,Active
+SITE-00302,TRL-0088,Toddborough University Hospital,Brazil,Dr. Gill,13,Closed
+SITE-00303,TRL-0088,New Seanstad Community Health Network,Spain,Dr. Miller,6,Active
+SITE-00304,TRL-0088,North Mariahaven University Hospital,Brazil,Dr. Harris,13,Pending Activation
+SITE-00305,TRL-0088,East Mark Clinical Research Institute,United States,Dr. Meyer,14,Pending Activation
+SITE-00306,TRL-0089,Lake Jamieshire Regional Cancer Center,Japan,Dr. Burns,190,Active
+SITE-00307,TRL-0090,Stokesmouth Community Health Network,Japan,Dr. Anderson,139,Pending Activation
+SITE-00308,TRL-0090,Bryantton Medical Center,Japan,Dr. Hansen,159,Closed
+SITE-00309,TRL-0090,Jenniferfurt Community Health Network,United Kingdom,Dr. Scott,85,Active
+SITE-00310,TRL-0090,Lake Jefferyland Clinical Research Institute,Australia,Dr. Williams,126,Active
+SITE-00311,TRL-0091,Isabellaside Community Health Network,Brazil,Dr. Mcknight,77,Closed
+SITE-00312,TRL-0091,South Anthonychester Community Health Network,Australia,Dr. White,55,Pending Activation
+SITE-00313,TRL-0091,Port Darlene Clinical Research Institute,United Kingdom,Dr. Daniel,74,Pending Activation
+SITE-00314,TRL-0091,Brooksfurt Community Health Network,India,Dr. West,49,Pending Activation
+SITE-00315,TRL-0092,Bennettside Community Health Network,Brazil,Dr. Anderson,13,Active
+SITE-00316,TRL-0092,Davidside Community Health Network,India,Dr. Long,15,Active
+SITE-00317,TRL-0092,Lake Tiffany Community Health Network,South Africa,Dr. Davenport,36,Active
+SITE-00318,TRL-0092,West Stevenside Community Health Network,South Africa,Dr. Coleman,26,Active
+SITE-00319,TRL-0093,Morrowbury University Hospital,South Africa,Dr. Murray,37,Closed
+SITE-00320,TRL-0093,West Jacob Medical Center,United Kingdom,Dr. Golden,23,Pending Activation
+SITE-00321,TRL-0094,North Lisachester Regional Cancer Center,India,Dr. Mendez,75,Pending Activation
+SITE-00322,TRL-0094,East Jamieville Regional Cancer Center,United States,Dr. Wheeler,93,Closed
+SITE-00323,TRL-0094,Harperton Clinical Research Institute,South Africa,Dr. Sanchez,87,Closed
+SITE-00324,TRL-0094,South Scottside Regional Cancer Center,Spain,Dr. Robinson,56,Active
+SITE-00325,TRL-0094,East Williamport Community Health Network,Australia,Dr. Young,106,Pending Activation
+SITE-00326,TRL-0095,Barbaramouth Medical Center,Canada,Dr. Young,12,Closed
+SITE-00327,TRL-0095,Lake Adriana Medical Center,United Kingdom,Dr. Gutierrez,19,Pending Activation
+SITE-00328,TRL-0095,Bruceshire Medical Center,United States,Dr. Hobbs,19,Closed
+SITE-00329,TRL-0096,Lake Erika Medical Center,South Africa,Dr. Peters,63,Active
+SITE-00330,TRL-0096,West Shellyfurt Medical Center,Australia,Dr. Floyd,54,Active
+SITE-00331,TRL-0096,Heatherchester University Hospital,Canada,Dr. Hernandez,124,Active
+SITE-00332,TRL-0097,Whiteside Regional Cancer Center,Brazil,Dr. Wells,191,Closed
+SITE-00333,TRL-0097,West Meredith Regional Cancer Center,Canada,Dr. Thomas,111,Closed
+SITE-00334,TRL-0098,Melendezside Community Health Network,Germany,Dr. Gutierrez,832,Pending Activation
+SITE-00335,TRL-0099,Grantberg Medical Center,Germany,Dr. Price,79,Pending Activation
+SITE-00336,TRL-0099,Jamesland Regional Cancer Center,South Africa,Dr. Nielsen,170,Active
+SITE-00337,TRL-0099,Christopherborough Clinical Research Institute,United States,Dr. Williams,212,Active
+SITE-00338,TRL-0100,Nunezton Regional Cancer Center,South Africa,Dr. Russo,61,Closed
+SITE-00339,TRL-0100,Port Kathleen Community Health Network,Canada,Dr. Ramsey,53,Active
+SITE-00340,TRL-0100,South Jason Clinical Research Institute,Australia,Dr. Meadows,51,Closed
+SITE-00341,TRL-0101,Susantown University Hospital,United Kingdom,Dr. Lewis,75,Pending Activation
+SITE-00342,TRL-0101,Lake David Medical Center,United States,Dr. Key,56,Pending Activation
+SITE-00343,TRL-0102,Rochaborough Community Health Network,United States,Dr. Sanders,7,Active
+SITE-00344,TRL-0102,New Marc Clinical Research Institute,India,Dr. Campbell,3,Active
+SITE-00345,TRL-0102,Fergusonstad Community Health Network,United States,Dr. Parker,6,Closed
+SITE-00346,TRL-0102,Williamfort Community Health Network,United States,Dr. Owens,9,Active
+SITE-00347,TRL-0103,Gillmouth Medical Center,Canada,Dr. Rocha,35,Closed
+SITE-00348,TRL-0103,Lawrenceton Clinical Research Institute,South Africa,Dr. Hart,30,Active
+SITE-00349,TRL-0103,Lake Dustin Medical Center,Germany,Dr. Green,21,Pending Activation
+SITE-00350,TRL-0103,Phillipsborough University Hospital,United Kingdom,Dr. Rivera,30,Pending Activation
+SITE-00351,TRL-0103,Hudsonbury Community Health Network,Brazil,Dr. Porter,27,Pending Activation
+SITE-00352,TRL-0103,Jonathanfort Community Health Network,Brazil,Dr. Levy,25,Active
+SITE-00353,TRL-0104,Murraystad Clinical Research Institute,South Africa,Dr. Jackson,71,Active
+SITE-00354,TRL-0104,Whiteside Regional Cancer Center,Japan,Dr. Mooney,157,Closed
+SITE-00355,TRL-0104,New Arthurland Medical Center,South Africa,Dr. Landry,107,Pending Activation
+SITE-00356,TRL-0105,Port Adamberg Clinical Research Institute,Canada,Dr. Kirby,7,Pending Activation
+SITE-00357,TRL-0105,North Jasmine Regional Cancer Center,United States,Dr. Smith,9,Closed
+SITE-00358,TRL-0105,Brooksfort Regional Cancer Center,South Africa,Dr. Hopkins,10,Closed
+SITE-00359,TRL-0105,North Amandachester Regional Cancer Center,Canada,Dr. Smith,14,Active
+SITE-00360,TRL-0105,Amandaport University Hospital,Canada,Dr. Smith,13,Active
+SITE-00361,TRL-0105,Drakeburgh Community Health Network,Australia,Dr. Rodriguez,13,Active
+SITE-00362,TRL-0106,New Eduardoborough University Hospital,Germany,Dr. Harvey,44,Closed
+SITE-00363,TRL-0106,Lisaview Medical Center,South Africa,Dr. Norton,80,Closed
+SITE-00364,TRL-0107,West Susanmouth Community Health Network,South Africa,Dr. Cunningham,26,Active
+SITE-00365,TRL-0107,West Gabriella Regional Cancer Center,United Kingdom,Dr. Abbott,14,Closed
+SITE-00366,TRL-0107,North Richardfurt Clinical Research Institute,Brazil,Dr. Tran,20,Pending Activation
+SITE-00367,TRL-0107,Lake Albertburgh Medical Center,Australia,Dr. Miller,34,Closed
+SITE-00368,TRL-0108,Newmanmouth Community Health Network,United Kingdom,Dr. Knight,61,Active
+SITE-00369,TRL-0109,New Samanthabury Regional Cancer Center,Spain,Dr. Lewis,76,Pending Activation
+SITE-00370,TRL-0109,Nelsonland Medical Center,India,Dr. Cohen,53,Active
+SITE-00371,TRL-0109,Rachelshire Community Health Network,South Africa,Dr. Barrett,38,Active
+SITE-00372,TRL-0110,Port Leonard Clinical Research Institute,Brazil,Dr. Ali,15,Closed
+SITE-00373,TRL-0110,Port Lori Medical Center,United Kingdom,Dr. Nicholson,31,Active
+SITE-00374,TRL-0110,West Franciscobury Medical Center,Australia,Dr. Knight,27,Active
+SITE-00375,TRL-0110,Rhodesside Community Health Network,United Kingdom,Dr. Rivera,31,Closed

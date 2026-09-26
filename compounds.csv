@@ -1,0 +1,151 @@
+compound_id,compound_name,chemical_class,therapeutic_area,target_protein,mechanism_of_action,discovery_phase,molecular_weight_da,solubility_mg_ml,toxicity_score,lead_scientist,synthesis_date,created_at
+CMP-0001,VLX-1000,Peptide,Neurology,JAK2,"Selective inhibitor of JAK2, blocking downstream proliferative signaling.",Preclinical,1387.41,3.292,0.085,Donald Walker,2024-06-30,2024-07-08
+CMP-0002,DKU-1001,PROTAC,Metabolic Disease,TNF-alpha,Degrader that recruits TNF-alpha to the ubiquitin-proteasome system for clearance.,Phase III,943.42,3.078,0.138,Stephanie Miller,2025-01-26,2025-02-13
+CMP-0003,AGN-1002,Small Molecule,Oncology,BTK,"Covalent inhibitor of BTK, irreversibly disabling enzymatic activity.",Preclinical,846.44,1.414,0.518,Daniel Wagner,2023-03-18,2023-03-21
+CMP-0004,PSA-1003,Kinase Inhibitor,Oncology,BCL-2,"Monoclonal antibody that binds BCL-2, triggering immune-mediated cell death.",Preclinical,759.21,3.845,0.377,Matthew Gardner,2020-11-13,2020-12-01
+CMP-0005,VLX-1004,PROTAC,Infectious Disease,BCL-2,Degrader that recruits BCL-2 to the ubiquitin-proteasome system for clearance.,Phase II,396.57,0.168,0.109,Rhonda Smith,2022-01-06,2022-01-20
+CMP-0006,PSA-1005,Peptide,Respiratory,VEGFR2,"Competitive antagonist at the VEGFR2 binding site, restoring normal pathway flux.",Phase I,334.99,1.709,0.479,Gina Moore,2025-06-25,2025-06-26
+CMP-0007,AGN-1006,Peptide,Cardiology,PCSK9,Degrader that recruits PCSK9 to the ubiquitin-proteasome system for clearance.,Phase I,414.77,8.732,0.197,Brandon Davis,2026-05-18,2026-05-23
+CMP-0008,DKU-1007,Small Molecule,Immunology,BCL-2,"Allosteric modulator of BCL-2, reducing pathological receptor activation.",Preclinical,237.44,0.984,0.087,Renee Blair,2025-09-23,2025-09-27
+CMP-0009,PSA-1008,Peptide,Respiratory,ALK,"Allosteric modulator of ALK, reducing pathological receptor activation.",Preclinical,869.22,0.38,0.24,Jamie Arnold,2023-11-20,2023-11-22
+CMP-0010,DKU-1009,Antisense Oligonucleotide,Oncology,SGLT2,"Covalent inhibitor of SGLT2, irreversibly disabling enzymatic activity.",Discovery,635.25,0.308,0.204,Shannon Ray,2025-08-15,2025-09-02
+CMP-0011,PSA-1010,siRNA Therapeutic,Cardiology,IL-6R,Degrader that recruits IL-6R to the ubiquitin-proteasome system for clearance.,Preclinical,592.98,3.27,0.319,Darren Roberts,2024-11-18,2024-12-07
+CMP-0012,DKU-1011,Small Molecule,Metabolic Disease,BCL-2,Degrader that recruits BCL-2 to the ubiquitin-proteasome system for clearance.,Phase II,1146.2,2.06,0.136,Brian Ramirez,2021-03-08,2021-03-16
+CMP-0013,SNF-1012,siRNA Therapeutic,Oncology,IL-6R,"Selective inhibitor of IL-6R, blocking downstream proliferative signaling.",Discovery,317.02,0.08,0.047,Jacob Clark,2024-06-22,2024-07-05
+CMP-0014,VLX-1013,siRNA Therapeutic,Cardiology,HER2,"Competitive antagonist at the HER2 binding site, restoring normal pathway flux.",Preclinical,701.19,3.522,0.153,Maria Lynch,2022-04-17,2022-04-23
+CMP-0015,SNF-1014,PROTAC,Cardiology,ALK,"Allosteric modulator of ALK, reducing pathological receptor activation.",Phase II,1286.75,4.07,0.404,Carla Gray,2021-09-22,2021-09-25
+CMP-0016,VLX-1015,Monoclonal Antibody,Neurology,PCSK9,"Covalent inhibitor of PCSK9, irreversibly disabling enzymatic activity.",Discovery,469.48,1.393,0.248,Kristin Cohen,2026-07-27,2026-08-11
+CMP-0017,VLX-1016,PROTAC,Infectious Disease,NLRP3,"Allosteric modulator of NLRP3, reducing pathological receptor activation.",Phase I,462.08,0.319,0.305,Crystal Johnson,2025-09-13,2025-09-21
+CMP-0018,SNF-1017,siRNA Therapeutic,Oncology,CDK4/6,"Selective inhibitor of CDK4/6, blocking downstream proliferative signaling.",Phase II,641.81,8.919,0.037,Daniel Hahn,2022-07-31,2022-08-11
+CMP-0019,DKU-1018,Monoclonal Antibody,Infectious Disease,NLRP3,"Allosteric modulator of NLRP3, reducing pathological receptor activation.",Phase II,818.4,0.132,0.318,Matthew Foster,2025-11-24,2025-12-05
+CMP-0020,AGN-1019,Antisense Oligonucleotide,Metabolic Disease,BCL-2,Degrader that recruits BCL-2 to the ubiquitin-proteasome system for clearance.,Phase I,1431.78,0.693,0.321,Derek Wright,2026-02-15,2026-03-02
+CMP-0021,SNF-1020,Monoclonal Antibody,Metabolic Disease,TNF-alpha,"Allosteric modulator of TNF-alpha, reducing pathological receptor activation.",Preclinical,983.03,2.51,0.116,Kevin Hurst,2024-01-13,2024-01-31
+CMP-0022,VLX-1021,Kinase Inhibitor,Immunology,KRAS G12C,"Allosteric modulator of KRAS G12C, reducing pathological receptor activation.",Preclinical,231.78,2.234,0.058,Zachary Hicks,2023-01-28,2023-02-16
+CMP-0023,SNF-1022,Monoclonal Antibody,Infectious Disease,NLRP3,"Allosteric modulator of NLRP3, reducing pathological receptor activation.",Phase II,671.15,6.901,0.242,Brian Burton,2021-04-01,2021-04-17
+CMP-0024,DKU-1023,Monoclonal Antibody,Metabolic Disease,BTK,"Selective inhibitor of BTK, blocking downstream proliferative signaling.",Phase III,507.59,2.697,0.174,Arthur James,2025-05-26,2025-06-01
+CMP-0025,DKU-1024,Antisense Oligonucleotide,Immunology,GLP-1R,"Covalent inhibitor of GLP-1R, irreversibly disabling enzymatic activity.",Discovery,1319.46,5.767,0.044,Tricia Valencia,2026-08-10,2026-08-30
+CMP-0026,RX-1025,Kinase Inhibitor,Respiratory,SGLT2,"Covalent inhibitor of SGLT2, irreversibly disabling enzymatic activity.",Approved,1306.6,3.784,0.13,Melanie Herrera,2020-10-11,2020-10-12
+CMP-0027,PSA-1026,siRNA Therapeutic,Cardiology,JAK2,Degrader that recruits JAK2 to the ubiquitin-proteasome system for clearance.,Phase II,191.68,0.267,0.37,Ashley Graham,2022-04-16,2022-04-27
+CMP-0028,AGN-1027,Monoclonal Antibody,Immunology,JAK2,"Allosteric modulator of JAK2, reducing pathological receptor activation.",Preclinical,1084.47,0.677,0.482,Sherri Baker,2023-05-25,2023-05-26
+CMP-0029,SNF-1028,Kinase Inhibitor,Oncology,HER2,"Covalent inhibitor of HER2, irreversibly disabling enzymatic activity.",Phase II,901.75,0.246,0.101,Thomas Harrell,2023-09-04,2023-09-14
+CMP-0030,SNF-1029,Monoclonal Antibody,Cardiology,BRAF,"Covalent inhibitor of BRAF, irreversibly disabling enzymatic activity.",Preclinical,1312.9,2.493,0.146,Lisa Hernandez,2022-06-24,2022-06-30
+CMP-0031,DKU-1030,Kinase Inhibitor,Cardiology,KRAS G12C,"Covalent inhibitor of KRAS G12C, irreversibly disabling enzymatic activity.",Preclinical,1097.51,0.824,0.244,Paula Moreno,2025-03-23,2025-04-08
+CMP-0032,RX-1031,siRNA Therapeutic,Respiratory,EGFR,"Selective inhibitor of EGFR, blocking downstream proliferative signaling.",Discontinued,1341.88,1.156,0.3,Alec Hickman,2020-09-18,2020-09-28
+CMP-0033,SNF-1032,Kinase Inhibitor,Oncology,VEGFR2,"Selective inhibitor of VEGFR2, blocking downstream proliferative signaling.",Preclinical,669.07,4.762,0.139,Elizabeth Brown,2025-11-29,2025-12-02
+CMP-0034,PSA-1033,siRNA Therapeutic,Neurology,mTOR,"Selective inhibitor of mTOR, blocking downstream proliferative signaling.",Phase II,903.98,0.256,0.342,Angelica Tucker,2025-11-28,2025-12-03
+CMP-0035,SNF-1034,Peptide,Infectious Disease,mTOR,"Covalent inhibitor of mTOR, irreversibly disabling enzymatic activity.",Phase II,1072.15,1.114,0.419,Pamela Anderson,2021-02-13,2021-03-05
+CMP-0036,PSA-1035,siRNA Therapeutic,Metabolic Disease,GLP-1R,"Monoclonal antibody that binds GLP-1R, triggering immune-mediated cell death.",Approved,829.4,1.74,0.222,Deborah Brennan,2023-07-11,2023-07-18
+CMP-0037,VLX-1036,PROTAC,Cardiology,IL-6R,"Competitive antagonist at the IL-6R binding site, restoring normal pathway flux.",Approved,609.25,1.177,0.328,Joshua Blair,2023-03-20,2023-04-04
+CMP-0038,DKU-1037,Monoclonal Antibody,Neurology,BRAF,"Competitive antagonist at the BRAF binding site, restoring normal pathway flux.",Phase I,543.91,2.234,0.115,Zachary Santos,2021-11-25,2021-11-28
+CMP-0039,PSA-1038,Kinase Inhibitor,Neurology,CDK4/6,"Selective inhibitor of CDK4/6, blocking downstream proliferative signaling.",Phase III,454.09,2.438,0.384,Barbara Walker,2023-04-22,2023-05-11
+CMP-0040,DKU-1039,PROTAC,Metabolic Disease,VEGFR2,"Selective inhibitor of VEGFR2, blocking downstream proliferative signaling.",Discontinued,835.7,0.975,0.107,Crystal Robinson,2022-09-17,2022-09-19
+CMP-0041,DKU-1040,siRNA Therapeutic,Cardiology,VEGFR2,"Selective inhibitor of VEGFR2, blocking downstream proliferative signaling.",Discovery,1402.56,4.519,0.075,Crystal Whitehead,2021-02-17,2021-02-20
+CMP-0042,RX-1041,PROTAC,Immunology,BRAF,"Monoclonal antibody that binds BRAF, triggering immune-mediated cell death.",Preclinical,877.52,3.135,0.059,David Caldwell,2025-10-19,2025-10-26
+CMP-0043,VLX-1042,Kinase Inhibitor,Infectious Disease,KRAS G12C,"Monoclonal antibody that binds KRAS G12C, triggering immune-mediated cell death.",Phase I,956.89,1.36,0.221,Timothy Duncan,2021-12-24,2022-01-09
+CMP-0044,AGN-1043,Monoclonal Antibody,Oncology,VEGFR2,"Competitive antagonist at the VEGFR2 binding site, restoring normal pathway flux.",Discovery,238.42,0.104,0.23,Rhonda Lee,2023-07-05,2023-07-09
+CMP-0045,AGN-1044,Antisense Oligonucleotide,Immunology,GLP-1R,"Allosteric modulator of GLP-1R, reducing pathological receptor activation.",Phase I,781.31,0.475,0.058,Jeff Owens,2021-04-14,2021-04-16
+CMP-0046,AGN-1045,PROTAC,Cardiology,JAK2,"Selective inhibitor of JAK2, blocking downstream proliferative signaling.",Discovery,655.76,2.458,0.392,Victoria Garcia,2025-01-10,2025-01-14
+CMP-0047,SNF-1046,Kinase Inhibitor,Immunology,VEGFR2,"Monoclonal antibody that binds VEGFR2, triggering immune-mediated cell death.",Discovery,995.87,0.067,0.307,Scott Wright,2023-02-04,2023-02-09
+CMP-0048,RX-1047,Antisense Oligonucleotide,Neurology,GLP-1R,"Monoclonal antibody that binds GLP-1R, triggering immune-mediated cell death.",Phase II,761.98,1.972,0.171,Javier Ramirez,2021-11-02,2021-11-05
+CMP-0049,DKU-1048,Small Molecule,Metabolic Disease,SGLT2,"Covalent inhibitor of SGLT2, irreversibly disabling enzymatic activity.",Preclinical,268.09,0.266,0.153,Jessica Callahan,2022-03-11,2022-03-29
+CMP-0050,SNF-1049,Monoclonal Antibody,Immunology,EGFR,"Selective inhibitor of EGFR, blocking downstream proliferative signaling.",Discovery,1214.37,0.828,0.342,Zachary Huff,2023-12-20,2024-01-05
+CMP-0051,AGN-1050,Small Molecule,Neurology,mTOR,"Monoclonal antibody that binds mTOR, triggering immune-mediated cell death.",Phase II,1200.42,0.828,0.375,Sarah Martin,2026-06-12,2026-06-25
+CMP-0052,RX-1051,siRNA Therapeutic,Respiratory,EGFR,"Competitive antagonist at the EGFR binding site, restoring normal pathway flux.",Phase I,652.46,3.745,0.323,James Brown,2023-08-02,2023-08-17
+CMP-0053,VLX-1052,PROTAC,Respiratory,IL-6R,"Competitive antagonist at the IL-6R binding site, restoring normal pathway flux.",Phase II,1138.27,0.272,0.171,Mrs. Rachel Gibson,2022-12-15,2023-01-02
+CMP-0054,SNF-1053,Peptide,Neurology,mTOR,"Monoclonal antibody that binds mTOR, triggering immune-mediated cell death.",Approved,674.29,0.027,0.283,Whitney Peters,2023-03-20,2023-03-22
+CMP-0055,VLX-1054,Peptide,Oncology,KRAS G12C,"Selective inhibitor of KRAS G12C, blocking downstream proliferative signaling.",Phase II,749.53,0.868,0.535,Edward Novak,2024-12-18,2024-12-20
+CMP-0056,PSA-1055,Monoclonal Antibody,Oncology,mTOR,"Covalent inhibitor of mTOR, irreversibly disabling enzymatic activity.",Phase III,295.83,1.705,0.296,Nicole Brown,2024-02-21,2024-03-09
+CMP-0057,DKU-1056,Kinase Inhibitor,Oncology,BTK,"Monoclonal antibody that binds BTK, triggering immune-mediated cell death.",Preclinical,328.68,0.386,0.213,Sarah Moore,2024-03-02,2024-03-10
+CMP-0058,PSA-1057,Monoclonal Antibody,Infectious Disease,NLRP3,"Selective inhibitor of NLRP3, blocking downstream proliferative signaling.",Phase II,272.41,4.313,0.153,Cody Larson,2026-05-26,2026-06-15
+CMP-0059,DKU-1058,Antisense Oligonucleotide,Metabolic Disease,PD-1,"Covalent inhibitor of PD-1, irreversibly disabling enzymatic activity.",Preclinical,650.72,4.189,0.09,Bryan Zamora,2024-09-15,2024-10-04
+CMP-0060,RX-1059,Monoclonal Antibody,Metabolic Disease,BRAF,"Allosteric modulator of BRAF, reducing pathological receptor activation.",Phase I,718.76,5.921,0.313,Lisa Barnes,2022-03-03,2022-03-14
+CMP-0061,AGN-1060,Monoclonal Antibody,Metabolic Disease,VEGFR2,"Allosteric modulator of VEGFR2, reducing pathological receptor activation.",Discovery,330.9,0.313,0.336,Taylor Harris,2024-03-01,2024-03-11
+CMP-0062,DKU-1061,Small Molecule,Immunology,SGLT2,"Allosteric modulator of SGLT2, reducing pathological receptor activation.",Preclinical,542.85,5.074,0.257,James Powers,2024-12-13,2025-01-02
+CMP-0063,PSA-1062,Monoclonal Antibody,Infectious Disease,JAK2,"Selective inhibitor of JAK2, blocking downstream proliferative signaling.",Discontinued,844.33,2.482,0.093,Paul Jones,2022-06-27,2022-07-06
+CMP-0064,DKU-1063,Monoclonal Antibody,Cardiology,TNF-alpha,"Allosteric modulator of TNF-alpha, reducing pathological receptor activation.",Approved,237.72,0.825,0.618,Dr. Angel Lewis MD,2023-06-04,2023-06-14
+CMP-0065,PSA-1064,PROTAC,Cardiology,PCSK9,"Competitive antagonist at the PCSK9 binding site, restoring normal pathway flux.",Phase I,628.76,2.191,0.032,Sherry Wood,2026-03-27,2026-04-16
+CMP-0066,VLX-1065,siRNA Therapeutic,Infectious Disease,BRAF,"Selective inhibitor of BRAF, blocking downstream proliferative signaling.",Discovery,1336.88,4.322,0.041,Michele Carr,2021-08-24,2021-09-03
+CMP-0067,RX-1066,Small Molecule,Oncology,JAK2,"Monoclonal antibody that binds JAK2, triggering immune-mediated cell death.",Discovery,213.49,1.181,0.377,Aimee Montoya,2026-07-22,2026-08-09
+CMP-0068,RX-1067,Kinase Inhibitor,Neurology,TNF-alpha,"Allosteric modulator of TNF-alpha, reducing pathological receptor activation.",Phase III,1244.68,1.581,0.072,Teresa Taylor,2022-06-26,2022-07-07
+CMP-0069,VLX-1068,siRNA Therapeutic,Cardiology,BCL-2,Degrader that recruits BCL-2 to the ubiquitin-proteasome system for clearance.,Phase III,1449.64,14.237,0.411,Juan Nelson,2021-05-24,2021-06-10
+CMP-0070,DKU-1069,Small Molecule,Metabolic Disease,mTOR,"Allosteric modulator of mTOR, reducing pathological receptor activation.",Preclinical,752.19,0.346,0.207,Christina Walters,2024-04-16,2024-04-30
+CMP-0071,DKU-1070,Peptide,Respiratory,HER2,"Selective inhibitor of HER2, blocking downstream proliferative signaling.",Phase II,634.87,0.301,0.142,Taylor Mathis Jr.,2022-04-10,2022-04-15
+CMP-0072,VLX-1071,Antisense Oligonucleotide,Infectious Disease,HER2,"Monoclonal antibody that binds HER2, triggering immune-mediated cell death.",Phase III,880.92,2.058,0.141,Aaron Wise,2023-03-21,2023-04-04
+CMP-0073,DKU-1072,Small Molecule,Metabolic Disease,KRAS G12C,"Selective inhibitor of KRAS G12C, blocking downstream proliferative signaling.",Phase II,967.79,3.044,0.193,Patrick Arnold,2024-06-25,2024-06-30
+CMP-0074,RX-1073,Kinase Inhibitor,Infectious Disease,KRAS G12C,"Selective inhibitor of KRAS G12C, blocking downstream proliferative signaling.",Phase I,678.15,1.438,0.151,Benjamin Ware,2023-03-30,2023-04-04
+CMP-0075,DKU-1074,Peptide,Cardiology,GLP-1R,"Monoclonal antibody that binds GLP-1R, triggering immune-mediated cell death.",Preclinical,970.05,4.958,0.175,Sandra Aguilar,2026-01-23,2026-01-25
+CMP-0076,VLX-1075,Monoclonal Antibody,Metabolic Disease,ALK,"Monoclonal antibody that binds ALK, triggering immune-mediated cell death.",Discontinued,805.62,0.997,0.062,Eric Nolan,2021-08-03,2021-08-07
+CMP-0077,AGN-1076,Kinase Inhibitor,Metabolic Disease,ALK,"Covalent inhibitor of ALK, irreversibly disabling enzymatic activity.",Discovery,372.92,0.374,0.081,Stephanie Clark,2025-06-04,2025-06-09
+CMP-0078,SNF-1077,Antisense Oligonucleotide,Oncology,VEGFR2,"Monoclonal antibody that binds VEGFR2, triggering immune-mediated cell death.",Phase I,1027.8,0.473,0.212,Richard Henson,2022-03-10,2022-03-16
+CMP-0079,VLX-1078,siRNA Therapeutic,Metabolic Disease,CDK4/6,"Competitive antagonist at the CDK4/6 binding site, restoring normal pathway flux.",Discovery,765.19,0.578,0.494,Brittany Spears,2023-02-12,2023-02-20
+CMP-0080,VLX-1079,Small Molecule,Immunology,HER2,"Monoclonal antibody that binds HER2, triggering immune-mediated cell death.",Phase III,977.43,0.213,0.228,Rita Keith,2025-10-30,2025-11-01
+CMP-0081,SNF-1080,siRNA Therapeutic,Immunology,mTOR,"Monoclonal antibody that binds mTOR, triggering immune-mediated cell death.",Preclinical,445.87,1.157,0.585,Evelyn Galvan,2020-11-09,2020-11-21
+CMP-0082,SNF-1081,Small Molecule,Metabolic Disease,IL-6R,"Monoclonal antibody that binds IL-6R, triggering immune-mediated cell death.",Phase II,226.59,0.727,0.282,Rita Adams,2025-06-17,2025-06-24
+CMP-0083,RX-1082,siRNA Therapeutic,Oncology,NLRP3,"Allosteric modulator of NLRP3, reducing pathological receptor activation.",Discovery,748.21,1.902,0.179,Shane Garrison,2025-05-16,2025-05-25
+CMP-0084,PSA-1083,Antisense Oligonucleotide,Metabolic Disease,ALK,Degrader that recruits ALK to the ubiquitin-proteasome system for clearance.,Preclinical,448.54,0.992,0.38,Julia Torres,2022-01-10,2022-01-28
+CMP-0085,DKU-1084,Peptide,Neurology,CDK4/6,"Selective inhibitor of CDK4/6, blocking downstream proliferative signaling.",Discovery,862.13,2.21,0.101,Alexander Lee,2025-06-02,2025-06-21
+CMP-0086,DKU-1085,Kinase Inhibitor,Immunology,HER2,"Selective inhibitor of HER2, blocking downstream proliferative signaling.",Preclinical,1000.31,2.114,0.058,Tracy Ramirez,2022-08-27,2022-09-08
+CMP-0087,PSA-1086,Kinase Inhibitor,Oncology,CDK4/6,"Competitive antagonist at the CDK4/6 binding site, restoring normal pathway flux.",Preclinical,384.07,0.516,0.153,William Herrera,2024-07-04,2024-07-17
+CMP-0088,DKU-1087,PROTAC,Immunology,BCL-2,"Allosteric modulator of BCL-2, reducing pathological receptor activation.",Phase I,701.2,10.097,0.268,Wesley White,2026-04-09,2026-04-10
+CMP-0089,VLX-1088,PROTAC,Metabolic Disease,BRAF,"Covalent inhibitor of BRAF, irreversibly disabling enzymatic activity.",Phase III,507.54,0.468,0.284,Brian Hamilton,2026-05-29,2026-06-05
+CMP-0090,DKU-1089,PROTAC,Cardiology,ALK,"Competitive antagonist at the ALK binding site, restoring normal pathway flux.",Preclinical,1157.26,0.518,0.267,Larry Dixon,2025-01-09,2025-01-29
+CMP-0091,DKU-1090,PROTAC,Cardiology,CDK4/6,Degrader that recruits CDK4/6 to the ubiquitin-proteasome system for clearance.,Discovery,955.49,0.851,0.085,Dawn Fletcher,2022-12-28,2023-01-14
+CMP-0092,AGN-1091,Peptide,Immunology,IL-6R,Degrader that recruits IL-6R to the ubiquitin-proteasome system for clearance.,Discovery,607.49,0.361,0.431,Kimberly Ball,2020-09-20,2020-09-30
+CMP-0093,SNF-1092,Antisense Oligonucleotide,Metabolic Disease,KRAS G12C,"Monoclonal antibody that binds KRAS G12C, triggering immune-mediated cell death.",Phase III,936.46,1.595,0.098,Helen Jones,2025-02-07,2025-02-20
+CMP-0094,PSA-1093,Peptide,Immunology,PCSK9,"Covalent inhibitor of PCSK9, irreversibly disabling enzymatic activity.",Discovery,1121.22,2.136,0.215,Erik Charles,2024-08-23,2024-09-10
+CMP-0095,RX-1094,Monoclonal Antibody,Immunology,EGFR,"Allosteric modulator of EGFR, reducing pathological receptor activation.",Discovery,388.62,4.213,0.389,Eric Ortiz,2024-12-21,2025-01-09
+CMP-0096,AGN-1095,Antisense Oligonucleotide,Metabolic Disease,CDK4/6,"Competitive antagonist at the CDK4/6 binding site, restoring normal pathway flux.",Preclinical,1217.08,1.446,0.489,Cameron Fisher,2023-02-03,2023-02-10
+CMP-0097,VLX-1096,Monoclonal Antibody,Metabolic Disease,BRAF,"Competitive antagonist at the BRAF binding site, restoring normal pathway flux.",Phase I,474.91,5.746,0.134,Stephanie Gilbert,2026-04-12,2026-04-15
+CMP-0098,VLX-1097,PROTAC,Infectious Disease,IL-6R,"Covalent inhibitor of IL-6R, irreversibly disabling enzymatic activity.",Discovery,1373.59,2.47,0.216,April Mitchell,2022-06-29,2022-07-10
+CMP-0099,VLX-1098,Peptide,Neurology,BTK,"Monoclonal antibody that binds BTK, triggering immune-mediated cell death.",Phase I,1315.24,3.885,0.256,Mary Marshall,2023-04-04,2023-04-11
+CMP-0100,DKU-1099,Monoclonal Antibody,Immunology,TNF-alpha,"Selective inhibitor of TNF-alpha, blocking downstream proliferative signaling.",Discovery,903.76,3.594,0.088,John Santana,2023-04-30,2023-05-20
+CMP-0101,AGN-1100,PROTAC,Infectious Disease,BTK,"Competitive antagonist at the BTK binding site, restoring normal pathway flux.",Phase III,341.91,1.266,0.188,Bradley Robertson,2025-06-04,2025-06-11
+CMP-0102,AGN-1101,Monoclonal Antibody,Neurology,NLRP3,"Competitive antagonist at the NLRP3 binding site, restoring normal pathway flux.",Phase II,994.26,2.96,0.207,Robert Potter,2024-06-16,2024-06-17
+CMP-0103,SNF-1102,Monoclonal Antibody,Respiratory,JAK2,"Competitive antagonist at the JAK2 binding site, restoring normal pathway flux.",Approved,920.91,1.281,0.079,Curtis Johnson,2024-09-10,2024-09-27
+CMP-0104,PSA-1103,Monoclonal Antibody,Respiratory,SGLT2,"Selective inhibitor of SGLT2, blocking downstream proliferative signaling.",Discovery,1287.6,6.725,0.535,Samuel Jones,2022-02-28,2022-03-04
+CMP-0105,AGN-1104,PROTAC,Infectious Disease,SGLT2,"Monoclonal antibody that binds SGLT2, triggering immune-mediated cell death.",Discovery,911.89,2.333,0.244,Cheyenne Horton,2023-03-02,2023-03-20
+CMP-0106,PSA-1105,siRNA Therapeutic,Metabolic Disease,CDK4/6,"Competitive antagonist at the CDK4/6 binding site, restoring normal pathway flux.",Phase I,323.81,10.473,0.237,Matthew Smith,2023-08-21,2023-09-07
+CMP-0107,AGN-1106,Monoclonal Antibody,Metabolic Disease,GLP-1R,"Covalent inhibitor of GLP-1R, irreversibly disabling enzymatic activity.",Preclinical,249.55,1.021,0.307,Ashley Coleman,2025-02-26,2025-03-14
+CMP-0108,SNF-1107,siRNA Therapeutic,Metabolic Disease,SGLT2,"Allosteric modulator of SGLT2, reducing pathological receptor activation.",Preclinical,620.63,3.344,0.021,Kelly Williams,2021-10-02,2021-10-11
+CMP-0109,VLX-1108,Monoclonal Antibody,Cardiology,BRAF,"Competitive antagonist at the BRAF binding site, restoring normal pathway flux.",Discovery,812.93,1.357,0.042,Joyce Solis,2022-03-09,2022-03-24
+CMP-0110,RX-1109,Monoclonal Antibody,Cardiology,BTK,Degrader that recruits BTK to the ubiquitin-proteasome system for clearance.,Discovery,1022.69,0.49,0.282,Linda Dodson DVM,2024-08-30,2024-09-10
+CMP-0111,DKU-1110,Monoclonal Antibody,Neurology,CDK4/6,"Covalent inhibitor of CDK4/6, irreversibly disabling enzymatic activity.",Phase I,936.14,0.174,0.102,Kathy Rivas,2024-05-03,2024-05-11
+CMP-0112,SNF-1111,PROTAC,Neurology,NLRP3,Degrader that recruits NLRP3 to the ubiquitin-proteasome system for clearance.,Preclinical,226.42,1.597,0.133,Natasha Wells,2023-12-15,2023-12-18
+CMP-0113,RX-1112,Kinase Inhibitor,Immunology,GLP-1R,"Competitive antagonist at the GLP-1R binding site, restoring normal pathway flux.",Phase I,739.77,1.28,0.084,Mark Cannon,2022-03-31,2022-04-14
+CMP-0114,AGN-1113,Antisense Oligonucleotide,Respiratory,PD-1,"Monoclonal antibody that binds PD-1, triggering immune-mediated cell death.",Approved,654.1,0.789,0.052,Denise Jones,2023-10-19,2023-11-07
+CMP-0115,AGN-1114,Antisense Oligonucleotide,Oncology,EGFR,"Covalent inhibitor of EGFR, irreversibly disabling enzymatic activity.",Phase II,1016.83,0.069,0.182,Francisco Fernandez,2022-05-27,2022-06-08
+CMP-0116,AGN-1115,Kinase Inhibitor,Metabolic Disease,IL-6R,"Competitive antagonist at the IL-6R binding site, restoring normal pathway flux.",Discovery,1195.89,0.492,0.066,Michael Mccarthy,2021-07-13,2021-07-31
+CMP-0117,SNF-1116,Peptide,Immunology,VEGFR2,"Competitive antagonist at the VEGFR2 binding site, restoring normal pathway flux.",Phase II,1266.73,4.433,0.573,Joshua Perry,2021-02-02,2021-02-18
+CMP-0118,RX-1117,PROTAC,Metabolic Disease,EGFR,"Competitive antagonist at the EGFR binding site, restoring normal pathway flux.",Approved,196.51,0.223,0.4,Taylor Silva,2021-12-08,2021-12-21
+CMP-0119,SNF-1118,Kinase Inhibitor,Infectious Disease,PCSK9,"Competitive antagonist at the PCSK9 binding site, restoring normal pathway flux.",Phase III,614.11,0.751,0.622,Pamela James,2024-10-29,2024-10-30
+CMP-0120,PSA-1119,PROTAC,Oncology,NLRP3,"Covalent inhibitor of NLRP3, irreversibly disabling enzymatic activity.",Phase I,881.1,1.432,0.264,Paul Castaneda,2020-09-29,2020-10-02
+CMP-0121,AGN-1120,Monoclonal Antibody,Oncology,GLP-1R,"Monoclonal antibody that binds GLP-1R, triggering immune-mediated cell death.",Phase III,799.04,5.624,0.118,Paul Payne,2026-05-10,2026-05-19
+CMP-0122,SNF-1121,Antisense Oligonucleotide,Cardiology,NLRP3,"Allosteric modulator of NLRP3, reducing pathological receptor activation.",Phase I,984.52,0.746,0.266,Daniel Graham,2024-04-13,2024-04-24
+CMP-0123,AGN-1122,Peptide,Respiratory,NLRP3,"Allosteric modulator of NLRP3, reducing pathological receptor activation.",Discovery,525.83,0.046,0.044,Michael Powell,2020-11-18,2020-11-21
+CMP-0124,VLX-1123,Kinase Inhibitor,Oncology,mTOR,"Selective inhibitor of mTOR, blocking downstream proliferative signaling.",Phase III,442.16,0.028,0.195,Cameron Dean,2021-09-08,2021-09-20
+CMP-0125,DKU-1124,siRNA Therapeutic,Metabolic Disease,VEGFR2,Degrader that recruits VEGFR2 to the ubiquitin-proteasome system for clearance.,Discovery,1341.3,1.357,0.567,Justin Johnson,2020-11-14,2020-11-16
+CMP-0126,SNF-1125,siRNA Therapeutic,Oncology,EGFR,"Monoclonal antibody that binds EGFR, triggering immune-mediated cell death.",Phase II,285.15,2.311,0.253,Joel Williams,2024-07-07,2024-07-27
+CMP-0127,SNF-1126,Antisense Oligonucleotide,Metabolic Disease,TNF-alpha,"Monoclonal antibody that binds TNF-alpha, triggering immune-mediated cell death.",Phase II,557.34,2.089,0.153,Gabriel Juarez,2022-12-15,2022-12-19
+CMP-0128,VLX-1127,Peptide,Respiratory,BCL-2,"Competitive antagonist at the BCL-2 binding site, restoring normal pathway flux.",Phase I,937.99,1.017,0.063,Sandra King,2022-12-15,2022-12-27
+CMP-0129,PSA-1128,PROTAC,Metabolic Disease,PCSK9,"Covalent inhibitor of PCSK9, irreversibly disabling enzymatic activity.",Phase I,492.93,4.275,0.599,Joshua Cooke,2021-03-13,2021-03-17
+CMP-0130,DKU-1129,Kinase Inhibitor,Oncology,PCSK9,"Allosteric modulator of PCSK9, reducing pathological receptor activation.",Preclinical,296.31,6.232,0.367,Rachael Pearson,2022-10-13,2022-10-23
+CMP-0131,VLX-1130,Monoclonal Antibody,Oncology,NLRP3,"Competitive antagonist at the NLRP3 binding site, restoring normal pathway flux.",Phase I,1288.64,3.294,0.218,Christina Smith,2025-03-05,2025-03-24
+CMP-0132,VLX-1131,siRNA Therapeutic,Cardiology,VEGFR2,"Selective inhibitor of VEGFR2, blocking downstream proliferative signaling.",Preclinical,801.57,0.625,0.338,Michael Elliott,2021-08-12,2021-09-01
+CMP-0133,DKU-1132,Peptide,Infectious Disease,JAK2,"Covalent inhibitor of JAK2, irreversibly disabling enzymatic activity.",Phase I,1342.67,0.086,0.223,Pamela Jackson,2022-01-01,2022-01-15
+CMP-0134,PSA-1133,PROTAC,Cardiology,ALK,"Selective inhibitor of ALK, blocking downstream proliferative signaling.",Approved,782.25,4.952,0.146,Ashley Weiss,2024-04-21,2024-04-22
+CMP-0135,DKU-1134,Antisense Oligonucleotide,Cardiology,GLP-1R,"Competitive antagonist at the GLP-1R binding site, restoring normal pathway flux.",Phase I,472.11,0.321,0.235,Alexander Collins,2026-06-03,2026-06-18
+CMP-0136,SNF-1135,PROTAC,Infectious Disease,TNF-alpha,"Competitive antagonist at the TNF-alpha binding site, restoring normal pathway flux.",Discovery,580.42,1.939,0.316,Jennifer Espinoza,2024-09-20,2024-09-29
+CMP-0137,AGN-1136,Antisense Oligonucleotide,Respiratory,KRAS G12C,"Competitive antagonist at the KRAS G12C binding site, restoring normal pathway flux.",Phase II,475.86,0.062,0.049,Lori Garcia,2021-02-28,2021-03-19
+CMP-0138,SNF-1137,siRNA Therapeutic,Oncology,HER2,"Allosteric modulator of HER2, reducing pathological receptor activation.",Discontinued,625.4,3.644,0.117,Lindsay Martinez,2025-04-14,2025-04-23
+CMP-0139,AGN-1138,Kinase Inhibitor,Infectious Disease,SGLT2,"Monoclonal antibody that binds SGLT2, triggering immune-mediated cell death.",Discontinued,1155.71,1.352,0.245,Hannah Patterson,2026-07-15,2026-07-28
+CMP-0140,AGN-1139,siRNA Therapeutic,Cardiology,CDK4/6,"Selective inhibitor of CDK4/6, blocking downstream proliferative signaling.",Preclinical,544.79,0.879,0.343,Gloria Atkinson,2022-11-27,2022-12-03
+CMP-0141,RX-1140,siRNA Therapeutic,Cardiology,mTOR,"Monoclonal antibody that binds mTOR, triggering immune-mediated cell death.",Phase II,457.18,7.487,0.273,Tyler Reid,2025-07-30,2025-08-10
+CMP-0142,VLX-1141,Peptide,Infectious Disease,HER2,"Covalent inhibitor of HER2, irreversibly disabling enzymatic activity.",Approved,773.6,2.376,0.118,Jessica Gross,2025-08-13,2025-08-14
+CMP-0143,DKU-1142,Monoclonal Antibody,Metabolic Disease,BRAF,"Monoclonal antibody that binds BRAF, triggering immune-mediated cell death.",Phase I,472.95,0.486,0.252,Robert Medina,2026-06-05,2026-06-19
+CMP-0144,SNF-1143,PROTAC,Immunology,mTOR,"Covalent inhibitor of mTOR, irreversibly disabling enzymatic activity.",Discovery,1410.76,5.381,0.092,Nicholas Adams,2023-07-29,2023-08-14
+CMP-0145,DKU-1144,Peptide,Neurology,SGLT2,"Selective inhibitor of SGLT2, blocking downstream proliferative signaling.",Discovery,1216.11,0.635,0.072,Angelica Keith,2025-10-02,2025-10-15
+CMP-0146,VLX-1145,Kinase Inhibitor,Cardiology,VEGFR2,"Allosteric modulator of VEGFR2, reducing pathological receptor activation.",Discovery,1294.38,0.772,0.334,Leonard Gray,2022-02-26,2022-03-14
+CMP-0147,RX-1146,Antisense Oligonucleotide,Metabolic Disease,KRAS G12C,"Covalent inhibitor of KRAS G12C, irreversibly disabling enzymatic activity.",Phase I,290.47,1.313,0.21,Catherine Lewis,2020-11-18,2020-12-06
+CMP-0148,VLX-1147,Antisense Oligonucleotide,Cardiology,CDK4/6,"Allosteric modulator of CDK4/6, reducing pathological receptor activation.",Discovery,459.63,2.874,0.113,Spencer Haynes,2025-06-07,2025-06-17
+CMP-0149,DKU-1148,PROTAC,Neurology,HER2,"Monoclonal antibody that binds HER2, triggering immune-mediated cell death.",Phase I,1227.34,1.069,0.589,Travis Miller,2022-05-07,2022-05-18
+CMP-0150,PSA-1149,siRNA Therapeutic,Metabolic Disease,JAK2,Degrader that recruits JAK2 to the ubiquitin-proteasome system for clearance.,Phase III,1016.23,4.753,0.229,Peter Vaughn DDS,2024-12-21,2024-12-27

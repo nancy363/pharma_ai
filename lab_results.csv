@@ -1,0 +1,2001 @@
+result_id,compound_id,experiment_type,result_value,unit,result_date,technician,pass_fail
+LAB-00001,CMP-0047,Binding Affinity (SPR),2.74,nM (Kd),2025-09-25,William Ramsey,Pass
+LAB-00002,CMP-0142,hERG Cardiotoxicity Screen,46.7,% inhibition at 10uM,2024-09-18,Amy Kim,Pass
+LAB-00003,CMP-0079,Solubility Assay,1.4,mg/mL,2026-01-24,Randy Friedman,Pass
+LAB-00004,CMP-0108,Solubility Assay,1.43,mg/mL,2024-04-19,Alyssa Nelson,Pass
+LAB-00005,CMP-0049,Selectivity Panel,80.3,% selectivity,2026-09-06,Henry Pugh MD,Pass
+LAB-00006,CMP-0073,Selectivity Panel,10.1,% selectivity,2025-06-06,Angelica Montgomery,Pass
+LAB-00007,CMP-0048,Solubility Assay,3.54,mg/mL,2025-11-26,Angela Moore,Pass
+LAB-00008,CMP-0139,Solubility Assay,8.59,mg/mL,2025-07-23,Nancy Stewart,Pass
+LAB-00009,CMP-0067,Enzymatic Inhibition Assay,1.84,nM (IC50),2023-02-20,Eric Ward,Pass
+LAB-00010,CMP-0099,Binding Affinity (SPR),0.74,nM (Kd),2023-10-16,Cody Cole,Pass
+LAB-00011,CMP-0119,Enzymatic Inhibition Assay,5.51,nM (IC50),2024-12-05,Alexander Gomez,Pass
+LAB-00012,CMP-0148,Metabolic Stability (Microsomal),114.3,min (t1/2),2023-01-31,Erika Cruz,Pass
+LAB-00013,CMP-0102,Binding Affinity (SPR),0.57,nM (Kd),2023-11-18,Bradley Santana,Pass
+LAB-00014,CMP-0004,Metabolic Stability (Microsomal),129.2,min (t1/2),2026-05-01,Laura Jackson,Pass
+LAB-00015,CMP-0024,Binding Affinity (SPR),1.36,nM (Kd),2024-03-26,Eric Snyder,Pass
+LAB-00016,CMP-0036,Solubility Assay,4.05,mg/mL,2022-12-19,Jason Washington,Pass
+LAB-00017,CMP-0118,Selectivity Panel,40.3,% selectivity,2023-01-08,David Weber,Pass
+LAB-00018,CMP-0075,Selectivity Panel,91.3,% selectivity,2025-01-31,Brian Torres,Pass
+LAB-00019,CMP-0094,Solubility Assay,0.51,mg/mL,2026-07-04,Manuel Brock,Fail
+LAB-00020,CMP-0076,Selectivity Panel,49.7,% selectivity,2024-01-12,Robert Villarreal,Fail
+LAB-00021,CMP-0061,Enzymatic Inhibition Assay,0.75,nM (IC50),2026-08-10,Frank Valentine,Pass
+LAB-00022,CMP-0079,Cell Viability Assay,49.9,% viability,2023-07-08,Vincent Novak,Pass
+LAB-00023,CMP-0102,Enzymatic Inhibition Assay,2.2,nM (IC50),2023-11-17,Katherine Johnston,Pass
+LAB-00024,CMP-0109,Metabolic Stability (Microsomal),113.3,min (t1/2),2023-09-06,Robert Long,Fail
+LAB-00025,CMP-0105,Binding Affinity (SPR),1.4,nM (Kd),2023-03-03,Leslie Gardner,Fail
+LAB-00026,CMP-0059,Pharmacokinetic (PK) Study,21.33,hours (t1/2),2025-06-09,Tiffany Murray,Fail
+LAB-00027,CMP-0039,Selectivity Panel,5.6,% selectivity,2025-07-18,Eddie Schwartz,Pass
+LAB-00028,CMP-0074,Selectivity Panel,32.6,% selectivity,2025-12-26,Jennifer Porter,Pass
+LAB-00029,CMP-0024,Enzymatic Inhibition Assay,9.93,nM (IC50),2025-03-30,Matthew Espinoza,Fail
+LAB-00030,CMP-0113,Metabolic Stability (Microsomal),65.4,min (t1/2),2025-11-13,William Mendoza,Fail
+LAB-00031,CMP-0134,hERG Cardiotoxicity Screen,52.1,% inhibition at 10uM,2024-04-25,Tami Holt,Pass
+LAB-00032,CMP-0071,hERG Cardiotoxicity Screen,25.0,% inhibition at 10uM,2024-11-19,Heather Woodard,Fail
+LAB-00033,CMP-0103,Metabolic Stability (Microsomal),29.5,min (t1/2),2024-11-09,Angela Mack,Pass
+LAB-00034,CMP-0003,Pharmacokinetic (PK) Study,10.02,hours (t1/2),2025-05-05,Matthew Williams,Fail
+LAB-00035,CMP-0111,Cell Viability Assay,67.2,% viability,2026-08-24,Jennifer Goodwin,Pass
+LAB-00036,CMP-0103,Binding Affinity (SPR),0.74,nM (Kd),2026-07-28,Adam Green,Fail
+LAB-00037,CMP-0061,hERG Cardiotoxicity Screen,78.3,% inhibition at 10uM,2024-10-02,Lauren Johnston,Pass
+LAB-00038,CMP-0019,hERG Cardiotoxicity Screen,62.6,% inhibition at 10uM,2024-06-29,Raymond Chapman,Pass
+LAB-00039,CMP-0021,Cell Viability Assay,41.7,% viability,2024-09-17,Alexander Garcia,Pass
+LAB-00040,CMP-0108,Metabolic Stability (Microsomal),152.7,min (t1/2),2024-05-17,Audrey Shepard,Pass
+LAB-00041,CMP-0104,Binding Affinity (SPR),0.42,nM (Kd),2023-04-12,Jesse Clark,Pass
+LAB-00042,CMP-0108,Binding Affinity (SPR),0.81,nM (Kd),2024-08-23,Jeffrey Horton,Pass
+LAB-00043,CMP-0045,Cell Viability Assay,85.3,% viability,2023-12-27,Robert Wilson,Pass
+LAB-00044,CMP-0129,Enzymatic Inhibition Assay,3.49,nM (IC50),2026-02-08,Megan Martin,Fail
+LAB-00045,CMP-0125,Metabolic Stability (Microsomal),95.1,min (t1/2),2026-08-24,Christopher Moore,Pass
+LAB-00046,CMP-0066,Selectivity Panel,82.4,% selectivity,2024-12-13,Crystal Sullivan,Fail
+LAB-00047,CMP-0104,Enzymatic Inhibition Assay,13.44,nM (IC50),2023-06-14,Jessica Johnson,Pass
+LAB-00048,CMP-0133,Cell Viability Assay,81.5,% viability,2025-03-02,Kevin Price,Pass
+LAB-00049,CMP-0053,Metabolic Stability (Microsomal),154.9,min (t1/2),2025-07-12,Paul Stokes,Pass
+LAB-00050,CMP-0035,Solubility Assay,2.95,mg/mL,2022-12-18,Shane Lopez,Pass
+LAB-00051,CMP-0144,Cell Viability Assay,78.7,% viability,2024-01-06,Dennis Huffman,Pass
+LAB-00052,CMP-0008,Enzymatic Inhibition Assay,6.37,nM (IC50),2024-10-27,Linda Carr,Pass
+LAB-00053,CMP-0118,Selectivity Panel,98.4,% selectivity,2025-01-22,Ryan Williamson,Pass
+LAB-00054,CMP-0143,Cell Viability Assay,31.3,% viability,2025-12-19,Elizabeth Mendez,Pass
+LAB-00055,CMP-0060,hERG Cardiotoxicity Screen,67.5,% inhibition at 10uM,2023-01-19,Bruce Torres,Pass
+LAB-00056,CMP-0063,Enzymatic Inhibition Assay,1.48,nM (IC50),2023-06-12,Kayla Barnes,Fail
+LAB-00057,CMP-0131,Solubility Assay,2.16,mg/mL,2023-04-07,Cody Reid,Fail
+LAB-00058,CMP-0094,Binding Affinity (SPR),0.68,nM (Kd),2025-06-26,Zoe Peters,Pass
+LAB-00059,CMP-0024,Metabolic Stability (Microsomal),134.1,min (t1/2),2024-09-01,Ernest Hayes,Pass
+LAB-00060,CMP-0091,hERG Cardiotoxicity Screen,51.1,% inhibition at 10uM,2022-12-05,Adam Taylor,Fail
+LAB-00061,CMP-0139,Binding Affinity (SPR),2.43,nM (Kd),2025-12-21,Kathy Simpson,Pass
+LAB-00062,CMP-0002,Metabolic Stability (Microsomal),98.6,min (t1/2),2025-06-13,Ryan Burns,Pass
+LAB-00063,CMP-0010,Solubility Assay,2.7,mg/mL,2023-01-16,Philip Carter,Pass
+LAB-00064,CMP-0138,Pharmacokinetic (PK) Study,11.9,hours (t1/2),2023-10-24,Carol Ellis,Pass
+LAB-00065,CMP-0106,Cell Viability Assay,25.8,% viability,2025-09-06,Krista Wilson,Pass
+LAB-00066,CMP-0125,Solubility Assay,3.59,mg/mL,2023-03-03,Samantha Richardson,Fail
+LAB-00067,CMP-0086,Metabolic Stability (Microsomal),86.8,min (t1/2),2026-01-01,Nathan Payne,Pass
+LAB-00068,CMP-0133,Cell Viability Assay,59.1,% viability,2026-09-02,Ronald Potter,Pass
+LAB-00069,CMP-0091,Metabolic Stability (Microsomal),103.6,min (t1/2),2023-11-26,Mrs. Hannah Montoya MD,Pass
+LAB-00070,CMP-0039,Solubility Assay,3.74,mg/mL,2026-09-08,Cynthia Cochran,Fail
+LAB-00071,CMP-0054,hERG Cardiotoxicity Screen,75.6,% inhibition at 10uM,2025-01-23,Michael Chen,Pass
+LAB-00072,CMP-0050,Selectivity Panel,14.2,% selectivity,2023-05-18,Daniel Clark,Pass
+LAB-00073,CMP-0131,Solubility Assay,3.68,mg/mL,2022-12-13,Douglas Ryan,Pass
+LAB-00074,CMP-0112,Metabolic Stability (Microsomal),84.3,min (t1/2),2024-01-03,Donna Adams,Pass
+LAB-00075,CMP-0118,Metabolic Stability (Microsomal),179.0,min (t1/2),2026-02-21,Miss Anna Estes,Fail
+LAB-00076,CMP-0099,hERG Cardiotoxicity Screen,9.2,% inhibition at 10uM,2025-11-08,Wendy Camacho,Pass
+LAB-00077,CMP-0132,Cell Viability Assay,32.0,% viability,2023-03-22,Danielle Dawson,Fail
+LAB-00078,CMP-0001,Pharmacokinetic (PK) Study,18.92,hours (t1/2),2026-01-09,Megan Burns,Pass
+LAB-00079,CMP-0054,Pharmacokinetic (PK) Study,6.04,hours (t1/2),2025-01-08,Jason Hayes,Pass
+LAB-00080,CMP-0088,Solubility Assay,1.78,mg/mL,2025-03-31,Anna Robertson,Pass
+LAB-00081,CMP-0048,Cell Viability Assay,52.2,% viability,2023-10-29,Jackie Clements,Fail
+LAB-00082,CMP-0149,hERG Cardiotoxicity Screen,13.6,% inhibition at 10uM,2024-01-08,Raymond Oconnor,Pass
+LAB-00083,CMP-0104,hERG Cardiotoxicity Screen,73.4,% inhibition at 10uM,2025-08-20,Matthew Howard,Fail
+LAB-00084,CMP-0038,Cell Viability Assay,82.7,% viability,2022-12-19,Claudia Jordan,Fail
+LAB-00085,CMP-0097,Selectivity Panel,73.2,% selectivity,2023-07-24,Ronald Morgan,Pass
+LAB-00086,CMP-0056,Metabolic Stability (Microsomal),92.1,min (t1/2),2025-01-08,Karina Cooper,Fail
+LAB-00087,CMP-0054,Cell Viability Assay,62.1,% viability,2025-06-10,Brett Bowers,Pass
+LAB-00088,CMP-0144,Cell Viability Assay,7.2,% viability,2024-07-19,Scott Alexander,Pass
+LAB-00089,CMP-0144,Solubility Assay,2.6,mg/mL,2022-09-18,Christina Barker,Pass
+LAB-00090,CMP-0122,Enzymatic Inhibition Assay,20.61,nM (IC50),2023-03-29,Caitlin Cantu,Pass
+LAB-00091,CMP-0024,Metabolic Stability (Microsomal),15.0,min (t1/2),2023-10-23,Danielle Watson,Pass
+LAB-00092,CMP-0150,Binding Affinity (SPR),1.85,nM (Kd),2026-04-29,James Torres,Pass
+LAB-00093,CMP-0128,Pharmacokinetic (PK) Study,0.63,hours (t1/2),2025-07-05,Matthew Padilla,Pass
+LAB-00094,CMP-0028,Pharmacokinetic (PK) Study,3.32,hours (t1/2),2022-09-19,Casey Perez,Fail
+LAB-00095,CMP-0043,hERG Cardiotoxicity Screen,36.7,% inhibition at 10uM,2025-06-06,Michael Montoya,Pass
+LAB-00096,CMP-0142,Pharmacokinetic (PK) Study,15.7,hours (t1/2),2026-08-30,Carlos Jones,Fail
+LAB-00097,CMP-0029,Metabolic Stability (Microsomal),113.8,min (t1/2),2024-03-30,Ashley Edwards,Pass
+LAB-00098,CMP-0034,hERG Cardiotoxicity Screen,7.8,% inhibition at 10uM,2026-03-27,Raymond Mullins,Pass
+LAB-00099,CMP-0122,Cell Viability Assay,83.2,% viability,2023-03-31,Brenda Moreno MD,Pass
+LAB-00100,CMP-0017,Binding Affinity (SPR),0.28,nM (Kd),2025-04-24,Nathan Fuller,Pass
+LAB-00101,CMP-0092,Selectivity Panel,45.1,% selectivity,2023-04-27,Michael Heath,Pass
+LAB-00102,CMP-0105,Binding Affinity (SPR),3.73,nM (Kd),2023-01-22,Paul Lawrence,Pass
+LAB-00103,CMP-0044,Pharmacokinetic (PK) Study,10.23,hours (t1/2),2024-03-31,Emily Taylor,Pass
+LAB-00104,CMP-0029,Metabolic Stability (Microsomal),158.9,min (t1/2),2023-10-27,Juan Greene,Pass
+LAB-00105,CMP-0017,Metabolic Stability (Microsomal),99.4,min (t1/2),2025-02-21,Melissa Abbott,Pass
+LAB-00106,CMP-0022,Solubility Assay,8.67,mg/mL,2025-05-06,Joseph Hicks,Pass
+LAB-00107,CMP-0113,Metabolic Stability (Microsomal),79.7,min (t1/2),2025-09-13,Anthony Hurst,Pass
+LAB-00108,CMP-0049,Pharmacokinetic (PK) Study,21.68,hours (t1/2),2026-07-12,Brian Porter MD,Pass
+LAB-00109,CMP-0090,Binding Affinity (SPR),1.58,nM (Kd),2024-10-28,Victoria Peck,Pass
+LAB-00110,CMP-0107,Pharmacokinetic (PK) Study,14.23,hours (t1/2),2023-03-29,Laura Diaz,Pass
+LAB-00111,CMP-0090,Solubility Assay,2.19,mg/mL,2025-06-11,Tiffany Townsend,Pass
+LAB-00112,CMP-0143,Selectivity Panel,70.8,% selectivity,2022-10-12,Dennis Williams,Pass
+LAB-00113,CMP-0111,Binding Affinity (SPR),0.31,nM (Kd),2022-12-15,Katie Fuller,Pass
+LAB-00114,CMP-0092,hERG Cardiotoxicity Screen,50.3,% inhibition at 10uM,2024-09-18,Michael Miller,Pass
+LAB-00115,CMP-0049,Metabolic Stability (Microsomal),131.0,min (t1/2),2024-11-09,Diamond Collins,Pass
+LAB-00116,CMP-0049,Binding Affinity (SPR),1.75,nM (Kd),2024-10-03,Robert Herrera,Pass
+LAB-00117,CMP-0015,Pharmacokinetic (PK) Study,18.96,hours (t1/2),2024-04-10,Sandra Becker,Pass
+LAB-00118,CMP-0130,Enzymatic Inhibition Assay,14.33,nM (IC50),2022-12-23,Monica Mathis,Pass
+LAB-00119,CMP-0059,Selectivity Panel,17.4,% selectivity,2022-12-11,Jeffrey Chavez,Pass
+LAB-00120,CMP-0082,Binding Affinity (SPR),2.52,nM (Kd),2025-02-22,Patrick Yang,Pass
+LAB-00121,CMP-0053,hERG Cardiotoxicity Screen,66.2,% inhibition at 10uM,2023-03-11,Meredith Martin,Pass
+LAB-00122,CMP-0055,Cell Viability Assay,70.9,% viability,2026-07-10,Rachel Le,Pass
+LAB-00123,CMP-0070,Metabolic Stability (Microsomal),68.6,min (t1/2),2023-05-19,Richard Adams,Pass
+LAB-00124,CMP-0037,Pharmacokinetic (PK) Study,19.48,hours (t1/2),2026-04-04,Alyssa Roman,Pass
+LAB-00125,CMP-0082,Binding Affinity (SPR),0.22,nM (Kd),2023-10-20,Michael Ray,Pass
+LAB-00126,CMP-0141,Pharmacokinetic (PK) Study,14.68,hours (t1/2),2023-01-08,Ian Porter,Pass
+LAB-00127,CMP-0031,Metabolic Stability (Microsomal),73.3,min (t1/2),2024-12-23,David Garcia,Fail
+LAB-00128,CMP-0095,Selectivity Panel,13.0,% selectivity,2025-01-02,Crystal Hicks,Pass
+LAB-00129,CMP-0102,Metabolic Stability (Microsomal),122.7,min (t1/2),2022-11-21,Dana Ruiz,Pass
+LAB-00130,CMP-0077,Solubility Assay,0.12,mg/mL,2024-03-30,Timothy Mathews,Pass
+LAB-00131,CMP-0076,Cell Viability Assay,89.7,% viability,2024-12-03,Natalie Barnes,Fail
+LAB-00132,CMP-0143,Binding Affinity (SPR),7.84,nM (Kd),2023-12-31,Nathan Nelson,Pass
+LAB-00133,CMP-0125,Solubility Assay,1.34,mg/mL,2023-01-09,Jonathan Winters,Fail
+LAB-00134,CMP-0028,Enzymatic Inhibition Assay,4.23,nM (IC50),2023-06-06,Vicki Finley,Pass
+LAB-00135,CMP-0095,Metabolic Stability (Microsomal),114.0,min (t1/2),2022-12-27,Douglas Kirk,Pass
+LAB-00136,CMP-0071,Solubility Assay,2.24,mg/mL,2024-01-08,Aimee Gonzalez,Pass
+LAB-00137,CMP-0080,Metabolic Stability (Microsomal),7.5,min (t1/2),2024-12-19,Marcus Marshall,Fail
+LAB-00138,CMP-0098,Cell Viability Assay,41.3,% viability,2025-01-28,Raymond Gonzalez DVM,Pass
+LAB-00139,CMP-0068,Binding Affinity (SPR),8.0,nM (Kd),2025-10-02,Aaron Ortiz,Pass
+LAB-00140,CMP-0123,Metabolic Stability (Microsomal),68.4,min (t1/2),2023-08-24,Ryan Wiley,Pass
+LAB-00141,CMP-0001,Pharmacokinetic (PK) Study,21.41,hours (t1/2),2026-07-07,Matthew Sweeney,Pass
+LAB-00142,CMP-0090,Enzymatic Inhibition Assay,8.23,nM (IC50),2025-08-14,Joseph Allen,Pass
+LAB-00143,CMP-0115,hERG Cardiotoxicity Screen,72.4,% inhibition at 10uM,2024-09-05,Zachary Dawson,Pass
+LAB-00144,CMP-0053,Cell Viability Assay,52.3,% viability,2023-01-31,Stephanie Meyer,Fail
+LAB-00145,CMP-0119,Pharmacokinetic (PK) Study,13.21,hours (t1/2),2025-07-07,William Miller,Pass
+LAB-00146,CMP-0043,Solubility Assay,1.49,mg/mL,2023-02-04,Robert Jones,Pass
+LAB-00147,CMP-0096,Binding Affinity (SPR),1.95,nM (Kd),2024-12-25,Victor Young,Pass
+LAB-00148,CMP-0056,Solubility Assay,2.0,mg/mL,2023-10-04,Robert Haynes,Pass
+LAB-00149,CMP-0035,Selectivity Panel,89.8,% selectivity,2025-08-26,Dillon Jones,Pass
+LAB-00150,CMP-0075,Selectivity Panel,10.5,% selectivity,2023-07-10,Lauren Moore,Pass
+LAB-00151,CMP-0043,hERG Cardiotoxicity Screen,14.8,% inhibition at 10uM,2023-05-15,Jason Herrera,Fail
+LAB-00152,CMP-0134,Cell Viability Assay,94.5,% viability,2026-07-27,Eric Baker,Fail
+LAB-00153,CMP-0083,Solubility Assay,4.05,mg/mL,2023-03-12,Michael Mckenzie,Pass
+LAB-00154,CMP-0115,Pharmacokinetic (PK) Study,17.99,hours (t1/2),2025-07-01,Russell Murphy,Pass
+LAB-00155,CMP-0010,Binding Affinity (SPR),2.09,nM (Kd),2023-01-29,Henry Palmer,Pass
+LAB-00156,CMP-0077,Pharmacokinetic (PK) Study,6.89,hours (t1/2),2025-06-02,William Johnson,Pass
+LAB-00157,CMP-0026,Metabolic Stability (Microsomal),27.2,min (t1/2),2024-04-30,Paul Wright,Pass
+LAB-00158,CMP-0092,Binding Affinity (SPR),7.65,nM (Kd),2024-07-23,Brenda Smith,Pass
+LAB-00159,CMP-0071,Pharmacokinetic (PK) Study,9.98,hours (t1/2),2026-01-12,Mrs. Samantha Watson,Fail
+LAB-00160,CMP-0031,Metabolic Stability (Microsomal),124.0,min (t1/2),2025-03-26,Lauren Green,Pass
+LAB-00161,CMP-0009,Binding Affinity (SPR),2.95,nM (Kd),2025-12-17,Austin Orr,Pass
+LAB-00162,CMP-0137,Metabolic Stability (Microsomal),146.6,min (t1/2),2024-06-26,Taylor Calderon,Pass
+LAB-00163,CMP-0122,Binding Affinity (SPR),2.7,nM (Kd),2024-01-15,Joel Jackson,Fail
+LAB-00164,CMP-0066,Cell Viability Assay,83.9,% viability,2025-01-02,Jennifer Johnson,Pass
+LAB-00165,CMP-0128,Pharmacokinetic (PK) Study,15.32,hours (t1/2),2025-06-11,Daniel Lopez,Pass
+LAB-00166,CMP-0078,Binding Affinity (SPR),2.59,nM (Kd),2023-10-31,Amanda Harvey,Pass
+LAB-00167,CMP-0144,hERG Cardiotoxicity Screen,49.9,% inhibition at 10uM,2023-09-11,Jason Pierce,Pass
+LAB-00168,CMP-0011,Selectivity Panel,93.2,% selectivity,2022-12-16,Chad Gonzalez,Pass
+LAB-00169,CMP-0134,Solubility Assay,5.02,mg/mL,2026-04-01,Lydia Pham,Pass
+LAB-00170,CMP-0042,Metabolic Stability (Microsomal),138.3,min (t1/2),2025-11-21,Rachael Howard DDS,Pass
+LAB-00171,CMP-0034,Solubility Assay,1.84,mg/mL,2024-08-25,Kathryn Price,Pass
+LAB-00172,CMP-0056,Selectivity Panel,46.4,% selectivity,2023-06-07,Daniel Huang,Pass
+LAB-00173,CMP-0111,hERG Cardiotoxicity Screen,82.3,% inhibition at 10uM,2025-10-28,William Moreno,Pass
+LAB-00174,CMP-0043,Cell Viability Assay,70.0,% viability,2025-10-11,Dr. Ariel Sandoval MD,Pass
+LAB-00175,CMP-0082,Solubility Assay,0.8,mg/mL,2025-12-22,Amy Davies,Fail
+LAB-00176,CMP-0124,hERG Cardiotoxicity Screen,92.1,% inhibition at 10uM,2023-08-04,Rebecca Kelly,Fail
+LAB-00177,CMP-0021,Solubility Assay,0.0,mg/mL,2026-01-25,Casey Watkins,Pass
+LAB-00178,CMP-0020,Metabolic Stability (Microsomal),20.4,min (t1/2),2025-12-08,Suzanne Johnson,Pass
+LAB-00179,CMP-0022,Pharmacokinetic (PK) Study,8.9,hours (t1/2),2025-07-06,Kristy Hart,Pass
+LAB-00180,CMP-0034,Metabolic Stability (Microsomal),152.1,min (t1/2),2023-06-19,Sierra Vasquez MD,Fail
+LAB-00181,CMP-0104,Pharmacokinetic (PK) Study,22.61,hours (t1/2),2024-09-03,David Robinson,Pass
+LAB-00182,CMP-0038,Selectivity Panel,21.2,% selectivity,2024-10-25,Thomas Harris,Pass
+LAB-00183,CMP-0019,Pharmacokinetic (PK) Study,7.42,hours (t1/2),2023-03-27,Tamara Richard,Pass
+LAB-00184,CMP-0062,Selectivity Panel,57.3,% selectivity,2024-01-03,Kevin Stark,Pass
+LAB-00185,CMP-0130,Solubility Assay,4.48,mg/mL,2025-10-22,Shannon Yu,Pass
+LAB-00186,CMP-0043,Selectivity Panel,53.9,% selectivity,2024-03-16,Jennifer Garcia,Fail
+LAB-00187,CMP-0104,Metabolic Stability (Microsomal),155.1,min (t1/2),2023-12-02,Christopher Fry,Pass
+LAB-00188,CMP-0057,Selectivity Panel,90.7,% selectivity,2025-11-17,Marie Thompson,Pass
+LAB-00189,CMP-0116,Selectivity Panel,49.5,% selectivity,2026-08-02,Tanya Buchanan,Pass
+LAB-00190,CMP-0150,Selectivity Panel,81.8,% selectivity,2023-08-09,Casey Parker,Pass
+LAB-00191,CMP-0074,Cell Viability Assay,20.7,% viability,2025-06-19,Nicholas Rush,Pass
+LAB-00192,CMP-0143,Binding Affinity (SPR),0.41,nM (Kd),2026-07-04,Zachary Sanford,Pass
+LAB-00193,CMP-0034,hERG Cardiotoxicity Screen,94.1,% inhibition at 10uM,2022-11-04,Tammy Ponce,Pass
+LAB-00194,CMP-0052,hERG Cardiotoxicity Screen,6.9,% inhibition at 10uM,2023-08-06,Taylor Taylor,Fail
+LAB-00195,CMP-0092,Selectivity Panel,1.1,% selectivity,2025-09-10,William Jackson,Pass
+LAB-00196,CMP-0114,Selectivity Panel,67.6,% selectivity,2026-04-02,Michael Fowler,Pass
+LAB-00197,CMP-0029,Cell Viability Assay,88.3,% viability,2026-04-04,Derek Wright,Pass
+LAB-00198,CMP-0108,hERG Cardiotoxicity Screen,63.6,% inhibition at 10uM,2022-12-25,Brian Smith,Pass
+LAB-00199,CMP-0096,Solubility Assay,7.8,mg/mL,2024-04-03,Tracy Wilkerson,Pass
+LAB-00200,CMP-0113,Enzymatic Inhibition Assay,1.09,nM (IC50),2024-09-06,Joshua Garcia,Pass
+LAB-00201,CMP-0015,Selectivity Panel,89.9,% selectivity,2024-08-18,Marilyn Mcdaniel,Pass
+LAB-00202,CMP-0086,Metabolic Stability (Microsomal),175.4,min (t1/2),2023-05-13,Ryan Phillips,Fail
+LAB-00203,CMP-0140,Binding Affinity (SPR),15.05,nM (Kd),2023-12-27,Angela Jackson,Pass
+LAB-00204,CMP-0124,Enzymatic Inhibition Assay,19.76,nM (IC50),2024-03-19,Kimberly Villanueva,Pass
+LAB-00205,CMP-0020,Solubility Assay,1.85,mg/mL,2023-01-31,Lisa Webb,Pass
+LAB-00206,CMP-0136,Cell Viability Assay,28.0,% viability,2022-11-02,Carmen Preston,Pass
+LAB-00207,CMP-0145,Cell Viability Assay,94.8,% viability,2023-05-05,Daniel Lee,Pass
+LAB-00208,CMP-0001,Binding Affinity (SPR),0.86,nM (Kd),2025-07-01,Monica Baker,Fail
+LAB-00209,CMP-0146,Solubility Assay,0.64,mg/mL,2023-11-03,Anthony Armstrong,Pass
+LAB-00210,CMP-0120,Metabolic Stability (Microsomal),43.1,min (t1/2),2026-01-26,Isaac Patterson,Fail
+LAB-00211,CMP-0028,Pharmacokinetic (PK) Study,23.31,hours (t1/2),2023-11-22,Lindsay Gonzalez,Pass
+LAB-00212,CMP-0006,Binding Affinity (SPR),0.99,nM (Kd),2022-10-25,Edgar Miller,Pass
+LAB-00213,CMP-0028,Solubility Assay,2.31,mg/mL,2026-01-31,James Burns,Pass
+LAB-00214,CMP-0138,Pharmacokinetic (PK) Study,6.91,hours (t1/2),2025-05-10,Joshua Lopez,Pass
+LAB-00215,CMP-0046,hERG Cardiotoxicity Screen,53.9,% inhibition at 10uM,2026-04-02,Jeremy Baker,Pass
+LAB-00216,CMP-0062,hERG Cardiotoxicity Screen,26.0,% inhibition at 10uM,2024-07-27,Derrick Brown,Pass
+LAB-00217,CMP-0118,Cell Viability Assay,90.5,% viability,2025-09-20,Angelica Cooper,Fail
+LAB-00218,CMP-0070,Metabolic Stability (Microsomal),31.3,min (t1/2),2024-11-16,Leah Spencer,Pass
+LAB-00219,CMP-0010,hERG Cardiotoxicity Screen,42.0,% inhibition at 10uM,2026-01-27,Jennifer Nichols,Pass
+LAB-00220,CMP-0088,Pharmacokinetic (PK) Study,7.99,hours (t1/2),2026-03-06,Stephen Alvarez,Pass
+LAB-00221,CMP-0140,Pharmacokinetic (PK) Study,4.8,hours (t1/2),2023-01-11,Michelle Shaw,Pass
+LAB-00222,CMP-0125,Solubility Assay,20.45,mg/mL,2026-04-24,Megan Oliver,Pass
+LAB-00223,CMP-0140,Metabolic Stability (Microsomal),63.2,min (t1/2),2023-03-12,Carrie Joyce,Pass
+LAB-00224,CMP-0136,hERG Cardiotoxicity Screen,4.1,% inhibition at 10uM,2026-08-07,Beth Henderson,Pass
+LAB-00225,CMP-0014,Metabolic Stability (Microsomal),27.8,min (t1/2),2026-08-30,Zachary Burton,Pass
+LAB-00226,CMP-0017,Cell Viability Assay,45.4,% viability,2026-01-17,Thomas Sloan,Pass
+LAB-00227,CMP-0009,hERG Cardiotoxicity Screen,57.7,% inhibition at 10uM,2022-12-24,James Nguyen,Pass
+LAB-00228,CMP-0082,Solubility Assay,1.89,mg/mL,2023-10-26,Shane Buchanan,Pass
+LAB-00229,CMP-0053,Selectivity Panel,52.4,% selectivity,2025-03-15,Jennifer Perry,Pass
+LAB-00230,CMP-0024,Enzymatic Inhibition Assay,6.63,nM (IC50),2023-04-22,Olivia Ayers,Pass
+LAB-00231,CMP-0044,Cell Viability Assay,18.8,% viability,2026-05-30,Ashlee Mitchell,Pass
+LAB-00232,CMP-0114,Selectivity Panel,70.0,% selectivity,2024-11-08,Jason Reyes,Pass
+LAB-00233,CMP-0109,Solubility Assay,2.74,mg/mL,2024-08-26,Amanda Hill,Pass
+LAB-00234,CMP-0074,Metabolic Stability (Microsomal),109.2,min (t1/2),2023-04-16,Melissa Williams,Fail
+LAB-00235,CMP-0099,Metabolic Stability (Microsomal),12.0,min (t1/2),2026-04-08,David Reese,Pass
+LAB-00236,CMP-0083,Selectivity Panel,29.9,% selectivity,2026-05-24,Alicia Roth,Pass
+LAB-00237,CMP-0134,hERG Cardiotoxicity Screen,72.7,% inhibition at 10uM,2023-12-04,John Horton,Pass
+LAB-00238,CMP-0138,Pharmacokinetic (PK) Study,10.29,hours (t1/2),2023-02-08,Brandy Mccann,Pass
+LAB-00239,CMP-0030,Selectivity Panel,41.2,% selectivity,2024-06-25,Debra Butler,Pass
+LAB-00240,CMP-0086,Enzymatic Inhibition Assay,7.93,nM (IC50),2025-04-17,Daniel Holloway,Fail
+LAB-00241,CMP-0123,Selectivity Panel,58.6,% selectivity,2025-09-03,Sharon Nicholson,Fail
+LAB-00242,CMP-0082,Pharmacokinetic (PK) Study,10.99,hours (t1/2),2024-10-09,Eric Hunter,Pass
+LAB-00243,CMP-0132,Enzymatic Inhibition Assay,0.88,nM (IC50),2023-04-04,Sherry Johnson,Pass
+LAB-00244,CMP-0025,Metabolic Stability (Microsomal),81.0,min (t1/2),2023-06-26,Sara Wright,Fail
+LAB-00245,CMP-0124,Pharmacokinetic (PK) Study,20.1,hours (t1/2),2024-07-15,Michele Hill,Pass
+LAB-00246,CMP-0069,hERG Cardiotoxicity Screen,62.4,% inhibition at 10uM,2026-01-02,Madison Martinez,Fail
+LAB-00247,CMP-0092,hERG Cardiotoxicity Screen,19.2,% inhibition at 10uM,2022-11-01,Kirk Thompson,Fail
+LAB-00248,CMP-0080,Solubility Assay,1.89,mg/mL,2026-03-11,Hannah Martin,Pass
+LAB-00249,CMP-0073,Solubility Assay,1.2,mg/mL,2026-04-15,Melissa Mitchell,Pass
+LAB-00250,CMP-0087,Pharmacokinetic (PK) Study,18.76,hours (t1/2),2024-04-04,Kenneth Hanna,Fail
+LAB-00251,CMP-0149,hERG Cardiotoxicity Screen,66.2,% inhibition at 10uM,2026-02-20,Megan Adams,Pass
+LAB-00252,CMP-0140,Binding Affinity (SPR),1.45,nM (Kd),2024-05-07,Richard Saunders,Pass
+LAB-00253,CMP-0150,Cell Viability Assay,61.3,% viability,2022-09-30,Maria Burke,Pass
+LAB-00254,CMP-0052,Enzymatic Inhibition Assay,12.31,nM (IC50),2022-09-30,Robert Torres,Fail
+LAB-00255,CMP-0022,Cell Viability Assay,7.8,% viability,2026-07-30,Jessica Bennett,Fail
+LAB-00256,CMP-0047,Binding Affinity (SPR),0.13,nM (Kd),2024-02-09,John Byrd,Pass
+LAB-00257,CMP-0079,Selectivity Panel,33.8,% selectivity,2026-01-03,Brian Hunt,Fail
+LAB-00258,CMP-0032,Solubility Assay,0.46,mg/mL,2025-05-12,Jacqueline Holland,Pass
+LAB-00259,CMP-0091,Metabolic Stability (Microsomal),48.4,min (t1/2),2025-02-23,Brian Brown,Pass
+LAB-00260,CMP-0029,Selectivity Panel,74.2,% selectivity,2026-08-31,Shannon Green,Fail
+LAB-00261,CMP-0002,Metabolic Stability (Microsomal),117.4,min (t1/2),2025-07-22,Elizabeth Hernandez,Fail
+LAB-00262,CMP-0084,Cell Viability Assay,74.1,% viability,2025-10-09,Renee Lang,Fail
+LAB-00263,CMP-0148,Solubility Assay,0.95,mg/mL,2025-02-10,Melanie Griffith,Pass
+LAB-00264,CMP-0076,Pharmacokinetic (PK) Study,16.21,hours (t1/2),2025-05-01,Deanna Barnes MD,Pass
+LAB-00265,CMP-0110,Pharmacokinetic (PK) Study,7.38,hours (t1/2),2022-11-08,Laura Lee,Pass
+LAB-00266,CMP-0072,Pharmacokinetic (PK) Study,23.56,hours (t1/2),2025-08-13,Joseph Glover,Fail
+LAB-00267,CMP-0022,Enzymatic Inhibition Assay,0.57,nM (IC50),2026-05-03,Katie Bruce,Pass
+LAB-00268,CMP-0096,Pharmacokinetic (PK) Study,23.53,hours (t1/2),2026-01-27,Catherine Davis,Pass
+LAB-00269,CMP-0012,Binding Affinity (SPR),0.3,nM (Kd),2023-03-23,Robert Hines,Pass
+LAB-00270,CMP-0047,Pharmacokinetic (PK) Study,21.51,hours (t1/2),2023-06-12,Gabriela Davis,Pass
+LAB-00271,CMP-0075,Selectivity Panel,32.3,% selectivity,2024-02-18,Elizabeth French,Pass
+LAB-00272,CMP-0116,Cell Viability Assay,93.7,% viability,2024-01-14,Edward York,Pass
+LAB-00273,CMP-0118,Pharmacokinetic (PK) Study,6.04,hours (t1/2),2024-08-04,Lauren Blackburn,Pass
+LAB-00274,CMP-0040,Metabolic Stability (Microsomal),171.5,min (t1/2),2022-12-30,Kathryn Dillon,Pass
+LAB-00275,CMP-0019,Metabolic Stability (Microsomal),72.1,min (t1/2),2024-03-28,Anthony Dickerson,Pass
+LAB-00276,CMP-0027,Pharmacokinetic (PK) Study,15.82,hours (t1/2),2023-04-06,Jason Hudson,Pass
+LAB-00277,CMP-0138,Cell Viability Assay,17.8,% viability,2026-05-03,Eugene Baldwin,Pass
+LAB-00278,CMP-0075,hERG Cardiotoxicity Screen,40.9,% inhibition at 10uM,2025-10-29,Mr. Christopher Walters,Pass
+LAB-00279,CMP-0019,Enzymatic Inhibition Assay,2.97,nM (IC50),2022-09-24,Philip Jackson,Pass
+LAB-00280,CMP-0089,hERG Cardiotoxicity Screen,39.8,% inhibition at 10uM,2025-10-08,Phillip Miller DDS,Fail
+LAB-00281,CMP-0031,Binding Affinity (SPR),0.17,nM (Kd),2025-03-30,Vincent Reyes,Pass
+LAB-00282,CMP-0114,hERG Cardiotoxicity Screen,40.1,% inhibition at 10uM,2022-11-12,Jake Smith,Pass
+LAB-00283,CMP-0003,Binding Affinity (SPR),3.93,nM (Kd),2024-01-01,Cheryl Rhodes,Pass
+LAB-00284,CMP-0081,Cell Viability Assay,51.2,% viability,2025-03-20,Michael Cooper,Pass
+LAB-00285,CMP-0048,Cell Viability Assay,54.2,% viability,2023-03-25,Kevin Jackson,Pass
+LAB-00286,CMP-0142,Enzymatic Inhibition Assay,1.44,nM (IC50),2026-01-02,Earl Luna,Pass
+LAB-00287,CMP-0017,Solubility Assay,1.13,mg/mL,2025-02-04,Stephen Cowan,Fail
+LAB-00288,CMP-0022,Metabolic Stability (Microsomal),84.9,min (t1/2),2024-01-31,Heather Lopez,Pass
+LAB-00289,CMP-0040,Pharmacokinetic (PK) Study,23.85,hours (t1/2),2026-07-03,Jennifer Perez,Pass
+LAB-00290,CMP-0006,Cell Viability Assay,48.0,% viability,2025-08-14,Nicholas Lawrence,Fail
+LAB-00291,CMP-0020,Cell Viability Assay,62.2,% viability,2023-05-22,Matthew Johnson,Fail
+LAB-00292,CMP-0015,Binding Affinity (SPR),4.08,nM (Kd),2026-03-20,Joseph Williams,Fail
+LAB-00293,CMP-0119,Enzymatic Inhibition Assay,6.02,nM (IC50),2026-09-09,Martha Smith,Pass
+LAB-00294,CMP-0077,Metabolic Stability (Microsomal),147.9,min (t1/2),2025-06-21,James Kelley,Pass
+LAB-00295,CMP-0059,Metabolic Stability (Microsomal),171.6,min (t1/2),2024-08-10,Michael Mccoy,Pass
+LAB-00296,CMP-0052,Metabolic Stability (Microsomal),10.0,min (t1/2),2023-12-01,Mary Nelson,Fail
+LAB-00297,CMP-0032,Pharmacokinetic (PK) Study,15.66,hours (t1/2),2025-02-18,Ronald Garcia,Pass
+LAB-00298,CMP-0093,hERG Cardiotoxicity Screen,10.4,% inhibition at 10uM,2025-08-02,Brian Rodriguez,Fail
+LAB-00299,CMP-0069,Binding Affinity (SPR),2.81,nM (Kd),2023-07-05,Dennis Mills,Pass
+LAB-00300,CMP-0114,Pharmacokinetic (PK) Study,2.9,hours (t1/2),2023-07-09,Elizabeth Williams,Pass
+LAB-00301,CMP-0136,Metabolic Stability (Microsomal),32.8,min (t1/2),2024-09-11,Timothy Rivera,Pass
+LAB-00302,CMP-0083,Cell Viability Assay,18.5,% viability,2022-09-21,Susan Conley,Pass
+LAB-00303,CMP-0073,Metabolic Stability (Microsomal),118.1,min (t1/2),2025-05-21,Brandon Hunt,Pass
+LAB-00304,CMP-0081,Binding Affinity (SPR),9.28,nM (Kd),2025-08-09,David Hall,Fail
+LAB-00305,CMP-0048,Cell Viability Assay,80.9,% viability,2026-08-31,John Garcia,Pass
+LAB-00306,CMP-0075,Cell Viability Assay,13.7,% viability,2023-05-31,Dylan Solis,Pass
+LAB-00307,CMP-0089,Enzymatic Inhibition Assay,3.13,nM (IC50),2023-12-18,Anna Chang,Pass
+LAB-00308,CMP-0037,Pharmacokinetic (PK) Study,13.73,hours (t1/2),2022-11-23,Mary Jackson,Fail
+LAB-00309,CMP-0032,Pharmacokinetic (PK) Study,4.67,hours (t1/2),2024-02-21,Marco Johns,Pass
+LAB-00310,CMP-0040,Pharmacokinetic (PK) Study,10.78,hours (t1/2),2023-01-31,Catherine Morales,Pass
+LAB-00311,CMP-0011,Solubility Assay,0.31,mg/mL,2026-07-23,James Jefferson,Pass
+LAB-00312,CMP-0053,hERG Cardiotoxicity Screen,91.9,% inhibition at 10uM,2025-11-28,Rebecca Wilson,Fail
+LAB-00313,CMP-0096,Pharmacokinetic (PK) Study,1.39,hours (t1/2),2025-06-30,Tommy Moore,Pass
+LAB-00314,CMP-0015,hERG Cardiotoxicity Screen,68.3,% inhibition at 10uM,2024-05-17,Rebekah Gregory,Pass
+LAB-00315,CMP-0016,Cell Viability Assay,8.3,% viability,2023-06-09,Ian Johnson,Pass
+LAB-00316,CMP-0006,Enzymatic Inhibition Assay,7.84,nM (IC50),2025-06-13,Valerie Anderson,Pass
+LAB-00317,CMP-0050,Metabolic Stability (Microsomal),131.4,min (t1/2),2026-05-23,Jason Williams,Pass
+LAB-00318,CMP-0137,Cell Viability Assay,62.5,% viability,2023-10-04,Michael Gregory,Pass
+LAB-00319,CMP-0055,Cell Viability Assay,41.6,% viability,2025-10-12,Krystal Levine,Pass
+LAB-00320,CMP-0055,Solubility Assay,0.46,mg/mL,2025-05-22,Joseph Haynes,Fail
+LAB-00321,CMP-0106,Pharmacokinetic (PK) Study,23.15,hours (t1/2),2023-02-04,Danielle Reed,Pass
+LAB-00322,CMP-0141,hERG Cardiotoxicity Screen,7.3,% inhibition at 10uM,2025-06-01,Ryan Grant,Pass
+LAB-00323,CMP-0049,Cell Viability Assay,10.5,% viability,2026-08-30,Mason Moore,Pass
+LAB-00324,CMP-0098,Enzymatic Inhibition Assay,2.91,nM (IC50),2026-02-08,Sheila Jones,Fail
+LAB-00325,CMP-0132,Enzymatic Inhibition Assay,1.49,nM (IC50),2024-09-04,Wayne Williams,Pass
+LAB-00326,CMP-0145,Selectivity Panel,26.9,% selectivity,2023-08-09,Jennifer Young,Pass
+LAB-00327,CMP-0080,Pharmacokinetic (PK) Study,18.32,hours (t1/2),2024-07-19,Joan Gates,Fail
+LAB-00328,CMP-0040,Enzymatic Inhibition Assay,15.2,nM (IC50),2024-07-01,Jonathan Valdez,Pass
+LAB-00329,CMP-0019,Metabolic Stability (Microsomal),100.7,min (t1/2),2023-02-14,Justin Smith,Pass
+LAB-00330,CMP-0142,Binding Affinity (SPR),2.23,nM (Kd),2023-01-28,Lisa Torres,Pass
+LAB-00331,CMP-0101,Solubility Assay,1.67,mg/mL,2024-09-29,Michael Clements,Pass
+LAB-00332,CMP-0102,Cell Viability Assay,47.0,% viability,2024-03-01,Daniel Gibson,Pass
+LAB-00333,CMP-0098,Cell Viability Assay,65.9,% viability,2024-12-13,Kara Sandoval,Pass
+LAB-00334,CMP-0052,Enzymatic Inhibition Assay,3.9,nM (IC50),2025-07-29,Peter Walker,Fail
+LAB-00335,CMP-0047,Enzymatic Inhibition Assay,18.02,nM (IC50),2024-01-29,Tracey Carter,Pass
+LAB-00336,CMP-0077,Cell Viability Assay,62.4,% viability,2024-10-19,Amber Martin,Pass
+LAB-00337,CMP-0134,hERG Cardiotoxicity Screen,67.6,% inhibition at 10uM,2023-04-11,Mikayla Rodriguez,Pass
+LAB-00338,CMP-0011,hERG Cardiotoxicity Screen,22.8,% inhibition at 10uM,2025-02-25,Timothy Long,Pass
+LAB-00339,CMP-0004,Selectivity Panel,98.5,% selectivity,2024-07-16,Michelle Rodriguez,Fail
+LAB-00340,CMP-0027,Binding Affinity (SPR),1.63,nM (Kd),2024-05-15,Sara Chapman,Pass
+LAB-00341,CMP-0142,hERG Cardiotoxicity Screen,32.5,% inhibition at 10uM,2025-10-19,Matthew Blanchard,Pass
+LAB-00342,CMP-0022,Binding Affinity (SPR),1.78,nM (Kd),2023-04-02,Mr. Anthony Mcconnell PhD,Pass
+LAB-00343,CMP-0137,Selectivity Panel,53.8,% selectivity,2024-08-23,Tammy Thompson,Pass
+LAB-00344,CMP-0015,Binding Affinity (SPR),18.31,nM (Kd),2025-01-09,Betty Hughes,Pass
+LAB-00345,CMP-0141,Binding Affinity (SPR),1.42,nM (Kd),2025-02-10,Kathy Cruz,Fail
+LAB-00346,CMP-0052,Metabolic Stability (Microsomal),132.7,min (t1/2),2026-08-18,Pamela Hill,Fail
+LAB-00347,CMP-0018,Solubility Assay,0.66,mg/mL,2026-07-25,Jodi Anderson,Pass
+LAB-00348,CMP-0008,Enzymatic Inhibition Assay,7.5,nM (IC50),2024-05-12,Nicole Evans,Pass
+LAB-00349,CMP-0048,Enzymatic Inhibition Assay,0.45,nM (IC50),2025-07-08,Michelle Walls,Pass
+LAB-00350,CMP-0072,Metabolic Stability (Microsomal),53.0,min (t1/2),2025-03-29,Marcus Roberts,Pass
+LAB-00351,CMP-0091,hERG Cardiotoxicity Screen,76.5,% inhibition at 10uM,2024-02-04,Vicki Santos,Fail
+LAB-00352,CMP-0112,Binding Affinity (SPR),3.54,nM (Kd),2026-07-18,Melissa Morris,Pass
+LAB-00353,CMP-0146,Enzymatic Inhibition Assay,2.54,nM (IC50),2023-03-05,John Duncan,Pass
+LAB-00354,CMP-0123,Pharmacokinetic (PK) Study,7.14,hours (t1/2),2025-05-19,Paul Skinner,Pass
+LAB-00355,CMP-0031,Cell Viability Assay,24.6,% viability,2023-11-09,Rhonda Mills,Fail
+LAB-00356,CMP-0027,Binding Affinity (SPR),1.07,nM (Kd),2022-10-24,Michael Gonzalez,Pass
+LAB-00357,CMP-0118,Metabolic Stability (Microsomal),17.2,min (t1/2),2025-09-17,Dustin King,Pass
+LAB-00358,CMP-0142,Solubility Assay,0.88,mg/mL,2026-01-25,Elizabeth Molina,Pass
+LAB-00359,CMP-0016,Cell Viability Assay,51.2,% viability,2022-11-04,Ashley Parrish,Pass
+LAB-00360,CMP-0060,Pharmacokinetic (PK) Study,17.14,hours (t1/2),2025-09-01,Natalie Hoffman,Pass
+LAB-00361,CMP-0079,Metabolic Stability (Microsomal),39.3,min (t1/2),2023-08-30,Rebecca Roberts,Fail
+LAB-00362,CMP-0020,Enzymatic Inhibition Assay,1.6,nM (IC50),2025-05-15,Jasmine Frye,Pass
+LAB-00363,CMP-0026,Pharmacokinetic (PK) Study,11.67,hours (t1/2),2026-08-12,Juan Smith,Pass
+LAB-00364,CMP-0121,hERG Cardiotoxicity Screen,90.2,% inhibition at 10uM,2023-09-19,Priscilla Berg,Pass
+LAB-00365,CMP-0034,Metabolic Stability (Microsomal),134.6,min (t1/2),2026-01-11,Michele Holland,Pass
+LAB-00366,CMP-0137,Solubility Assay,4.62,mg/mL,2025-09-24,Lindsey Parsons,Pass
+LAB-00367,CMP-0044,hERG Cardiotoxicity Screen,29.7,% inhibition at 10uM,2026-07-26,Christopher Fleming,Pass
+LAB-00368,CMP-0097,Binding Affinity (SPR),1.92,nM (Kd),2023-06-17,Jose Bennett,Fail
+LAB-00369,CMP-0051,Cell Viability Assay,57.0,% viability,2024-06-04,Beverly Silva,Fail
+LAB-00370,CMP-0129,Pharmacokinetic (PK) Study,20.86,hours (t1/2),2023-09-25,Michael Moore,Pass
+LAB-00371,CMP-0022,Solubility Assay,4.2,mg/mL,2023-04-30,Anthony Randolph,Pass
+LAB-00372,CMP-0072,Solubility Assay,0.82,mg/mL,2025-03-04,Katherine Armstrong,Pass
+LAB-00373,CMP-0030,Binding Affinity (SPR),1.27,nM (Kd),2024-02-22,Emily Robinson,Pass
+LAB-00374,CMP-0113,Selectivity Panel,62.6,% selectivity,2023-06-13,Jonathan Perry,Pass
+LAB-00375,CMP-0050,Cell Viability Assay,47.7,% viability,2024-11-10,Daniel Lewis,Fail
+LAB-00376,CMP-0015,hERG Cardiotoxicity Screen,9.8,% inhibition at 10uM,2024-01-15,Daniel Goodwin,Pass
+LAB-00377,CMP-0029,Enzymatic Inhibition Assay,27.93,nM (IC50),2024-10-31,Samantha Zavala MD,Fail
+LAB-00378,CMP-0030,Solubility Assay,2.21,mg/mL,2025-05-21,Tanner Austin,Fail
+LAB-00379,CMP-0123,Binding Affinity (SPR),1.08,nM (Kd),2025-03-12,Melanie Flores,Pass
+LAB-00380,CMP-0031,Metabolic Stability (Microsomal),116.9,min (t1/2),2026-05-17,Janice Fernandez,Pass
+LAB-00381,CMP-0049,hERG Cardiotoxicity Screen,16.3,% inhibition at 10uM,2023-11-04,Samantha Brooks,Pass
+LAB-00382,CMP-0052,Pharmacokinetic (PK) Study,6.57,hours (t1/2),2025-12-03,Andrew Villanueva,Fail
+LAB-00383,CMP-0104,Metabolic Stability (Microsomal),118.2,min (t1/2),2023-06-26,Tiffany Jackson,Pass
+LAB-00384,CMP-0133,Binding Affinity (SPR),1.43,nM (Kd),2026-07-15,Adrienne Jones,Fail
+LAB-00385,CMP-0046,Cell Viability Assay,87.2,% viability,2025-05-23,Sharon Coleman,Pass
+LAB-00386,CMP-0132,Pharmacokinetic (PK) Study,12.42,hours (t1/2),2023-02-16,Michele Cherry,Fail
+LAB-00387,CMP-0052,Enzymatic Inhibition Assay,0.52,nM (IC50),2025-10-23,Teresa Burgess,Pass
+LAB-00388,CMP-0102,Binding Affinity (SPR),3.28,nM (Kd),2023-04-30,Gary Miller,Fail
+LAB-00389,CMP-0010,Metabolic Stability (Microsomal),179.7,min (t1/2),2022-12-06,Kristin Andrews,Pass
+LAB-00390,CMP-0083,Cell Viability Assay,93.9,% viability,2023-08-16,James Mccoy,Pass
+LAB-00391,CMP-0021,hERG Cardiotoxicity Screen,92.7,% inhibition at 10uM,2024-06-11,Michael Nichols,Pass
+LAB-00392,CMP-0150,Cell Viability Assay,84.5,% viability,2025-04-11,Nicole Richards,Fail
+LAB-00393,CMP-0136,Cell Viability Assay,28.1,% viability,2025-07-07,Timothy Rodriguez,Fail
+LAB-00394,CMP-0088,Selectivity Panel,15.0,% selectivity,2025-11-09,Brandon Hubbard,Pass
+LAB-00395,CMP-0052,Cell Viability Assay,25.0,% viability,2024-06-18,Matthew Wells,Pass
+LAB-00396,CMP-0068,Solubility Assay,5.33,mg/mL,2024-11-04,James Salinas,Fail
+LAB-00397,CMP-0069,Selectivity Panel,89.4,% selectivity,2024-11-22,Brianna Byrd,Fail
+LAB-00398,CMP-0052,Metabolic Stability (Microsomal),64.4,min (t1/2),2026-05-14,Monica Brooks,Pass
+LAB-00399,CMP-0056,Metabolic Stability (Microsomal),148.1,min (t1/2),2026-07-05,Kristen Martinez,Pass
+LAB-00400,CMP-0003,Metabolic Stability (Microsomal),50.6,min (t1/2),2022-09-25,Kimberly Arroyo,Pass
+LAB-00401,CMP-0126,Pharmacokinetic (PK) Study,11.92,hours (t1/2),2023-12-06,Stephanie Cooper,Pass
+LAB-00402,CMP-0126,Pharmacokinetic (PK) Study,15.54,hours (t1/2),2024-05-12,Kayla Martin,Pass
+LAB-00403,CMP-0137,Selectivity Panel,79.4,% selectivity,2023-08-06,Cheyenne White,Pass
+LAB-00404,CMP-0060,Enzymatic Inhibition Assay,17.88,nM (IC50),2025-11-28,Sarah Randolph,Pass
+LAB-00405,CMP-0010,Binding Affinity (SPR),4.1,nM (Kd),2026-09-08,Joshua Roberts,Pass
+LAB-00406,CMP-0041,Selectivity Panel,83.3,% selectivity,2022-12-25,Nicholas Freeman,Pass
+LAB-00407,CMP-0101,Selectivity Panel,34.8,% selectivity,2024-01-14,Matthew Garcia,Fail
+LAB-00408,CMP-0041,hERG Cardiotoxicity Screen,46.7,% inhibition at 10uM,2025-03-10,Emily Hayes,Pass
+LAB-00409,CMP-0001,Metabolic Stability (Microsomal),92.5,min (t1/2),2025-03-05,Kevin Cunningham,Fail
+LAB-00410,CMP-0071,Binding Affinity (SPR),0.14,nM (Kd),2024-03-03,Jeffrey Smith,Pass
+LAB-00411,CMP-0115,Enzymatic Inhibition Assay,15.62,nM (IC50),2023-09-12,Patrick Graham,Pass
+LAB-00412,CMP-0149,Solubility Assay,0.07,mg/mL,2026-01-26,Nicholas Humphrey,Pass
+LAB-00413,CMP-0133,Selectivity Panel,79.0,% selectivity,2024-07-24,Eric Arnold,Pass
+LAB-00414,CMP-0043,Solubility Assay,1.68,mg/mL,2023-06-01,Sarah Trevino,Pass
+LAB-00415,CMP-0141,Pharmacokinetic (PK) Study,14.15,hours (t1/2),2023-04-10,Deborah Mercado,Fail
+LAB-00416,CMP-0048,Binding Affinity (SPR),7.02,nM (Kd),2023-01-07,Albert Hunter,Fail
+LAB-00417,CMP-0134,hERG Cardiotoxicity Screen,81.3,% inhibition at 10uM,2022-11-02,Jennifer Lawrence,Fail
+LAB-00418,CMP-0031,Selectivity Panel,47.7,% selectivity,2026-05-03,Kimberly Lutz,Pass
+LAB-00419,CMP-0140,Binding Affinity (SPR),1.15,nM (Kd),2024-08-07,Holly Walker,Pass
+LAB-00420,CMP-0017,Cell Viability Assay,82.2,% viability,2025-10-19,Donna Marshall,Pass
+LAB-00421,CMP-0006,Binding Affinity (SPR),0.65,nM (Kd),2024-10-02,Jonathan Bates,Pass
+LAB-00422,CMP-0089,Enzymatic Inhibition Assay,1.72,nM (IC50),2026-02-07,Lisa Martin,Pass
+LAB-00423,CMP-0088,Binding Affinity (SPR),5.0,nM (Kd),2024-10-07,Christopher Fry,Pass
+LAB-00424,CMP-0039,Metabolic Stability (Microsomal),45.3,min (t1/2),2025-05-07,Nancy Webb,Pass
+LAB-00425,CMP-0068,Pharmacokinetic (PK) Study,20.54,hours (t1/2),2024-02-23,John Brown,Fail
+LAB-00426,CMP-0101,Solubility Assay,12.29,mg/mL,2024-03-10,Daniel Velez,Pass
+LAB-00427,CMP-0029,Solubility Assay,1.99,mg/mL,2024-02-27,Jesse Williams,Pass
+LAB-00428,CMP-0074,Enzymatic Inhibition Assay,1.53,nM (IC50),2026-08-19,Michael Boyd,Pass
+LAB-00429,CMP-0026,Solubility Assay,0.76,mg/mL,2026-01-11,Deborah Stephens,Pass
+LAB-00430,CMP-0091,Pharmacokinetic (PK) Study,13.06,hours (t1/2),2023-05-29,Holly Valdez,Pass
+LAB-00431,CMP-0146,Binding Affinity (SPR),5.37,nM (Kd),2026-01-19,Jamie Solomon,Pass
+LAB-00432,CMP-0125,Selectivity Panel,73.4,% selectivity,2024-10-10,Sean Tucker,Pass
+LAB-00433,CMP-0103,Pharmacokinetic (PK) Study,4.49,hours (t1/2),2024-08-21,Kathryn Taylor,Pass
+LAB-00434,CMP-0107,Cell Viability Assay,37.2,% viability,2023-05-17,Mason Lewis,Fail
+LAB-00435,CMP-0012,Binding Affinity (SPR),4.49,nM (Kd),2023-06-17,Mitchell Wilson,Fail
+LAB-00436,CMP-0130,Selectivity Panel,18.1,% selectivity,2023-08-20,Michelle Olson,Fail
+LAB-00437,CMP-0142,Binding Affinity (SPR),0.64,nM (Kd),2024-08-17,Christopher Whitaker,Pass
+LAB-00438,CMP-0061,Solubility Assay,0.65,mg/mL,2022-10-20,Kenneth Martin,Pass
+LAB-00439,CMP-0118,Solubility Assay,0.28,mg/mL,2025-03-25,Kenneth Brown,Fail
+LAB-00440,CMP-0148,Pharmacokinetic (PK) Study,20.92,hours (t1/2),2023-09-30,Tyler Greene,Pass
+LAB-00441,CMP-0149,Pharmacokinetic (PK) Study,13.71,hours (t1/2),2024-12-18,Nathan Stanley,Pass
+LAB-00442,CMP-0053,Solubility Assay,15.43,mg/mL,2023-11-05,Jerry Haney,Pass
+LAB-00443,CMP-0046,Solubility Assay,0.49,mg/mL,2026-03-07,Ronald Burke,Pass
+LAB-00444,CMP-0076,Metabolic Stability (Microsomal),8.3,min (t1/2),2025-11-21,Catherine Keller,Pass
+LAB-00445,CMP-0090,Solubility Assay,1.5,mg/mL,2023-10-09,Grace Chavez,Pass
+LAB-00446,CMP-0030,Pharmacokinetic (PK) Study,19.18,hours (t1/2),2025-01-27,James Rodriguez,Pass
+LAB-00447,CMP-0133,Metabolic Stability (Microsomal),37.1,min (t1/2),2023-07-10,Kathy Barnes,Pass
+LAB-00448,CMP-0096,Selectivity Panel,8.1,% selectivity,2023-04-24,John Mendez,Pass
+LAB-00449,CMP-0077,Pharmacokinetic (PK) Study,6.46,hours (t1/2),2022-11-13,Kathy Wilson,Pass
+LAB-00450,CMP-0013,Solubility Assay,0.22,mg/mL,2024-08-22,Larry Carey,Pass
+LAB-00451,CMP-0044,Pharmacokinetic (PK) Study,20.39,hours (t1/2),2026-04-19,Marie Boyd,Pass
+LAB-00452,CMP-0033,hERG Cardiotoxicity Screen,84.7,% inhibition at 10uM,2024-03-11,Joseph Perez,Fail
+LAB-00453,CMP-0040,Enzymatic Inhibition Assay,8.2,nM (IC50),2025-12-02,Jane Chapman,Pass
+LAB-00454,CMP-0018,Metabolic Stability (Microsomal),96.1,min (t1/2),2025-09-04,Melissa Davis,Pass
+LAB-00455,CMP-0003,Enzymatic Inhibition Assay,0.75,nM (IC50),2023-04-01,David Trevino,Fail
+LAB-00456,CMP-0063,Solubility Assay,0.46,mg/mL,2023-11-05,Jennifer Lopez,Pass
+LAB-00457,CMP-0056,Binding Affinity (SPR),3.44,nM (Kd),2025-07-19,Laura Wilson,Pass
+LAB-00458,CMP-0129,Cell Viability Assay,45.5,% viability,2022-09-28,Melissa Stewart,Pass
+LAB-00459,CMP-0120,Pharmacokinetic (PK) Study,15.97,hours (t1/2),2024-02-28,Matthew King,Pass
+LAB-00460,CMP-0030,Cell Viability Assay,17.3,% viability,2026-02-17,Jacob Hill,Pass
+LAB-00461,CMP-0092,Solubility Assay,5.0,mg/mL,2025-06-07,Jennifer Bowers,Fail
+LAB-00462,CMP-0101,Cell Viability Assay,86.6,% viability,2024-08-22,Justin King,Pass
+LAB-00463,CMP-0150,Solubility Assay,3.91,mg/mL,2023-12-09,Michael Fitzgerald,Pass
+LAB-00464,CMP-0094,hERG Cardiotoxicity Screen,83.2,% inhibition at 10uM,2026-02-17,Nicole Griffin,Fail
+LAB-00465,CMP-0008,Cell Viability Assay,26.0,% viability,2025-07-04,Daniel Morales,Pass
+LAB-00466,CMP-0033,Cell Viability Assay,28.3,% viability,2024-01-25,Melissa Mann,Pass
+LAB-00467,CMP-0115,Enzymatic Inhibition Assay,7.33,nM (IC50),2023-05-10,Abigail Davis,Pass
+LAB-00468,CMP-0117,Metabolic Stability (Microsomal),165.7,min (t1/2),2023-04-18,Jessica Brown,Pass
+LAB-00469,CMP-0110,Metabolic Stability (Microsomal),107.9,min (t1/2),2023-08-07,Andrew Cruz,Pass
+LAB-00470,CMP-0003,Metabolic Stability (Microsomal),5.9,min (t1/2),2026-08-25,Kelly Dawson,Pass
+LAB-00471,CMP-0066,Metabolic Stability (Microsomal),132.9,min (t1/2),2025-02-06,Samantha Bowman,Fail
+LAB-00472,CMP-0017,Selectivity Panel,79.2,% selectivity,2024-06-19,Matthew Lara,Pass
+LAB-00473,CMP-0096,Binding Affinity (SPR),1.03,nM (Kd),2023-11-09,Kyle Black,Fail
+LAB-00474,CMP-0138,Cell Viability Assay,45.3,% viability,2023-08-22,Andrew Allen,Pass
+LAB-00475,CMP-0111,Enzymatic Inhibition Assay,0.6,nM (IC50),2022-09-18,Zachary Chan,Pass
+LAB-00476,CMP-0061,Solubility Assay,1.1,mg/mL,2024-02-15,Kevin Holmes,Pass
+LAB-00477,CMP-0082,Cell Viability Assay,32.7,% viability,2025-08-28,Brandon Mitchell,Fail
+LAB-00478,CMP-0113,Pharmacokinetic (PK) Study,21.79,hours (t1/2),2026-01-11,Hannah Richmond,Pass
+LAB-00479,CMP-0081,Pharmacokinetic (PK) Study,11.44,hours (t1/2),2023-10-26,Cheyenne Spears,Pass
+LAB-00480,CMP-0015,Cell Viability Assay,85.5,% viability,2025-01-04,Jason Rodriguez,Pass
+LAB-00481,CMP-0048,Selectivity Panel,7.9,% selectivity,2023-01-01,Travis Pratt,Pass
+LAB-00482,CMP-0064,Metabolic Stability (Microsomal),146.3,min (t1/2),2026-07-15,Robin Andrews,Pass
+LAB-00483,CMP-0125,Pharmacokinetic (PK) Study,7.17,hours (t1/2),2025-06-27,Kristine Carrillo,Pass
+LAB-00484,CMP-0138,Metabolic Stability (Microsomal),65.7,min (t1/2),2025-09-27,Judy Murray,Fail
+LAB-00485,CMP-0085,Cell Viability Assay,94.0,% viability,2025-01-21,Brian Jones,Pass
+LAB-00486,CMP-0045,Binding Affinity (SPR),3.71,nM (Kd),2025-03-31,Megan Hall MD,Pass
+LAB-00487,CMP-0046,hERG Cardiotoxicity Screen,42.3,% inhibition at 10uM,2026-07-13,Alexandra Collier,Pass
+LAB-00488,CMP-0051,hERG Cardiotoxicity Screen,56.1,% inhibition at 10uM,2023-09-15,Michael Nicholson,Pass
+LAB-00489,CMP-0122,Enzymatic Inhibition Assay,0.92,nM (IC50),2023-01-07,Karen Gomez,Pass
+LAB-00490,CMP-0117,Selectivity Panel,44.6,% selectivity,2026-04-15,Travis Vega,Fail
+LAB-00491,CMP-0130,Solubility Assay,4.63,mg/mL,2026-05-08,Mr. Nicolas Salas II,Fail
+LAB-00492,CMP-0010,Cell Viability Assay,21.2,% viability,2023-07-11,Luke Moore,Pass
+LAB-00493,CMP-0012,Selectivity Panel,95.8,% selectivity,2023-02-20,Megan Alvarado,Fail
+LAB-00494,CMP-0031,Enzymatic Inhibition Assay,1.51,nM (IC50),2025-03-02,Kimberly Williams,Fail
+LAB-00495,CMP-0115,hERG Cardiotoxicity Screen,70.0,% inhibition at 10uM,2024-08-22,Katherine Galloway,Pass
+LAB-00496,CMP-0104,Selectivity Panel,90.4,% selectivity,2026-04-19,Katherine Joyce,Pass
+LAB-00497,CMP-0094,hERG Cardiotoxicity Screen,26.9,% inhibition at 10uM,2026-05-17,Daniel Ray,Pass
+LAB-00498,CMP-0027,Selectivity Panel,6.2,% selectivity,2022-12-06,Karen Fernandez,Pass
+LAB-00499,CMP-0093,hERG Cardiotoxicity Screen,5.0,% inhibition at 10uM,2024-09-20,Michael Thompson,Fail
+LAB-00500,CMP-0114,Metabolic Stability (Microsomal),112.7,min (t1/2),2026-08-13,Julia Norris,Fail
+LAB-00501,CMP-0087,Metabolic Stability (Microsomal),23.8,min (t1/2),2022-10-05,Kevin Nguyen,Pass
+LAB-00502,CMP-0071,Selectivity Panel,72.3,% selectivity,2025-02-28,Joshua Young,Fail
+LAB-00503,CMP-0007,Selectivity Panel,80.5,% selectivity,2024-08-06,Holly Jimenez,Pass
+LAB-00504,CMP-0035,Binding Affinity (SPR),2.2,nM (Kd),2023-07-22,Jacqueline Dickerson,Pass
+LAB-00505,CMP-0074,Enzymatic Inhibition Assay,0.39,nM (IC50),2023-10-31,Carlos Johnston,Fail
+LAB-00506,CMP-0007,Cell Viability Assay,58.0,% viability,2023-08-17,Devin Young,Fail
+LAB-00507,CMP-0122,Solubility Assay,0.68,mg/mL,2024-06-10,Charles Haley,Pass
+LAB-00508,CMP-0067,Metabolic Stability (Microsomal),153.8,min (t1/2),2023-04-24,Cassandra Porter,Pass
+LAB-00509,CMP-0007,Binding Affinity (SPR),1.95,nM (Kd),2026-09-10,Kelly Le,Pass
+LAB-00510,CMP-0054,Metabolic Stability (Microsomal),135.9,min (t1/2),2025-11-07,Justin Bradley,Pass
+LAB-00511,CMP-0026,Metabolic Stability (Microsomal),7.4,min (t1/2),2024-04-21,Amy Cervantes,Pass
+LAB-00512,CMP-0110,Selectivity Panel,29.6,% selectivity,2024-08-13,Joanna Cook,Pass
+LAB-00513,CMP-0028,Binding Affinity (SPR),0.34,nM (Kd),2024-02-27,Tara Scott,Pass
+LAB-00514,CMP-0017,Cell Viability Assay,68.6,% viability,2022-10-16,Sean Mccarty,Pass
+LAB-00515,CMP-0028,Enzymatic Inhibition Assay,3.11,nM (IC50),2023-07-05,Mariah Thompson,Pass
+LAB-00516,CMP-0020,Pharmacokinetic (PK) Study,19.02,hours (t1/2),2025-10-31,Michael Freeman,Fail
+LAB-00517,CMP-0010,Selectivity Panel,96.8,% selectivity,2025-08-28,Jane Mitchell,Fail
+LAB-00518,CMP-0052,Pharmacokinetic (PK) Study,2.84,hours (t1/2),2025-03-28,Christopher Morton,Pass
+LAB-00519,CMP-0001,Binding Affinity (SPR),2.58,nM (Kd),2024-01-23,Laura Sweeney,Fail
+LAB-00520,CMP-0053,Metabolic Stability (Microsomal),113.7,min (t1/2),2022-12-31,Darren Stewart,Fail
+LAB-00521,CMP-0098,Metabolic Stability (Microsomal),76.1,min (t1/2),2023-11-17,Matthew Nelson,Fail
+LAB-00522,CMP-0051,Pharmacokinetic (PK) Study,21.65,hours (t1/2),2024-06-28,Heidi Matthews,Pass
+LAB-00523,CMP-0037,hERG Cardiotoxicity Screen,10.9,% inhibition at 10uM,2026-07-28,Clinton Johnson,Pass
+LAB-00524,CMP-0068,Cell Viability Assay,26.1,% viability,2025-08-15,Teresa Haynes,Fail
+LAB-00525,CMP-0149,Metabolic Stability (Microsomal),132.8,min (t1/2),2023-01-12,Brian Brown,Pass
+LAB-00526,CMP-0051,hERG Cardiotoxicity Screen,3.9,% inhibition at 10uM,2026-03-23,Allison Sanders,Pass
+LAB-00527,CMP-0080,Enzymatic Inhibition Assay,5.98,nM (IC50),2025-10-08,Dennis Moore,Pass
+LAB-00528,CMP-0081,Metabolic Stability (Microsomal),166.2,min (t1/2),2025-05-01,Ellen Wright,Fail
+LAB-00529,CMP-0081,Pharmacokinetic (PK) Study,16.43,hours (t1/2),2023-11-06,Bonnie Roberson,Fail
+LAB-00530,CMP-0139,Cell Viability Assay,36.8,% viability,2022-10-29,Shannon Nguyen,Pass
+LAB-00531,CMP-0053,Cell Viability Assay,29.6,% viability,2024-08-13,Kimberly Nelson,Pass
+LAB-00532,CMP-0073,Solubility Assay,2.33,mg/mL,2024-06-28,Melissa Thompson,Pass
+LAB-00533,CMP-0086,hERG Cardiotoxicity Screen,9.3,% inhibition at 10uM,2025-02-06,Madison Elliott,Pass
+LAB-00534,CMP-0134,Selectivity Panel,96.2,% selectivity,2024-10-21,Emily Reed,Pass
+LAB-00535,CMP-0083,Selectivity Panel,13.7,% selectivity,2024-11-13,Jessica Diaz,Fail
+LAB-00536,CMP-0147,hERG Cardiotoxicity Screen,38.8,% inhibition at 10uM,2023-10-02,Aaron Ochoa,Pass
+LAB-00537,CMP-0049,Metabolic Stability (Microsomal),50.8,min (t1/2),2026-02-07,John Smith,Fail
+LAB-00538,CMP-0075,Solubility Assay,4.04,mg/mL,2026-05-26,Karen Smith,Pass
+LAB-00539,CMP-0047,Enzymatic Inhibition Assay,10.96,nM (IC50),2024-06-07,David Smith,Pass
+LAB-00540,CMP-0113,hERG Cardiotoxicity Screen,31.1,% inhibition at 10uM,2024-03-16,Justin Foster,Pass
+LAB-00541,CMP-0064,Enzymatic Inhibition Assay,1.06,nM (IC50),2023-05-14,Jean Gray,Pass
+LAB-00542,CMP-0066,hERG Cardiotoxicity Screen,32.1,% inhibition at 10uM,2023-10-06,David Duran,Pass
+LAB-00543,CMP-0104,Selectivity Panel,16.5,% selectivity,2026-05-08,Melinda Mitchell,Pass
+LAB-00544,CMP-0097,Cell Viability Assay,87.8,% viability,2025-09-06,Jennifer Castaneda,Pass
+LAB-00545,CMP-0048,Binding Affinity (SPR),0.75,nM (Kd),2023-06-11,Mark Williamson,Fail
+LAB-00546,CMP-0148,Selectivity Panel,1.9,% selectivity,2023-10-20,Chelsea Smith,Pass
+LAB-00547,CMP-0011,Solubility Assay,0.75,mg/mL,2022-11-29,Charlene Garcia,Pass
+LAB-00548,CMP-0008,Metabolic Stability (Microsomal),22.0,min (t1/2),2023-10-16,Monica Hall,Pass
+LAB-00549,CMP-0058,Cell Viability Assay,92.9,% viability,2023-04-25,Glenn Collins DDS,Fail
+LAB-00550,CMP-0145,Binding Affinity (SPR),1.02,nM (Kd),2026-09-14,Rick Rivera,Pass
+LAB-00551,CMP-0122,Metabolic Stability (Microsomal),12.1,min (t1/2),2026-01-31,Amy Rowe,Pass
+LAB-00552,CMP-0085,Solubility Assay,2.53,mg/mL,2022-12-31,Corey Skinner,Pass
+LAB-00553,CMP-0131,Pharmacokinetic (PK) Study,23.13,hours (t1/2),2025-12-24,Barbara Tate,Fail
+LAB-00554,CMP-0001,Metabolic Stability (Microsomal),30.0,min (t1/2),2023-09-16,Jessica Rojas,Fail
+LAB-00555,CMP-0008,Enzymatic Inhibition Assay,12.2,nM (IC50),2022-11-05,Ray Boyd,Fail
+LAB-00556,CMP-0135,Binding Affinity (SPR),0.49,nM (Kd),2026-08-21,Michael Collins,Pass
+LAB-00557,CMP-0005,Binding Affinity (SPR),0.81,nM (Kd),2024-01-02,Amanda Pineda,Fail
+LAB-00558,CMP-0042,Enzymatic Inhibition Assay,2.31,nM (IC50),2024-10-17,Mark Gonzalez,Pass
+LAB-00559,CMP-0068,Binding Affinity (SPR),2.38,nM (Kd),2026-04-05,Claudia Rodriguez,Pass
+LAB-00560,CMP-0124,Selectivity Panel,42.9,% selectivity,2025-03-30,Christopher Hill,Pass
+LAB-00561,CMP-0045,Cell Viability Assay,24.8,% viability,2023-03-11,Alexa Williams,Pass
+LAB-00562,CMP-0134,Binding Affinity (SPR),0.47,nM (Kd),2025-11-04,Kyle Watson,Pass
+LAB-00563,CMP-0019,Selectivity Panel,49.8,% selectivity,2023-01-26,Brandon Montgomery,Fail
+LAB-00564,CMP-0087,Selectivity Panel,82.8,% selectivity,2026-06-08,Lori Brown DDS,Pass
+LAB-00565,CMP-0103,Solubility Assay,11.21,mg/mL,2025-07-07,Beth Hall,Pass
+LAB-00566,CMP-0001,hERG Cardiotoxicity Screen,15.6,% inhibition at 10uM,2026-08-21,Nicole Trujillo,Pass
+LAB-00567,CMP-0028,Cell Viability Assay,94.3,% viability,2024-06-19,Michael Howard,Pass
+LAB-00568,CMP-0041,Metabolic Stability (Microsomal),170.7,min (t1/2),2023-04-02,Karina Kim,Fail
+LAB-00569,CMP-0129,Binding Affinity (SPR),3.92,nM (Kd),2023-11-22,Cheryl Lopez,Pass
+LAB-00570,CMP-0148,Binding Affinity (SPR),1.74,nM (Kd),2024-02-07,Denise Guerra,Pass
+LAB-00571,CMP-0057,hERG Cardiotoxicity Screen,35.8,% inhibition at 10uM,2026-05-15,Andrea Moore,Pass
+LAB-00572,CMP-0025,Enzymatic Inhibition Assay,12.16,nM (IC50),2023-11-23,Jacob Smith,Pass
+LAB-00573,CMP-0129,Enzymatic Inhibition Assay,4.42,nM (IC50),2025-04-06,Cody Smith,Pass
+LAB-00574,CMP-0014,Pharmacokinetic (PK) Study,11.94,hours (t1/2),2026-02-19,Cynthia Le,Pass
+LAB-00575,CMP-0065,Enzymatic Inhibition Assay,14.85,nM (IC50),2025-05-06,Jasmine Warren,Pass
+LAB-00576,CMP-0038,hERG Cardiotoxicity Screen,36.3,% inhibition at 10uM,2024-09-13,Lisa Morris,Pass
+LAB-00577,CMP-0021,hERG Cardiotoxicity Screen,30.3,% inhibition at 10uM,2025-04-10,Joseph Jones,Pass
+LAB-00578,CMP-0098,Metabolic Stability (Microsomal),80.8,min (t1/2),2026-01-19,Shane Harris,Pass
+LAB-00579,CMP-0141,Selectivity Panel,1.8,% selectivity,2024-08-26,Kenneth Huff,Pass
+LAB-00580,CMP-0040,Selectivity Panel,20.1,% selectivity,2025-05-05,Meredith Scott,Pass
+LAB-00581,CMP-0088,Metabolic Stability (Microsomal),170.8,min (t1/2),2024-03-05,Andrea Conrad,Pass
+LAB-00582,CMP-0129,Enzymatic Inhibition Assay,34.63,nM (IC50),2023-07-19,Steve Miller PhD,Pass
+LAB-00583,CMP-0098,Solubility Assay,9.38,mg/mL,2022-12-15,Teresa Perry,Pass
+LAB-00584,CMP-0015,hERG Cardiotoxicity Screen,81.4,% inhibition at 10uM,2024-03-09,Samantha Baker,Pass
+LAB-00585,CMP-0006,Cell Viability Assay,16.4,% viability,2022-11-16,Eric Blackburn,Pass
+LAB-00586,CMP-0050,Solubility Assay,5.78,mg/mL,2026-07-21,Neil Schmidt,Pass
+LAB-00587,CMP-0034,Solubility Assay,0.2,mg/mL,2023-06-21,Danielle Garrett,Pass
+LAB-00588,CMP-0047,hERG Cardiotoxicity Screen,79.7,% inhibition at 10uM,2023-06-06,Jennifer Garcia,Pass
+LAB-00589,CMP-0142,hERG Cardiotoxicity Screen,40.3,% inhibition at 10uM,2025-04-07,Jimmy Ortega,Fail
+LAB-00590,CMP-0104,Binding Affinity (SPR),4.17,nM (Kd),2026-03-29,Christopher Morales,Pass
+LAB-00591,CMP-0139,Metabolic Stability (Microsomal),45.4,min (t1/2),2024-01-23,Zachary Ramos,Pass
+LAB-00592,CMP-0053,Pharmacokinetic (PK) Study,20.02,hours (t1/2),2024-02-14,William Nguyen,Pass
+LAB-00593,CMP-0051,Selectivity Panel,18.4,% selectivity,2024-03-13,Jessica Swanson,Pass
+LAB-00594,CMP-0080,hERG Cardiotoxicity Screen,3.3,% inhibition at 10uM,2025-02-22,Cindy Cannon,Pass
+LAB-00595,CMP-0099,Metabolic Stability (Microsomal),11.7,min (t1/2),2026-06-01,Tyrone West,Pass
+LAB-00596,CMP-0118,Enzymatic Inhibition Assay,3.63,nM (IC50),2024-04-19,Victoria Larson,Pass
+LAB-00597,CMP-0126,Binding Affinity (SPR),4.8,nM (Kd),2024-10-12,Elizabeth Evans MD,Pass
+LAB-00598,CMP-0012,Binding Affinity (SPR),1.31,nM (Kd),2026-02-18,Rodney Norris,Pass
+LAB-00599,CMP-0118,Selectivity Panel,7.9,% selectivity,2023-10-25,Kristie Howe,Pass
+LAB-00600,CMP-0041,Solubility Assay,5.05,mg/mL,2023-05-01,Henry Taylor,Pass
+LAB-00601,CMP-0066,Pharmacokinetic (PK) Study,2.48,hours (t1/2),2024-03-06,Crystal Shepherd,Pass
+LAB-00602,CMP-0030,Pharmacokinetic (PK) Study,6.07,hours (t1/2),2023-01-30,Thomas Navarro,Pass
+LAB-00603,CMP-0046,Selectivity Panel,62.0,% selectivity,2025-08-09,Carrie Petersen,Fail
+LAB-00604,CMP-0076,hERG Cardiotoxicity Screen,61.5,% inhibition at 10uM,2025-06-20,Susan Larson,Pass
+LAB-00605,CMP-0054,Pharmacokinetic (PK) Study,14.02,hours (t1/2),2023-11-30,Laura Miller,Pass
+LAB-00606,CMP-0063,Solubility Assay,1.93,mg/mL,2022-12-08,Hannah Montoya,Pass
+LAB-00607,CMP-0060,Binding Affinity (SPR),0.2,nM (Kd),2024-05-18,Sheila Perez,Pass
+LAB-00608,CMP-0019,hERG Cardiotoxicity Screen,29.1,% inhibition at 10uM,2025-04-28,Alexandra Waters,Pass
+LAB-00609,CMP-0054,Solubility Assay,0.47,mg/mL,2024-03-29,Andrew Fernandez,Pass
+LAB-00610,CMP-0033,hERG Cardiotoxicity Screen,98.7,% inhibition at 10uM,2023-04-24,Connie Williams,Pass
+LAB-00611,CMP-0059,Cell Viability Assay,18.2,% viability,2025-08-21,Jeremy Larson,Pass
+LAB-00612,CMP-0142,Cell Viability Assay,5.5,% viability,2024-09-23,Dylan Foster,Pass
+LAB-00613,CMP-0072,Binding Affinity (SPR),2.5,nM (Kd),2023-03-29,Kenneth Williams,Pass
+LAB-00614,CMP-0023,Metabolic Stability (Microsomal),40.8,min (t1/2),2024-04-22,Jonathan Ayala,Pass
+LAB-00615,CMP-0097,Metabolic Stability (Microsomal),18.4,min (t1/2),2023-03-27,Justin Freeman,Fail
+LAB-00616,CMP-0103,Pharmacokinetic (PK) Study,10.26,hours (t1/2),2025-04-27,Luis Fitzgerald,Fail
+LAB-00617,CMP-0024,Binding Affinity (SPR),0.98,nM (Kd),2023-09-12,Ricardo Morris,Pass
+LAB-00618,CMP-0069,Selectivity Panel,94.3,% selectivity,2026-05-29,Michael Henderson,Fail
+LAB-00619,CMP-0134,Pharmacokinetic (PK) Study,21.65,hours (t1/2),2024-02-08,Kirk Johnson,Pass
+LAB-00620,CMP-0101,Selectivity Panel,75.8,% selectivity,2023-12-07,Lisa Branch MD,Pass
+LAB-00621,CMP-0148,Pharmacokinetic (PK) Study,10.88,hours (t1/2),2023-04-18,Robert Gonzalez,Pass
+LAB-00622,CMP-0065,Enzymatic Inhibition Assay,1.77,nM (IC50),2024-03-16,Sarah Rodriguez,Fail
+LAB-00623,CMP-0087,hERG Cardiotoxicity Screen,85.9,% inhibition at 10uM,2022-12-06,Tammy Melton,Fail
+LAB-00624,CMP-0011,Pharmacokinetic (PK) Study,21.32,hours (t1/2),2025-12-28,Michael Rodriguez,Pass
+LAB-00625,CMP-0133,Pharmacokinetic (PK) Study,12.13,hours (t1/2),2024-07-06,Daniel Medina,Pass
+LAB-00626,CMP-0088,Cell Viability Assay,85.0,% viability,2023-07-12,Deanna Webb,Fail
+LAB-00627,CMP-0075,Metabolic Stability (Microsomal),32.4,min (t1/2),2025-08-18,Michael Smith,Pass
+LAB-00628,CMP-0055,Metabolic Stability (Microsomal),71.6,min (t1/2),2025-01-16,Amanda Jackson,Pass
+LAB-00629,CMP-0001,Selectivity Panel,12.6,% selectivity,2023-11-06,Lisa Brown,Pass
+LAB-00630,CMP-0065,Enzymatic Inhibition Assay,4.29,nM (IC50),2025-04-30,James Nelson,Pass
+LAB-00631,CMP-0059,Solubility Assay,1.83,mg/mL,2026-02-13,Sharon Smith,Pass
+LAB-00632,CMP-0048,Solubility Assay,2.25,mg/mL,2026-03-07,Crystal James,Pass
+LAB-00633,CMP-0073,Binding Affinity (SPR),5.55,nM (Kd),2026-08-13,Ethan Delacruz,Fail
+LAB-00634,CMP-0112,Enzymatic Inhibition Assay,7.34,nM (IC50),2024-11-02,Jonathan Ellis,Pass
+LAB-00635,CMP-0038,Binding Affinity (SPR),8.59,nM (Kd),2026-06-01,David Moreno,Pass
+LAB-00636,CMP-0022,Solubility Assay,5.37,mg/mL,2024-01-18,Christopher Reed,Pass
+LAB-00637,CMP-0014,Cell Viability Assay,33.6,% viability,2024-02-13,Cynthia Good,Pass
+LAB-00638,CMP-0147,hERG Cardiotoxicity Screen,28.8,% inhibition at 10uM,2024-09-18,Lori Johns,Fail
+LAB-00639,CMP-0095,Enzymatic Inhibition Assay,0.99,nM (IC50),2026-04-09,Alyssa Peters,Pass
+LAB-00640,CMP-0077,hERG Cardiotoxicity Screen,26.3,% inhibition at 10uM,2023-11-01,Steven Sandoval,Pass
+LAB-00641,CMP-0078,Solubility Assay,0.16,mg/mL,2023-01-24,Tyler Salazar,Pass
+LAB-00642,CMP-0099,Pharmacokinetic (PK) Study,1.98,hours (t1/2),2025-03-19,David Hernandez,Pass
+LAB-00643,CMP-0041,Selectivity Panel,7.5,% selectivity,2026-08-04,Erin Daniels,Pass
+LAB-00644,CMP-0072,Binding Affinity (SPR),1.88,nM (Kd),2023-07-16,Joshua Mcbride,Fail
+LAB-00645,CMP-0086,Metabolic Stability (Microsomal),109.6,min (t1/2),2026-02-28,Michael Mills,Fail
+LAB-00646,CMP-0147,Binding Affinity (SPR),1.32,nM (Kd),2023-04-03,Vanessa Thomas DVM,Pass
+LAB-00647,CMP-0097,Pharmacokinetic (PK) Study,13.95,hours (t1/2),2026-05-18,Justin Fry,Fail
+LAB-00648,CMP-0077,Enzymatic Inhibition Assay,10.5,nM (IC50),2023-03-09,Shawn Acosta,Pass
+LAB-00649,CMP-0015,Pharmacokinetic (PK) Study,7.81,hours (t1/2),2025-10-09,Jennifer Jenkins,Fail
+LAB-00650,CMP-0112,Enzymatic Inhibition Assay,2.4,nM (IC50),2024-06-25,Stephanie Mahoney,Pass
+LAB-00651,CMP-0110,hERG Cardiotoxicity Screen,14.4,% inhibition at 10uM,2023-10-22,Ashley Lopez,Pass
+LAB-00652,CMP-0100,Enzymatic Inhibition Assay,12.69,nM (IC50),2025-10-05,Debra Bradley,Pass
+LAB-00653,CMP-0039,Enzymatic Inhibition Assay,4.99,nM (IC50),2023-08-21,Michael Howard,Pass
+LAB-00654,CMP-0061,Enzymatic Inhibition Assay,3.2,nM (IC50),2025-06-18,Jonathan Jacobs,Fail
+LAB-00655,CMP-0003,Cell Viability Assay,35.0,% viability,2025-07-23,Samuel Henry,Pass
+LAB-00656,CMP-0119,Metabolic Stability (Microsomal),36.8,min (t1/2),2023-04-06,Andrew Duran,Fail
+LAB-00657,CMP-0003,hERG Cardiotoxicity Screen,1.5,% inhibition at 10uM,2022-10-09,Jason Newton,Pass
+LAB-00658,CMP-0083,Pharmacokinetic (PK) Study,6.44,hours (t1/2),2026-08-30,Andrea Ho,Fail
+LAB-00659,CMP-0115,Enzymatic Inhibition Assay,17.93,nM (IC50),2026-08-27,Katherine Nguyen,Pass
+LAB-00660,CMP-0093,Cell Viability Assay,28.6,% viability,2024-07-17,Jared Williams,Pass
+LAB-00661,CMP-0123,hERG Cardiotoxicity Screen,90.1,% inhibition at 10uM,2025-08-26,Erik Carr,Pass
+LAB-00662,CMP-0113,Pharmacokinetic (PK) Study,16.81,hours (t1/2),2025-09-06,Kelly Liu,Pass
+LAB-00663,CMP-0131,Cell Viability Assay,19.8,% viability,2025-11-09,Jocelyn Wilcox,Pass
+LAB-00664,CMP-0002,Cell Viability Assay,72.8,% viability,2022-11-18,Kelly Foster PhD,Pass
+LAB-00665,CMP-0096,Cell Viability Assay,34.7,% viability,2024-12-10,Lydia Williams,Pass
+LAB-00666,CMP-0024,Binding Affinity (SPR),4.5,nM (Kd),2023-11-17,Eric Carey,Pass
+LAB-00667,CMP-0020,Binding Affinity (SPR),2.72,nM (Kd),2024-07-22,Louis Brown,Pass
+LAB-00668,CMP-0103,Metabolic Stability (Microsomal),119.0,min (t1/2),2024-10-11,Ronald Hayes,Pass
+LAB-00669,CMP-0103,Enzymatic Inhibition Assay,50.97,nM (IC50),2025-08-08,Richard Pace,Pass
+LAB-00670,CMP-0077,Binding Affinity (SPR),0.29,nM (Kd),2025-06-30,Jason Hayes,Pass
+LAB-00671,CMP-0017,Selectivity Panel,69.9,% selectivity,2023-06-06,Michelle Harris,Pass
+LAB-00672,CMP-0004,Enzymatic Inhibition Assay,11.87,nM (IC50),2024-07-12,Michael Meadows,Fail
+LAB-00673,CMP-0054,Cell Viability Assay,71.8,% viability,2025-11-23,Becky Wilson,Pass
+LAB-00674,CMP-0109,Selectivity Panel,49.1,% selectivity,2024-07-05,Joseph Cruz,Fail
+LAB-00675,CMP-0136,Cell Viability Assay,32.6,% viability,2025-11-15,Tiffany Gray,Pass
+LAB-00676,CMP-0067,Cell Viability Assay,80.2,% viability,2024-03-26,Susan Cunningham,Pass
+LAB-00677,CMP-0127,Cell Viability Assay,66.7,% viability,2025-05-07,Sean White,Pass
+LAB-00678,CMP-0056,Binding Affinity (SPR),4.0,nM (Kd),2025-07-23,Eric Mack,Pass
+LAB-00679,CMP-0133,hERG Cardiotoxicity Screen,69.6,% inhibition at 10uM,2024-06-30,Autumn Anderson,Pass
+LAB-00680,CMP-0100,Enzymatic Inhibition Assay,18.97,nM (IC50),2023-07-11,Dawn Ellis,Fail
+LAB-00681,CMP-0042,Pharmacokinetic (PK) Study,1.61,hours (t1/2),2026-02-17,Abigail Andrade,Pass
+LAB-00682,CMP-0003,hERG Cardiotoxicity Screen,50.7,% inhibition at 10uM,2023-08-31,Karen Ortiz,Pass
+LAB-00683,CMP-0095,Solubility Assay,5.12,mg/mL,2023-01-11,Dana Kelley,Pass
+LAB-00684,CMP-0110,Cell Viability Assay,14.2,% viability,2025-03-10,Samantha Williams,Fail
+LAB-00685,CMP-0035,Enzymatic Inhibition Assay,19.55,nM (IC50),2023-04-22,Amanda Nash,Fail
+LAB-00686,CMP-0144,Pharmacokinetic (PK) Study,3.96,hours (t1/2),2025-05-18,Elizabeth Knapp,Pass
+LAB-00687,CMP-0025,Pharmacokinetic (PK) Study,10.97,hours (t1/2),2022-11-28,Christopher Powers,Pass
+LAB-00688,CMP-0035,Selectivity Panel,84.9,% selectivity,2025-02-26,Linda Cobb,Pass
+LAB-00689,CMP-0053,hERG Cardiotoxicity Screen,21.0,% inhibition at 10uM,2023-06-04,Kent Huynh,Pass
+LAB-00690,CMP-0114,Cell Viability Assay,76.9,% viability,2023-01-31,Jacob Gray,Pass
+LAB-00691,CMP-0146,Solubility Assay,1.31,mg/mL,2022-12-25,Joshua Carter,Fail
+LAB-00692,CMP-0028,Metabolic Stability (Microsomal),104.3,min (t1/2),2023-04-02,Denise Rose,Pass
+LAB-00693,CMP-0127,Selectivity Panel,8.3,% selectivity,2024-10-22,Lisa Rodriguez,Pass
+LAB-00694,CMP-0040,Metabolic Stability (Microsomal),117.2,min (t1/2),2025-08-18,Victoria Webb,Pass
+LAB-00695,CMP-0002,Selectivity Panel,13.5,% selectivity,2025-06-19,Victoria Mitchell,Pass
+LAB-00696,CMP-0010,Pharmacokinetic (PK) Study,13.62,hours (t1/2),2025-02-22,Joseph Carney,Fail
+LAB-00697,CMP-0121,Enzymatic Inhibition Assay,13.86,nM (IC50),2024-02-16,Justin Stone,Pass
+LAB-00698,CMP-0096,Pharmacokinetic (PK) Study,12.91,hours (t1/2),2025-03-28,Christopher Lynch DDS,Fail
+LAB-00699,CMP-0068,Selectivity Panel,56.4,% selectivity,2026-08-17,Alexander Garrett,Pass
+LAB-00700,CMP-0039,Selectivity Panel,33.4,% selectivity,2023-03-09,Rebecca Duarte,Fail
+LAB-00701,CMP-0041,Metabolic Stability (Microsomal),71.8,min (t1/2),2024-05-14,Justin Walsh,Pass
+LAB-00702,CMP-0053,Enzymatic Inhibition Assay,5.93,nM (IC50),2022-10-04,Douglas Tyler,Pass
+LAB-00703,CMP-0113,Pharmacokinetic (PK) Study,12.01,hours (t1/2),2023-12-11,Erica Smith,Pass
+LAB-00704,CMP-0101,Selectivity Panel,25.1,% selectivity,2025-06-15,Nathaniel Gilbert,Fail
+LAB-00705,CMP-0143,Metabolic Stability (Microsomal),173.0,min (t1/2),2022-10-30,Gary Morgan,Pass
+LAB-00706,CMP-0055,Cell Viability Assay,86.1,% viability,2025-05-26,Rebecca Brewer,Pass
+LAB-00707,CMP-0099,Solubility Assay,3.78,mg/mL,2024-08-20,Stephanie Herrera,Fail
+LAB-00708,CMP-0127,Binding Affinity (SPR),0.92,nM (Kd),2024-01-20,Jennifer Newton,Pass
+LAB-00709,CMP-0059,Solubility Assay,5.17,mg/mL,2026-01-19,Nathaniel Stewart,Pass
+LAB-00710,CMP-0004,Cell Viability Assay,21.1,% viability,2024-11-08,Michael Marsh,Pass
+LAB-00711,CMP-0003,Binding Affinity (SPR),6.89,nM (Kd),2026-04-06,Wayne Ramirez,Pass
+LAB-00712,CMP-0112,Metabolic Stability (Microsomal),167.2,min (t1/2),2022-11-02,Miss Sarah Duncan,Fail
+LAB-00713,CMP-0129,Enzymatic Inhibition Assay,15.59,nM (IC50),2024-04-08,Sharon Walton,Fail
+LAB-00714,CMP-0035,Pharmacokinetic (PK) Study,9.88,hours (t1/2),2025-07-13,Andres Gutierrez,Pass
+LAB-00715,CMP-0133,Selectivity Panel,24.6,% selectivity,2024-09-12,Jesse Sampson,Pass
+LAB-00716,CMP-0038,Pharmacokinetic (PK) Study,19.27,hours (t1/2),2023-07-30,Brian Glover,Fail
+LAB-00717,CMP-0136,Selectivity Panel,37.9,% selectivity,2025-10-27,Jill Johnson,Pass
+LAB-00718,CMP-0053,Solubility Assay,0.32,mg/mL,2024-08-22,Cheryl Mclean,Pass
+LAB-00719,CMP-0140,Enzymatic Inhibition Assay,7.37,nM (IC50),2025-08-22,Patricia Thomas,Pass
+LAB-00720,CMP-0129,Metabolic Stability (Microsomal),99.0,min (t1/2),2026-03-13,Teresa Rhodes,Pass
+LAB-00721,CMP-0043,Binding Affinity (SPR),2.94,nM (Kd),2023-03-30,Julia Reeves,Fail
+LAB-00722,CMP-0077,Selectivity Panel,75.9,% selectivity,2024-10-19,Timothy Mcdaniel,Pass
+LAB-00723,CMP-0112,Selectivity Panel,58.1,% selectivity,2025-02-01,John Williams,Fail
+LAB-00724,CMP-0133,Selectivity Panel,33.7,% selectivity,2024-10-17,Emily Lane,Pass
+LAB-00725,CMP-0113,Cell Viability Assay,78.6,% viability,2023-12-17,Erica Lee,Pass
+LAB-00726,CMP-0072,Enzymatic Inhibition Assay,8.22,nM (IC50),2023-10-26,Jeremy Wilson,Fail
+LAB-00727,CMP-0059,Metabolic Stability (Microsomal),83.4,min (t1/2),2023-04-24,Adrian Dean,Fail
+LAB-00728,CMP-0065,Enzymatic Inhibition Assay,3.85,nM (IC50),2024-10-07,Gregory Flores,Pass
+LAB-00729,CMP-0093,hERG Cardiotoxicity Screen,2.7,% inhibition at 10uM,2023-04-12,Diane Sanchez,Pass
+LAB-00730,CMP-0071,Binding Affinity (SPR),9.49,nM (Kd),2022-12-31,Gina Wallace,Pass
+LAB-00731,CMP-0093,Selectivity Panel,30.7,% selectivity,2023-03-26,Michael Rodriguez,Pass
+LAB-00732,CMP-0035,Solubility Assay,1.09,mg/mL,2022-12-05,Christopher Carlson,Pass
+LAB-00733,CMP-0013,Binding Affinity (SPR),3.14,nM (Kd),2025-01-30,Melissa Jensen,Pass
+LAB-00734,CMP-0083,Solubility Assay,1.63,mg/mL,2023-12-18,Michelle Lambert,Pass
+LAB-00735,CMP-0099,Selectivity Panel,91.2,% selectivity,2024-11-04,Nicole Owens,Pass
+LAB-00736,CMP-0042,Solubility Assay,8.95,mg/mL,2023-03-29,Tamara Mcdonald,Pass
+LAB-00737,CMP-0108,Cell Viability Assay,60.9,% viability,2024-07-14,Michelle Marshall,Fail
+LAB-00738,CMP-0060,Binding Affinity (SPR),0.4,nM (Kd),2023-08-22,Scott Jensen,Fail
+LAB-00739,CMP-0006,Solubility Assay,0.4,mg/mL,2026-05-12,Michael Ortega,Pass
+LAB-00740,CMP-0145,hERG Cardiotoxicity Screen,15.7,% inhibition at 10uM,2025-11-12,Jody Johnson,Pass
+LAB-00741,CMP-0055,Solubility Assay,1.23,mg/mL,2024-08-11,Joel Jackson,Pass
+LAB-00742,CMP-0103,Enzymatic Inhibition Assay,4.34,nM (IC50),2025-10-13,Bethany Garcia,Pass
+LAB-00743,CMP-0051,Selectivity Panel,30.5,% selectivity,2025-12-24,Erika Banks,Fail
+LAB-00744,CMP-0104,Metabolic Stability (Microsomal),135.4,min (t1/2),2025-11-17,Jennifer Gutierrez,Fail
+LAB-00745,CMP-0011,Binding Affinity (SPR),2.63,nM (Kd),2025-03-12,Valerie Reyes,Fail
+LAB-00746,CMP-0146,Metabolic Stability (Microsomal),36.0,min (t1/2),2024-01-28,Leslie Mueller,Fail
+LAB-00747,CMP-0055,Binding Affinity (SPR),4.9,nM (Kd),2024-06-14,Kimberly Young,Pass
+LAB-00748,CMP-0133,Cell Viability Assay,91.8,% viability,2025-05-12,Timothy Andrews,Pass
+LAB-00749,CMP-0150,Enzymatic Inhibition Assay,64.83,nM (IC50),2024-08-28,Julie Peters,Pass
+LAB-00750,CMP-0001,Cell Viability Assay,19.2,% viability,2025-12-31,Tyler Jones,Pass
+LAB-00751,CMP-0116,Selectivity Panel,24.1,% selectivity,2023-02-23,Patricia Gray,Pass
+LAB-00752,CMP-0132,Pharmacokinetic (PK) Study,9.0,hours (t1/2),2024-09-08,Ann Montoya,Pass
+LAB-00753,CMP-0007,Enzymatic Inhibition Assay,12.58,nM (IC50),2026-04-05,Makayla Smith,Pass
+LAB-00754,CMP-0006,Enzymatic Inhibition Assay,36.32,nM (IC50),2023-04-20,Joseph Price,Pass
+LAB-00755,CMP-0064,Metabolic Stability (Microsomal),49.0,min (t1/2),2025-01-08,Michael Stewart,Pass
+LAB-00756,CMP-0050,Selectivity Panel,78.6,% selectivity,2024-12-28,Elizabeth Harding,Pass
+LAB-00757,CMP-0043,Pharmacokinetic (PK) Study,23.6,hours (t1/2),2024-06-13,Mrs. Ann Smith,Pass
+LAB-00758,CMP-0131,Pharmacokinetic (PK) Study,4.28,hours (t1/2),2026-08-28,Cameron Phillips,Pass
+LAB-00759,CMP-0056,Pharmacokinetic (PK) Study,1.43,hours (t1/2),2024-03-10,Amy Warner,Fail
+LAB-00760,CMP-0135,Solubility Assay,1.5,mg/mL,2025-12-29,Scott Glenn,Pass
+LAB-00761,CMP-0047,Metabolic Stability (Microsomal),106.2,min (t1/2),2023-08-27,Jennifer Flores,Pass
+LAB-00762,CMP-0123,Binding Affinity (SPR),1.17,nM (Kd),2024-03-29,Joshua Bates,Pass
+LAB-00763,CMP-0105,Solubility Assay,1.28,mg/mL,2024-08-11,James Middleton,Pass
+LAB-00764,CMP-0103,Selectivity Panel,47.8,% selectivity,2026-01-26,Zachary Santiago,Pass
+LAB-00765,CMP-0117,Pharmacokinetic (PK) Study,15.03,hours (t1/2),2023-04-02,Alan Griffith,Pass
+LAB-00766,CMP-0030,hERG Cardiotoxicity Screen,62.6,% inhibition at 10uM,2024-08-28,William Miller,Pass
+LAB-00767,CMP-0021,Solubility Assay,2.76,mg/mL,2025-04-12,Jesus Mccormick,Pass
+LAB-00768,CMP-0106,Binding Affinity (SPR),18.41,nM (Kd),2025-02-16,Christopher Hicks,Fail
+LAB-00769,CMP-0067,hERG Cardiotoxicity Screen,5.1,% inhibition at 10uM,2024-12-01,Henry Lopez,Pass
+LAB-00770,CMP-0068,Pharmacokinetic (PK) Study,18.18,hours (t1/2),2025-02-16,Sarah Young,Pass
+LAB-00771,CMP-0093,Pharmacokinetic (PK) Study,7.97,hours (t1/2),2024-09-19,Joshua Richardson,Pass
+LAB-00772,CMP-0061,Solubility Assay,4.73,mg/mL,2026-08-16,Michele Wilson,Pass
+LAB-00773,CMP-0099,Solubility Assay,3.64,mg/mL,2024-08-21,Brenda Simon,Pass
+LAB-00774,CMP-0062,Metabolic Stability (Microsomal),96.2,min (t1/2),2026-08-24,Dr. Julie Miller,Pass
+LAB-00775,CMP-0015,hERG Cardiotoxicity Screen,11.3,% inhibition at 10uM,2026-04-09,John Harmon,Pass
+LAB-00776,CMP-0038,Metabolic Stability (Microsomal),162.6,min (t1/2),2026-07-21,Mark Yates,Pass
+LAB-00777,CMP-0097,Cell Viability Assay,39.2,% viability,2023-12-18,Greg Osborne,Fail
+LAB-00778,CMP-0096,Pharmacokinetic (PK) Study,17.76,hours (t1/2),2024-08-02,Julie Gross,Fail
+LAB-00779,CMP-0124,Enzymatic Inhibition Assay,5.91,nM (IC50),2024-05-24,Rebecca Roberts,Fail
+LAB-00780,CMP-0008,Pharmacokinetic (PK) Study,9.29,hours (t1/2),2022-11-08,Nicole Acosta,Pass
+LAB-00781,CMP-0103,hERG Cardiotoxicity Screen,74.4,% inhibition at 10uM,2024-12-19,John Jackson,Fail
+LAB-00782,CMP-0134,Enzymatic Inhibition Assay,3.46,nM (IC50),2022-12-02,Rhonda Weber MD,Pass
+LAB-00783,CMP-0131,hERG Cardiotoxicity Screen,42.3,% inhibition at 10uM,2023-01-16,Sarah Ramirez,Fail
+LAB-00784,CMP-0017,Enzymatic Inhibition Assay,10.35,nM (IC50),2023-03-30,Scott Smith,Pass
+LAB-00785,CMP-0039,Selectivity Panel,49.5,% selectivity,2023-02-27,Kevin Hernandez,Fail
+LAB-00786,CMP-0049,Binding Affinity (SPR),1.72,nM (Kd),2024-07-01,Debbie Haynes,Pass
+LAB-00787,CMP-0060,Metabolic Stability (Microsomal),28.0,min (t1/2),2024-08-25,Shannon Cooper,Pass
+LAB-00788,CMP-0111,hERG Cardiotoxicity Screen,68.6,% inhibition at 10uM,2023-01-19,Timothy Moore,Pass
+LAB-00789,CMP-0093,Enzymatic Inhibition Assay,4.9,nM (IC50),2024-09-11,Patricia Young MD,Pass
+LAB-00790,CMP-0106,Metabolic Stability (Microsomal),38.3,min (t1/2),2025-04-05,Nicholas Reed,Pass
+LAB-00791,CMP-0049,Solubility Assay,3.03,mg/mL,2025-04-12,Audrey Jackson,Pass
+LAB-00792,CMP-0095,Enzymatic Inhibition Assay,17.97,nM (IC50),2024-04-22,Paul Goodwin,Fail
+LAB-00793,CMP-0070,hERG Cardiotoxicity Screen,37.9,% inhibition at 10uM,2024-11-03,Michael Wells,Fail
+LAB-00794,CMP-0073,Selectivity Panel,42.7,% selectivity,2023-04-17,Alexandra Ho,Pass
+LAB-00795,CMP-0140,Solubility Assay,1.19,mg/mL,2024-07-04,Tonya Vega,Pass
+LAB-00796,CMP-0075,Binding Affinity (SPR),10.41,nM (Kd),2022-11-16,Marcia Blanchard,Pass
+LAB-00797,CMP-0068,Binding Affinity (SPR),2.99,nM (Kd),2024-06-09,Shannon Rogers,Pass
+LAB-00798,CMP-0112,Pharmacokinetic (PK) Study,16.71,hours (t1/2),2023-10-12,Matthew Myers,Pass
+LAB-00799,CMP-0116,Cell Viability Assay,47.0,% viability,2025-10-20,Morgan Chapman,Fail
+LAB-00800,CMP-0057,Pharmacokinetic (PK) Study,4.82,hours (t1/2),2023-06-29,Michael White,Pass
+LAB-00801,CMP-0080,Cell Viability Assay,73.3,% viability,2024-11-25,Sandra Smith,Pass
+LAB-00802,CMP-0121,Metabolic Stability (Microsomal),179.1,min (t1/2),2023-02-07,Jeremy Robinson,Pass
+LAB-00803,CMP-0086,hERG Cardiotoxicity Screen,52.7,% inhibition at 10uM,2023-11-05,Alexander Davis,Fail
+LAB-00804,CMP-0024,hERG Cardiotoxicity Screen,49.6,% inhibition at 10uM,2026-06-19,Sara Sampson,Fail
+LAB-00805,CMP-0009,Selectivity Panel,61.5,% selectivity,2025-04-06,Barbara Gates,Pass
+LAB-00806,CMP-0100,Pharmacokinetic (PK) Study,21.21,hours (t1/2),2023-03-26,Stephanie Knight,Fail
+LAB-00807,CMP-0104,Solubility Assay,0.75,mg/mL,2026-07-31,Melissa King,Pass
+LAB-00808,CMP-0088,hERG Cardiotoxicity Screen,81.6,% inhibition at 10uM,2024-07-30,Margaret Livingston,Pass
+LAB-00809,CMP-0119,Solubility Assay,1.74,mg/mL,2023-10-26,Steven Carrillo,Fail
+LAB-00810,CMP-0002,Solubility Assay,1.75,mg/mL,2024-01-03,Benjamin Waters,Pass
+LAB-00811,CMP-0142,Pharmacokinetic (PK) Study,0.94,hours (t1/2),2024-03-29,Anthony Sosa,Pass
+LAB-00812,CMP-0125,Pharmacokinetic (PK) Study,20.55,hours (t1/2),2023-10-09,John Mcfarland,Pass
+LAB-00813,CMP-0108,Metabolic Stability (Microsomal),149.0,min (t1/2),2025-02-25,Johnathan Thomas,Fail
+LAB-00814,CMP-0076,Binding Affinity (SPR),5.99,nM (Kd),2025-10-14,Mason Gaines,Pass
+LAB-00815,CMP-0088,Solubility Assay,3.13,mg/mL,2025-07-28,Benjamin Duncan,Pass
+LAB-00816,CMP-0013,hERG Cardiotoxicity Screen,4.4,% inhibition at 10uM,2023-09-18,Steven Hernandez,Fail
+LAB-00817,CMP-0136,Selectivity Panel,64.9,% selectivity,2025-04-09,Mary Adams,Pass
+LAB-00818,CMP-0144,Enzymatic Inhibition Assay,2.55,nM (IC50),2025-07-06,Laura Robertson,Fail
+LAB-00819,CMP-0124,Solubility Assay,2.67,mg/mL,2026-06-21,Jeffrey Anthony DDS,Pass
+LAB-00820,CMP-0003,Binding Affinity (SPR),1.54,nM (Kd),2025-11-07,April Finley,Pass
+LAB-00821,CMP-0086,Solubility Assay,1.76,mg/mL,2025-12-25,Mr. Timothy Howard,Pass
+LAB-00822,CMP-0003,Cell Viability Assay,84.6,% viability,2025-06-09,Mark Benjamin,Pass
+LAB-00823,CMP-0099,hERG Cardiotoxicity Screen,45.2,% inhibition at 10uM,2023-01-28,Tonya Miller,Fail
+LAB-00824,CMP-0056,Solubility Assay,12.26,mg/mL,2024-07-20,Maria Thompson,Pass
+LAB-00825,CMP-0102,Selectivity Panel,81.2,% selectivity,2022-11-14,Connor Dominguez,Pass
+LAB-00826,CMP-0015,hERG Cardiotoxicity Screen,10.8,% inhibition at 10uM,2026-04-18,Heather Miller,Pass
+LAB-00827,CMP-0054,Binding Affinity (SPR),1.32,nM (Kd),2025-03-29,Brenda Lee,Pass
+LAB-00828,CMP-0123,Cell Viability Assay,26.1,% viability,2025-08-03,Katherine Brown,Pass
+LAB-00829,CMP-0036,Pharmacokinetic (PK) Study,3.68,hours (t1/2),2024-11-15,Joseph Flowers,Pass
+LAB-00830,CMP-0117,Enzymatic Inhibition Assay,1.22,nM (IC50),2024-07-04,Amanda Brown PhD,Pass
+LAB-00831,CMP-0134,Binding Affinity (SPR),0.86,nM (Kd),2022-11-19,Robert Contreras,Pass
+LAB-00832,CMP-0114,Binding Affinity (SPR),3.91,nM (Kd),2024-07-18,Shelly Hernandez,Pass
+LAB-00833,CMP-0027,Metabolic Stability (Microsomal),132.7,min (t1/2),2025-01-10,Amanda Thomas,Pass
+LAB-00834,CMP-0009,Binding Affinity (SPR),0.92,nM (Kd),2025-04-29,Thomas Williams,Pass
+LAB-00835,CMP-0102,Metabolic Stability (Microsomal),43.8,min (t1/2),2025-07-07,Christopher Williams,Pass
+LAB-00836,CMP-0106,Cell Viability Assay,52.8,% viability,2023-12-10,Joy Jackson,Pass
+LAB-00837,CMP-0148,Pharmacokinetic (PK) Study,23.95,hours (t1/2),2025-01-27,Ashley Crawford,Fail
+LAB-00838,CMP-0077,Solubility Assay,9.34,mg/mL,2025-11-27,Robert Simmons,Fail
+LAB-00839,CMP-0146,Cell Viability Assay,70.8,% viability,2025-12-15,Miss Erika Daugherty,Fail
+LAB-00840,CMP-0102,hERG Cardiotoxicity Screen,77.4,% inhibition at 10uM,2025-01-05,Russell Mcguire,Pass
+LAB-00841,CMP-0116,Binding Affinity (SPR),0.89,nM (Kd),2025-10-07,Gabriela Martinez,Pass
+LAB-00842,CMP-0128,Metabolic Stability (Microsomal),18.0,min (t1/2),2023-04-12,Michael Tran,Pass
+LAB-00843,CMP-0145,Metabolic Stability (Microsomal),85.9,min (t1/2),2024-06-19,Amanda Garcia,Pass
+LAB-00844,CMP-0036,Enzymatic Inhibition Assay,3.68,nM (IC50),2026-02-06,Paula Smith,Pass
+LAB-00845,CMP-0031,Cell Viability Assay,36.8,% viability,2024-08-28,Christopher Davis,Pass
+LAB-00846,CMP-0088,Cell Viability Assay,23.0,% viability,2025-04-26,Jennifer Aguirre,Pass
+LAB-00847,CMP-0032,Enzymatic Inhibition Assay,1.55,nM (IC50),2025-10-19,Christine Bowman,Pass
+LAB-00848,CMP-0097,Cell Viability Assay,17.0,% viability,2024-10-20,Todd Bishop,Pass
+LAB-00849,CMP-0059,Cell Viability Assay,35.8,% viability,2022-11-11,Jonathan Clements,Pass
+LAB-00850,CMP-0122,hERG Cardiotoxicity Screen,64.6,% inhibition at 10uM,2025-03-21,Hannah Smith,Pass
+LAB-00851,CMP-0112,hERG Cardiotoxicity Screen,14.0,% inhibition at 10uM,2023-08-28,Joseph Davis,Pass
+LAB-00852,CMP-0121,Selectivity Panel,63.5,% selectivity,2024-02-28,Kimberly Robinson,Pass
+LAB-00853,CMP-0010,Enzymatic Inhibition Assay,8.74,nM (IC50),2025-10-16,Destiny Lee,Pass
+LAB-00854,CMP-0086,Binding Affinity (SPR),5.25,nM (Kd),2025-11-24,Tracy Wells,Fail
+LAB-00855,CMP-0037,Metabolic Stability (Microsomal),161.4,min (t1/2),2023-06-02,Amanda Newman,Pass
+LAB-00856,CMP-0086,hERG Cardiotoxicity Screen,83.7,% inhibition at 10uM,2023-11-08,Geoffrey Trujillo,Pass
+LAB-00857,CMP-0030,Pharmacokinetic (PK) Study,21.2,hours (t1/2),2025-09-29,Patrick Buckley,Pass
+LAB-00858,CMP-0016,Solubility Assay,1.26,mg/mL,2023-06-01,Karina Wilson,Pass
+LAB-00859,CMP-0066,Enzymatic Inhibition Assay,2.0,nM (IC50),2026-04-16,Leslie Nguyen,Pass
+LAB-00860,CMP-0032,Pharmacokinetic (PK) Study,16.15,hours (t1/2),2023-07-05,Erika Maxwell,Fail
+LAB-00861,CMP-0108,Enzymatic Inhibition Assay,3.91,nM (IC50),2024-01-07,Oscar Kane,Pass
+LAB-00862,CMP-0143,Metabolic Stability (Microsomal),42.4,min (t1/2),2024-03-19,John Washington,Pass
+LAB-00863,CMP-0017,Cell Viability Assay,54.6,% viability,2026-04-10,Timothy Gibson,Pass
+LAB-00864,CMP-0132,Solubility Assay,2.25,mg/mL,2024-04-05,Nathan Chen,Fail
+LAB-00865,CMP-0008,Pharmacokinetic (PK) Study,11.12,hours (t1/2),2026-08-12,Cameron Schwartz,Fail
+LAB-00866,CMP-0077,Binding Affinity (SPR),0.67,nM (Kd),2022-12-14,Samuel Ellis,Pass
+LAB-00867,CMP-0041,hERG Cardiotoxicity Screen,90.0,% inhibition at 10uM,2023-05-25,Stephen Munoz,Fail
+LAB-00868,CMP-0078,Pharmacokinetic (PK) Study,0.51,hours (t1/2),2025-11-13,Lisa Jackson,Pass
+LAB-00869,CMP-0056,Enzymatic Inhibition Assay,6.59,nM (IC50),2026-08-04,Angelica Vincent,Pass
+LAB-00870,CMP-0133,Selectivity Panel,51.2,% selectivity,2024-09-01,Leslie Hood MD,Pass
+LAB-00871,CMP-0044,Cell Viability Assay,78.5,% viability,2025-08-18,Danielle Murphy,Pass
+LAB-00872,CMP-0042,Cell Viability Assay,16.5,% viability,2025-01-11,Leslie Hernandez,Pass
+LAB-00873,CMP-0072,Binding Affinity (SPR),1.54,nM (Kd),2025-01-02,William Williams,Pass
+LAB-00874,CMP-0046,Selectivity Panel,26.8,% selectivity,2024-08-05,Amanda Schmidt,Pass
+LAB-00875,CMP-0068,Solubility Assay,4.05,mg/mL,2024-08-17,Samantha Chavez,Fail
+LAB-00876,CMP-0031,Binding Affinity (SPR),6.29,nM (Kd),2023-09-04,Alexandria Dennis,Fail
+LAB-00877,CMP-0057,Cell Viability Assay,79.2,% viability,2026-07-05,Edward Holland,Pass
+LAB-00878,CMP-0008,Solubility Assay,1.34,mg/mL,2023-01-28,Eric Warner,Pass
+LAB-00879,CMP-0054,Solubility Assay,5.31,mg/mL,2026-02-21,Allison Gibson,Pass
+LAB-00880,CMP-0048,hERG Cardiotoxicity Screen,28.8,% inhibition at 10uM,2025-10-18,Jennifer Clarke,Pass
+LAB-00881,CMP-0067,Pharmacokinetic (PK) Study,13.16,hours (t1/2),2024-03-11,Mark Dalton,Pass
+LAB-00882,CMP-0101,Solubility Assay,4.12,mg/mL,2022-12-30,Faith Johnson,Pass
+LAB-00883,CMP-0118,Metabolic Stability (Microsomal),58.8,min (t1/2),2024-05-31,Tracy Daniels,Fail
+LAB-00884,CMP-0137,Solubility Assay,8.31,mg/mL,2025-11-20,Angela Gilmore,Pass
+LAB-00885,CMP-0089,Binding Affinity (SPR),1.22,nM (Kd),2025-08-27,Tony Leonard,Pass
+LAB-00886,CMP-0019,Metabolic Stability (Microsomal),70.1,min (t1/2),2026-04-06,Jacob Harvey,Pass
+LAB-00887,CMP-0080,Solubility Assay,0.49,mg/mL,2024-03-04,Justin Jones,Fail
+LAB-00888,CMP-0121,Solubility Assay,0.44,mg/mL,2025-07-19,William Allen,Pass
+LAB-00889,CMP-0143,Selectivity Panel,47.4,% selectivity,2023-03-02,Todd Carpenter,Pass
+LAB-00890,CMP-0124,hERG Cardiotoxicity Screen,43.4,% inhibition at 10uM,2026-07-19,Patrick Perez,Pass
+LAB-00891,CMP-0032,Cell Viability Assay,81.7,% viability,2024-02-14,Michael Ramirez,Fail
+LAB-00892,CMP-0009,Cell Viability Assay,40.8,% viability,2022-12-19,John Rose,Pass
+LAB-00893,CMP-0120,Pharmacokinetic (PK) Study,2.68,hours (t1/2),2023-03-16,Meghan Patel,Pass
+LAB-00894,CMP-0121,Binding Affinity (SPR),1.68,nM (Kd),2023-11-18,Rebecca Dougherty,Pass
+LAB-00895,CMP-0068,Cell Viability Assay,71.9,% viability,2025-12-11,Ana Mcclain,Pass
+LAB-00896,CMP-0095,Enzymatic Inhibition Assay,2.72,nM (IC50),2024-07-17,Steven Roberts,Pass
+LAB-00897,CMP-0050,Enzymatic Inhibition Assay,3.22,nM (IC50),2026-07-15,Donald Terry,Pass
+LAB-00898,CMP-0048,Metabolic Stability (Microsomal),13.1,min (t1/2),2024-09-11,Kelly Burton,Pass
+LAB-00899,CMP-0131,Binding Affinity (SPR),4.89,nM (Kd),2023-11-20,Kimberly Anderson,Pass
+LAB-00900,CMP-0033,hERG Cardiotoxicity Screen,1.5,% inhibition at 10uM,2024-02-06,Matthew Carter,Pass
+LAB-00901,CMP-0086,Selectivity Panel,69.2,% selectivity,2022-12-18,Crystal Meza,Pass
+LAB-00902,CMP-0047,Pharmacokinetic (PK) Study,20.08,hours (t1/2),2025-04-16,Grant Lucas,Pass
+LAB-00903,CMP-0021,Binding Affinity (SPR),7.52,nM (Kd),2024-01-07,Melissa Wilkinson,Pass
+LAB-00904,CMP-0111,hERG Cardiotoxicity Screen,30.5,% inhibition at 10uM,2024-06-29,Carlos Clarke,Fail
+LAB-00905,CMP-0023,Cell Viability Assay,56.7,% viability,2023-05-26,John Arellano,Pass
+LAB-00906,CMP-0149,Enzymatic Inhibition Assay,6.25,nM (IC50),2025-10-15,Harry Bryant,Pass
+LAB-00907,CMP-0144,Pharmacokinetic (PK) Study,6.97,hours (t1/2),2023-05-18,Michelle Mitchell,Pass
+LAB-00908,CMP-0026,Pharmacokinetic (PK) Study,20.77,hours (t1/2),2026-08-08,Melissa Estrada,Pass
+LAB-00909,CMP-0106,Pharmacokinetic (PK) Study,16.08,hours (t1/2),2023-04-30,Andrew Stewart,Pass
+LAB-00910,CMP-0147,Pharmacokinetic (PK) Study,2.05,hours (t1/2),2023-03-21,Cody Hart,Pass
+LAB-00911,CMP-0108,Selectivity Panel,34.8,% selectivity,2022-11-07,Gregg Watson,Pass
+LAB-00912,CMP-0100,Enzymatic Inhibition Assay,9.25,nM (IC50),2024-11-14,Eric Knapp,Fail
+LAB-00913,CMP-0056,Selectivity Panel,4.5,% selectivity,2024-04-30,Mr. Jimmy Flores Jr.,Pass
+LAB-00914,CMP-0072,hERG Cardiotoxicity Screen,97.4,% inhibition at 10uM,2025-08-31,Erin Thornton,Pass
+LAB-00915,CMP-0002,Enzymatic Inhibition Assay,74.38,nM (IC50),2024-08-09,Tony Hooper,Pass
+LAB-00916,CMP-0012,Solubility Assay,4.88,mg/mL,2025-01-02,Keith Meadows,Pass
+LAB-00917,CMP-0125,Selectivity Panel,31.4,% selectivity,2024-06-24,Monique Mccullough,Pass
+LAB-00918,CMP-0052,Enzymatic Inhibition Assay,3.57,nM (IC50),2023-04-09,Elizabeth Morales,Pass
+LAB-00919,CMP-0083,Solubility Assay,4.55,mg/mL,2026-01-27,Brandon Brown,Fail
+LAB-00920,CMP-0033,hERG Cardiotoxicity Screen,71.2,% inhibition at 10uM,2025-04-11,Courtney Walls,Pass
+LAB-00921,CMP-0139,hERG Cardiotoxicity Screen,9.2,% inhibition at 10uM,2023-10-28,Joshua Griffin,Pass
+LAB-00922,CMP-0049,Pharmacokinetic (PK) Study,18.37,hours (t1/2),2025-05-25,Jorge Lee,Pass
+LAB-00923,CMP-0148,Metabolic Stability (Microsomal),77.2,min (t1/2),2023-12-25,Terri Kerr,Pass
+LAB-00924,CMP-0107,Cell Viability Assay,85.6,% viability,2024-02-27,Scott Wood,Pass
+LAB-00925,CMP-0052,Metabolic Stability (Microsomal),154.2,min (t1/2),2024-03-15,Gregory Madden,Pass
+LAB-00926,CMP-0083,Binding Affinity (SPR),2.51,nM (Kd),2026-03-17,Nicholas Wallace,Pass
+LAB-00927,CMP-0092,Solubility Assay,1.04,mg/mL,2026-09-06,Donna Shaffer,Pass
+LAB-00928,CMP-0004,Solubility Assay,4.27,mg/mL,2026-08-04,Steven Taylor,Pass
+LAB-00929,CMP-0098,Selectivity Panel,5.2,% selectivity,2025-01-22,Daniel Wells,Pass
+LAB-00930,CMP-0006,Enzymatic Inhibition Assay,0.57,nM (IC50),2026-03-07,Mrs. Toni Avila,Pass
+LAB-00931,CMP-0142,Pharmacokinetic (PK) Study,0.81,hours (t1/2),2023-01-25,Thomas Perry,Pass
+LAB-00932,CMP-0118,Binding Affinity (SPR),2.73,nM (Kd),2024-12-07,Nicole Taylor,Fail
+LAB-00933,CMP-0080,hERG Cardiotoxicity Screen,47.8,% inhibition at 10uM,2023-06-16,Julian Williams,Fail
+LAB-00934,CMP-0003,Pharmacokinetic (PK) Study,23.86,hours (t1/2),2026-01-06,Elizabeth Hansen,Fail
+LAB-00935,CMP-0133,Cell Viability Assay,46.8,% viability,2024-07-25,Aaron Baker,Pass
+LAB-00936,CMP-0042,Metabolic Stability (Microsomal),45.6,min (t1/2),2026-07-14,Kaitlyn Valdez,Pass
+LAB-00937,CMP-0098,Cell Viability Assay,13.8,% viability,2026-04-13,John Watts,Pass
+LAB-00938,CMP-0050,Selectivity Panel,17.3,% selectivity,2023-09-10,Donald Gamble,Pass
+LAB-00939,CMP-0051,Pharmacokinetic (PK) Study,20.84,hours (t1/2),2022-12-24,Lauren Cunningham,Pass
+LAB-00940,CMP-0139,Metabolic Stability (Microsomal),152.6,min (t1/2),2026-03-08,Karen Benson,Fail
+LAB-00941,CMP-0143,Enzymatic Inhibition Assay,9.59,nM (IC50),2023-03-11,Laura Bruce,Fail
+LAB-00942,CMP-0020,Pharmacokinetic (PK) Study,19.28,hours (t1/2),2023-05-13,Francisco Johns,Fail
+LAB-00943,CMP-0107,Enzymatic Inhibition Assay,22.84,nM (IC50),2023-04-03,Dominic Barnes,Pass
+LAB-00944,CMP-0072,Pharmacokinetic (PK) Study,17.66,hours (t1/2),2026-05-11,Dylan Moreno,Fail
+LAB-00945,CMP-0017,hERG Cardiotoxicity Screen,60.5,% inhibition at 10uM,2026-06-16,Pamela White,Pass
+LAB-00946,CMP-0015,Metabolic Stability (Microsomal),169.9,min (t1/2),2023-02-02,Kimberly Brennan,Pass
+LAB-00947,CMP-0099,Enzymatic Inhibition Assay,7.98,nM (IC50),2026-01-07,Elizabeth Jennings,Pass
+LAB-00948,CMP-0013,hERG Cardiotoxicity Screen,19.2,% inhibition at 10uM,2025-06-18,Kevin Morrow,Pass
+LAB-00949,CMP-0108,Binding Affinity (SPR),2.03,nM (Kd),2022-10-06,Jacqueline Washington,Pass
+LAB-00950,CMP-0012,Selectivity Panel,18.1,% selectivity,2024-01-27,Ashley Moore,Pass
+LAB-00951,CMP-0054,Pharmacokinetic (PK) Study,18.54,hours (t1/2),2023-08-06,Steven Austin,Fail
+LAB-00952,CMP-0040,Metabolic Stability (Microsomal),36.6,min (t1/2),2026-01-13,Kim Arnold,Pass
+LAB-00953,CMP-0113,Pharmacokinetic (PK) Study,2.89,hours (t1/2),2025-09-26,Joe Jones,Pass
+LAB-00954,CMP-0064,hERG Cardiotoxicity Screen,56.9,% inhibition at 10uM,2025-12-26,Karen Collins,Fail
+LAB-00955,CMP-0076,Solubility Assay,4.66,mg/mL,2024-02-29,Stacy Harper,Pass
+LAB-00956,CMP-0095,Cell Viability Assay,91.2,% viability,2025-10-06,Michael Johnson,Pass
+LAB-00957,CMP-0075,Metabolic Stability (Microsomal),94.5,min (t1/2),2025-12-20,Scott Thomas,Fail
+LAB-00958,CMP-0033,Enzymatic Inhibition Assay,33.54,nM (IC50),2023-08-14,Carlos Miller,Fail
+LAB-00959,CMP-0060,Metabolic Stability (Microsomal),159.6,min (t1/2),2025-06-22,Angela Hampton,Pass
+LAB-00960,CMP-0094,Cell Viability Assay,45.2,% viability,2025-09-27,Brian Mcguire,Fail
+LAB-00961,CMP-0045,Enzymatic Inhibition Assay,1.28,nM (IC50),2024-10-06,Bryan King,Pass
+LAB-00962,CMP-0025,Cell Viability Assay,63.5,% viability,2022-12-23,Nicole Patton,Fail
+LAB-00963,CMP-0062,Pharmacokinetic (PK) Study,14.72,hours (t1/2),2026-05-23,Steven Lopez,Pass
+LAB-00964,CMP-0091,Enzymatic Inhibition Assay,2.52,nM (IC50),2024-02-13,Ryan Mcmahon,Pass
+LAB-00965,CMP-0025,Metabolic Stability (Microsomal),122.6,min (t1/2),2026-07-04,Christopher Mason,Pass
+LAB-00966,CMP-0144,Solubility Assay,7.03,mg/mL,2025-08-16,Kelly Garcia,Pass
+LAB-00967,CMP-0107,Metabolic Stability (Microsomal),48.2,min (t1/2),2025-01-09,Daniel Lee,Pass
+LAB-00968,CMP-0011,Selectivity Panel,22.8,% selectivity,2023-11-03,Kimberly Beltran,Pass
+LAB-00969,CMP-0014,Metabolic Stability (Microsomal),96.7,min (t1/2),2023-02-09,Jonathan Zimmerman,Pass
+LAB-00970,CMP-0119,Cell Viability Assay,66.2,% viability,2024-03-06,Jessica Rosario,Pass
+LAB-00971,CMP-0021,hERG Cardiotoxicity Screen,32.1,% inhibition at 10uM,2023-06-09,James Lewis,Pass
+LAB-00972,CMP-0030,Binding Affinity (SPR),0.58,nM (Kd),2023-08-16,William Martinez,Pass
+LAB-00973,CMP-0124,Cell Viability Assay,41.7,% viability,2023-02-26,Philip Bush,Pass
+LAB-00974,CMP-0065,Metabolic Stability (Microsomal),126.4,min (t1/2),2024-12-09,Garrett Wilson,Pass
+LAB-00975,CMP-0063,Enzymatic Inhibition Assay,0.45,nM (IC50),2023-11-06,Emily Cherry,Pass
+LAB-00976,CMP-0112,Enzymatic Inhibition Assay,2.69,nM (IC50),2024-06-27,Donna Wyatt,Pass
+LAB-00977,CMP-0069,Cell Viability Assay,69.3,% viability,2023-06-20,Ryan Alvarez,Pass
+LAB-00978,CMP-0128,Metabolic Stability (Microsomal),143.2,min (t1/2),2025-06-05,Zachary Vasquez,Pass
+LAB-00979,CMP-0104,Solubility Assay,1.15,mg/mL,2023-02-18,Matthew Miller,Pass
+LAB-00980,CMP-0093,Cell Viability Assay,29.4,% viability,2023-04-15,Kevin Garcia,Fail
+LAB-00981,CMP-0118,hERG Cardiotoxicity Screen,86.2,% inhibition at 10uM,2026-05-30,Amy Hester,Pass
+LAB-00982,CMP-0113,Metabolic Stability (Microsomal),170.5,min (t1/2),2024-01-25,Wanda Martinez,Pass
+LAB-00983,CMP-0057,hERG Cardiotoxicity Screen,18.2,% inhibition at 10uM,2026-01-23,Diana Reeves,Pass
+LAB-00984,CMP-0038,Metabolic Stability (Microsomal),90.6,min (t1/2),2025-01-14,Richard Schneider,Pass
+LAB-00985,CMP-0129,Metabolic Stability (Microsomal),105.8,min (t1/2),2024-04-24,Larry Sullivan,Pass
+LAB-00986,CMP-0124,Selectivity Panel,88.4,% selectivity,2024-08-25,Randy Rodriguez,Fail
+LAB-00987,CMP-0010,Selectivity Panel,95.0,% selectivity,2023-09-19,Mark Taylor Jr.,Pass
+LAB-00988,CMP-0018,hERG Cardiotoxicity Screen,5.3,% inhibition at 10uM,2022-12-04,Michael Stanton,Pass
+LAB-00989,CMP-0001,Metabolic Stability (Microsomal),158.4,min (t1/2),2024-03-29,Brittany Howell,Pass
+LAB-00990,CMP-0124,Cell Viability Assay,35.5,% viability,2023-02-05,Paul Saunders,Pass
+LAB-00991,CMP-0077,Selectivity Panel,62.7,% selectivity,2025-11-18,Matthew Henry,Pass
+LAB-00992,CMP-0114,Pharmacokinetic (PK) Study,4.34,hours (t1/2),2023-10-05,Scott Payne,Fail
+LAB-00993,CMP-0078,Metabolic Stability (Microsomal),68.8,min (t1/2),2026-07-09,Jeffrey Melendez,Pass
+LAB-00994,CMP-0067,Enzymatic Inhibition Assay,11.66,nM (IC50),2024-03-31,James Stevens,Fail
+LAB-00995,CMP-0139,Enzymatic Inhibition Assay,3.74,nM (IC50),2022-11-04,Shannon Turner,Pass
+LAB-00996,CMP-0136,Pharmacokinetic (PK) Study,20.19,hours (t1/2),2025-07-14,Chad Baldwin MD,Pass
+LAB-00997,CMP-0143,Metabolic Stability (Microsomal),92.5,min (t1/2),2023-02-24,Mary Jennings,Fail
+LAB-00998,CMP-0115,hERG Cardiotoxicity Screen,11.5,% inhibition at 10uM,2024-12-31,Scott Hunter,Pass
+LAB-00999,CMP-0145,Cell Viability Assay,5.4,% viability,2024-04-11,Wesley Jensen MD,Pass
+LAB-01000,CMP-0077,Metabolic Stability (Microsomal),33.2,min (t1/2),2026-08-15,Alfred Williams,Pass
+LAB-01001,CMP-0105,Metabolic Stability (Microsomal),15.3,min (t1/2),2026-01-21,Patrick Johnson,Pass
+LAB-01002,CMP-0008,hERG Cardiotoxicity Screen,59.3,% inhibition at 10uM,2026-04-11,Brent Reed,Pass
+LAB-01003,CMP-0078,Enzymatic Inhibition Assay,6.77,nM (IC50),2024-02-21,Matthew Wright,Pass
+LAB-01004,CMP-0038,Pharmacokinetic (PK) Study,19.76,hours (t1/2),2025-04-21,Susan Jones,Pass
+LAB-01005,CMP-0091,Selectivity Panel,49.3,% selectivity,2023-12-07,Alejandro Nguyen,Fail
+LAB-01006,CMP-0071,hERG Cardiotoxicity Screen,50.8,% inhibition at 10uM,2024-07-21,Laura Valenzuela,Fail
+LAB-01007,CMP-0037,Binding Affinity (SPR),0.61,nM (Kd),2023-10-12,Leah Odom,Pass
+LAB-01008,CMP-0057,Enzymatic Inhibition Assay,2.18,nM (IC50),2024-03-22,Kenneth Stokes,Pass
+LAB-01009,CMP-0023,Enzymatic Inhibition Assay,1.5,nM (IC50),2023-02-11,Gabriella Shaw,Pass
+LAB-01010,CMP-0130,Cell Viability Assay,74.8,% viability,2025-10-08,Lucas Cox,Pass
+LAB-01011,CMP-0142,Metabolic Stability (Microsomal),99.3,min (t1/2),2024-06-15,Ryan Cobb PhD,Pass
+LAB-01012,CMP-0088,Metabolic Stability (Microsomal),34.1,min (t1/2),2024-11-08,Anthony Davies,Pass
+LAB-01013,CMP-0108,Binding Affinity (SPR),4.04,nM (Kd),2024-04-26,Patrick Davis,Pass
+LAB-01014,CMP-0116,Cell Viability Assay,19.4,% viability,2026-02-01,George Jones,Pass
+LAB-01015,CMP-0006,hERG Cardiotoxicity Screen,1.5,% inhibition at 10uM,2025-11-30,Daniel Flynn,Pass
+LAB-01016,CMP-0074,Solubility Assay,1.0,mg/mL,2025-04-26,Robert Reynolds,Pass
+LAB-01017,CMP-0113,hERG Cardiotoxicity Screen,24.9,% inhibition at 10uM,2024-11-14,James Weber,Pass
+LAB-01018,CMP-0121,Binding Affinity (SPR),1.22,nM (Kd),2024-07-10,Catherine Smith,Pass
+LAB-01019,CMP-0143,Metabolic Stability (Microsomal),115.5,min (t1/2),2025-07-10,Laura Lewis,Pass
+LAB-01020,CMP-0004,hERG Cardiotoxicity Screen,91.5,% inhibition at 10uM,2026-07-23,Julie Giles,Fail
+LAB-01021,CMP-0024,Cell Viability Assay,92.6,% viability,2024-11-03,Patricia Hamilton,Pass
+LAB-01022,CMP-0129,hERG Cardiotoxicity Screen,21.3,% inhibition at 10uM,2024-12-22,Kelly Diaz,Pass
+LAB-01023,CMP-0055,Cell Viability Assay,44.7,% viability,2023-04-21,Michael Evans,Pass
+LAB-01024,CMP-0125,hERG Cardiotoxicity Screen,35.2,% inhibition at 10uM,2024-06-14,Ronald Brown,Pass
+LAB-01025,CMP-0070,hERG Cardiotoxicity Screen,39.4,% inhibition at 10uM,2023-07-12,Rodney Lucas,Pass
+LAB-01026,CMP-0103,Metabolic Stability (Microsomal),167.3,min (t1/2),2023-09-27,Jennifer Wilson,Pass
+LAB-01027,CMP-0012,Binding Affinity (SPR),2.18,nM (Kd),2023-06-25,Ronald Marshall,Pass
+LAB-01028,CMP-0104,Selectivity Panel,85.0,% selectivity,2024-12-13,Matthew Johnson,Pass
+LAB-01029,CMP-0079,Enzymatic Inhibition Assay,1.74,nM (IC50),2023-05-08,David Lara,Pass
+LAB-01030,CMP-0081,hERG Cardiotoxicity Screen,56.4,% inhibition at 10uM,2025-05-06,Samuel Stuart,Fail
+LAB-01031,CMP-0060,Binding Affinity (SPR),0.49,nM (Kd),2024-08-27,Scott Miller,Pass
+LAB-01032,CMP-0038,Binding Affinity (SPR),0.38,nM (Kd),2025-02-12,Stephanie Russell,Pass
+LAB-01033,CMP-0030,Metabolic Stability (Microsomal),80.4,min (t1/2),2024-03-01,Ann Hahn,Pass
+LAB-01034,CMP-0047,Enzymatic Inhibition Assay,1.72,nM (IC50),2025-08-10,Brian Navarro,Pass
+LAB-01035,CMP-0148,hERG Cardiotoxicity Screen,82.2,% inhibition at 10uM,2026-06-11,Sandra Herring,Pass
+LAB-01036,CMP-0073,Cell Viability Assay,32.4,% viability,2026-06-09,Stephen Young,Pass
+LAB-01037,CMP-0065,Solubility Assay,0.74,mg/mL,2023-03-15,Erin Silva,Fail
+LAB-01038,CMP-0104,Pharmacokinetic (PK) Study,14.0,hours (t1/2),2024-04-09,Cynthia Henderson,Pass
+LAB-01039,CMP-0147,Solubility Assay,1.0,mg/mL,2023-04-16,Wayne Gonzales,Fail
+LAB-01040,CMP-0095,hERG Cardiotoxicity Screen,28.2,% inhibition at 10uM,2023-09-24,Katherine Brooks,Fail
+LAB-01041,CMP-0075,Binding Affinity (SPR),16.56,nM (Kd),2026-07-04,Jeff Vega,Pass
+LAB-01042,CMP-0065,Binding Affinity (SPR),0.41,nM (Kd),2026-07-25,Taylor Cox,Pass
+LAB-01043,CMP-0010,Binding Affinity (SPR),1.27,nM (Kd),2025-07-28,Alisha Rasmussen,Pass
+LAB-01044,CMP-0114,Binding Affinity (SPR),2.33,nM (Kd),2025-02-18,Mary Everett,Pass
+LAB-01045,CMP-0146,Binding Affinity (SPR),1.39,nM (Kd),2025-06-22,Cynthia Tran,Pass
+LAB-01046,CMP-0083,Solubility Assay,1.18,mg/mL,2023-12-13,Heidi Burnett,Fail
+LAB-01047,CMP-0044,Cell Viability Assay,77.7,% viability,2023-03-15,Shannon Price,Fail
+LAB-01048,CMP-0055,Cell Viability Assay,33.8,% viability,2026-05-08,William Scott,Pass
+LAB-01049,CMP-0006,Selectivity Panel,96.5,% selectivity,2023-01-27,Cynthia Clark,Pass
+LAB-01050,CMP-0094,Enzymatic Inhibition Assay,4.37,nM (IC50),2026-04-09,Lynn Suarez,Pass
+LAB-01051,CMP-0115,Solubility Assay,0.58,mg/mL,2025-10-11,Andrew Delacruz,Pass
+LAB-01052,CMP-0045,Selectivity Panel,2.6,% selectivity,2026-01-01,Kaitlin Gutierrez,Pass
+LAB-01053,CMP-0149,hERG Cardiotoxicity Screen,92.3,% inhibition at 10uM,2026-01-28,Sherri Wilkins,Pass
+LAB-01054,CMP-0005,hERG Cardiotoxicity Screen,5.9,% inhibition at 10uM,2026-01-03,Katie Bell,Pass
+LAB-01055,CMP-0028,Pharmacokinetic (PK) Study,13.69,hours (t1/2),2025-02-13,Nancy Chavez,Fail
+LAB-01056,CMP-0135,Metabolic Stability (Microsomal),23.8,min (t1/2),2022-10-27,Martin Mccoy,Pass
+LAB-01057,CMP-0087,Enzymatic Inhibition Assay,8.89,nM (IC50),2025-11-15,James Fuller,Pass
+LAB-01058,CMP-0063,Metabolic Stability (Microsomal),85.3,min (t1/2),2023-12-20,Christopher Black,Pass
+LAB-01059,CMP-0034,Pharmacokinetic (PK) Study,2.78,hours (t1/2),2026-08-03,Pamela Bradford,Pass
+LAB-01060,CMP-0095,Cell Viability Assay,43.5,% viability,2025-06-15,Emma Mendoza,Pass
+LAB-01061,CMP-0149,Selectivity Panel,47.2,% selectivity,2025-08-26,Michael Serrano,Pass
+LAB-01062,CMP-0038,Enzymatic Inhibition Assay,11.27,nM (IC50),2025-11-28,Jason White,Fail
+LAB-01063,CMP-0123,Binding Affinity (SPR),0.22,nM (Kd),2026-03-20,Stacey Walker,Pass
+LAB-01064,CMP-0101,Cell Viability Assay,84.9,% viability,2026-07-03,Maria Sims,Pass
+LAB-01065,CMP-0103,hERG Cardiotoxicity Screen,29.6,% inhibition at 10uM,2026-05-03,Christina Haynes,Fail
+LAB-01066,CMP-0053,hERG Cardiotoxicity Screen,69.9,% inhibition at 10uM,2023-05-22,Jeffrey Green,Pass
+LAB-01067,CMP-0072,Selectivity Panel,39.0,% selectivity,2023-01-26,Travis Wilson,Pass
+LAB-01068,CMP-0020,Solubility Assay,3.75,mg/mL,2025-08-02,Thomas Chavez,Pass
+LAB-01069,CMP-0009,Selectivity Panel,29.9,% selectivity,2025-05-28,Micheal Lee,Pass
+LAB-01070,CMP-0031,Metabolic Stability (Microsomal),146.2,min (t1/2),2026-02-27,Donna Snyder,Pass
+LAB-01071,CMP-0138,Solubility Assay,2.75,mg/mL,2023-03-27,Lindsay Carney,Pass
+LAB-01072,CMP-0025,Metabolic Stability (Microsomal),157.3,min (t1/2),2023-11-05,Jennifer Ortiz,Pass
+LAB-01073,CMP-0021,Pharmacokinetic (PK) Study,13.69,hours (t1/2),2023-04-19,Dennis Williamson,Pass
+LAB-01074,CMP-0111,Binding Affinity (SPR),0.35,nM (Kd),2026-05-04,Michael Ellis,Pass
+LAB-01075,CMP-0111,hERG Cardiotoxicity Screen,2.2,% inhibition at 10uM,2022-10-03,Frank Steele,Pass
+LAB-01076,CMP-0137,Metabolic Stability (Microsomal),84.9,min (t1/2),2025-06-16,Michelle Fitzgerald,Pass
+LAB-01077,CMP-0150,Binding Affinity (SPR),0.72,nM (Kd),2023-09-27,Anthony Cook,Fail
+LAB-01078,CMP-0137,Pharmacokinetic (PK) Study,13.45,hours (t1/2),2023-08-26,Yesenia Crosby,Pass
+LAB-01079,CMP-0135,Enzymatic Inhibition Assay,0.47,nM (IC50),2026-07-31,Nicole Williams,Fail
+LAB-01080,CMP-0124,Selectivity Panel,74.5,% selectivity,2023-09-23,Elizabeth Foster,Fail
+LAB-01081,CMP-0084,Solubility Assay,0.78,mg/mL,2024-03-12,Kristin Carpenter,Pass
+LAB-01082,CMP-0137,hERG Cardiotoxicity Screen,42.9,% inhibition at 10uM,2023-10-03,Tara Humphrey,Pass
+LAB-01083,CMP-0045,Enzymatic Inhibition Assay,0.85,nM (IC50),2023-03-29,Joseph Thomas,Pass
+LAB-01084,CMP-0108,Pharmacokinetic (PK) Study,16.98,hours (t1/2),2023-03-07,Carl Savage,Fail
+LAB-01085,CMP-0095,hERG Cardiotoxicity Screen,64.2,% inhibition at 10uM,2026-01-18,Tammy Campbell,Pass
+LAB-01086,CMP-0133,Cell Viability Assay,7.1,% viability,2026-03-21,Pam Baker,Pass
+LAB-01087,CMP-0061,Solubility Assay,4.14,mg/mL,2023-12-18,Emily Vang,Pass
+LAB-01088,CMP-0112,Solubility Assay,3.11,mg/mL,2025-10-06,Samuel Sandoval,Pass
+LAB-01089,CMP-0074,hERG Cardiotoxicity Screen,92.0,% inhibition at 10uM,2025-11-26,Charles Hall,Pass
+LAB-01090,CMP-0100,Metabolic Stability (Microsomal),17.1,min (t1/2),2022-11-09,Michael Graham,Fail
+LAB-01091,CMP-0039,Binding Affinity (SPR),0.56,nM (Kd),2026-09-09,Amanda Kelly,Pass
+LAB-01092,CMP-0125,Pharmacokinetic (PK) Study,22.12,hours (t1/2),2025-07-19,Mr. Ryan Camacho,Pass
+LAB-01093,CMP-0057,hERG Cardiotoxicity Screen,21.4,% inhibition at 10uM,2023-03-17,Sean White,Pass
+LAB-01094,CMP-0068,Selectivity Panel,13.7,% selectivity,2023-05-21,Denise Macdonald,Pass
+LAB-01095,CMP-0046,Selectivity Panel,31.7,% selectivity,2025-01-20,Valerie Fox,Pass
+LAB-01096,CMP-0100,Metabolic Stability (Microsomal),137.4,min (t1/2),2024-12-29,Billy Tate,Pass
+LAB-01097,CMP-0058,Selectivity Panel,56.3,% selectivity,2025-06-02,Allison Maldonado,Pass
+LAB-01098,CMP-0069,Pharmacokinetic (PK) Study,14.18,hours (t1/2),2025-06-07,Kevin Bean,Pass
+LAB-01099,CMP-0146,Solubility Assay,1.08,mg/mL,2026-01-21,Brad Rivas,Pass
+LAB-01100,CMP-0093,Metabolic Stability (Microsomal),174.0,min (t1/2),2025-05-07,Tyler Wheeler,Pass
+LAB-01101,CMP-0047,Cell Viability Assay,49.9,% viability,2022-09-26,Mary Tapia,Fail
+LAB-01102,CMP-0019,Solubility Assay,0.33,mg/mL,2024-01-05,Morgan Bernard,Pass
+LAB-01103,CMP-0031,Solubility Assay,2.32,mg/mL,2024-12-26,Anthony Schneider,Pass
+LAB-01104,CMP-0150,hERG Cardiotoxicity Screen,93.9,% inhibition at 10uM,2024-01-02,Benjamin Crane,Pass
+LAB-01105,CMP-0079,Metabolic Stability (Microsomal),58.8,min (t1/2),2024-03-27,Christopher Hanna,Pass
+LAB-01106,CMP-0032,Selectivity Panel,73.8,% selectivity,2026-03-04,Samuel Martin,Pass
+LAB-01107,CMP-0141,Solubility Assay,0.02,mg/mL,2025-10-30,Paul Valdez,Pass
+LAB-01108,CMP-0134,Selectivity Panel,26.0,% selectivity,2023-03-13,Jeffrey Drake MD,Pass
+LAB-01109,CMP-0024,Pharmacokinetic (PK) Study,18.67,hours (t1/2),2025-06-14,Max Collier,Pass
+LAB-01110,CMP-0017,Pharmacokinetic (PK) Study,19.39,hours (t1/2),2024-10-05,Stephen Alvarez MD,Pass
+LAB-01111,CMP-0127,hERG Cardiotoxicity Screen,41.8,% inhibition at 10uM,2024-05-27,Rita Austin,Pass
+LAB-01112,CMP-0084,Cell Viability Assay,45.3,% viability,2024-06-12,Andrew Peterson,Fail
+LAB-01113,CMP-0005,Metabolic Stability (Microsomal),53.4,min (t1/2),2024-07-25,Michael Moore,Fail
+LAB-01114,CMP-0008,Cell Viability Assay,12.1,% viability,2024-09-10,Kelly Roberts,Pass
+LAB-01115,CMP-0009,Selectivity Panel,28.9,% selectivity,2024-06-17,Karen Hernandez,Pass
+LAB-01116,CMP-0108,Enzymatic Inhibition Assay,15.28,nM (IC50),2023-03-23,Sarah Mills,Pass
+LAB-01117,CMP-0023,Cell Viability Assay,12.8,% viability,2023-11-23,Billy Williams,Fail
+LAB-01118,CMP-0059,Pharmacokinetic (PK) Study,14.39,hours (t1/2),2023-02-22,Brandon Guerrero,Fail
+LAB-01119,CMP-0053,Metabolic Stability (Microsomal),80.8,min (t1/2),2024-12-25,David Miller,Pass
+LAB-01120,CMP-0129,Binding Affinity (SPR),1.36,nM (Kd),2024-09-22,Matthew White,Pass
+LAB-01121,CMP-0062,Selectivity Panel,70.2,% selectivity,2023-06-11,Bradley Mcdowell,Pass
+LAB-01122,CMP-0057,Pharmacokinetic (PK) Study,23.59,hours (t1/2),2023-11-26,Jordan Santiago,Pass
+LAB-01123,CMP-0116,Pharmacokinetic (PK) Study,6.9,hours (t1/2),2025-03-16,Vincent Savage,Fail
+LAB-01124,CMP-0020,Solubility Assay,2.29,mg/mL,2023-06-18,Paul Munoz,Pass
+LAB-01125,CMP-0072,Solubility Assay,6.69,mg/mL,2026-03-13,Joseph Smith,Pass
+LAB-01126,CMP-0137,Selectivity Panel,82.0,% selectivity,2023-03-07,John Holt,Pass
+LAB-01127,CMP-0139,hERG Cardiotoxicity Screen,19.0,% inhibition at 10uM,2026-03-09,Lindsay Tucker,Pass
+LAB-01128,CMP-0036,Pharmacokinetic (PK) Study,3.89,hours (t1/2),2025-03-09,Heather Nunez,Pass
+LAB-01129,CMP-0120,Pharmacokinetic (PK) Study,2.81,hours (t1/2),2025-06-21,Eric Martinez,Pass
+LAB-01130,CMP-0033,Selectivity Panel,32.1,% selectivity,2022-10-08,Alan Waller,Pass
+LAB-01131,CMP-0104,Metabolic Stability (Microsomal),9.6,min (t1/2),2026-02-23,Matthew Santos,Pass
+LAB-01132,CMP-0100,hERG Cardiotoxicity Screen,95.3,% inhibition at 10uM,2024-06-15,Rachel Lee,Pass
+LAB-01133,CMP-0118,Selectivity Panel,46.7,% selectivity,2023-12-01,John Johnson,Pass
+LAB-01134,CMP-0006,Cell Viability Assay,45.5,% viability,2023-05-18,Michael Maynard,Pass
+LAB-01135,CMP-0023,Solubility Assay,0.43,mg/mL,2024-08-06,Lauren Harris,Pass
+LAB-01136,CMP-0075,Pharmacokinetic (PK) Study,17.83,hours (t1/2),2024-12-27,Amber Smith,Pass
+LAB-01137,CMP-0046,Enzymatic Inhibition Assay,2.41,nM (IC50),2025-03-26,Veronica Allison,Pass
+LAB-01138,CMP-0018,Pharmacokinetic (PK) Study,6.62,hours (t1/2),2025-08-29,Kristen Roberts,Pass
+LAB-01139,CMP-0096,Selectivity Panel,30.7,% selectivity,2024-08-29,Mr. Logan Gregory,Pass
+LAB-01140,CMP-0071,Selectivity Panel,85.5,% selectivity,2025-12-23,Miguel Rice MD,Pass
+LAB-01141,CMP-0058,Selectivity Panel,97.0,% selectivity,2023-12-23,Steven Butler,Pass
+LAB-01142,CMP-0097,Metabolic Stability (Microsomal),69.8,min (t1/2),2024-08-09,Todd Reed DDS,Pass
+LAB-01143,CMP-0041,Binding Affinity (SPR),0.79,nM (Kd),2022-10-18,Corey Cooper,Pass
+LAB-01144,CMP-0084,Solubility Assay,0.25,mg/mL,2023-08-22,Terry Morgan,Fail
+LAB-01145,CMP-0016,Metabolic Stability (Microsomal),96.8,min (t1/2),2025-02-13,Mary Anderson,Pass
+LAB-01146,CMP-0103,Pharmacokinetic (PK) Study,11.93,hours (t1/2),2023-11-20,Toni Whitaker,Pass
+LAB-01147,CMP-0068,Metabolic Stability (Microsomal),79.6,min (t1/2),2025-05-27,Rebecca Marsh,Pass
+LAB-01148,CMP-0053,Binding Affinity (SPR),2.92,nM (Kd),2026-02-02,Diane Curry,Pass
+LAB-01149,CMP-0082,Metabolic Stability (Microsomal),74.6,min (t1/2),2025-05-18,Curtis Obrien,Pass
+LAB-01150,CMP-0117,hERG Cardiotoxicity Screen,77.5,% inhibition at 10uM,2023-02-12,Xavier Torres,Pass
+LAB-01151,CMP-0091,hERG Cardiotoxicity Screen,9.1,% inhibition at 10uM,2023-07-20,Albert Ibarra,Pass
+LAB-01152,CMP-0073,Cell Viability Assay,53.9,% viability,2024-02-21,Ronald Kline,Fail
+LAB-01153,CMP-0144,hERG Cardiotoxicity Screen,70.7,% inhibition at 10uM,2022-11-03,Jeffrey Williamson,Fail
+LAB-01154,CMP-0097,Selectivity Panel,60.2,% selectivity,2023-03-13,David Peterson,Pass
+LAB-01155,CMP-0113,hERG Cardiotoxicity Screen,47.2,% inhibition at 10uM,2024-02-18,Shawn Adams,Pass
+LAB-01156,CMP-0062,Selectivity Panel,96.3,% selectivity,2023-04-26,Kaylee Caldwell,Fail
+LAB-01157,CMP-0061,Enzymatic Inhibition Assay,2.6,nM (IC50),2025-07-15,Jessica Bryant,Fail
+LAB-01158,CMP-0132,Enzymatic Inhibition Assay,5.76,nM (IC50),2026-01-28,Brian Bishop,Fail
+LAB-01159,CMP-0110,Cell Viability Assay,80.4,% viability,2025-11-02,Samantha Williams,Pass
+LAB-01160,CMP-0117,Pharmacokinetic (PK) Study,0.73,hours (t1/2),2023-02-18,Shelby Bartlett,Pass
+LAB-01161,CMP-0001,Enzymatic Inhibition Assay,2.61,nM (IC50),2023-05-05,Jeremy Hunter,Pass
+LAB-01162,CMP-0124,Pharmacokinetic (PK) Study,19.58,hours (t1/2),2025-08-22,Matthew Cook,Fail
+LAB-01163,CMP-0132,Binding Affinity (SPR),4.46,nM (Kd),2023-04-07,Jessica Perry,Pass
+LAB-01164,CMP-0031,hERG Cardiotoxicity Screen,90.6,% inhibition at 10uM,2025-10-14,Robert Peterson,Pass
+LAB-01165,CMP-0032,Selectivity Panel,62.9,% selectivity,2024-09-24,Jaime Fischer,Pass
+LAB-01166,CMP-0026,Selectivity Panel,34.4,% selectivity,2024-02-26,Brittany Molina,Pass
+LAB-01167,CMP-0092,Enzymatic Inhibition Assay,3.98,nM (IC50),2024-05-25,Robert Gutierrez,Pass
+LAB-01168,CMP-0059,Pharmacokinetic (PK) Study,15.93,hours (t1/2),2024-05-07,Samuel Norton,Fail
+LAB-01169,CMP-0096,Metabolic Stability (Microsomal),160.6,min (t1/2),2024-02-28,Charles Smith,Fail
+LAB-01170,CMP-0096,Selectivity Panel,89.4,% selectivity,2025-12-08,Angela Edwards,Fail
+LAB-01171,CMP-0124,hERG Cardiotoxicity Screen,32.7,% inhibition at 10uM,2026-08-21,Antonio Malone,Pass
+LAB-01172,CMP-0108,Enzymatic Inhibition Assay,6.75,nM (IC50),2025-05-08,Stephanie Brown,Fail
+LAB-01173,CMP-0020,Binding Affinity (SPR),2.5,nM (Kd),2025-03-28,Mary Meyer,Pass
+LAB-01174,CMP-0137,Selectivity Panel,42.9,% selectivity,2023-11-23,Michael Spencer,Pass
+LAB-01175,CMP-0043,Enzymatic Inhibition Assay,15.61,nM (IC50),2023-12-06,Susan Smith,Fail
+LAB-01176,CMP-0136,Cell Viability Assay,38.7,% viability,2023-10-31,Tami Graves,Pass
+LAB-01177,CMP-0090,Binding Affinity (SPR),1.66,nM (Kd),2024-06-30,Joshua Kramer,Pass
+LAB-01178,CMP-0100,hERG Cardiotoxicity Screen,70.8,% inhibition at 10uM,2025-04-26,Stacy Harrington,Pass
+LAB-01179,CMP-0108,Pharmacokinetic (PK) Study,23.86,hours (t1/2),2024-04-30,Eric Johnson,Pass
+LAB-01180,CMP-0148,Enzymatic Inhibition Assay,5.7,nM (IC50),2024-01-19,Natalie Martinez,Pass
+LAB-01181,CMP-0097,Cell Viability Assay,58.7,% viability,2026-09-05,Brandon Arnold,Pass
+LAB-01182,CMP-0047,hERG Cardiotoxicity Screen,49.4,% inhibition at 10uM,2024-10-18,Caitlin Johnson,Fail
+LAB-01183,CMP-0042,Enzymatic Inhibition Assay,66.31,nM (IC50),2025-11-24,Daisy Schroeder,Pass
+LAB-01184,CMP-0143,Binding Affinity (SPR),3.27,nM (Kd),2025-08-13,Mrs. Amy Watson,Pass
+LAB-01185,CMP-0031,Binding Affinity (SPR),0.45,nM (Kd),2025-03-21,Anthony Curtis,Pass
+LAB-01186,CMP-0047,Solubility Assay,7.49,mg/mL,2023-03-19,Norman Chavez,Fail
+LAB-01187,CMP-0026,hERG Cardiotoxicity Screen,30.2,% inhibition at 10uM,2026-08-23,Virginia Cunningham,Pass
+LAB-01188,CMP-0042,Metabolic Stability (Microsomal),28.5,min (t1/2),2026-04-15,Kim Larson,Pass
+LAB-01189,CMP-0039,Enzymatic Inhibition Assay,1.22,nM (IC50),2024-02-11,Richard Espinoza,Pass
+LAB-01190,CMP-0015,Selectivity Panel,57.5,% selectivity,2025-05-26,Kelly Wright,Pass
+LAB-01191,CMP-0101,Pharmacokinetic (PK) Study,2.51,hours (t1/2),2024-01-09,Samantha Ward,Pass
+LAB-01192,CMP-0049,Cell Viability Assay,24.2,% viability,2023-02-08,Sandra Miller,Pass
+LAB-01193,CMP-0089,Selectivity Panel,70.9,% selectivity,2022-12-17,Karen Griffin,Fail
+LAB-01194,CMP-0116,Solubility Assay,0.46,mg/mL,2024-03-10,Leah Stone,Pass
+LAB-01195,CMP-0103,Enzymatic Inhibition Assay,0.52,nM (IC50),2024-04-16,Jonathan Henderson,Fail
+LAB-01196,CMP-0062,Pharmacokinetic (PK) Study,14.4,hours (t1/2),2024-06-21,Katherine Mcpherson,Pass
+LAB-01197,CMP-0118,Cell Viability Assay,28.5,% viability,2026-01-02,Cameron Dawson,Fail
+LAB-01198,CMP-0120,Binding Affinity (SPR),3.04,nM (Kd),2023-03-25,Sharon Wilson,Pass
+LAB-01199,CMP-0035,Solubility Assay,0.79,mg/mL,2023-07-25,Paul Raymond,Pass
+LAB-01200,CMP-0126,Selectivity Panel,62.5,% selectivity,2024-03-10,Lindsay Ortiz,Pass
+LAB-01201,CMP-0099,Enzymatic Inhibition Assay,26.21,nM (IC50),2023-03-13,Amanda Hernandez,Pass
+LAB-01202,CMP-0015,Solubility Assay,0.94,mg/mL,2024-03-13,Elizabeth Tucker PhD,Pass
+LAB-01203,CMP-0104,hERG Cardiotoxicity Screen,88.8,% inhibition at 10uM,2023-04-13,Amber Shannon,Pass
+LAB-01204,CMP-0056,Selectivity Panel,14.3,% selectivity,2026-04-08,Robert Burns,Pass
+LAB-01205,CMP-0101,hERG Cardiotoxicity Screen,94.5,% inhibition at 10uM,2023-03-15,Seth Butler,Pass
+LAB-01206,CMP-0078,Selectivity Panel,54.3,% selectivity,2025-01-01,Stephanie Harrington,Fail
+LAB-01207,CMP-0089,Pharmacokinetic (PK) Study,1.78,hours (t1/2),2024-08-11,Lisa Gill,Pass
+LAB-01208,CMP-0081,Solubility Assay,5.13,mg/mL,2024-09-23,Jerry Cole,Pass
+LAB-01209,CMP-0003,hERG Cardiotoxicity Screen,34.1,% inhibition at 10uM,2026-03-05,Robert Beck,Pass
+LAB-01210,CMP-0035,Pharmacokinetic (PK) Study,15.68,hours (t1/2),2024-05-08,James Weaver,Fail
+LAB-01211,CMP-0026,Pharmacokinetic (PK) Study,6.92,hours (t1/2),2026-07-17,Nancy Brewer,Pass
+LAB-01212,CMP-0059,hERG Cardiotoxicity Screen,54.8,% inhibition at 10uM,2026-03-05,Laura Hogan,Pass
+LAB-01213,CMP-0116,Selectivity Panel,62.6,% selectivity,2025-07-16,Becky Hansen,Fail
+LAB-01214,CMP-0059,Metabolic Stability (Microsomal),77.6,min (t1/2),2023-06-25,Laura Brown,Pass
+LAB-01215,CMP-0023,Enzymatic Inhibition Assay,2.72,nM (IC50),2024-12-28,John Prince,Pass
+LAB-01216,CMP-0104,Solubility Assay,1.0,mg/mL,2023-03-12,Catherine Smith,Pass
+LAB-01217,CMP-0078,Binding Affinity (SPR),0.56,nM (Kd),2025-11-09,Michael Clay,Pass
+LAB-01218,CMP-0038,Cell Viability Assay,30.6,% viability,2024-06-27,Lisa Morales,Pass
+LAB-01219,CMP-0044,Metabolic Stability (Microsomal),96.5,min (t1/2),2022-11-22,Allison Kim,Fail
+LAB-01220,CMP-0054,Selectivity Panel,57.5,% selectivity,2024-05-15,Emily Scott,Pass
+LAB-01221,CMP-0039,Pharmacokinetic (PK) Study,20.8,hours (t1/2),2023-03-04,Christopher Thomas,Pass
+LAB-01222,CMP-0080,Solubility Assay,0.91,mg/mL,2023-09-26,Eric Russell,Pass
+LAB-01223,CMP-0060,Solubility Assay,7.06,mg/mL,2023-05-23,Erika Johnson,Fail
+LAB-01224,CMP-0066,Cell Viability Assay,85.0,% viability,2022-12-12,Francisco Gutierrez,Fail
+LAB-01225,CMP-0141,Pharmacokinetic (PK) Study,18.73,hours (t1/2),2024-01-04,Ronald Martinez,Fail
+LAB-01226,CMP-0123,Enzymatic Inhibition Assay,8.9,nM (IC50),2023-07-10,Laurie Vasquez,Fail
+LAB-01227,CMP-0052,Selectivity Panel,46.8,% selectivity,2025-09-20,Brian Brown,Fail
+LAB-01228,CMP-0073,Enzymatic Inhibition Assay,1.0,nM (IC50),2024-07-27,John Russell,Pass
+LAB-01229,CMP-0011,Metabolic Stability (Microsomal),165.7,min (t1/2),2023-08-25,Debra Richmond,Pass
+LAB-01230,CMP-0143,hERG Cardiotoxicity Screen,5.3,% inhibition at 10uM,2025-05-30,Justin Glover,Fail
+LAB-01231,CMP-0127,Binding Affinity (SPR),1.48,nM (Kd),2023-12-06,Bradley Fields,Pass
+LAB-01232,CMP-0084,Cell Viability Assay,74.0,% viability,2023-07-12,Jacqueline Galloway,Fail
+LAB-01233,CMP-0119,Binding Affinity (SPR),0.48,nM (Kd),2025-11-02,Jessica Buck,Pass
+LAB-01234,CMP-0048,Cell Viability Assay,82.1,% viability,2024-07-08,John Calderon,Pass
+LAB-01235,CMP-0040,Enzymatic Inhibition Assay,25.62,nM (IC50),2023-11-14,April Mahoney,Pass
+LAB-01236,CMP-0088,Metabolic Stability (Microsomal),37.9,min (t1/2),2024-08-21,Sara James,Pass
+LAB-01237,CMP-0001,Enzymatic Inhibition Assay,70.54,nM (IC50),2024-02-13,Lauren Dixon,Pass
+LAB-01238,CMP-0056,hERG Cardiotoxicity Screen,76.6,% inhibition at 10uM,2022-11-23,Kristine Turner,Pass
+LAB-01239,CMP-0011,Cell Viability Assay,46.4,% viability,2024-04-17,Charles Hawkins,Pass
+LAB-01240,CMP-0113,Cell Viability Assay,64.0,% viability,2023-10-31,Leroy Bernard,Pass
+LAB-01241,CMP-0046,Cell Viability Assay,51.2,% viability,2023-12-26,Grace Green,Fail
+LAB-01242,CMP-0026,Binding Affinity (SPR),0.87,nM (Kd),2025-09-20,David Bird,Pass
+LAB-01243,CMP-0047,Binding Affinity (SPR),1.32,nM (Kd),2024-01-29,Kyle Smith,Fail
+LAB-01244,CMP-0025,Binding Affinity (SPR),0.44,nM (Kd),2025-06-24,April Alvarez,Pass
+LAB-01245,CMP-0055,Pharmacokinetic (PK) Study,7.93,hours (t1/2),2026-04-26,Jennifer Woodard,Pass
+LAB-01246,CMP-0074,Metabolic Stability (Microsomal),93.4,min (t1/2),2025-07-10,Kimberly Cobb,Pass
+LAB-01247,CMP-0055,Solubility Assay,2.18,mg/mL,2025-04-22,Andre Collier,Pass
+LAB-01248,CMP-0013,Metabolic Stability (Microsomal),82.7,min (t1/2),2025-05-25,Heather Hess,Pass
+LAB-01249,CMP-0045,Pharmacokinetic (PK) Study,2.57,hours (t1/2),2026-01-08,Christopher Tate,Pass
+LAB-01250,CMP-0010,Metabolic Stability (Microsomal),166.0,min (t1/2),2025-07-01,Joel Mayer,Pass
+LAB-01251,CMP-0099,Pharmacokinetic (PK) Study,1.59,hours (t1/2),2024-06-28,Alejandro Campbell,Pass
+LAB-01252,CMP-0071,Selectivity Panel,90.5,% selectivity,2026-05-25,Brandon Austin,Pass
+LAB-01253,CMP-0043,Solubility Assay,0.94,mg/mL,2023-12-04,Cynthia Snyder,Pass
+LAB-01254,CMP-0108,Solubility Assay,7.03,mg/mL,2024-02-29,Tanner Mann,Pass
+LAB-01255,CMP-0117,Metabolic Stability (Microsomal),149.4,min (t1/2),2023-07-20,Roberto Foster,Pass
+LAB-01256,CMP-0032,Metabolic Stability (Microsomal),62.4,min (t1/2),2026-03-11,Kathleen Arnold,Pass
+LAB-01257,CMP-0083,Solubility Assay,0.45,mg/mL,2025-05-08,Melanie Cunningham,Pass
+LAB-01258,CMP-0147,Binding Affinity (SPR),1.9,nM (Kd),2022-12-22,Austin Green,Pass
+LAB-01259,CMP-0041,hERG Cardiotoxicity Screen,42.7,% inhibition at 10uM,2024-12-28,Joseph Casey,Pass
+LAB-01260,CMP-0010,Selectivity Panel,83.6,% selectivity,2023-06-25,Wendy Steele,Pass
+LAB-01261,CMP-0126,Metabolic Stability (Microsomal),131.5,min (t1/2),2024-11-04,Justin Gibson,Fail
+LAB-01262,CMP-0072,Enzymatic Inhibition Assay,0.64,nM (IC50),2026-06-18,Terri Williams,Pass
+LAB-01263,CMP-0036,Enzymatic Inhibition Assay,14.07,nM (IC50),2026-06-19,Zachary Hill,Pass
+LAB-01264,CMP-0001,hERG Cardiotoxicity Screen,29.0,% inhibition at 10uM,2025-06-07,Isaiah Blake,Fail
+LAB-01265,CMP-0048,Binding Affinity (SPR),1.1,nM (Kd),2026-03-31,Donald Fisher,Fail
+LAB-01266,CMP-0039,Solubility Assay,1.6,mg/mL,2024-07-04,Cory Miller,Fail
+LAB-01267,CMP-0098,hERG Cardiotoxicity Screen,96.3,% inhibition at 10uM,2024-12-30,Omar Spence,Pass
+LAB-01268,CMP-0028,Pharmacokinetic (PK) Study,5.92,hours (t1/2),2024-05-28,David Martin,Fail
+LAB-01269,CMP-0110,Selectivity Panel,10.9,% selectivity,2023-12-15,Anne Castillo,Pass
+LAB-01270,CMP-0055,Pharmacokinetic (PK) Study,13.81,hours (t1/2),2025-12-10,Lori Cook,Pass
+LAB-01271,CMP-0060,Binding Affinity (SPR),3.03,nM (Kd),2023-09-18,David Peterson,Pass
+LAB-01272,CMP-0090,hERG Cardiotoxicity Screen,45.5,% inhibition at 10uM,2022-12-06,Robert Harding,Fail
+LAB-01273,CMP-0004,Metabolic Stability (Microsomal),21.8,min (t1/2),2025-10-24,Pamela Garrett,Pass
+LAB-01274,CMP-0048,Binding Affinity (SPR),4.9,nM (Kd),2025-01-10,Antonio Johnson,Pass
+LAB-01275,CMP-0080,Solubility Assay,2.37,mg/mL,2023-12-19,Ana Anderson,Pass
+LAB-01276,CMP-0063,Pharmacokinetic (PK) Study,11.3,hours (t1/2),2026-05-21,Eric Sims,Pass
+LAB-01277,CMP-0010,Cell Viability Assay,64.7,% viability,2022-12-23,Kristin Phillips,Pass
+LAB-01278,CMP-0064,hERG Cardiotoxicity Screen,38.2,% inhibition at 10uM,2024-03-27,Paul Hall,Fail
+LAB-01279,CMP-0010,Metabolic Stability (Microsomal),39.8,min (t1/2),2025-02-09,Alexandra Reyes,Fail
+LAB-01280,CMP-0132,Enzymatic Inhibition Assay,2.94,nM (IC50),2025-11-21,Lisa Morgan,Pass
+LAB-01281,CMP-0003,Solubility Assay,1.46,mg/mL,2026-06-17,Jordan Murphy,Pass
+LAB-01282,CMP-0134,Metabolic Stability (Microsomal),22.5,min (t1/2),2023-06-26,Kurt Jones,Pass
+LAB-01283,CMP-0138,Cell Viability Assay,38.5,% viability,2025-11-13,Kenneth Walsh,Pass
+LAB-01284,CMP-0077,Binding Affinity (SPR),4.7,nM (Kd),2023-09-27,Nathaniel Wallace,Pass
+LAB-01285,CMP-0123,Enzymatic Inhibition Assay,2.01,nM (IC50),2023-09-08,Amy Collins,Pass
+LAB-01286,CMP-0076,Metabolic Stability (Microsomal),131.0,min (t1/2),2024-06-15,Nicole Collins,Fail
+LAB-01287,CMP-0134,Enzymatic Inhibition Assay,43.36,nM (IC50),2026-04-02,Brittany Parker,Pass
+LAB-01288,CMP-0090,Pharmacokinetic (PK) Study,8.93,hours (t1/2),2024-01-31,Adam Willis,Pass
+LAB-01289,CMP-0028,Binding Affinity (SPR),3.03,nM (Kd),2025-06-04,Jonathon Conley,Fail
+LAB-01290,CMP-0099,Metabolic Stability (Microsomal),134.6,min (t1/2),2026-02-22,Craig Gonzalez,Pass
+LAB-01291,CMP-0010,Cell Viability Assay,83.8,% viability,2026-05-06,Gloria Contreras,Pass
+LAB-01292,CMP-0053,hERG Cardiotoxicity Screen,92.1,% inhibition at 10uM,2025-06-28,Ms. Erin Lane,Pass
+LAB-01293,CMP-0003,Pharmacokinetic (PK) Study,20.58,hours (t1/2),2026-07-25,Jennifer Martin,Fail
+LAB-01294,CMP-0128,Cell Viability Assay,75.5,% viability,2024-07-12,Amanda Robinson,Pass
+LAB-01295,CMP-0026,Enzymatic Inhibition Assay,5.29,nM (IC50),2022-09-23,David Hanson,Pass
+LAB-01296,CMP-0124,hERG Cardiotoxicity Screen,63.3,% inhibition at 10uM,2023-09-01,Tiffany Rivera,Fail
+LAB-01297,CMP-0066,Metabolic Stability (Microsomal),150.3,min (t1/2),2025-09-02,Clinton Fritz,Pass
+LAB-01298,CMP-0112,Pharmacokinetic (PK) Study,6.8,hours (t1/2),2024-02-29,Alvin Wilson,Pass
+LAB-01299,CMP-0005,Selectivity Panel,79.7,% selectivity,2023-11-16,Kevin Cannon,Pass
+LAB-01300,CMP-0020,Selectivity Panel,98.9,% selectivity,2022-11-21,Craig Thompson,Pass
+LAB-01301,CMP-0101,Binding Affinity (SPR),4.89,nM (Kd),2026-04-02,Gina Spencer,Pass
+LAB-01302,CMP-0056,Binding Affinity (SPR),0.56,nM (Kd),2023-06-05,Ryan Lozano,Pass
+LAB-01303,CMP-0108,hERG Cardiotoxicity Screen,97.8,% inhibition at 10uM,2022-10-18,Jamie Cobb,Pass
+LAB-01304,CMP-0072,Solubility Assay,2.73,mg/mL,2023-02-27,Elizabeth Allen,Pass
+LAB-01305,CMP-0070,Cell Viability Assay,91.3,% viability,2025-12-12,Teresa Rowland,Fail
+LAB-01306,CMP-0029,Metabolic Stability (Microsomal),72.8,min (t1/2),2026-09-13,Sherry Jones,Pass
+LAB-01307,CMP-0126,Solubility Assay,5.1,mg/mL,2023-04-16,Rebecca Lee,Fail
+LAB-01308,CMP-0023,Solubility Assay,0.37,mg/mL,2024-03-23,Kyle Rowland,Pass
+LAB-01309,CMP-0057,Enzymatic Inhibition Assay,0.74,nM (IC50),2023-09-10,Luis Lopez,Pass
+LAB-01310,CMP-0033,Pharmacokinetic (PK) Study,21.28,hours (t1/2),2024-11-07,Erin Brown,Pass
+LAB-01311,CMP-0072,Selectivity Panel,49.1,% selectivity,2025-11-22,Sarah Schmitt,Pass
+LAB-01312,CMP-0148,Selectivity Panel,6.0,% selectivity,2026-04-03,Brad Ruiz,Fail
+LAB-01313,CMP-0140,Binding Affinity (SPR),1.08,nM (Kd),2025-05-13,Jordan Potter,Fail
+LAB-01314,CMP-0030,Solubility Assay,6.08,mg/mL,2025-04-16,Kathleen Marshall,Fail
+LAB-01315,CMP-0099,Cell Viability Assay,90.5,% viability,2023-12-31,Michael Baldwin,Fail
+LAB-01316,CMP-0041,Enzymatic Inhibition Assay,2.03,nM (IC50),2024-09-09,James Morse,Pass
+LAB-01317,CMP-0031,Pharmacokinetic (PK) Study,18.33,hours (t1/2),2025-01-17,Daniel Harris,Pass
+LAB-01318,CMP-0015,hERG Cardiotoxicity Screen,21.5,% inhibition at 10uM,2026-03-01,Eric Oneal,Fail
+LAB-01319,CMP-0129,Cell Viability Assay,26.7,% viability,2024-12-30,Jacqueline Pierce,Pass
+LAB-01320,CMP-0131,Selectivity Panel,80.9,% selectivity,2023-04-02,Jeremy Bell,Fail
+LAB-01321,CMP-0005,Binding Affinity (SPR),0.42,nM (Kd),2025-01-17,Marc Simmons,Pass
+LAB-01322,CMP-0064,Binding Affinity (SPR),3.17,nM (Kd),2024-07-31,Robert Stewart,Fail
+LAB-01323,CMP-0005,hERG Cardiotoxicity Screen,18.6,% inhibition at 10uM,2024-03-29,David Brewer,Pass
+LAB-01324,CMP-0043,Pharmacokinetic (PK) Study,0.54,hours (t1/2),2024-02-24,Ryan Hunt,Pass
+LAB-01325,CMP-0013,Enzymatic Inhibition Assay,1.14,nM (IC50),2025-04-14,Tammy Garcia,Pass
+LAB-01326,CMP-0037,Enzymatic Inhibition Assay,3.37,nM (IC50),2022-12-31,Curtis Gonzalez,Pass
+LAB-01327,CMP-0007,Enzymatic Inhibition Assay,2.17,nM (IC50),2024-01-11,Robert Sutton,Pass
+LAB-01328,CMP-0118,hERG Cardiotoxicity Screen,62.2,% inhibition at 10uM,2023-10-23,Yolanda Murillo,Fail
+LAB-01329,CMP-0108,Enzymatic Inhibition Assay,6.28,nM (IC50),2025-09-20,Susan Smith,Fail
+LAB-01330,CMP-0143,hERG Cardiotoxicity Screen,39.6,% inhibition at 10uM,2023-11-29,Rachel Powell,Pass
+LAB-01331,CMP-0058,Solubility Assay,11.49,mg/mL,2024-05-02,Mary Kennedy,Pass
+LAB-01332,CMP-0036,Enzymatic Inhibition Assay,7.09,nM (IC50),2024-10-05,Brittany Sanders,Pass
+LAB-01333,CMP-0054,Metabolic Stability (Microsomal),130.1,min (t1/2),2023-08-15,Kara Black,Pass
+LAB-01334,CMP-0017,Metabolic Stability (Microsomal),62.5,min (t1/2),2025-11-08,Miranda Murray,Pass
+LAB-01335,CMP-0047,Cell Viability Assay,53.7,% viability,2025-11-17,Cole Carrillo,Pass
+LAB-01336,CMP-0100,Selectivity Panel,47.4,% selectivity,2025-07-02,Jerry Hansen,Pass
+LAB-01337,CMP-0100,Cell Viability Assay,74.9,% viability,2024-03-18,Bethany Harding,Fail
+LAB-01338,CMP-0004,Selectivity Panel,33.9,% selectivity,2022-10-02,Sandra Morgan,Pass
+LAB-01339,CMP-0002,Enzymatic Inhibition Assay,5.28,nM (IC50),2024-05-21,Jennifer Osborne,Fail
+LAB-01340,CMP-0046,hERG Cardiotoxicity Screen,66.7,% inhibition at 10uM,2024-11-10,Alexander Floyd,Pass
+LAB-01341,CMP-0069,Metabolic Stability (Microsomal),67.2,min (t1/2),2026-05-26,Troy Rivera,Pass
+LAB-01342,CMP-0138,Enzymatic Inhibition Assay,1.87,nM (IC50),2025-03-25,Lisa Camacho,Pass
+LAB-01343,CMP-0105,Solubility Assay,0.97,mg/mL,2026-08-19,James Ferguson,Pass
+LAB-01344,CMP-0106,hERG Cardiotoxicity Screen,54.6,% inhibition at 10uM,2023-06-19,Keith Hayes,Pass
+LAB-01345,CMP-0129,hERG Cardiotoxicity Screen,17.9,% inhibition at 10uM,2026-04-16,Brian Tran,Pass
+LAB-01346,CMP-0035,hERG Cardiotoxicity Screen,59.0,% inhibition at 10uM,2022-11-03,Katherine Lopez,Pass
+LAB-01347,CMP-0134,Enzymatic Inhibition Assay,11.31,nM (IC50),2022-12-28,Diane Hall,Pass
+LAB-01348,CMP-0037,hERG Cardiotoxicity Screen,91.7,% inhibition at 10uM,2025-05-07,Anthony Stone,Pass
+LAB-01349,CMP-0143,Solubility Assay,1.78,mg/mL,2023-05-26,Jennifer Moore,Pass
+LAB-01350,CMP-0117,Pharmacokinetic (PK) Study,16.19,hours (t1/2),2023-02-26,Karen Jones,Fail
+LAB-01351,CMP-0080,Metabolic Stability (Microsomal),154.9,min (t1/2),2026-07-13,Beverly Harris,Pass
+LAB-01352,CMP-0115,Binding Affinity (SPR),0.94,nM (Kd),2024-06-10,Karen Munoz,Pass
+LAB-01353,CMP-0099,Pharmacokinetic (PK) Study,9.58,hours (t1/2),2026-06-20,Kathryn Cohen,Pass
+LAB-01354,CMP-0142,hERG Cardiotoxicity Screen,68.0,% inhibition at 10uM,2023-10-25,Charles Brown,Pass
+LAB-01355,CMP-0105,Solubility Assay,0.12,mg/mL,2024-04-22,Kelly Kent,Pass
+LAB-01356,CMP-0019,Pharmacokinetic (PK) Study,17.4,hours (t1/2),2026-03-24,Kenneth Mclaughlin,Fail
+LAB-01357,CMP-0103,Pharmacokinetic (PK) Study,13.81,hours (t1/2),2023-11-12,Joyce Graves,Pass
+LAB-01358,CMP-0033,Binding Affinity (SPR),0.92,nM (Kd),2025-07-23,Louis Patrick,Pass
+LAB-01359,CMP-0077,hERG Cardiotoxicity Screen,22.8,% inhibition at 10uM,2023-05-31,Steven Quinn,Pass
+LAB-01360,CMP-0068,Pharmacokinetic (PK) Study,8.51,hours (t1/2),2024-07-17,Catherine Carroll,Pass
+LAB-01361,CMP-0013,Pharmacokinetic (PK) Study,22.85,hours (t1/2),2024-04-14,Cynthia Harrell,Pass
+LAB-01362,CMP-0013,Pharmacokinetic (PK) Study,19.43,hours (t1/2),2023-10-22,Dorothy Hendricks,Pass
+LAB-01363,CMP-0083,Cell Viability Assay,36.4,% viability,2025-07-03,Claudia Snyder,Fail
+LAB-01364,CMP-0138,Pharmacokinetic (PK) Study,23.89,hours (t1/2),2026-09-05,Whitney Jones,Pass
+LAB-01365,CMP-0051,Solubility Assay,8.7,mg/mL,2023-02-18,Erika Hayes,Pass
+LAB-01366,CMP-0044,Metabolic Stability (Microsomal),90.5,min (t1/2),2023-09-22,Julia Jones,Pass
+LAB-01367,CMP-0129,hERG Cardiotoxicity Screen,84.9,% inhibition at 10uM,2025-06-27,Jane Reese,Pass
+LAB-01368,CMP-0150,hERG Cardiotoxicity Screen,23.7,% inhibition at 10uM,2026-02-18,Adam Wilson,Fail
+LAB-01369,CMP-0068,Binding Affinity (SPR),1.19,nM (Kd),2026-05-19,Paul Washington,Fail
+LAB-01370,CMP-0053,Pharmacokinetic (PK) Study,22.01,hours (t1/2),2022-12-26,Dana Dodson,Fail
+LAB-01371,CMP-0121,hERG Cardiotoxicity Screen,71.9,% inhibition at 10uM,2023-04-10,Sarah Jackson,Pass
+LAB-01372,CMP-0118,Binding Affinity (SPR),7.91,nM (Kd),2022-10-14,Edward Nichols,Pass
+LAB-01373,CMP-0123,Binding Affinity (SPR),0.41,nM (Kd),2024-04-10,Phillip Byrd,Pass
+LAB-01374,CMP-0078,Solubility Assay,7.84,mg/mL,2023-04-30,Daniel Johnson,Fail
+LAB-01375,CMP-0139,Selectivity Panel,60.0,% selectivity,2025-05-30,Michael Copeland,Fail
+LAB-01376,CMP-0057,Selectivity Panel,9.8,% selectivity,2025-12-15,Michelle Prince,Pass
+LAB-01377,CMP-0049,Solubility Assay,0.86,mg/mL,2024-04-10,Anthony Smith,Fail
+LAB-01378,CMP-0097,Metabolic Stability (Microsomal),38.7,min (t1/2),2025-10-19,Tanya Brooks,Pass
+LAB-01379,CMP-0052,Pharmacokinetic (PK) Study,14.53,hours (t1/2),2023-09-01,Javier Hays,Fail
+LAB-01380,CMP-0148,Binding Affinity (SPR),1.79,nM (Kd),2024-01-23,Michael Walker,Fail
+LAB-01381,CMP-0143,Enzymatic Inhibition Assay,4.16,nM (IC50),2026-03-29,Sandra Jackson,Pass
+LAB-01382,CMP-0095,Metabolic Stability (Microsomal),95.1,min (t1/2),2023-05-19,Brian Murphy,Pass
+LAB-01383,CMP-0115,Binding Affinity (SPR),3.9,nM (Kd),2024-12-16,Daniel Weaver,Pass
+LAB-01384,CMP-0074,Cell Viability Assay,59.5,% viability,2026-06-19,Daniel Kelly,Fail
+LAB-01385,CMP-0065,Selectivity Panel,34.6,% selectivity,2023-05-29,Eugene Price,Pass
+LAB-01386,CMP-0114,Selectivity Panel,26.4,% selectivity,2024-07-18,Robert Santos,Pass
+LAB-01387,CMP-0088,Selectivity Panel,59.6,% selectivity,2024-03-09,Daniel Turner,Pass
+LAB-01388,CMP-0034,Metabolic Stability (Microsomal),118.3,min (t1/2),2025-02-08,Mrs. Kimberly Mooney,Pass
+LAB-01389,CMP-0025,Enzymatic Inhibition Assay,9.04,nM (IC50),2026-02-10,Tyler Greene,Pass
+LAB-01390,CMP-0005,Metabolic Stability (Microsomal),152.1,min (t1/2),2026-08-20,Megan Compton,Pass
+LAB-01391,CMP-0107,Metabolic Stability (Microsomal),5.9,min (t1/2),2025-06-26,Mark Henson,Pass
+LAB-01392,CMP-0146,Enzymatic Inhibition Assay,7.32,nM (IC50),2023-12-26,Karen Rogers,Pass
+LAB-01393,CMP-0086,Selectivity Panel,45.0,% selectivity,2025-02-22,Janet Davidson,Pass
+LAB-01394,CMP-0050,Enzymatic Inhibition Assay,10.29,nM (IC50),2023-08-23,Virginia Hall,Pass
+LAB-01395,CMP-0147,Binding Affinity (SPR),11.8,nM (Kd),2025-03-05,Ellen Rojas,Pass
+LAB-01396,CMP-0039,Metabolic Stability (Microsomal),150.6,min (t1/2),2025-09-27,Amy Brooks,Pass
+LAB-01397,CMP-0058,Enzymatic Inhibition Assay,3.25,nM (IC50),2023-11-25,Dan Johnson,Pass
+LAB-01398,CMP-0036,Enzymatic Inhibition Assay,4.31,nM (IC50),2026-05-28,Theresa Stevenson,Fail
+LAB-01399,CMP-0001,Selectivity Panel,25.8,% selectivity,2024-01-10,Mason Hodges,Pass
+LAB-01400,CMP-0058,hERG Cardiotoxicity Screen,52.2,% inhibition at 10uM,2024-10-17,Maria Roberts,Pass
+LAB-01401,CMP-0039,hERG Cardiotoxicity Screen,10.5,% inhibition at 10uM,2022-10-22,Erin Allen,Pass
+LAB-01402,CMP-0050,Metabolic Stability (Microsomal),113.1,min (t1/2),2024-11-13,Mary Wright,Pass
+LAB-01403,CMP-0049,Enzymatic Inhibition Assay,8.02,nM (IC50),2025-06-17,Lisa James,Pass
+LAB-01404,CMP-0136,Pharmacokinetic (PK) Study,12.37,hours (t1/2),2023-12-31,Aaron Kane,Pass
+LAB-01405,CMP-0123,Selectivity Panel,85.9,% selectivity,2022-12-29,Mark Thomas,Fail
+LAB-01406,CMP-0008,Cell Viability Assay,56.8,% viability,2023-07-13,Kevin Guerra,Fail
+LAB-01407,CMP-0138,Pharmacokinetic (PK) Study,7.4,hours (t1/2),2026-06-09,Blake Hardy,Pass
+LAB-01408,CMP-0075,Solubility Assay,1.53,mg/mL,2023-12-16,Danielle Thompson,Pass
+LAB-01409,CMP-0064,Pharmacokinetic (PK) Study,11.81,hours (t1/2),2023-09-16,Jerome Reid,Pass
+LAB-01410,CMP-0016,Binding Affinity (SPR),1.95,nM (Kd),2023-10-19,Angela Kaufman,Pass
+LAB-01411,CMP-0090,Cell Viability Assay,18.2,% viability,2024-04-21,Jeremy Wagner,Pass
+LAB-01412,CMP-0130,Pharmacokinetic (PK) Study,21.32,hours (t1/2),2025-08-25,Sally Leon,Pass
+LAB-01413,CMP-0119,Cell Viability Assay,30.7,% viability,2022-10-16,Scott Blake,Fail
+LAB-01414,CMP-0066,Selectivity Panel,0.5,% selectivity,2026-05-25,Brittany Barber,Pass
+LAB-01415,CMP-0121,Cell Viability Assay,57.7,% viability,2023-09-28,Jesse Brooks,Pass
+LAB-01416,CMP-0145,Metabolic Stability (Microsomal),139.6,min (t1/2),2025-02-18,Chad Harrison,Pass
+LAB-01417,CMP-0034,Pharmacokinetic (PK) Study,10.62,hours (t1/2),2023-05-01,Adam Mason,Pass
+LAB-01418,CMP-0088,Metabolic Stability (Microsomal),24.4,min (t1/2),2025-08-12,Timothy Bentley DVM,Fail
+LAB-01419,CMP-0090,Pharmacokinetic (PK) Study,7.41,hours (t1/2),2024-03-15,Martin Chapman MD,Pass
+LAB-01420,CMP-0133,Pharmacokinetic (PK) Study,2.44,hours (t1/2),2022-11-13,Janice Cunningham,Fail
+LAB-01421,CMP-0075,Pharmacokinetic (PK) Study,14.03,hours (t1/2),2023-06-28,David Gentry,Fail
+LAB-01422,CMP-0119,Enzymatic Inhibition Assay,7.74,nM (IC50),2025-08-07,Katherine Barker,Pass
+LAB-01423,CMP-0121,hERG Cardiotoxicity Screen,24.2,% inhibition at 10uM,2025-06-30,Tammy Fitzgerald,Pass
+LAB-01424,CMP-0089,Selectivity Panel,25.1,% selectivity,2023-09-06,Robert Mccoy,Pass
+LAB-01425,CMP-0126,Pharmacokinetic (PK) Study,14.14,hours (t1/2),2025-06-01,Maria Green,Fail
+LAB-01426,CMP-0132,Pharmacokinetic (PK) Study,15.31,hours (t1/2),2024-07-13,Dawn Guzman,Pass
+LAB-01427,CMP-0055,Enzymatic Inhibition Assay,2.12,nM (IC50),2026-07-08,Alexandria Wise,Pass
+LAB-01428,CMP-0128,hERG Cardiotoxicity Screen,44.7,% inhibition at 10uM,2025-04-15,Jennifer Willis,Fail
+LAB-01429,CMP-0134,Selectivity Panel,89.8,% selectivity,2026-04-25,Chelsea Henderson,Pass
+LAB-01430,CMP-0023,Enzymatic Inhibition Assay,10.32,nM (IC50),2026-01-11,Eric Ponce,Pass
+LAB-01431,CMP-0126,Selectivity Panel,56.0,% selectivity,2025-05-06,Eric Jenkins,Pass
+LAB-01432,CMP-0058,Selectivity Panel,59.1,% selectivity,2026-03-20,Ann Fields,Pass
+LAB-01433,CMP-0052,Selectivity Panel,16.8,% selectivity,2025-10-25,Charles Goodman,Fail
+LAB-01434,CMP-0144,Enzymatic Inhibition Assay,0.83,nM (IC50),2026-06-06,Eric Benitez,Pass
+LAB-01435,CMP-0095,hERG Cardiotoxicity Screen,96.6,% inhibition at 10uM,2025-12-22,Benjamin Horton,Pass
+LAB-01436,CMP-0024,Binding Affinity (SPR),1.3,nM (Kd),2024-10-23,Morgan Jackson,Fail
+LAB-01437,CMP-0090,Pharmacokinetic (PK) Study,2.97,hours (t1/2),2024-03-17,Christina White,Fail
+LAB-01438,CMP-0146,Solubility Assay,3.6,mg/mL,2026-07-03,Robert Lopez,Fail
+LAB-01439,CMP-0015,Enzymatic Inhibition Assay,37.15,nM (IC50),2022-12-13,Peter Green,Pass
+LAB-01440,CMP-0084,hERG Cardiotoxicity Screen,96.1,% inhibition at 10uM,2026-04-27,Mark Weber,Pass
+LAB-01441,CMP-0071,Cell Viability Assay,71.1,% viability,2026-03-08,Edward Gray,Fail
+LAB-01442,CMP-0094,Metabolic Stability (Microsomal),135.1,min (t1/2),2023-10-27,Kevin Woods,Pass
+LAB-01443,CMP-0012,Pharmacokinetic (PK) Study,19.0,hours (t1/2),2025-05-27,Antonio Walton,Pass
+LAB-01444,CMP-0113,Pharmacokinetic (PK) Study,9.59,hours (t1/2),2022-09-28,Victoria Davis,Pass
+LAB-01445,CMP-0017,Solubility Assay,7.86,mg/mL,2024-10-19,Larry Hatfield,Pass
+LAB-01446,CMP-0061,Cell Viability Assay,10.1,% viability,2025-10-03,Kara Rogers,Pass
+LAB-01447,CMP-0076,Solubility Assay,5.17,mg/mL,2024-06-06,Steve Key,Pass
+LAB-01448,CMP-0142,Metabolic Stability (Microsomal),152.7,min (t1/2),2025-12-23,Mary Gray,Pass
+LAB-01449,CMP-0005,Metabolic Stability (Microsomal),28.8,min (t1/2),2022-12-10,Gary Garcia,Pass
+LAB-01450,CMP-0088,Cell Viability Assay,51.9,% viability,2024-07-16,Molly Barron,Pass
+LAB-01451,CMP-0114,Pharmacokinetic (PK) Study,11.49,hours (t1/2),2023-04-08,Sheila Ramirez,Fail
+LAB-01452,CMP-0008,hERG Cardiotoxicity Screen,26.0,% inhibition at 10uM,2025-07-04,Isabella Montgomery,Pass
+LAB-01453,CMP-0099,Metabolic Stability (Microsomal),147.6,min (t1/2),2025-05-06,Jason Lopez,Pass
+LAB-01454,CMP-0146,Binding Affinity (SPR),4.24,nM (Kd),2026-08-27,Robin Smith,Pass
+LAB-01455,CMP-0007,Cell Viability Assay,21.2,% viability,2024-02-25,Robert Nguyen,Pass
+LAB-01456,CMP-0086,Cell Viability Assay,10.1,% viability,2024-06-27,Jennifer Salazar,Pass
+LAB-01457,CMP-0090,hERG Cardiotoxicity Screen,68.9,% inhibition at 10uM,2023-01-14,Timothy Galvan,Pass
+LAB-01458,CMP-0134,Solubility Assay,0.38,mg/mL,2026-08-28,Susan Navarro,Pass
+LAB-01459,CMP-0134,Solubility Assay,1.58,mg/mL,2023-11-21,Charles Meyer,Pass
+LAB-01460,CMP-0060,Selectivity Panel,66.8,% selectivity,2024-12-30,Kathy Anderson,Pass
+LAB-01461,CMP-0126,Selectivity Panel,14.3,% selectivity,2025-11-24,Michael Dunn,Pass
+LAB-01462,CMP-0065,Pharmacokinetic (PK) Study,10.67,hours (t1/2),2026-03-18,Jeremy Wilson,Pass
+LAB-01463,CMP-0073,Binding Affinity (SPR),4.42,nM (Kd),2025-05-12,Daniel Mullins,Pass
+LAB-01464,CMP-0017,Binding Affinity (SPR),7.85,nM (Kd),2025-05-08,Jeffrey Baldwin,Fail
+LAB-01465,CMP-0044,Enzymatic Inhibition Assay,5.13,nM (IC50),2023-05-09,Stephanie Miranda,Pass
+LAB-01466,CMP-0013,Cell Viability Assay,91.1,% viability,2023-08-05,John Merritt,Pass
+LAB-01467,CMP-0122,Binding Affinity (SPR),0.24,nM (Kd),2023-03-16,Joseph Swanson,Pass
+LAB-01468,CMP-0067,Metabolic Stability (Microsomal),64.3,min (t1/2),2023-01-28,Shelby Huynh,Pass
+LAB-01469,CMP-0042,Solubility Assay,2.18,mg/mL,2025-10-10,Maria Bennett,Pass
+LAB-01470,CMP-0035,Binding Affinity (SPR),0.94,nM (Kd),2025-07-31,Jane May,Fail
+LAB-01471,CMP-0131,Binding Affinity (SPR),0.43,nM (Kd),2024-12-16,Rhonda Walker,Pass
+LAB-01472,CMP-0052,hERG Cardiotoxicity Screen,3.3,% inhibition at 10uM,2023-03-05,Brandon Yang,Pass
+LAB-01473,CMP-0047,hERG Cardiotoxicity Screen,12.9,% inhibition at 10uM,2026-06-17,Audrey Richardson,Pass
+LAB-01474,CMP-0052,Solubility Assay,2.22,mg/mL,2026-02-14,Laura Smith,Pass
+LAB-01475,CMP-0068,Cell Viability Assay,58.3,% viability,2022-12-17,Sarah Whitney,Pass
+LAB-01476,CMP-0125,Solubility Assay,3.5,mg/mL,2023-12-28,Michael Hogan,Pass
+LAB-01477,CMP-0110,Enzymatic Inhibition Assay,9.37,nM (IC50),2024-10-15,Courtney Foster,Pass
+LAB-01478,CMP-0063,Binding Affinity (SPR),1.8,nM (Kd),2024-11-11,Charles Hahn,Pass
+LAB-01479,CMP-0025,Solubility Assay,1.17,mg/mL,2026-01-22,Mr. Kyle Thomas DDS,Pass
+LAB-01480,CMP-0137,Selectivity Panel,91.9,% selectivity,2025-11-30,Linda Parker,Pass
+LAB-01481,CMP-0099,Enzymatic Inhibition Assay,6.6,nM (IC50),2026-09-02,Zachary Mccarthy,Pass
+LAB-01482,CMP-0034,Selectivity Panel,36.7,% selectivity,2024-08-16,Kathleen Padilla,Fail
+LAB-01483,CMP-0098,Selectivity Panel,55.1,% selectivity,2024-03-20,Mrs. Samantha Clark,Pass
+LAB-01484,CMP-0077,Solubility Assay,2.19,mg/mL,2025-08-22,Melody Williams,Pass
+LAB-01485,CMP-0141,Metabolic Stability (Microsomal),138.0,min (t1/2),2026-03-04,John Myers,Pass
+LAB-01486,CMP-0065,Enzymatic Inhibition Assay,6.17,nM (IC50),2026-08-25,Sarah Ritter,Pass
+LAB-01487,CMP-0130,hERG Cardiotoxicity Screen,51.6,% inhibition at 10uM,2024-11-25,Michael Mooney,Pass
+LAB-01488,CMP-0001,Solubility Assay,3.35,mg/mL,2025-09-28,Joseph Campbell,Pass
+LAB-01489,CMP-0099,Enzymatic Inhibition Assay,2.26,nM (IC50),2025-06-30,Scott Long,Fail
+LAB-01490,CMP-0104,Solubility Assay,1.11,mg/mL,2023-03-28,Lauren Trujillo,Pass
+LAB-01491,CMP-0007,Solubility Assay,0.68,mg/mL,2026-02-09,Judith Martin,Fail
+LAB-01492,CMP-0076,Pharmacokinetic (PK) Study,6.27,hours (t1/2),2023-04-06,Doris Thomas,Pass
+LAB-01493,CMP-0133,Enzymatic Inhibition Assay,6.79,nM (IC50),2023-08-02,Nancy Smith,Pass
+LAB-01494,CMP-0146,Metabolic Stability (Microsomal),20.2,min (t1/2),2025-08-12,Meghan Hinton,Pass
+LAB-01495,CMP-0094,Pharmacokinetic (PK) Study,11.2,hours (t1/2),2023-04-21,Jessica Skinner,Pass
+LAB-01496,CMP-0029,Metabolic Stability (Microsomal),83.6,min (t1/2),2026-05-31,William White,Fail
+LAB-01497,CMP-0074,Cell Viability Assay,48.7,% viability,2022-12-03,Miss Leslie Booker,Pass
+LAB-01498,CMP-0014,hERG Cardiotoxicity Screen,19.5,% inhibition at 10uM,2025-03-21,Andrew Allen,Pass
+LAB-01499,CMP-0053,Solubility Assay,0.4,mg/mL,2024-08-31,Tiffany Delgado,Pass
+LAB-01500,CMP-0098,hERG Cardiotoxicity Screen,53.7,% inhibition at 10uM,2024-03-19,Rebecca Barrett,Pass
+LAB-01501,CMP-0004,Selectivity Panel,81.1,% selectivity,2025-10-27,Marie Hill,Pass
+LAB-01502,CMP-0036,Solubility Assay,0.72,mg/mL,2025-04-28,Bryan Miller,Pass
+LAB-01503,CMP-0089,hERG Cardiotoxicity Screen,77.8,% inhibition at 10uM,2024-09-01,Katrina Johnson,Fail
+LAB-01504,CMP-0033,hERG Cardiotoxicity Screen,35.1,% inhibition at 10uM,2025-01-01,Denise Mcgee,Fail
+LAB-01505,CMP-0145,Solubility Assay,1.64,mg/mL,2025-11-20,John Newman,Pass
+LAB-01506,CMP-0078,Binding Affinity (SPR),0.84,nM (Kd),2024-06-12,Ariana Brown,Pass
+LAB-01507,CMP-0129,Selectivity Panel,70.0,% selectivity,2026-05-06,Cathy Hess,Pass
+LAB-01508,CMP-0023,Selectivity Panel,52.5,% selectivity,2022-10-16,Kimberly Burnett,Pass
+LAB-01509,CMP-0109,Pharmacokinetic (PK) Study,16.69,hours (t1/2),2024-08-31,Lauren Reeves,Fail
+LAB-01510,CMP-0132,Selectivity Panel,70.7,% selectivity,2025-11-14,Paul Sheppard,Pass
+LAB-01511,CMP-0029,hERG Cardiotoxicity Screen,55.2,% inhibition at 10uM,2026-04-20,Kyle White,Pass
+LAB-01512,CMP-0028,Pharmacokinetic (PK) Study,5.21,hours (t1/2),2024-12-05,Barbara Anderson,Pass
+LAB-01513,CMP-0109,Cell Viability Assay,16.2,% viability,2023-07-16,Justin York,Pass
+LAB-01514,CMP-0081,Pharmacokinetic (PK) Study,16.02,hours (t1/2),2022-11-08,Katie Cox,Fail
+LAB-01515,CMP-0041,Enzymatic Inhibition Assay,4.02,nM (IC50),2024-11-20,Tony Smith,Pass
+LAB-01516,CMP-0054,Cell Viability Assay,70.3,% viability,2023-11-30,Kelly Patton,Fail
+LAB-01517,CMP-0064,Enzymatic Inhibition Assay,1.52,nM (IC50),2025-05-07,Kenneth Neal,Pass
+LAB-01518,CMP-0067,Cell Viability Assay,19.3,% viability,2024-10-20,Mrs. Kimberly Clark,Pass
+LAB-01519,CMP-0041,Enzymatic Inhibition Assay,2.33,nM (IC50),2023-02-09,Cynthia Lopez,Fail
+LAB-01520,CMP-0128,hERG Cardiotoxicity Screen,38.9,% inhibition at 10uM,2023-11-29,Tina Guzman,Fail
+LAB-01521,CMP-0089,hERG Cardiotoxicity Screen,88.0,% inhibition at 10uM,2023-07-30,Carl Dean,Pass
+LAB-01522,CMP-0092,Binding Affinity (SPR),3.9,nM (Kd),2023-01-04,James Mckee,Pass
+LAB-01523,CMP-0033,Binding Affinity (SPR),0.61,nM (Kd),2024-04-24,David Coleman,Pass
+LAB-01524,CMP-0080,Solubility Assay,4.17,mg/mL,2025-06-27,Andrea Oconnor,Pass
+LAB-01525,CMP-0038,Cell Viability Assay,43.5,% viability,2026-09-10,Cheryl Watson,Pass
+LAB-01526,CMP-0060,Pharmacokinetic (PK) Study,14.27,hours (t1/2),2025-05-04,Lisa Barnes,Pass
+LAB-01527,CMP-0007,Enzymatic Inhibition Assay,12.47,nM (IC50),2023-04-30,Jessica Johnson DDS,Pass
+LAB-01528,CMP-0112,Cell Viability Assay,65.8,% viability,2023-01-09,Brian Kelley,Fail
+LAB-01529,CMP-0101,Solubility Assay,1.99,mg/mL,2022-12-23,Heidi Cook,Pass
+LAB-01530,CMP-0004,hERG Cardiotoxicity Screen,17.9,% inhibition at 10uM,2023-10-21,Courtney Smith,Fail
+LAB-01531,CMP-0055,hERG Cardiotoxicity Screen,54.7,% inhibition at 10uM,2024-03-21,Jamie Garcia,Pass
+LAB-01532,CMP-0058,Pharmacokinetic (PK) Study,21.98,hours (t1/2),2026-05-31,Nicholas Parker,Fail
+LAB-01533,CMP-0004,Solubility Assay,2.35,mg/mL,2025-12-30,Joseph Graves PhD,Pass
+LAB-01534,CMP-0087,Enzymatic Inhibition Assay,6.71,nM (IC50),2024-12-01,Stephanie Jackson,Fail
+LAB-01535,CMP-0139,Selectivity Panel,88.4,% selectivity,2026-06-30,Gregory Figueroa,Pass
+LAB-01536,CMP-0054,Enzymatic Inhibition Assay,9.55,nM (IC50),2026-08-01,Linda Atkinson,Fail
+LAB-01537,CMP-0037,Enzymatic Inhibition Assay,1.88,nM (IC50),2024-08-14,Adam Palmer,Fail
+LAB-01538,CMP-0103,Metabolic Stability (Microsomal),77.9,min (t1/2),2023-05-03,James Moss,Fail
+LAB-01539,CMP-0081,Selectivity Panel,41.8,% selectivity,2022-12-04,Vanessa Zimmerman,Pass
+LAB-01540,CMP-0031,hERG Cardiotoxicity Screen,18.8,% inhibition at 10uM,2023-09-16,Michelle White,Pass
+LAB-01541,CMP-0007,Binding Affinity (SPR),13.03,nM (Kd),2026-08-27,Kathryn Hill,Pass
+LAB-01542,CMP-0024,Cell Viability Assay,63.4,% viability,2024-06-03,Sierra Cervantes,Pass
+LAB-01543,CMP-0061,Selectivity Panel,92.8,% selectivity,2023-12-07,Theresa Russell,Pass
+LAB-01544,CMP-0067,Cell Viability Assay,8.6,% viability,2023-12-18,Bobby Blair,Pass
+LAB-01545,CMP-0142,Selectivity Panel,85.0,% selectivity,2026-06-28,Anthony Paul,Fail
+LAB-01546,CMP-0115,hERG Cardiotoxicity Screen,33.4,% inhibition at 10uM,2024-12-05,Shannon Hayden MD,Pass
+LAB-01547,CMP-0033,Selectivity Panel,43.7,% selectivity,2024-09-29,Karen Robertson,Pass
+LAB-01548,CMP-0067,Binding Affinity (SPR),0.57,nM (Kd),2026-09-14,Melissa Sullivan,Fail
+LAB-01549,CMP-0117,hERG Cardiotoxicity Screen,80.1,% inhibition at 10uM,2025-03-05,Nichole Klein,Pass
+LAB-01550,CMP-0115,Metabolic Stability (Microsomal),165.4,min (t1/2),2025-07-09,Dana Stevenson,Fail
+LAB-01551,CMP-0127,Solubility Assay,1.88,mg/mL,2026-07-07,Shirley Rice,Pass
+LAB-01552,CMP-0103,Solubility Assay,1.82,mg/mL,2025-02-23,Traci Craig,Pass
+LAB-01553,CMP-0052,Enzymatic Inhibition Assay,2.68,nM (IC50),2026-03-28,Courtney Jones,Fail
+LAB-01554,CMP-0043,Cell Viability Assay,31.9,% viability,2026-01-25,Tiffany Henderson,Pass
+LAB-01555,CMP-0098,Selectivity Panel,44.1,% selectivity,2024-03-24,Brian Sloan,Pass
+LAB-01556,CMP-0008,hERG Cardiotoxicity Screen,36.1,% inhibition at 10uM,2023-09-17,Pamela Wilson,Pass
+LAB-01557,CMP-0062,Pharmacokinetic (PK) Study,22.21,hours (t1/2),2023-11-28,Daniel Rojas,Pass
+LAB-01558,CMP-0084,Metabolic Stability (Microsomal),126.7,min (t1/2),2024-12-26,Eric Fitzpatrick,Pass
+LAB-01559,CMP-0144,Cell Viability Assay,48.1,% viability,2025-04-13,Amanda Ford,Pass
+LAB-01560,CMP-0016,Cell Viability Assay,50.3,% viability,2025-03-07,Henry Gilbert MD,Pass
+LAB-01561,CMP-0134,Selectivity Panel,83.1,% selectivity,2024-02-16,Steve Lopez,Pass
+LAB-01562,CMP-0063,Metabolic Stability (Microsomal),119.0,min (t1/2),2024-02-17,Johnathan Miller,Pass
+LAB-01563,CMP-0090,Binding Affinity (SPR),3.56,nM (Kd),2024-10-07,Caleb Freeman,Pass
+LAB-01564,CMP-0078,Selectivity Panel,47.0,% selectivity,2023-05-03,Courtney Foster,Pass
+LAB-01565,CMP-0054,Solubility Assay,1.24,mg/mL,2023-11-28,Clarence Cain,Fail
+LAB-01566,CMP-0094,Metabolic Stability (Microsomal),124.8,min (t1/2),2023-02-23,Ryan Martin,Pass
+LAB-01567,CMP-0091,Metabolic Stability (Microsomal),43.2,min (t1/2),2024-02-16,Ian Harrell,Pass
+LAB-01568,CMP-0070,Solubility Assay,0.79,mg/mL,2023-07-04,Andrew Foster,Pass
+LAB-01569,CMP-0033,Binding Affinity (SPR),0.96,nM (Kd),2025-09-08,Caitlin Gonzalez,Fail
+LAB-01570,CMP-0128,Cell Viability Assay,49.2,% viability,2024-08-17,Deborah Fisher,Pass
+LAB-01571,CMP-0075,Selectivity Panel,34.1,% selectivity,2024-11-29,Michelle Nguyen,Fail
+LAB-01572,CMP-0047,Selectivity Panel,25.9,% selectivity,2025-10-08,Kathryn Mclean,Pass
+LAB-01573,CMP-0142,Cell Viability Assay,74.9,% viability,2026-01-30,Brian Rodriguez,Pass
+LAB-01574,CMP-0054,Pharmacokinetic (PK) Study,19.39,hours (t1/2),2022-10-18,Jonathan Saunders,Pass
+LAB-01575,CMP-0054,Metabolic Stability (Microsomal),9.8,min (t1/2),2023-08-29,Gloria Bray,Fail
+LAB-01576,CMP-0146,Cell Viability Assay,11.7,% viability,2025-08-29,Dylan Tucker,Pass
+LAB-01577,CMP-0058,Metabolic Stability (Microsomal),155.6,min (t1/2),2025-10-02,Christian Dixon,Pass
+LAB-01578,CMP-0041,Enzymatic Inhibition Assay,13.59,nM (IC50),2023-09-17,Sharon Gamble,Fail
+LAB-01579,CMP-0142,Pharmacokinetic (PK) Study,8.35,hours (t1/2),2023-09-14,Christina Mccarthy,Pass
+LAB-01580,CMP-0051,Enzymatic Inhibition Assay,4.23,nM (IC50),2025-12-13,Kathryn White,Pass
+LAB-01581,CMP-0070,Pharmacokinetic (PK) Study,14.35,hours (t1/2),2026-09-06,Madison Perez,Pass
+LAB-01582,CMP-0080,hERG Cardiotoxicity Screen,80.7,% inhibition at 10uM,2023-03-30,William Hickman,Pass
+LAB-01583,CMP-0129,Selectivity Panel,43.8,% selectivity,2024-06-01,Ann Williams,Fail
+LAB-01584,CMP-0062,Solubility Assay,0.68,mg/mL,2024-05-04,Mark Hall,Pass
+LAB-01585,CMP-0048,hERG Cardiotoxicity Screen,94.8,% inhibition at 10uM,2024-01-21,Jordan Schneider,Pass
+LAB-01586,CMP-0055,Metabolic Stability (Microsomal),122.3,min (t1/2),2023-12-06,Douglas Bell,Pass
+LAB-01587,CMP-0114,Solubility Assay,1.27,mg/mL,2024-05-20,Anthony Williams,Pass
+LAB-01588,CMP-0021,Enzymatic Inhibition Assay,6.92,nM (IC50),2022-12-03,Christy Kennedy,Pass
+LAB-01589,CMP-0137,Metabolic Stability (Microsomal),50.6,min (t1/2),2026-05-06,Cody Vaughan,Pass
+LAB-01590,CMP-0121,hERG Cardiotoxicity Screen,95.2,% inhibition at 10uM,2024-03-01,Brent Smith,Fail
+LAB-01591,CMP-0064,Enzymatic Inhibition Assay,24.8,nM (IC50),2024-12-01,Erin Figueroa,Fail
+LAB-01592,CMP-0115,Solubility Assay,1.26,mg/mL,2024-02-27,Kendra Watson,Fail
+LAB-01593,CMP-0032,hERG Cardiotoxicity Screen,21.9,% inhibition at 10uM,2025-04-24,James Eaton,Pass
+LAB-01594,CMP-0045,Binding Affinity (SPR),0.45,nM (Kd),2023-03-27,Barbara Willis,Pass
+LAB-01595,CMP-0021,Metabolic Stability (Microsomal),93.7,min (t1/2),2026-05-11,Cheryl Bush,Pass
+LAB-01596,CMP-0041,Metabolic Stability (Microsomal),99.0,min (t1/2),2026-05-31,Joshua Cooper,Pass
+LAB-01597,CMP-0117,Metabolic Stability (Microsomal),117.2,min (t1/2),2025-08-12,Christina Le MD,Pass
+LAB-01598,CMP-0079,Pharmacokinetic (PK) Study,4.33,hours (t1/2),2023-06-24,Dawn Wiley,Pass
+LAB-01599,CMP-0009,Binding Affinity (SPR),2.47,nM (Kd),2026-02-15,Vanessa Jacobson,Pass
+LAB-01600,CMP-0012,Solubility Assay,9.34,mg/mL,2024-07-03,Susan Jones,Pass
+LAB-01601,CMP-0108,Pharmacokinetic (PK) Study,9.59,hours (t1/2),2024-05-21,Kathy Johnson,Pass
+LAB-01602,CMP-0148,Pharmacokinetic (PK) Study,3.04,hours (t1/2),2025-02-08,Betty Williams,Fail
+LAB-01603,CMP-0061,Cell Viability Assay,17.6,% viability,2024-12-22,Melissa Yang,Pass
+LAB-01604,CMP-0097,Pharmacokinetic (PK) Study,21.13,hours (t1/2),2024-04-20,Sheila Mata,Pass
+LAB-01605,CMP-0054,Selectivity Panel,24.4,% selectivity,2023-05-17,Janet Chan,Pass
+LAB-01606,CMP-0123,Pharmacokinetic (PK) Study,13.89,hours (t1/2),2024-04-25,Clinton Moore,Fail
+LAB-01607,CMP-0092,Metabolic Stability (Microsomal),119.7,min (t1/2),2023-08-01,Sherry Gibbs,Pass
+LAB-01608,CMP-0043,Metabolic Stability (Microsomal),58.6,min (t1/2),2024-07-13,Kelly Turner,Pass
+LAB-01609,CMP-0113,Selectivity Panel,79.7,% selectivity,2023-08-05,Kristen Jackson,Pass
+LAB-01610,CMP-0110,Selectivity Panel,81.7,% selectivity,2022-11-23,Andrew Hernandez,Pass
+LAB-01611,CMP-0025,Binding Affinity (SPR),4.28,nM (Kd),2026-03-31,Debra Gibbs,Fail
+LAB-01612,CMP-0074,Enzymatic Inhibition Assay,0.88,nM (IC50),2025-04-12,Rodney Nichols,Pass
+LAB-01613,CMP-0015,Binding Affinity (SPR),3.8,nM (Kd),2022-09-20,Larry Wood,Pass
+LAB-01614,CMP-0109,hERG Cardiotoxicity Screen,80.7,% inhibition at 10uM,2023-01-17,Kirsten Bowen,Pass
+LAB-01615,CMP-0131,Solubility Assay,3.81,mg/mL,2024-05-06,Erika Brown,Fail
+LAB-01616,CMP-0022,Enzymatic Inhibition Assay,3.14,nM (IC50),2025-12-22,Colleen Sanford,Pass
+LAB-01617,CMP-0101,Solubility Assay,7.52,mg/mL,2023-06-03,Kimberly Irwin,Fail
+LAB-01618,CMP-0043,Selectivity Panel,49.9,% selectivity,2025-10-28,Ashley Reese,Pass
+LAB-01619,CMP-0069,Cell Viability Assay,84.8,% viability,2024-03-28,Sheila Walters,Fail
+LAB-01620,CMP-0129,hERG Cardiotoxicity Screen,25.2,% inhibition at 10uM,2024-11-30,Connie Adams,Pass
+LAB-01621,CMP-0055,Cell Viability Assay,80.4,% viability,2025-01-14,Nicole Moore,Pass
+LAB-01622,CMP-0063,Cell Viability Assay,34.7,% viability,2023-08-22,Jackie Barrera,Pass
+LAB-01623,CMP-0007,Cell Viability Assay,60.6,% viability,2023-02-01,Cody Huffman,Pass
+LAB-01624,CMP-0127,hERG Cardiotoxicity Screen,22.2,% inhibition at 10uM,2023-06-20,Nicholas Holland Jr.,Pass
+LAB-01625,CMP-0058,Solubility Assay,2.03,mg/mL,2023-05-13,James Franklin,Pass
+LAB-01626,CMP-0056,Enzymatic Inhibition Assay,6.02,nM (IC50),2022-12-28,David Stout,Pass
+LAB-01627,CMP-0127,Selectivity Panel,81.6,% selectivity,2026-08-04,Joseph Acosta,Pass
+LAB-01628,CMP-0108,Solubility Assay,2.1,mg/mL,2025-12-10,Jamie Smith,Pass
+LAB-01629,CMP-0150,hERG Cardiotoxicity Screen,14.3,% inhibition at 10uM,2026-01-06,Maria Williams,Pass
+LAB-01630,CMP-0059,Enzymatic Inhibition Assay,16.73,nM (IC50),2023-09-15,Charles Burton,Pass
+LAB-01631,CMP-0116,hERG Cardiotoxicity Screen,76.8,% inhibition at 10uM,2022-10-07,Tina Rodriguez,Pass
+LAB-01632,CMP-0040,hERG Cardiotoxicity Screen,28.4,% inhibition at 10uM,2025-08-27,Michael Harris,Fail
+LAB-01633,CMP-0008,Selectivity Panel,62.8,% selectivity,2024-08-19,Jill Martin,Pass
+LAB-01634,CMP-0103,Enzymatic Inhibition Assay,2.31,nM (IC50),2024-01-15,Anthony Holt,Pass
+LAB-01635,CMP-0014,hERG Cardiotoxicity Screen,70.6,% inhibition at 10uM,2025-03-22,Roger Garcia,Pass
+LAB-01636,CMP-0146,Enzymatic Inhibition Assay,9.77,nM (IC50),2023-11-25,Sara Thomas,Pass
+LAB-01637,CMP-0058,Cell Viability Assay,63.0,% viability,2026-05-11,Jeffery Hernandez,Fail
+LAB-01638,CMP-0031,Cell Viability Assay,64.1,% viability,2025-05-01,Shawn Cruz,Pass
+LAB-01639,CMP-0030,hERG Cardiotoxicity Screen,8.4,% inhibition at 10uM,2026-03-31,Ashley Jackson,Pass
+LAB-01640,CMP-0077,hERG Cardiotoxicity Screen,16.8,% inhibition at 10uM,2023-02-25,Tyler Howard,Pass
+LAB-01641,CMP-0026,hERG Cardiotoxicity Screen,69.1,% inhibition at 10uM,2025-03-04,Thomas Gillespie,Fail
+LAB-01642,CMP-0053,Cell Viability Assay,51.0,% viability,2026-04-17,Cassandra Moreno,Pass
+LAB-01643,CMP-0050,Pharmacokinetic (PK) Study,17.5,hours (t1/2),2025-02-09,Brittany Contreras,Pass
+LAB-01644,CMP-0129,Solubility Assay,1.73,mg/mL,2023-12-02,Hannah Garcia,Pass
+LAB-01645,CMP-0123,hERG Cardiotoxicity Screen,34.7,% inhibition at 10uM,2026-05-17,Tasha Cochran,Pass
+LAB-01646,CMP-0149,Binding Affinity (SPR),3.9,nM (Kd),2025-07-22,Aaron Fitzpatrick,Pass
+LAB-01647,CMP-0058,Enzymatic Inhibition Assay,3.59,nM (IC50),2023-04-23,Erica Myers,Pass
+LAB-01648,CMP-0081,Cell Viability Assay,65.6,% viability,2025-08-06,Karen Jones,Pass
+LAB-01649,CMP-0017,Pharmacokinetic (PK) Study,22.59,hours (t1/2),2025-01-08,Diana Davis,Pass
+LAB-01650,CMP-0132,Metabolic Stability (Microsomal),115.2,min (t1/2),2026-09-09,James Flores,Pass
+LAB-01651,CMP-0047,Binding Affinity (SPR),1.8,nM (Kd),2024-05-28,Jennifer Leon,Pass
+LAB-01652,CMP-0106,Pharmacokinetic (PK) Study,15.51,hours (t1/2),2024-01-17,Martha Sanchez,Fail
+LAB-01653,CMP-0131,Solubility Assay,1.68,mg/mL,2024-05-21,Joseph Patel PhD,Fail
+LAB-01654,CMP-0072,hERG Cardiotoxicity Screen,92.0,% inhibition at 10uM,2024-04-01,Jennifer Lane,Pass
+LAB-01655,CMP-0052,Cell Viability Assay,11.6,% viability,2025-06-26,Michele Young,Fail
+LAB-01656,CMP-0011,Selectivity Panel,87.6,% selectivity,2022-09-22,Alicia Grant DVM,Pass
+LAB-01657,CMP-0081,hERG Cardiotoxicity Screen,54.0,% inhibition at 10uM,2026-05-24,Gregory Allison,Pass
+LAB-01658,CMP-0105,Binding Affinity (SPR),0.31,nM (Kd),2026-03-06,Elizabeth Thomas,Pass
+LAB-01659,CMP-0117,Metabolic Stability (Microsomal),128.1,min (t1/2),2026-02-14,Susan Sanchez,Pass
+LAB-01660,CMP-0057,Pharmacokinetic (PK) Study,15.23,hours (t1/2),2026-01-08,Chad Hayden,Pass
+LAB-01661,CMP-0055,Metabolic Stability (Microsomal),67.6,min (t1/2),2025-07-11,Alexander Hanna,Fail
+LAB-01662,CMP-0123,Selectivity Panel,76.6,% selectivity,2024-03-13,Mary Jones,Pass
+LAB-01663,CMP-0127,Solubility Assay,1.76,mg/mL,2026-01-22,Amanda Diaz,Pass
+LAB-01664,CMP-0034,Enzymatic Inhibition Assay,4.87,nM (IC50),2023-01-11,Keith Cervantes,Fail
+LAB-01665,CMP-0012,Solubility Assay,3.89,mg/mL,2023-04-24,Patrick Adkins,Pass
+LAB-01666,CMP-0081,Metabolic Stability (Microsomal),61.6,min (t1/2),2025-07-03,Jason Rogers,Pass
+LAB-01667,CMP-0063,hERG Cardiotoxicity Screen,91.0,% inhibition at 10uM,2025-11-01,Donna Moore,Pass
+LAB-01668,CMP-0026,hERG Cardiotoxicity Screen,68.8,% inhibition at 10uM,2026-03-27,Paul Gordon,Pass
+LAB-01669,CMP-0062,hERG Cardiotoxicity Screen,87.4,% inhibition at 10uM,2022-10-03,Melanie Liu,Pass
+LAB-01670,CMP-0099,Metabolic Stability (Microsomal),113.8,min (t1/2),2024-12-05,Tamara Shaw,Pass
+LAB-01671,CMP-0141,Binding Affinity (SPR),3.23,nM (Kd),2025-07-19,Christopher Dudley,Pass
+LAB-01672,CMP-0075,Binding Affinity (SPR),1.04,nM (Kd),2024-10-18,Beth Lewis,Pass
+LAB-01673,CMP-0139,Pharmacokinetic (PK) Study,12.21,hours (t1/2),2025-03-09,Clinton Reese,Pass
+LAB-01674,CMP-0135,Enzymatic Inhibition Assay,18.75,nM (IC50),2024-12-12,Rose Mcdonald,Pass
+LAB-01675,CMP-0118,Cell Viability Assay,33.6,% viability,2023-12-19,Samantha Martin,Fail
+LAB-01676,CMP-0024,Cell Viability Assay,40.6,% viability,2025-12-03,Chloe Rodriguez,Pass
+LAB-01677,CMP-0087,Selectivity Panel,44.7,% selectivity,2023-01-09,Sarah Johnson,Pass
+LAB-01678,CMP-0129,hERG Cardiotoxicity Screen,90.2,% inhibition at 10uM,2023-11-04,Ana Harper,Pass
+LAB-01679,CMP-0004,Enzymatic Inhibition Assay,12.77,nM (IC50),2025-09-26,Juan Little,Fail
+LAB-01680,CMP-0033,Cell Viability Assay,81.5,% viability,2022-11-04,William Cunningham,Fail
+LAB-01681,CMP-0130,Binding Affinity (SPR),0.79,nM (Kd),2024-12-19,Amber Edwards,Pass
+LAB-01682,CMP-0015,Cell Viability Assay,79.5,% viability,2026-06-26,Howard Campbell,Pass
+LAB-01683,CMP-0137,Cell Viability Assay,27.4,% viability,2024-04-21,Paul Swanson,Fail
+LAB-01684,CMP-0044,Pharmacokinetic (PK) Study,13.28,hours (t1/2),2026-08-09,Anne Russell,Pass
+LAB-01685,CMP-0077,Pharmacokinetic (PK) Study,12.58,hours (t1/2),2025-09-04,Robert Hernandez,Pass
+LAB-01686,CMP-0150,Pharmacokinetic (PK) Study,14.95,hours (t1/2),2025-01-22,Kevin Christian,Pass
+LAB-01687,CMP-0035,Selectivity Panel,30.4,% selectivity,2023-11-15,Joel Mcclure,Pass
+LAB-01688,CMP-0150,Cell Viability Assay,35.5,% viability,2023-02-01,Stacey Aguirre,Pass
+LAB-01689,CMP-0074,hERG Cardiotoxicity Screen,15.2,% inhibition at 10uM,2025-04-30,Candace Stuart,Pass
+LAB-01690,CMP-0128,Solubility Assay,5.59,mg/mL,2024-10-10,Marisa Conrad,Pass
+LAB-01691,CMP-0120,Cell Viability Assay,42.3,% viability,2024-01-29,Gina Ward,Pass
+LAB-01692,CMP-0024,Enzymatic Inhibition Assay,21.78,nM (IC50),2026-02-18,Steven Schroeder,Pass
+LAB-01693,CMP-0031,Solubility Assay,0.82,mg/mL,2024-04-05,Leroy Jones,Pass
+LAB-01694,CMP-0095,hERG Cardiotoxicity Screen,27.5,% inhibition at 10uM,2023-04-28,Kathleen Ballard,Pass
+LAB-01695,CMP-0003,hERG Cardiotoxicity Screen,16.7,% inhibition at 10uM,2023-04-14,Kimberly Novak,Fail
+LAB-01696,CMP-0119,Cell Viability Assay,20.2,% viability,2025-11-01,Brandon Edwards,Pass
+LAB-01697,CMP-0045,Binding Affinity (SPR),3.75,nM (Kd),2026-06-12,Douglas Cox,Pass
+LAB-01698,CMP-0017,Pharmacokinetic (PK) Study,10.15,hours (t1/2),2023-01-26,Raymond Scott,Pass
+LAB-01699,CMP-0049,Cell Viability Assay,36.1,% viability,2024-08-08,Shawn Santos,Fail
+LAB-01700,CMP-0029,Metabolic Stability (Microsomal),172.7,min (t1/2),2023-04-11,Keith Williams,Fail
+LAB-01701,CMP-0102,Cell Viability Assay,9.1,% viability,2026-02-23,Scott Stark,Pass
+LAB-01702,CMP-0088,hERG Cardiotoxicity Screen,44.5,% inhibition at 10uM,2023-03-25,Ryan Crane,Fail
+LAB-01703,CMP-0110,Cell Viability Assay,82.4,% viability,2024-03-16,Katie Baker,Fail
+LAB-01704,CMP-0139,hERG Cardiotoxicity Screen,72.1,% inhibition at 10uM,2026-03-19,Lisa Schneider,Pass
+LAB-01705,CMP-0122,Enzymatic Inhibition Assay,1.65,nM (IC50),2025-09-03,Roberto Smith,Pass
+LAB-01706,CMP-0105,Pharmacokinetic (PK) Study,9.48,hours (t1/2),2026-02-14,Christopher Ross,Pass
+LAB-01707,CMP-0141,Enzymatic Inhibition Assay,8.75,nM (IC50),2023-01-02,Joel Davis,Pass
+LAB-01708,CMP-0020,Metabolic Stability (Microsomal),126.9,min (t1/2),2024-07-29,Stephanie Marshall,Pass
+LAB-01709,CMP-0025,Solubility Assay,4.66,mg/mL,2023-01-21,Sylvia Nielsen,Pass
+LAB-01710,CMP-0105,Enzymatic Inhibition Assay,19.72,nM (IC50),2025-10-13,Gary Stewart,Pass
+LAB-01711,CMP-0108,Selectivity Panel,19.6,% selectivity,2026-09-11,Dr. John Ramirez,Pass
+LAB-01712,CMP-0111,Metabolic Stability (Microsomal),176.7,min (t1/2),2022-11-12,John Bowman,Pass
+LAB-01713,CMP-0008,Cell Viability Assay,58.1,% viability,2023-12-29,Kyle James,Pass
+LAB-01714,CMP-0122,Enzymatic Inhibition Assay,11.2,nM (IC50),2026-06-16,Jeffrey Kennedy,Pass
+LAB-01715,CMP-0036,Selectivity Panel,45.9,% selectivity,2022-12-05,Tiffany Sutton,Fail
+LAB-01716,CMP-0073,Solubility Assay,1.58,mg/mL,2023-10-16,Angela Jones,Pass
+LAB-01717,CMP-0017,hERG Cardiotoxicity Screen,70.9,% inhibition at 10uM,2024-05-01,Michael Savage,Pass
+LAB-01718,CMP-0064,Cell Viability Assay,82.2,% viability,2024-10-23,Debbie Rivas,Pass
+LAB-01719,CMP-0119,Solubility Assay,2.69,mg/mL,2023-01-30,Gloria Mullins,Fail
+LAB-01720,CMP-0033,Selectivity Panel,11.8,% selectivity,2023-05-16,Jason Alvarez,Pass
+LAB-01721,CMP-0045,hERG Cardiotoxicity Screen,3.0,% inhibition at 10uM,2025-06-19,Michael Gomez,Pass
+LAB-01722,CMP-0087,Pharmacokinetic (PK) Study,14.7,hours (t1/2),2025-06-25,Adam Logan,Pass
+LAB-01723,CMP-0043,Metabolic Stability (Microsomal),46.9,min (t1/2),2025-02-05,Michael Jensen,Pass
+LAB-01724,CMP-0016,hERG Cardiotoxicity Screen,33.9,% inhibition at 10uM,2024-01-03,Dr. Natalie Doyle,Pass
+LAB-01725,CMP-0081,Cell Viability Assay,80.9,% viability,2023-12-24,Jimmy Hernandez,Pass
+LAB-01726,CMP-0146,Solubility Assay,4.75,mg/mL,2026-03-02,Wayne Russell,Pass
+LAB-01727,CMP-0124,Selectivity Panel,50.0,% selectivity,2024-10-17,Jerry Wall,Pass
+LAB-01728,CMP-0056,Pharmacokinetic (PK) Study,17.64,hours (t1/2),2023-03-20,Wayne Davis,Fail
+LAB-01729,CMP-0033,Enzymatic Inhibition Assay,6.23,nM (IC50),2023-08-03,Jennifer Payne,Pass
+LAB-01730,CMP-0069,Binding Affinity (SPR),2.29,nM (Kd),2023-05-18,Gregory Farley,Pass
+LAB-01731,CMP-0049,Cell Viability Assay,54.2,% viability,2026-08-06,Alexis Cervantes,Pass
+LAB-01732,CMP-0075,hERG Cardiotoxicity Screen,6.9,% inhibition at 10uM,2022-10-11,Kathryn Parrish,Pass
+LAB-01733,CMP-0026,Selectivity Panel,50.6,% selectivity,2025-07-05,Joy Jenkins,Pass
+LAB-01734,CMP-0087,Enzymatic Inhibition Assay,3.8,nM (IC50),2024-02-14,Kelly Hubbard,Fail
+LAB-01735,CMP-0029,Enzymatic Inhibition Assay,7.43,nM (IC50),2023-03-02,Jeffrey Thompson,Pass
+LAB-01736,CMP-0039,Enzymatic Inhibition Assay,27.28,nM (IC50),2025-02-02,Jane Bruce,Pass
+LAB-01737,CMP-0098,Binding Affinity (SPR),2.03,nM (Kd),2025-06-19,Douglas Oliver,Pass
+LAB-01738,CMP-0104,Selectivity Panel,20.2,% selectivity,2026-05-30,Whitney Shaffer,Pass
+LAB-01739,CMP-0068,Pharmacokinetic (PK) Study,22.9,hours (t1/2),2023-02-16,Lisa Jenkins,Pass
+LAB-01740,CMP-0049,Binding Affinity (SPR),4.9,nM (Kd),2024-09-11,Tammy Garcia,Pass
+LAB-01741,CMP-0121,Enzymatic Inhibition Assay,1.18,nM (IC50),2024-06-27,Amanda Roberts,Pass
+LAB-01742,CMP-0060,Selectivity Panel,12.6,% selectivity,2024-05-24,Jesse James,Pass
+LAB-01743,CMP-0127,Selectivity Panel,18.6,% selectivity,2023-06-30,Caleb Ponce,Pass
+LAB-01744,CMP-0044,Enzymatic Inhibition Assay,1.12,nM (IC50),2026-05-14,Robert Padilla,Pass
+LAB-01745,CMP-0109,Pharmacokinetic (PK) Study,6.11,hours (t1/2),2025-09-04,James Walker,Fail
+LAB-01746,CMP-0123,Enzymatic Inhibition Assay,1.68,nM (IC50),2023-11-06,Deborah Roberson,Pass
+LAB-01747,CMP-0069,Cell Viability Assay,57.5,% viability,2025-11-21,David Mccullough,Pass
+LAB-01748,CMP-0050,Pharmacokinetic (PK) Study,4.22,hours (t1/2),2024-05-15,Christian Brooks,Pass
+LAB-01749,CMP-0058,Cell Viability Assay,41.6,% viability,2025-12-23,Lindsay Rogers,Pass
+LAB-01750,CMP-0145,Cell Viability Assay,93.4,% viability,2026-07-19,Dana Beltran MD,Fail
+LAB-01751,CMP-0106,Binding Affinity (SPR),1.02,nM (Kd),2025-04-15,Rebecca Lane,Fail
+LAB-01752,CMP-0086,Binding Affinity (SPR),2.74,nM (Kd),2023-03-25,Vanessa Thompson,Pass
+LAB-01753,CMP-0003,Metabolic Stability (Microsomal),167.1,min (t1/2),2026-04-30,Jessica Garcia,Pass
+LAB-01754,CMP-0016,Pharmacokinetic (PK) Study,6.41,hours (t1/2),2025-11-30,Lynn Mueller,Pass
+LAB-01755,CMP-0017,Binding Affinity (SPR),0.29,nM (Kd),2026-01-30,Debbie Tran,Pass
+LAB-01756,CMP-0058,Pharmacokinetic (PK) Study,17.3,hours (t1/2),2026-07-04,Brandon Kim,Pass
+LAB-01757,CMP-0112,Cell Viability Assay,20.6,% viability,2025-03-24,Alyssa Zimmerman,Pass
+LAB-01758,CMP-0071,Metabolic Stability (Microsomal),157.4,min (t1/2),2026-05-24,James Newton,Fail
+LAB-01759,CMP-0098,Solubility Assay,4.46,mg/mL,2023-03-27,Mark Howard,Pass
+LAB-01760,CMP-0113,Selectivity Panel,58.6,% selectivity,2023-09-02,Elizabeth Nichols,Pass
+LAB-01761,CMP-0015,Enzymatic Inhibition Assay,2.13,nM (IC50),2023-09-11,Rachel Townsend,Fail
+LAB-01762,CMP-0115,Metabolic Stability (Microsomal),108.4,min (t1/2),2025-05-07,Timothy Burton,Pass
+LAB-01763,CMP-0149,Enzymatic Inhibition Assay,10.91,nM (IC50),2025-04-07,Ashley Stevens,Pass
+LAB-01764,CMP-0116,Cell Viability Assay,21.3,% viability,2025-02-04,Douglas Kline,Fail
+LAB-01765,CMP-0087,Pharmacokinetic (PK) Study,7.32,hours (t1/2),2023-01-31,Isaiah Massey MD,Pass
+LAB-01766,CMP-0128,hERG Cardiotoxicity Screen,3.5,% inhibition at 10uM,2024-09-03,Benjamin Chung,Pass
+LAB-01767,CMP-0090,Selectivity Panel,28.9,% selectivity,2023-01-07,Jaime Edwards,Pass
+LAB-01768,CMP-0137,Binding Affinity (SPR),1.1,nM (Kd),2026-05-06,Catherine Smith,Fail
+LAB-01769,CMP-0138,hERG Cardiotoxicity Screen,32.5,% inhibition at 10uM,2023-06-05,Lisa Johnson,Pass
+LAB-01770,CMP-0029,Metabolic Stability (Microsomal),65.5,min (t1/2),2026-08-12,Karen Mendez DDS,Pass
+LAB-01771,CMP-0105,Pharmacokinetic (PK) Study,15.43,hours (t1/2),2023-05-07,Tammy Lee,Pass
+LAB-01772,CMP-0053,Enzymatic Inhibition Assay,4.07,nM (IC50),2022-10-31,Jorge Hernandez,Pass
+LAB-01773,CMP-0002,Selectivity Panel,95.6,% selectivity,2026-03-06,Daniel Murphy,Pass
+LAB-01774,CMP-0046,Cell Viability Assay,15.8,% viability,2023-08-04,Teresa Adams,Pass
+LAB-01775,CMP-0131,hERG Cardiotoxicity Screen,37.4,% inhibition at 10uM,2024-08-21,Hannah Arnold,Pass
+LAB-01776,CMP-0079,Enzymatic Inhibition Assay,50.3,nM (IC50),2023-11-21,Kathleen Hunt,Pass
+LAB-01777,CMP-0134,Binding Affinity (SPR),3.18,nM (Kd),2024-04-23,Christopher Mcdaniel,Fail
+LAB-01778,CMP-0145,Cell Viability Assay,39.1,% viability,2026-04-05,James Silva,Pass
+LAB-01779,CMP-0143,Binding Affinity (SPR),5.85,nM (Kd),2025-10-11,Robert Mckay,Pass
+LAB-01780,CMP-0098,Binding Affinity (SPR),2.04,nM (Kd),2024-08-30,Jessica Burgess,Pass
+LAB-01781,CMP-0132,Binding Affinity (SPR),0.46,nM (Kd),2025-12-22,Lisa Patterson,Fail
+LAB-01782,CMP-0046,Pharmacokinetic (PK) Study,20.3,hours (t1/2),2024-12-24,Mark Brown,Pass
+LAB-01783,CMP-0071,Selectivity Panel,64.7,% selectivity,2023-05-20,Jorge Matthews,Pass
+LAB-01784,CMP-0057,Pharmacokinetic (PK) Study,11.19,hours (t1/2),2023-11-20,Maria Sanford,Pass
+LAB-01785,CMP-0119,Enzymatic Inhibition Assay,2.19,nM (IC50),2024-02-14,Christopher Morris,Fail
+LAB-01786,CMP-0074,Solubility Assay,0.16,mg/mL,2025-11-15,Benjamin Sandoval,Pass
+LAB-01787,CMP-0113,Metabolic Stability (Microsomal),176.3,min (t1/2),2024-03-14,Barbara Flores,Pass
+LAB-01788,CMP-0131,Selectivity Panel,81.2,% selectivity,2022-10-03,John Pope,Fail
+LAB-01789,CMP-0067,Enzymatic Inhibition Assay,3.84,nM (IC50),2026-04-22,Janice Guzman,Pass
+LAB-01790,CMP-0029,Pharmacokinetic (PK) Study,22.56,hours (t1/2),2024-10-26,Donald Franklin,Fail
+LAB-01791,CMP-0095,Enzymatic Inhibition Assay,0.84,nM (IC50),2026-03-30,Angela Stafford,Pass
+LAB-01792,CMP-0041,Cell Viability Assay,72.3,% viability,2024-05-25,Emily Flores,Fail
+LAB-01793,CMP-0104,Binding Affinity (SPR),1.44,nM (Kd),2023-07-02,Kathleen Mooney,Pass
+LAB-01794,CMP-0112,Solubility Assay,6.21,mg/mL,2024-05-25,Christopher Murphy,Pass
+LAB-01795,CMP-0148,Solubility Assay,5.36,mg/mL,2024-03-29,Dominique Schneider,Pass
+LAB-01796,CMP-0028,Cell Viability Assay,44.9,% viability,2026-02-18,Susan Mitchell DVM,Pass
+LAB-01797,CMP-0065,Cell Viability Assay,88.7,% viability,2024-04-28,Tamara Williams,Pass
+LAB-01798,CMP-0095,Metabolic Stability (Microsomal),116.2,min (t1/2),2025-04-16,Brandon Lang,Pass
+LAB-01799,CMP-0125,Metabolic Stability (Microsomal),162.9,min (t1/2),2025-08-08,Paul Ross,Pass
+LAB-01800,CMP-0066,Cell Viability Assay,64.4,% viability,2024-12-08,Logan Long,Pass
+LAB-01801,CMP-0115,Selectivity Panel,89.1,% selectivity,2025-06-30,Samuel Coffey,Fail
+LAB-01802,CMP-0021,Metabolic Stability (Microsomal),122.1,min (t1/2),2023-03-14,Luke Johnson,Fail
+LAB-01803,CMP-0101,Selectivity Panel,47.8,% selectivity,2022-11-26,Brian Morris,Fail
+LAB-01804,CMP-0105,Solubility Assay,13.77,mg/mL,2025-06-17,Christopher Lee,Fail
+LAB-01805,CMP-0136,Binding Affinity (SPR),1.32,nM (Kd),2026-04-27,Steven Mayo,Pass
+LAB-01806,CMP-0053,hERG Cardiotoxicity Screen,2.5,% inhibition at 10uM,2026-06-12,Debbie Glover,Fail
+LAB-01807,CMP-0018,Pharmacokinetic (PK) Study,3.48,hours (t1/2),2023-02-26,Angela Murphy,Fail
+LAB-01808,CMP-0029,Enzymatic Inhibition Assay,0.7,nM (IC50),2025-02-28,Debra Jackson,Pass
+LAB-01809,CMP-0022,Cell Viability Assay,62.6,% viability,2023-04-07,Cameron Atkins,Pass
+LAB-01810,CMP-0118,Selectivity Panel,79.3,% selectivity,2025-09-21,Tracy Gutierrez,Pass
+LAB-01811,CMP-0106,Solubility Assay,3.88,mg/mL,2024-07-01,Joseph Lane,Fail
+LAB-01812,CMP-0026,hERG Cardiotoxicity Screen,60.2,% inhibition at 10uM,2025-05-10,Erica Simon,Pass
+LAB-01813,CMP-0099,Pharmacokinetic (PK) Study,22.74,hours (t1/2),2023-08-13,Edward Miller,Pass
+LAB-01814,CMP-0058,Binding Affinity (SPR),1.89,nM (Kd),2024-12-11,Mary Moss,Fail
+LAB-01815,CMP-0083,Selectivity Panel,38.3,% selectivity,2023-07-15,Wesley Brown,Pass
+LAB-01816,CMP-0127,Binding Affinity (SPR),0.75,nM (Kd),2022-10-07,Robert Lopez,Pass
+LAB-01817,CMP-0009,Selectivity Panel,47.4,% selectivity,2023-02-17,Kevin Rose,Pass
+LAB-01818,CMP-0014,Metabolic Stability (Microsomal),14.4,min (t1/2),2026-02-22,Emily Gibson,Pass
+LAB-01819,CMP-0093,Binding Affinity (SPR),2.48,nM (Kd),2023-04-30,Suzanne Robinson,Pass
+LAB-01820,CMP-0107,Metabolic Stability (Microsomal),89.5,min (t1/2),2024-03-01,Shawna Palmer,Pass
+LAB-01821,CMP-0130,Pharmacokinetic (PK) Study,11.7,hours (t1/2),2025-10-30,Donald Martin,Pass
+LAB-01822,CMP-0137,Enzymatic Inhibition Assay,1.54,nM (IC50),2023-12-10,Mariah Thomas,Pass
+LAB-01823,CMP-0144,Enzymatic Inhibition Assay,9.54,nM (IC50),2026-03-20,Cynthia Shannon,Fail
+LAB-01824,CMP-0126,Selectivity Panel,70.9,% selectivity,2023-06-18,Matthew Chavez,Pass
+LAB-01825,CMP-0039,Enzymatic Inhibition Assay,1.35,nM (IC50),2023-10-10,Angela Reynolds,Pass
+LAB-01826,CMP-0141,Metabolic Stability (Microsomal),8.0,min (t1/2),2023-04-25,Katie Brown,Pass
+LAB-01827,CMP-0091,Cell Viability Assay,34.0,% viability,2023-10-20,Matthew Dennis,Pass
+LAB-01828,CMP-0110,Binding Affinity (SPR),6.15,nM (Kd),2024-05-26,James Wheeler,Fail
+LAB-01829,CMP-0106,Enzymatic Inhibition Assay,13.98,nM (IC50),2024-10-30,Jeffrey Maldonado DDS,Pass
+LAB-01830,CMP-0150,Metabolic Stability (Microsomal),20.8,min (t1/2),2026-07-19,Anthony Johnson,Pass
+LAB-01831,CMP-0120,Pharmacokinetic (PK) Study,19.64,hours (t1/2),2023-10-11,Brian Perez,Pass
+LAB-01832,CMP-0076,Binding Affinity (SPR),2.87,nM (Kd),2025-03-11,Jenna Garcia,Pass
+LAB-01833,CMP-0056,Cell Viability Assay,45.9,% viability,2025-08-24,Debra Harris,Fail
+LAB-01834,CMP-0093,hERG Cardiotoxicity Screen,20.2,% inhibition at 10uM,2025-11-08,Dwayne Carlson,Fail
+LAB-01835,CMP-0083,Selectivity Panel,74.3,% selectivity,2025-08-24,Jonathan Graves,Pass
+LAB-01836,CMP-0006,Enzymatic Inhibition Assay,3.02,nM (IC50),2024-08-14,Terry Allen,Pass
+LAB-01837,CMP-0066,Selectivity Panel,66.8,% selectivity,2023-12-22,Cody Yoder,Pass
+LAB-01838,CMP-0114,Metabolic Stability (Microsomal),129.4,min (t1/2),2023-04-13,John Cook,Fail
+LAB-01839,CMP-0041,Solubility Assay,8.29,mg/mL,2023-06-04,Billy Shelton,Pass
+LAB-01840,CMP-0119,Enzymatic Inhibition Assay,0.71,nM (IC50),2026-02-14,Tracy Aguilar,Pass
+LAB-01841,CMP-0125,Cell Viability Assay,43.9,% viability,2024-08-30,Brian Fuentes,Pass
+LAB-01842,CMP-0048,Solubility Assay,4.76,mg/mL,2024-12-24,Sara Fox MD,Pass
+LAB-01843,CMP-0101,hERG Cardiotoxicity Screen,36.3,% inhibition at 10uM,2023-04-20,Eric Fitzgerald,Pass
+LAB-01844,CMP-0090,hERG Cardiotoxicity Screen,3.3,% inhibition at 10uM,2024-07-09,Wanda Scott,Pass
+LAB-01845,CMP-0111,Binding Affinity (SPR),2.73,nM (Kd),2024-08-28,Adam Gomez,Pass
+LAB-01846,CMP-0019,Cell Viability Assay,54.8,% viability,2025-07-20,Patricia Vincent,Pass
+LAB-01847,CMP-0039,Solubility Assay,10.02,mg/mL,2026-04-27,Ashley Jennings,Pass
+LAB-01848,CMP-0012,Enzymatic Inhibition Assay,4.44,nM (IC50),2025-08-16,William Chase,Pass
+LAB-01849,CMP-0041,Solubility Assay,7.6,mg/mL,2025-05-07,Jonathan Sanchez,Pass
+LAB-01850,CMP-0008,Cell Viability Assay,64.6,% viability,2025-09-03,Heather Garner,Pass
+LAB-01851,CMP-0097,Selectivity Panel,84.5,% selectivity,2023-06-28,Margaret Sheppard,Pass
+LAB-01852,CMP-0033,Solubility Assay,5.1,mg/mL,2026-03-21,Stephanie Cole,Pass
+LAB-01853,CMP-0134,Cell Viability Assay,5.3,% viability,2026-07-18,Deborah Shelton,Pass
+LAB-01854,CMP-0137,Binding Affinity (SPR),1.02,nM (Kd),2026-04-06,Jason Mcknight,Fail
+LAB-01855,CMP-0083,Solubility Assay,2.93,mg/mL,2023-12-13,Joseph Cooper,Pass
+LAB-01856,CMP-0051,Cell Viability Assay,10.5,% viability,2025-02-28,Jesse Donaldson,Pass
+LAB-01857,CMP-0041,Binding Affinity (SPR),0.47,nM (Kd),2025-11-17,Wayne Porter,Pass
+LAB-01858,CMP-0062,Binding Affinity (SPR),1.04,nM (Kd),2025-06-14,Chris Levy,Pass
+LAB-01859,CMP-0061,hERG Cardiotoxicity Screen,48.0,% inhibition at 10uM,2025-03-16,Elizabeth Roberts,Pass
+LAB-01860,CMP-0067,Metabolic Stability (Microsomal),137.8,min (t1/2),2025-11-28,Andrew Campbell,Pass
+LAB-01861,CMP-0053,Cell Viability Assay,92.8,% viability,2025-01-30,Eric Jordan,Pass
+LAB-01862,CMP-0021,Selectivity Panel,75.4,% selectivity,2025-05-08,David Bell,Pass
+LAB-01863,CMP-0073,Cell Viability Assay,65.8,% viability,2023-11-05,Mary Mack,Pass
+LAB-01864,CMP-0092,hERG Cardiotoxicity Screen,64.5,% inhibition at 10uM,2023-05-02,Devin Ferrell,Pass
+LAB-01865,CMP-0035,Solubility Assay,6.44,mg/mL,2023-07-02,Angela Robinson,Pass
+LAB-01866,CMP-0050,Cell Viability Assay,81.5,% viability,2024-08-08,Robert Walsh,Fail
+LAB-01867,CMP-0116,Selectivity Panel,77.1,% selectivity,2024-05-26,Annette Green,Fail
+LAB-01868,CMP-0140,Metabolic Stability (Microsomal),25.6,min (t1/2),2023-12-02,Justin Shelton,Pass
+LAB-01869,CMP-0016,hERG Cardiotoxicity Screen,99.7,% inhibition at 10uM,2024-01-01,Melinda Gonzalez,Pass
+LAB-01870,CMP-0073,Cell Viability Assay,25.7,% viability,2023-04-04,Elizabeth Miller,Fail
+LAB-01871,CMP-0134,hERG Cardiotoxicity Screen,2.4,% inhibition at 10uM,2024-12-23,Kimberly Bennett,Fail
+LAB-01872,CMP-0110,Pharmacokinetic (PK) Study,21.58,hours (t1/2),2026-03-19,Charles Ramos,Pass
+LAB-01873,CMP-0066,Binding Affinity (SPR),0.84,nM (Kd),2023-12-19,Michelle Mcdonald,Pass
+LAB-01874,CMP-0082,Enzymatic Inhibition Assay,6.78,nM (IC50),2024-06-03,Jason Johnson,Pass
+LAB-01875,CMP-0058,Pharmacokinetic (PK) Study,23.79,hours (t1/2),2024-12-12,Jennifer Campos,Pass
+LAB-01876,CMP-0044,Metabolic Stability (Microsomal),7.5,min (t1/2),2025-03-04,David Hunt,Pass
+LAB-01877,CMP-0023,Enzymatic Inhibition Assay,16.32,nM (IC50),2023-03-22,Krystal Carter,Pass
+LAB-01878,CMP-0105,Cell Viability Assay,39.0,% viability,2025-09-24,Jamie Smith,Fail
+LAB-01879,CMP-0086,Binding Affinity (SPR),3.79,nM (Kd),2025-12-09,Julia Brown,Pass
+LAB-01880,CMP-0079,Solubility Assay,3.19,mg/mL,2022-12-06,Marie Cook,Pass
+LAB-01881,CMP-0057,Solubility Assay,2.12,mg/mL,2023-02-07,John Rivera,Pass
+LAB-01882,CMP-0061,Solubility Assay,2.51,mg/mL,2022-12-15,Megan Stevenson,Pass
+LAB-01883,CMP-0080,Selectivity Panel,43.1,% selectivity,2022-12-04,Charles Yang,Pass
+LAB-01884,CMP-0101,Pharmacokinetic (PK) Study,22.11,hours (t1/2),2024-09-10,Michael Phelps,Pass
+LAB-01885,CMP-0098,hERG Cardiotoxicity Screen,2.4,% inhibition at 10uM,2023-12-01,William Smith,Fail
+LAB-01886,CMP-0126,hERG Cardiotoxicity Screen,1.5,% inhibition at 10uM,2024-08-26,Ashley Smith,Pass
+LAB-01887,CMP-0070,Solubility Assay,4.7,mg/mL,2025-02-15,Brent Harris,Pass
+LAB-01888,CMP-0010,Enzymatic Inhibition Assay,3.39,nM (IC50),2024-08-09,Jill Brown,Fail
+LAB-01889,CMP-0111,hERG Cardiotoxicity Screen,81.4,% inhibition at 10uM,2023-03-14,William Wilkins,Pass
+LAB-01890,CMP-0149,Pharmacokinetic (PK) Study,4.3,hours (t1/2),2026-01-28,Samantha Maldonado,Pass
+LAB-01891,CMP-0150,Pharmacokinetic (PK) Study,5.59,hours (t1/2),2026-02-23,Jessica Fields,Pass
+LAB-01892,CMP-0090,hERG Cardiotoxicity Screen,69.6,% inhibition at 10uM,2023-06-14,Mary Jackson,Fail
+LAB-01893,CMP-0129,Pharmacokinetic (PK) Study,2.7,hours (t1/2),2025-09-04,Karen Roberts,Pass
+LAB-01894,CMP-0049,Pharmacokinetic (PK) Study,14.18,hours (t1/2),2025-05-19,Katherine Contreras,Fail
+LAB-01895,CMP-0011,Cell Viability Assay,29.4,% viability,2024-04-11,Ashley Butler,Fail
+LAB-01896,CMP-0051,Solubility Assay,1.6,mg/mL,2024-05-30,Jim Elliott,Pass
+LAB-01897,CMP-0112,Selectivity Panel,4.6,% selectivity,2022-10-04,Matthew Barry,Pass
+LAB-01898,CMP-0033,Pharmacokinetic (PK) Study,10.51,hours (t1/2),2025-03-11,Terry Estes,Fail
+LAB-01899,CMP-0129,Enzymatic Inhibition Assay,2.31,nM (IC50),2024-08-01,Destiny Holden,Pass
+LAB-01900,CMP-0062,Solubility Assay,3.62,mg/mL,2024-02-22,Kathy Bailey,Fail
+LAB-01901,CMP-0139,Selectivity Panel,91.1,% selectivity,2025-07-15,Arthur Rios,Pass
+LAB-01902,CMP-0113,Pharmacokinetic (PK) Study,4.52,hours (t1/2),2024-02-13,Gina Espinoza,Pass
+LAB-01903,CMP-0106,Cell Viability Assay,60.0,% viability,2025-11-09,Phillip Turner,Pass
+LAB-01904,CMP-0032,Metabolic Stability (Microsomal),121.5,min (t1/2),2024-04-15,Maria Bennett,Pass
+LAB-01905,CMP-0148,Pharmacokinetic (PK) Study,17.68,hours (t1/2),2024-08-06,Laura Pennington,Pass
+LAB-01906,CMP-0142,Solubility Assay,1.7,mg/mL,2025-10-24,Beverly Nguyen,Fail
+LAB-01907,CMP-0056,Solubility Assay,1.16,mg/mL,2026-07-13,Luis Powell,Pass
+LAB-01908,CMP-0108,hERG Cardiotoxicity Screen,35.0,% inhibition at 10uM,2022-11-22,Caitlin Davis,Pass
+LAB-01909,CMP-0094,hERG Cardiotoxicity Screen,64.7,% inhibition at 10uM,2023-02-20,Karen Wolf,Pass
+LAB-01910,CMP-0131,Pharmacokinetic (PK) Study,16.64,hours (t1/2),2026-08-20,Morgan Young,Pass
+LAB-01911,CMP-0113,Selectivity Panel,25.5,% selectivity,2026-04-23,Steven Campos,Pass
+LAB-01912,CMP-0123,Cell Viability Assay,13.7,% viability,2024-05-23,Logan Wilson,Pass
+LAB-01913,CMP-0082,Enzymatic Inhibition Assay,4.46,nM (IC50),2026-02-05,Phillip Obrien,Fail
+LAB-01914,CMP-0050,Cell Viability Assay,79.4,% viability,2026-01-27,Erica Hale,Pass
+LAB-01915,CMP-0035,Metabolic Stability (Microsomal),148.3,min (t1/2),2024-03-22,Laura Gonzalez MD,Pass
+LAB-01916,CMP-0094,Binding Affinity (SPR),0.59,nM (Kd),2024-06-17,Curtis Martin,Pass
+LAB-01917,CMP-0069,Cell Viability Assay,9.7,% viability,2025-12-19,Cheryl Perkins,Pass
+LAB-01918,CMP-0129,Binding Affinity (SPR),1.71,nM (Kd),2025-03-24,Christina Patrick,Pass
+LAB-01919,CMP-0041,Binding Affinity (SPR),4.57,nM (Kd),2026-04-14,Jason Payne,Pass
+LAB-01920,CMP-0140,hERG Cardiotoxicity Screen,51.9,% inhibition at 10uM,2023-01-01,Nicholas Bartlett,Fail
+LAB-01921,CMP-0112,Cell Viability Assay,67.1,% viability,2025-04-12,Ronnie Hudson MD,Pass
+LAB-01922,CMP-0051,Selectivity Panel,68.4,% selectivity,2024-02-14,Kristin Taylor,Pass
+LAB-01923,CMP-0149,Cell Viability Assay,7.9,% viability,2022-12-25,James Jones,Pass
+LAB-01924,CMP-0011,Metabolic Stability (Microsomal),32.3,min (t1/2),2023-01-10,Elizabeth Wilson,Fail
+LAB-01925,CMP-0071,Solubility Assay,2.43,mg/mL,2023-08-20,Erin Walker,Pass
+LAB-01926,CMP-0036,Enzymatic Inhibition Assay,3.39,nM (IC50),2026-06-22,Danielle Warner,Pass
+LAB-01927,CMP-0117,Solubility Assay,8.2,mg/mL,2022-12-26,Tracy Jones,Pass
+LAB-01928,CMP-0062,Metabolic Stability (Microsomal),150.8,min (t1/2),2025-01-05,Tara Porter,Pass
+LAB-01929,CMP-0136,Solubility Assay,0.74,mg/mL,2024-04-22,Michael Rodriguez,Fail
+LAB-01930,CMP-0113,Solubility Assay,0.76,mg/mL,2024-08-05,Deborah Johnson,Pass
+LAB-01931,CMP-0065,Selectivity Panel,34.7,% selectivity,2024-01-24,George Hubbard,Pass
+LAB-01932,CMP-0047,Cell Viability Assay,53.9,% viability,2023-04-09,Morgan Glass,Fail
+LAB-01933,CMP-0116,Selectivity Panel,82.1,% selectivity,2025-05-13,Cynthia Jones,Pass
+LAB-01934,CMP-0096,Metabolic Stability (Microsomal),67.8,min (t1/2),2026-07-03,Michele Cannon,Pass
+LAB-01935,CMP-0092,hERG Cardiotoxicity Screen,68.4,% inhibition at 10uM,2022-11-08,Dr. Linda Salazar,Fail
+LAB-01936,CMP-0133,Metabolic Stability (Microsomal),97.9,min (t1/2),2023-01-13,Theresa Nelson,Pass
+LAB-01937,CMP-0029,Metabolic Stability (Microsomal),5.2,min (t1/2),2022-11-17,Jordan Santos,Fail
+LAB-01938,CMP-0115,Cell Viability Assay,19.3,% viability,2024-06-09,Samuel Mata,Fail
+LAB-01939,CMP-0018,hERG Cardiotoxicity Screen,42.0,% inhibition at 10uM,2022-10-19,Raymond Shepherd,Pass
+LAB-01940,CMP-0010,Solubility Assay,4.9,mg/mL,2024-11-05,Melanie Rojas,Fail
+LAB-01941,CMP-0079,Metabolic Stability (Microsomal),53.7,min (t1/2),2024-12-02,Ralph Dominguez,Fail
+LAB-01942,CMP-0134,Metabolic Stability (Microsomal),5.3,min (t1/2),2024-06-06,Chad Kim,Pass
+LAB-01943,CMP-0025,hERG Cardiotoxicity Screen,81.3,% inhibition at 10uM,2026-04-19,Mrs. Cheryl Kim,Pass
+LAB-01944,CMP-0039,Selectivity Panel,20.0,% selectivity,2022-12-11,Kevin Perez,Pass
+LAB-01945,CMP-0102,Pharmacokinetic (PK) Study,12.03,hours (t1/2),2025-09-13,Rebecca Bradley,Fail
+LAB-01946,CMP-0121,Metabolic Stability (Microsomal),36.9,min (t1/2),2026-09-03,Nathan Hess,Pass
+LAB-01947,CMP-0037,Selectivity Panel,67.4,% selectivity,2023-01-07,Christopher Williams,Fail
+LAB-01948,CMP-0081,hERG Cardiotoxicity Screen,58.6,% inhibition at 10uM,2024-02-10,Dana Carter,Pass
+LAB-01949,CMP-0061,hERG Cardiotoxicity Screen,8.5,% inhibition at 10uM,2025-02-18,Bryan Jones,Pass
+LAB-01950,CMP-0082,Selectivity Panel,95.1,% selectivity,2023-09-18,Kathleen Moss,Pass
+LAB-01951,CMP-0106,Enzymatic Inhibition Assay,30.4,nM (IC50),2024-02-21,Connie Marquez,Fail
+LAB-01952,CMP-0129,hERG Cardiotoxicity Screen,88.8,% inhibition at 10uM,2026-06-23,Eileen Valdez,Pass
+LAB-01953,CMP-0044,Selectivity Panel,51.7,% selectivity,2024-10-26,Michael Gordon,Fail
+LAB-01954,CMP-0072,hERG Cardiotoxicity Screen,17.3,% inhibition at 10uM,2022-12-05,Michele Howell,Pass
+LAB-01955,CMP-0141,Selectivity Panel,70.7,% selectivity,2023-10-31,Chad Daugherty,Pass
+LAB-01956,CMP-0013,Binding Affinity (SPR),3.96,nM (Kd),2023-08-20,Christine Watson,Fail
+LAB-01957,CMP-0126,hERG Cardiotoxicity Screen,27.1,% inhibition at 10uM,2025-12-22,William Hale,Pass
+LAB-01958,CMP-0092,Cell Viability Assay,93.8,% viability,2025-04-23,Brian Porter,Pass
+LAB-01959,CMP-0116,Solubility Assay,0.13,mg/mL,2022-11-06,James Wilcox,Pass
+LAB-01960,CMP-0065,Metabolic Stability (Microsomal),114.2,min (t1/2),2023-01-19,Leonard Simpson,Pass
+LAB-01961,CMP-0074,Selectivity Panel,48.3,% selectivity,2026-02-28,Andrew Harris,Pass
+LAB-01962,CMP-0051,Cell Viability Assay,63.3,% viability,2023-06-14,Anthony Torres,Pass
+LAB-01963,CMP-0117,Enzymatic Inhibition Assay,0.77,nM (IC50),2024-11-16,Alexander Franklin,Pass
+LAB-01964,CMP-0148,Pharmacokinetic (PK) Study,22.11,hours (t1/2),2026-04-14,Susan Patrick,Pass
+LAB-01965,CMP-0142,Pharmacokinetic (PK) Study,16.45,hours (t1/2),2025-01-27,Glenda Calderon,Pass
+LAB-01966,CMP-0039,Pharmacokinetic (PK) Study,20.01,hours (t1/2),2024-06-12,Nicholas Moss,Pass
+LAB-01967,CMP-0096,Enzymatic Inhibition Assay,22.75,nM (IC50),2022-12-10,James Griffith,Pass
+LAB-01968,CMP-0040,Metabolic Stability (Microsomal),159.2,min (t1/2),2025-06-03,Teresa Ford,Pass
+LAB-01969,CMP-0141,Solubility Assay,0.54,mg/mL,2024-12-31,Kelly Martin,Fail
+LAB-01970,CMP-0110,hERG Cardiotoxicity Screen,44.1,% inhibition at 10uM,2024-03-27,Tammy Anderson,Pass
+LAB-01971,CMP-0149,Cell Viability Assay,21.3,% viability,2022-10-10,Tiffany Miller,Pass
+LAB-01972,CMP-0063,Pharmacokinetic (PK) Study,18.24,hours (t1/2),2023-09-17,Gail Foster,Pass
+LAB-01973,CMP-0045,Pharmacokinetic (PK) Study,2.93,hours (t1/2),2025-03-04,Matthew Patton,Pass
+LAB-01974,CMP-0097,Solubility Assay,1.46,mg/mL,2025-12-13,Becky Carroll,Pass
+LAB-01975,CMP-0033,hERG Cardiotoxicity Screen,56.6,% inhibition at 10uM,2023-12-30,Christopher Ford,Pass
+LAB-01976,CMP-0130,Solubility Assay,3.23,mg/mL,2024-06-21,Vincent Castillo,Fail
+LAB-01977,CMP-0068,Solubility Assay,1.78,mg/mL,2026-02-01,Anthony Mcmillan,Pass
+LAB-01978,CMP-0024,Enzymatic Inhibition Assay,1.57,nM (IC50),2023-10-26,Emily Brown,Fail
+LAB-01979,CMP-0120,hERG Cardiotoxicity Screen,8.6,% inhibition at 10uM,2023-06-07,Desiree Booth,Pass
+LAB-01980,CMP-0095,Selectivity Panel,98.0,% selectivity,2023-03-22,Bridget Williamson,Pass
+LAB-01981,CMP-0084,Pharmacokinetic (PK) Study,17.5,hours (t1/2),2022-11-29,Andrew Cohen,Fail
+LAB-01982,CMP-0087,Pharmacokinetic (PK) Study,8.51,hours (t1/2),2026-02-25,Amanda Love,Pass
+LAB-01983,CMP-0113,Binding Affinity (SPR),0.62,nM (Kd),2022-12-15,Deanna Scott,Pass
+LAB-01984,CMP-0077,Cell Viability Assay,93.8,% viability,2025-06-04,Heather Higgins,Pass
+LAB-01985,CMP-0028,Cell Viability Assay,54.5,% viability,2025-02-10,Billy Wallace,Fail
+LAB-01986,CMP-0089,Pharmacokinetic (PK) Study,17.51,hours (t1/2),2024-10-03,Gabriel Watson,Pass
+LAB-01987,CMP-0143,Selectivity Panel,45.7,% selectivity,2026-01-01,Martin Liu,Pass
+LAB-01988,CMP-0117,Solubility Assay,5.52,mg/mL,2023-04-14,Richard Rogers,Fail
+LAB-01989,CMP-0097,Selectivity Panel,94.9,% selectivity,2024-05-05,Julie Beltran,Pass
+LAB-01990,CMP-0070,Solubility Assay,3.04,mg/mL,2025-03-13,Andrew Conrad,Fail
+LAB-01991,CMP-0098,hERG Cardiotoxicity Screen,5.1,% inhibition at 10uM,2026-05-11,Lee Morton,Fail
+LAB-01992,CMP-0076,Cell Viability Assay,69.7,% viability,2024-10-02,Katie Perkins,Pass
+LAB-01993,CMP-0098,Pharmacokinetic (PK) Study,14.41,hours (t1/2),2024-02-02,Ronald Johnson,Pass
+LAB-01994,CMP-0024,hERG Cardiotoxicity Screen,2.3,% inhibition at 10uM,2025-08-13,Zachary Miller,Fail
+LAB-01995,CMP-0086,Pharmacokinetic (PK) Study,20.55,hours (t1/2),2023-01-08,Courtney Gordon,Pass
+LAB-01996,CMP-0093,Metabolic Stability (Microsomal),26.1,min (t1/2),2025-01-03,Jennifer Quinn,Pass
+LAB-01997,CMP-0081,Cell Viability Assay,51.9,% viability,2026-02-06,Amber Kennedy,Fail
+LAB-01998,CMP-0110,Selectivity Panel,76.2,% selectivity,2024-10-22,Derrick Huff,Pass
+LAB-01999,CMP-0090,Enzymatic Inhibition Assay,11.86,nM (IC50),2023-11-19,David Saunders,Fail
+LAB-02000,CMP-0036,Enzymatic Inhibition Assay,2.13,nM (IC50),2024-02-28,Paul Wilson,Pass

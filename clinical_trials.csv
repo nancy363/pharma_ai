@@ -1,0 +1,111 @@
+trial_id,compound_id,trial_phase,therapeutic_area,sponsor,start_date,planned_end_date,actual_end_date,status,target_enrollment,actual_enrollment,primary_endpoint
+TRL-0001,CMP-0002,Phase III,Metabolic Disease,PharmaSense Global R&D,2024-02-01,2025-03-08,2025-03-08,Completed,525,511,Reduction in LDL Cholesterol
+TRL-0002,CMP-0005,Phase II,Infectious Disease,PharmaSense Oncology Division,2025-07-19,2026-08-01,2026-08-01,Completed,333,293,Time to Symptom Resolution
+TRL-0003,CMP-0006,Phase I,Respiratory,PharmaSense Oncology Division,2022-02-28,2023-07-02,2022-06-12,Terminated,44,23,Reduction in LDL Cholesterol
+TRL-0004,CMP-0007,Phase I,Cardiology,PharmaSense Global R&D,2022-10-13,2023-06-05,2023-06-05,Completed,596,521,Change in HbA1c from Baseline
+TRL-0005,CMP-0012,Phase II,Metabolic Disease,PharmaSense Global R&D,2025-01-21,2025-11-02,,"Active, not recruiting",42,31,Objective Response Rate (ORR)
+TRL-0006,CMP-0012,Phase II,Metabolic Disease,PharmaSense Global R&D,2023-03-12,2025-01-10,,Recruiting,481,391,Change in HbA1c from Baseline
+TRL-0007,CMP-0015,Phase II,Cardiology,PharmaSense Therapeutics,2024-07-10,2025-09-21,2025-09-21,Completed,519,493,Progression-Free Survival (PFS)
+TRL-0008,CMP-0017,Phase I,Infectious Disease,PharmaSense Therapeutics,2024-01-01,2025-11-14,,Recruiting,105,43,Change in HbA1c from Baseline
+TRL-0009,CMP-0017,Phase I,Infectious Disease,PharmaSense Therapeutics,2024-04-12,2025-03-10,2025-03-10,Completed,341,356,ACR20 Response Rate
+TRL-0010,CMP-0018,Phase II,Oncology,PharmaSense Oncology Division,2023-10-08,2025-10-28,2025-10-28,Completed,456,411,Safety and Tolerability (MTD)
+TRL-0011,CMP-0019,Phase II,Infectious Disease,PharmaSense Neuroscience Unit,2025-04-27,2027-01-20,2027-01-20,Completed,334,319,Reduction in LDL Cholesterol
+TRL-0012,CMP-0019,Phase II,Infectious Disease,PharmaSense Therapeutics,2023-04-24,2025-05-25,2025-05-25,Completed,91,79,ACR20 Response Rate
+TRL-0013,CMP-0020,Phase I,Metabolic Disease,PharmaSense Oncology Division,2025-02-09,2026-05-05,2026-05-05,Completed,113,108,ACR20 Response Rate
+TRL-0014,CMP-0023,Phase II,Infectious Disease,PharmaSense Oncology Division,2023-01-08,2025-01-22,,Suspended,106,48,Overall Survival (OS)
+TRL-0015,CMP-0024,Phase III,Metabolic Disease,PharmaSense Global R&D,2022-12-05,2024-09-06,2024-09-06,Completed,511,529,Overall Survival (OS)
+TRL-0016,CMP-0024,Phase III,Metabolic Disease,PharmaSense Global R&D,2022-04-18,2023-06-09,,Recruiting,325,293,Objective Response Rate (ORR)
+TRL-0017,CMP-0026,Phase IV,Respiratory,PharmaSense Oncology Division,2022-08-23,2025-01-22,2025-01-22,Completed,269,232,Safety and Tolerability (MTD)
+TRL-0018,CMP-0027,Phase II,Cardiology,PharmaSense Oncology Division,2022-04-16,2024-04-22,,"Active, not recruiting",260,190,Reduction in LDL Cholesterol
+TRL-0019,CMP-0029,Phase II,Oncology,PharmaSense Oncology Division,2024-04-20,2024-12-29,,Recruiting,91,57,Reduction in LDL Cholesterol
+TRL-0020,CMP-0032,Phase IV,Respiratory,PharmaSense Global R&D,2025-05-25,2027-02-13,,"Active, not recruiting",157,104,Safety and Tolerability (MTD)
+TRL-0021,CMP-0034,Phase II,Neurology,PharmaSense Neuroscience Unit,2022-08-10,2024-07-02,,Recruiting,582,496,Objective Response Rate (ORR)
+TRL-0022,CMP-0035,Phase II,Infectious Disease,PharmaSense Neuroscience Unit,2022-10-04,2024-12-04,,Suspended,70,64,Time to Symptom Resolution
+TRL-0023,CMP-0036,Phase III,Metabolic Disease,PharmaSense Therapeutics,2024-01-20,2024-08-13,2024-08-13,Completed,123,107,Reduction in LDL Cholesterol
+TRL-0024,CMP-0037,Phase IV,Cardiology,PharmaSense Global R&D,2025-03-20,2026-03-14,2026-03-14,Completed,511,436,Change in HbA1c from Baseline
+TRL-0025,CMP-0038,Phase I,Neurology,PharmaSense Therapeutics,2026-06-08,2028-09-15,,Recruiting,533,235,Objective Response Rate (ORR)
+TRL-0026,CMP-0038,Phase I,Neurology,PharmaSense Global R&D,2024-04-01,2025-09-19,,"Active, not recruiting",448,348,Time to Symptom Resolution
+TRL-0027,CMP-0039,Phase III,Neurology,PharmaSense Neuroscience Unit,2023-01-30,2024-01-09,2024-01-09,Completed,367,344,Objective Response Rate (ORR)
+TRL-0028,CMP-0040,Phase III,Metabolic Disease,PharmaSense Neuroscience Unit,2022-03-13,2024-07-18,,"Active, not recruiting",440,417,Progression-Free Survival (PFS)
+TRL-0029,CMP-0043,Phase I,Infectious Disease,PharmaSense Therapeutics,2022-08-26,2023-11-07,,"Active, not recruiting",361,194,Safety and Tolerability (MTD)
+TRL-0030,CMP-0045,Phase I,Immunology,PharmaSense Neuroscience Unit,2022-10-23,2025-02-22,,Recruiting,585,465,Safety and Tolerability (MTD)
+TRL-0031,CMP-0048,Phase II,Neurology,PharmaSense Global R&D,2022-07-31,2023-08-07,2023-08-07,Completed,560,500,Objective Response Rate (ORR)
+TRL-0032,CMP-0051,Phase II,Neurology,PharmaSense Global R&D,2021-10-12,2022-06-01,,Recruiting,238,169,Change in HbA1c from Baseline
+TRL-0033,CMP-0051,Phase II,Neurology,PharmaSense Neuroscience Unit,2024-04-17,2025-08-04,2025-08-04,Completed,478,432,Progression-Free Survival (PFS)
+TRL-0034,CMP-0052,Phase I,Respiratory,PharmaSense Oncology Division,2023-01-14,2025-04-18,,Suspended,275,86,Reduction in LDL Cholesterol
+TRL-0035,CMP-0053,Phase II,Respiratory,PharmaSense Therapeutics,2026-06-04,2028-06-18,,"Active, not recruiting",447,405,ACR20 Response Rate
+TRL-0036,CMP-0054,Phase III,Neurology,PharmaSense Neuroscience Unit,2024-05-21,2026-03-04,,"Active, not recruiting",150,101,Reduction in LDL Cholesterol
+TRL-0037,CMP-0055,Phase II,Oncology,PharmaSense Neuroscience Unit,2025-01-31,2026-09-28,,"Active, not recruiting",524,212,ACR20 Response Rate
+TRL-0038,CMP-0056,Phase III,Oncology,PharmaSense Neuroscience Unit,2022-04-28,2024-05-11,,Suspended,178,90,ACR20 Response Rate
+TRL-0039,CMP-0056,Phase III,Oncology,PharmaSense Oncology Division,2025-11-29,2028-01-31,2026-07-30,Terminated,550,118,Progression-Free Survival (PFS)
+TRL-0040,CMP-0058,Phase II,Infectious Disease,PharmaSense Global R&D,2024-02-01,2025-09-27,,Recruiting,378,260,Overall Survival (OS)
+TRL-0041,CMP-0060,Phase I,Metabolic Disease,PharmaSense Oncology Division,2025-12-07,2027-04-06,,"Active, not recruiting",531,450,Objective Response Rate (ORR)
+TRL-0042,CMP-0063,Phase IV,Infectious Disease,PharmaSense Neuroscience Unit,2024-06-27,2025-12-12,,"Active, not recruiting",370,342,Time to Symptom Resolution
+TRL-0043,CMP-0063,Phase IV,Infectious Disease,PharmaSense Oncology Division,2023-12-25,2025-01-01,,Recruiting,274,233,Safety and Tolerability (MTD)
+TRL-0044,CMP-0064,Phase IV,Cardiology,PharmaSense Neuroscience Unit,2023-11-04,2025-03-23,2025-03-23,Completed,514,516,Change in HbA1c from Baseline
+TRL-0045,CMP-0065,Phase I,Cardiology,PharmaSense Global R&D,2022-08-08,2023-03-13,2023-03-13,Completed,159,159,Progression-Free Survival (PFS)
+TRL-0046,CMP-0065,Phase I,Cardiology,PharmaSense Neuroscience Unit,2021-12-16,2023-09-07,2023-09-07,Completed,132,115,Overall Survival (OS)
+TRL-0047,CMP-0068,Phase III,Neurology,PharmaSense Therapeutics,2026-04-06,2027-11-26,,Recruiting,188,167,Objective Response Rate (ORR)
+TRL-0048,CMP-0069,Phase III,Cardiology,PharmaSense Therapeutics,2024-01-09,2025-06-18,2025-06-18,Completed,437,441,Time to Symptom Resolution
+TRL-0049,CMP-0071,Phase II,Respiratory,PharmaSense Therapeutics,2025-09-08,2027-01-25,,"Active, not recruiting",529,152,Progression-Free Survival (PFS)
+TRL-0050,CMP-0071,Phase II,Respiratory,PharmaSense Oncology Division,2023-08-26,2024-10-19,,Recruiting,324,231,Progression-Free Survival (PFS)
+TRL-0051,CMP-0072,Phase III,Infectious Disease,PharmaSense Neuroscience Unit,2022-01-25,2022-11-01,,"Active, not recruiting",132,46,Change in HbA1c from Baseline
+TRL-0052,CMP-0072,Phase III,Infectious Disease,PharmaSense Therapeutics,2024-10-03,2027-03-12,,"Active, not recruiting",336,83,Overall Survival (OS)
+TRL-0053,CMP-0073,Phase II,Metabolic Disease,PharmaSense Global R&D,2021-12-20,2022-08-14,2022-08-14,Completed,330,298,Time to Symptom Resolution
+TRL-0054,CMP-0074,Phase I,Infectious Disease,PharmaSense Neuroscience Unit,2022-06-07,2023-05-02,2023-05-02,Completed,280,255,Change in HbA1c from Baseline
+TRL-0055,CMP-0074,Phase I,Infectious Disease,PharmaSense Therapeutics,2024-06-07,2025-05-27,,"Active, not recruiting",209,43,Safety and Tolerability (MTD)
+TRL-0056,CMP-0076,Phase III,Metabolic Disease,PharmaSense Neuroscience Unit,2023-03-07,2025-01-24,,Recruiting,176,87,Reduction in LDL Cholesterol
+TRL-0057,CMP-0078,Phase I,Oncology,PharmaSense Neuroscience Unit,2026-07-09,2027-09-23,,"Active, not recruiting",39,25,Reduction in LDL Cholesterol
+TRL-0058,CMP-0078,Phase I,Oncology,PharmaSense Oncology Division,2022-04-14,2024-09-03,,"Active, not recruiting",589,424,Progression-Free Survival (PFS)
+TRL-0059,CMP-0080,Phase III,Immunology,PharmaSense Neuroscience Unit,2025-05-29,2026-11-13,2025-09-23,Terminated,336,164,Reduction in LDL Cholesterol
+TRL-0060,CMP-0080,Phase III,Immunology,PharmaSense Oncology Division,2024-08-23,2026-06-01,,"Active, not recruiting",339,94,Safety and Tolerability (MTD)
+TRL-0061,CMP-0082,Phase II,Metabolic Disease,PharmaSense Neuroscience Unit,2025-07-15,2026-04-30,,Recruiting,272,255,Time to Symptom Resolution
+TRL-0062,CMP-0082,Phase II,Metabolic Disease,PharmaSense Global R&D,2022-10-20,2024-11-26,,Recruiting,332,190,Overall Survival (OS)
+TRL-0063,CMP-0088,Phase I,Immunology,PharmaSense Therapeutics,2024-03-28,2025-07-02,2025-07-02,Completed,38,37,Objective Response Rate (ORR)
+TRL-0064,CMP-0088,Phase I,Immunology,PharmaSense Global R&D,2023-11-22,2025-03-09,2025-03-09,Completed,265,225,ACR20 Response Rate
+TRL-0065,CMP-0089,Phase III,Metabolic Disease,PharmaSense Oncology Division,2023-11-08,2026-01-31,,"Active, not recruiting",286,168,Progression-Free Survival (PFS)
+TRL-0066,CMP-0093,Phase III,Metabolic Disease,PharmaSense Therapeutics,2025-11-14,2027-03-25,,Recruiting,481,222,Time to Symptom Resolution
+TRL-0067,CMP-0097,Phase I,Metabolic Disease,PharmaSense Global R&D,2026-07-02,2027-03-31,,Recruiting,332,85,Safety and Tolerability (MTD)
+TRL-0068,CMP-0099,Phase I,Neurology,PharmaSense Global R&D,2023-03-10,2024-03-29,,"Active, not recruiting",165,49,Reduction in LDL Cholesterol
+TRL-0069,CMP-0101,Phase III,Infectious Disease,PharmaSense Global R&D,2024-09-18,2025-12-05,2025-12-05,Completed,523,516,Time to Symptom Resolution
+TRL-0070,CMP-0102,Phase II,Neurology,PharmaSense Oncology Division,2024-08-29,2026-06-19,2026-06-19,Completed,107,95,ACR20 Response Rate
+TRL-0071,CMP-0103,Phase III,Respiratory,PharmaSense Neuroscience Unit,2025-04-16,2027-05-06,,Recruiting,404,112,Overall Survival (OS)
+TRL-0072,CMP-0103,Phase III,Respiratory,PharmaSense Neuroscience Unit,2026-04-18,2027-07-12,2027-07-12,Completed,579,573,Time to Symptom Resolution
+TRL-0073,CMP-0106,Phase I,Metabolic Disease,PharmaSense Global R&D,2022-09-19,2024-11-05,,Recruiting,420,378,Progression-Free Survival (PFS)
+TRL-0074,CMP-0111,Phase I,Neurology,PharmaSense Global R&D,2022-09-24,2024-07-17,,Recruiting,55,33,ACR20 Response Rate
+TRL-0075,CMP-0113,Phase I,Immunology,PharmaSense Global R&D,2024-11-26,2027-03-06,2027-03-06,Completed,505,517,Safety and Tolerability (MTD)
+TRL-0076,CMP-0114,Phase III,Respiratory,PharmaSense Global R&D,2022-06-21,2023-05-10,2023-05-10,Completed,76,76,Objective Response Rate (ORR)
+TRL-0077,CMP-0115,Phase II,Oncology,PharmaSense Oncology Division,2022-07-21,2023-04-26,,"Active, not recruiting",270,219,Safety and Tolerability (MTD)
+TRL-0078,CMP-0117,Phase II,Immunology,PharmaSense Neuroscience Unit,2022-01-27,2023-08-09,,Recruiting,583,507,Change in HbA1c from Baseline
+TRL-0079,CMP-0117,Phase II,Immunology,PharmaSense Neuroscience Unit,2021-09-21,2023-05-18,2023-05-18,Completed,131,132,Safety and Tolerability (MTD)
+TRL-0080,CMP-0118,Phase III,Metabolic Disease,PharmaSense Neuroscience Unit,2023-11-22,2024-06-22,,"Active, not recruiting",409,279,Objective Response Rate (ORR)
+TRL-0081,CMP-0119,Phase III,Infectious Disease,PharmaSense Global R&D,2024-08-01,2026-02-03,2026-02-03,Completed,131,130,Time to Symptom Resolution
+TRL-0082,CMP-0120,Phase I,Oncology,PharmaSense Oncology Division,2023-02-13,2024-09-22,,Recruiting,312,76,Progression-Free Survival (PFS)
+TRL-0083,CMP-0121,Phase III,Oncology,PharmaSense Therapeutics,2022-10-31,2023-07-31,,Recruiting,247,78,Overall Survival (OS)
+TRL-0084,CMP-0121,Phase III,Oncology,PharmaSense Oncology Division,2025-02-17,2026-07-23,2026-02-10,Terminated,279,58,ACR20 Response Rate
+TRL-0085,CMP-0122,Phase I,Cardiology,PharmaSense Oncology Division,2025-02-10,2027-02-27,,"Active, not recruiting",242,81,ACR20 Response Rate
+TRL-0086,CMP-0124,Phase III,Oncology,PharmaSense Global R&D,2023-11-28,2024-10-24,2024-10-24,Completed,32,31,Change in HbA1c from Baseline
+TRL-0087,CMP-0126,Phase II,Oncology,PharmaSense Oncology Division,2025-01-13,2027-01-16,,"Active, not recruiting",286,176,Progression-Free Survival (PFS)
+TRL-0088,CMP-0127,Phase II,Metabolic Disease,PharmaSense Global R&D,2026-03-07,2027-01-15,2027-01-15,Completed,45,40,ACR20 Response Rate
+TRL-0089,CMP-0128,Phase I,Respiratory,PharmaSense Global R&D,2025-07-10,2026-01-22,,Suspended,208,193,Overall Survival (OS)
+TRL-0090,CMP-0129,Phase I,Metabolic Disease,PharmaSense Therapeutics,2024-09-25,2026-05-29,2026-05-29,Completed,568,505,Progression-Free Survival (PFS)
+TRL-0091,CMP-0131,Phase I,Oncology,PharmaSense Therapeutics,2024-11-28,2026-08-29,2026-08-29,Completed,400,345,Objective Response Rate (ORR)
+TRL-0092,CMP-0131,Phase I,Oncology,PharmaSense Therapeutics,2026-03-24,2028-02-17,,Recruiting,256,100,Reduction in LDL Cholesterol
+TRL-0093,CMP-0133,Phase I,Infectious Disease,PharmaSense Therapeutics,2023-10-08,2026-01-23,,"Active, not recruiting",61,51,Objective Response Rate (ORR)
+TRL-0094,CMP-0133,Phase I,Infectious Disease,PharmaSense Therapeutics,2024-05-06,2025-12-18,2025-12-18,Completed,466,465,Objective Response Rate (ORR)
+TRL-0095,CMP-0134,Phase IV,Cardiology,PharmaSense Oncology Division,2024-11-04,2025-07-17,,"Active, not recruiting",112,51,Progression-Free Survival (PFS)
+TRL-0096,CMP-0134,Phase IV,Cardiology,PharmaSense Neuroscience Unit,2026-02-08,2026-12-14,,"Active, not recruiting",311,292,Reduction in LDL Cholesterol
+TRL-0097,CMP-0135,Phase I,Cardiology,PharmaSense Therapeutics,2025-09-16,2027-08-14,,Recruiting,470,399,Progression-Free Survival (PFS)
+TRL-0098,CMP-0135,Phase I,Cardiology,PharmaSense Oncology Division,2022-01-21,2024-05-20,2024-05-20,Completed,594,557,Safety and Tolerability (MTD)
+TRL-0099,CMP-0137,Phase II,Respiratory,PharmaSense Global R&D,2022-07-07,2023-08-24,2023-08-24,Completed,453,429,Objective Response Rate (ORR)
+TRL-0100,CMP-0137,Phase II,Respiratory,PharmaSense Therapeutics,2023-03-14,2024-10-22,2023-11-10,Terminated,455,250,Time to Symptom Resolution
+TRL-0101,CMP-0138,Phase IV,Oncology,PharmaSense Oncology Division,2025-05-02,2026-09-14,,"Active, not recruiting",291,187,Objective Response Rate (ORR)
+TRL-0102,CMP-0138,Phase III,Oncology,PharmaSense Therapeutics,2024-06-18,2025-02-21,2024-10-22,Terminated,123,25,Safety and Tolerability (MTD)
+TRL-0103,CMP-0139,Phase III,Infectious Disease,PharmaSense Global R&D,2023-02-08,2024-08-22,2024-08-22,Completed,163,162,Progression-Free Survival (PFS)
+TRL-0104,CMP-0141,Phase II,Cardiology,PharmaSense Therapeutics,2022-04-24,2023-10-18,,Recruiting,463,341,Reduction in LDL Cholesterol
+TRL-0105,CMP-0141,Phase II,Cardiology,PharmaSense Global R&D,2025-01-15,2027-03-20,2025-09-25,Terminated,349,66,Progression-Free Survival (PFS)
+TRL-0106,CMP-0142,Phase III,Infectious Disease,PharmaSense Therapeutics,2025-02-04,2026-01-08,,Suspended,523,175,Time to Symptom Resolution
+TRL-0107,CMP-0143,Phase I,Metabolic Disease,PharmaSense Oncology Division,2026-04-09,2027-01-31,2026-07-14,Terminated,315,109,Safety and Tolerability (MTD)
+TRL-0108,CMP-0147,Phase I,Metabolic Disease,PharmaSense Therapeutics,2024-02-18,2026-05-01,2025-02-19,Terminated,303,97,Change in HbA1c from Baseline
+TRL-0109,CMP-0149,Phase I,Neurology,PharmaSense Global R&D,2024-02-06,2026-07-24,,"Active, not recruiting",346,223,Time to Symptom Resolution
+TRL-0110,CMP-0150,Phase III,Metabolic Disease,PharmaSense Neuroscience Unit,2022-02-06,2023-02-06,,Recruiting,176,86,Progression-Free Survival (PFS)
