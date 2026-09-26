@@ -623,16 +623,33 @@ if prompt := st.chat_input("Enter your research or clinical query..."):
                 start_time = time.time()
                 
                 # Dynamic Routing Simulation
-                if "dosage" in prompt.lower() or "prescribe" in prompt.lower():
-                    response_text = "I cannot provide personal medical or prescription advice."
-                elif "patient" in prompt.lower() or "hospitalization" in prompt.lower():
-                    # Safety Triage
-                    response_text = "🚨 **SAFETY TRIAGE EVENT DETECTED**\n\n- **Severity**: Serious\n- **Action**: Escalated to Human Reviewer Board.\n- **Log ID**: `AE-2026-9901`"
-                else:
-                    # Multi-Agent Synthesis Response
-                    response_text = f"### Multi-Agent Summary Report\n\n**Structured Findings:**\nFound 3 active clinical trials associated with your query.\n\n**Literature Insights:**\nAccording to recent trial docs, the compound shows favorable tolerability profile.\n\n*Source: [Doc ID 'DOC-102' - Title: 'Phase II Efficacy Study']* "
+                # ==========================================
+# CORRECTED STREAMLIT CHAT INPUT LOGIC
+# ==========================================
 
-                # 3. Apply Output Guardrails (PII Masking)
+if prompt := st.chat_input("Enter your research or clinical query..."):
+    # 1. User Message Display
+    st.chat_message("user").markdown(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
+
+    # 2. Run Guardrails Check
+    is_valid, clean_prompt, guardrail_msg = GuardrailEngine.sanitize_input(prompt)
+    
+    with st.chat_message("assistant"):
+        if not is_valid:
+            st.warning(guardrail_msg)
+            st.session_state.messages.append({"role": "assistant", "content": guardrail_msg})
+        else:
+            with st.spinner("Orchestrating agents and gathering insights..."):
+                start_time = time.time()
+                
+                # 🔥 FIX: Direct call to Orchestration Pipeline instead of hardcoded if/else
+                try:
+                    response_text = orchestrate_multi_agent_system(clean_prompt)
+                except Exception as e:
+                    response_text = f"Error during agent execution: {str(e)}"
+
+                # 3. Apply Output Guardrails
                 final_output = GuardrailEngine.sanitize_output(response_text)
                 
                 latency = round(time.time() - start_time, 2)
@@ -640,3 +657,4 @@ if prompt := st.chat_input("Enter your research or clinical query..."):
                 st.caption(f"⏱️ Response generated in {latency}s | Guardrails Passed")
                 
                 st.session_state.messages.append({"role": "assistant", "content": final_output})
+                
