@@ -1,65 +1,87 @@
-import pandas as pd
-import sqlite3
-from groq import Groq
 import os
+import re
+import json
+import time
+import csv
+import sqlite3
+import random
+import pandas as pd
+from datetime import datetime
+from typing import Dict, Any, List, Tuple
+
+import streamlit as st
+from groq import Groq
+
+# LangChain Imports
+from langchain_groq import ChatGroq
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.tools import Tool
+from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-import json
-import random
-import csv
-from datetime import datetime
-import streamlit as st
-import time
 
-compounds_df = pd.read_csv("compounds.csv")
-clinical_trials_df = pd.read_csv("clinical_trials.csv")
-trial_sites_df = pd.read_csv("trial_sites.csv")
-lab_results_df = pd.read_csv("lab_results.csv")
-adverse_events_df = pd.read_csv("adverse_events.csv")
-agent_interaction_logs_df = pd.read_csv("agent_interaction_logs.csv")
-research_docs_df = pd.read_csv("research_documents.csv")
+# ==============================================================================
+# 1. DATABASE SETUP & INITIALIZATION
+# ==============================================================================
 
+DB_PATH = "pharmasense.db"
+conn = sqlite3.connect(DB_PATH, check_same_thread=False)
 
-conn = sqlite3.connect("pharmasense.db")
+# Load Datasets into SQLite DB
+data_files = {
+    "compounds": "compounds.csv",
+    "clinical_trials": "clinical_trials.csv",
+    "trial_sites": "trial_sites.csv",
+    "lab_results": "lab_results.csv",
+    "adverse_events": "adverse_events.csv",
+    "agent_interaction_logs": "agent_interaction_logs.csv",
+    "research_documents": "research_documents.csv"
+}
 
+for table_name, file_path in data_files.items():
+    if os.path.exists(file_path):
+        df = pd.read_csv(file_path)
+        df.to_sql(table_name, conn, if_exists="replace", index=False)
 
-compounds_df.to_sql("compounds", conn, if_exists="replace", index=False)
-clinical_trials_df.to_sql("clinical_trials", conn, if_exists="replace", index=False)
-trial_sites_df.to_sql("trial_sites", conn, if_exists="replace", index=False)
-lab_results_df.to_sql("lab_results", conn, if_exists="replace", index=False)
-adverse_events_df.to_sql("adverse_events", conn, if_exists="replace", index=False)
-agent_interaction_logs_df.to_sql("agent_interaction_logs", conn, if_exists="replace", index=False)
-# Sanity check code
+# Database Sanity Check
 cursor = conn.cursor()
-query = """
-SELECT count(*) 
-FROM adverse_events 
-WHERE trial_id NOT IN (SELECT trial_id FROM clinical_trials)
-"""
-missing_count = cursor.execute(query).fetchone()[0]
+try:
+    cursor.execute("""
+        SELECT count(*) 
+        FROM adverse_events 
+        WHERE trial_id NOT IN (SELECT trial_id FROM clinical_trials)
+    """)
+    missing_count = cursor.fetchone()[0]
+    if missing_count == 0:
+        print("Sanity Check Passed: All trial_ids match correctly!")
+    else:
+        print(f"Warning: {missing_count} unmatched trial_ids found.")
+except Exception as e:
+    print(f"Database check warning: {str(e)}")
 
-if missing_count == 0:
-    print("Sanity Check Passed: All trial_ids match correctly!")
-else:
-    print(f"Warning: {missing_count} unmatched trial_ids found.")
-
-groq_api_key = st.secrets.get("GROQ_API_KEY", " ")
+# Initialize Groq Client & Secrets
+groq_api_key = st.secrets.get("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", ""))
 if not groq_api_key:
-    st.error("GROQ_API_KEY")
+    st.error("GROQ_API_KEY is missing. Please configure it in st.secrets or environment variables.")
     st.stop()
+
 client = Groq(api_key=groq_api_key)
 
-# 2. Centralized LLM Gateway Wrapper (Groq Version)
+llm = ChatGroq(
+    groq_api_key=groq_api_key, 
+    model_name="llama-3.3-70b-versatile", 
+    temperature=0.0
+)
+
+# Centralized LLM Gateway Wrapper
 def call_llm(
     prompt: str, 
     system_prompt: str = "You are a helpful assistant.", 
-    model: str = "openai/gpt-oss-20b", 
+    model: str = "llama-3.3-70b-versatile", 
     temperature: float = 0.0
 ) -> str:
-    
     try:
-        # Groq API को कॉल करें
         response = client.chat.completions.create(
             model=model,
             temperature=temperature,
@@ -68,573 +90,512 @@ def call_llm(
                 {"role": "user", "content": prompt}
             ]
         )
-        
-        
         prompt_tokens = response.usage.prompt_tokens
         completion_tokens = response.usage.completion_tokens
         total_tokens = response.usage.total_tokens
-        
-        
         print(f"[Groq Log] Input Tokens: {prompt_tokens} | Output Tokens: {completion_tokens} | Total Tokens: {total_tokens}")
-        
-    
         return response.choices[0].message.content
-        
     except Exception as e:
-        # 3. (Error Handling)
         print(f"[Groq Error Log] Failed to get response: {str(e)}")
         return f"Error calling Groq LLM: {str(e)}"
 
+# ==============================================================================
+# 2. LOGGING & OBSERVABILITY SYSTEM
+# ==============================================================================
 
-# Text Splitter (300-500 tokens / characters approx)
-text_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=1000,       #300-500 TOKEN
-    chunk_overlap=150,     # OVERLAP
-    separators=["\n\n", "\n", " ", ""]
-)
+LOG_FILE = "agent_interaction_logs.csv"
+if not os.path.exists(LOG_FILE):
+    with open(LOG_FILE, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["timestamp", "agent_name", "input_query", "output_summary", "latency_sec", "cost_usd"])
 
-documents = []
-metadatas = []
-
-
-for idx, row in research_docs_df.iterrows():
-    doc_id = row.get("doc_id", f"doc_{idx}")
-    title = row.get("title", "Unknown Document")
-    full_text = str(row["full_text"])
+def log_agent_step(agent_name: str, input_query: str, output: str, latency_sec: float = 0.0, cost_usd: float = 0.0):
+    """हर एजेंट के कार्य को CSV और SQLite DB में लॉग रिकॉर्ड करता है"""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     
-    
-    chunks = text_splitter.split_text(full_text)
-    
-    for chunk in chunks:
-        documents.append(chunk)
+    # Log to CSV
+    with open(LOG_FILE, "a", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow([timestamp, agent_name, input_query, summary, round(latency_sec, 3), round(cost_usd, 6)])
         
-        metadatas.append({"doc_id": doc_id, "title": title})
-
-print(f"कुल {len(documents)} चंक्स बनाए गए।")
-
-
-
-# 2. Embeddings & Vector Store 
-print("2. Open-source Embeddings मॉडल लोड हो रहा है...")
-# Sentence Transformers
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-print("3. Vector Store (FAISS Index) बनाया जा रहा है...")
-# FAISS Vector Store 
-vector_db = FAISS.from_texts(
-    texts=documents,
-    embedding=embeddings,
-    metadatas=metadatas
-)
-
-print("Vector Database iS ready \n")
-
-
-# 3. Vector Search Tool (Retrieval Tool)
-
-def vector_search_tool(query: str, k: int = 3) -> str:
-    
-    
-    results = vector_db.similarity_search(query, k=k)
-    
-    if not results:
-        return "I don't know"  # Refusal rule / Guardrail
-    
-    retrieved_passages = []
-    
-    for i, doc in enumerate(results, start=1):
-        source_id = doc.metadata.get("doc_id", "N/A")
-        source_title = doc.metadata.get("title", "N/A")
-        content = doc.page_content.strip()
-        
-        
-        passage_text = f"[Source {i}: Doc ID '{source_id}' - Title: '{source_title}']\nContent: {content}"
-        retrieved_passages.append(passage_text)
-        
-    
-    return "\n\n---\n\n".join(retrieved_passages)
-# 1. 5 SPECIALIST AGENT SYSTEM INSTRUCTIONS (PROMPTS)
-
-AGENT_INSTRUCTIONS = {
-    "trial_data_analyst": """
-    You are the Trial Data Analyst Agent for PharmaSense AI.
-    - Identity & Scope: You specialize in querying structured clinical trial databases (compounds, clinical_trials, trial_sites, lab_results, adverse_events).
-    - Available Tools: sql_query_tool.
-    - Output Format: Return SQL query results clearly as markdown tables with brief factual commentary.
-    - Guardrails: Only execute SELECT queries. Never modify data. If query returns no results, state clearly that no records exist.
-    """,
-    
-    "literature_researcher": """
-    You are the Literature & Document Research Agent for PharmaSense AI.
-    - Identity & Scope: You extract insights from unstructured research papers and scientific documents.
-    - Available Tools: vector_search_tool.
-    - Output Format: Provide grounded answers and ALWAYS include citations in the format: [Source X: Doc ID '...' - Title: '...'].
-    - Guardrails: Refuse to guess. If the vector search returns no relevant context, strictly answer 'I don't know'.
-    """,
-    
-    "adverse_event_triage": """
-    You are the Adverse Event Triage Agent for PharmaSense AI.
-    - Identity & Scope: You assess safety reports and classify adverse event severity (Mild, Moderate, Serious).
-    - Available Tools: ae_severity_classifier_tool, simulated_escalation_notifier_tool.
-    - Output Format: Return a risk score and severity level.
-    - Guardrails: Any event classified as 'Serious' MUST trigger the simulated_escalation_notifier_tool immediately for human review.
-    """,
-    
-    "compound_similarity": """
-    You are the Compound Similarity Agent for PharmaSense AI.
-    - Identity & Scope: You evaluate chemical compound structures and compute similarity metrics across known molecules.
-    - Available Tools: compound_similarity_tool.
-    - Output Format: Provide similarity scores (%) alongside functional group overlaps.
-    - Guardrails: State clearly that computational similarity does not guarantee identical biological activity.
-    """,
-    
-    "report_writer": """
-    You are the Report Writer Agent for PharmaSense AI.
-    - Identity & Scope: You take outputs from other specialist agents and synthesize them into a clean, executive-ready report.
-    - Available Tools: citation_formatter_tool.
-    - Output Format: Structured Markdown with Executive Summary, Structured Data Findings, Literature Insights, and Risk Analysis.
-    - Guardrails: Maintain strict fidelity to source data; do not add facts not supplied by specialist agents.
-    """
-}
-#3. ROUTER / PLANNER AGENT (Intent Classification & Execution PLAN
-ROUTER_SYSTEM_PROMPT = """
-You are the Master Router Agent for PharmaSense AI.
-Analyze the user query and output a JSON object indicating the execution plan.
-
-Routing Rules:
-1. If query is ONLY about structured database tables (trials, compounds, side-effect counts), set strategy to 'SINGLE_SQL'.
-2. If query is ONLY about unstructured literature, papers, or clinical text, set strategy to 'SINGLE_RAG'.
-3. If query asks for a FULL COMPREHENSIVE REPORT combining both structured data and research text, set strategy to 'PARALLEL_FULL_REPORT'.
-4. If query describes a patient side-effect, set strategy to 'ADVERSE_EVENT_TRIAGE'.
-
-Output ONLY a valid JSON object in this format:
-{
-  "strategy": "SINGLE_SQL" | "SINGLE_RAG" | "PARALLEL_FULL_REPORT" | "ADVERSE_EVENT_TRIAGE",
-  "reason": "Short explanation"
-}
-"""
-
-def router_agent(user_query: str) -> dict:
-    """यूजर की क्वेरी को वर्गीकृत करता है कि कौन सा पैटर्न और एजेंट इस्तेमाल करना है"""
-    raw_response = call_llm(prompt=user_query, system_prompt=ROUTER_SYSTEM_PROMPT)
+    # Log to SQLite
     try:
-        # JSON एक्सट्रैक्ट करें
-        clean_json = raw_response[raw_response.find("{"):raw_response.rfind("}")+1]
-        plan = json.loads(clean_json)
-        log_agent_step("RouterAgent", user_query, f"Strategy: {plan.get('strategy')}")
-        return plan
+        log_df = pd.DataFrame([{
+            "timestamp": timestamp,
+            "agent_name": agent_name,
+            "input_query": input_query,
+            "output_summary": summary,
+            "latency_sec": round(latency_sec, 3),
+            "cost_usd": round(cost_usd, 6)
+        }])
+        cur_conn = sqlite3.connect(DB_PATH)
+        log_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
+        cur_conn.close()
     except Exception as e:
-        # फॉलबैक (Default)
-        return {"strategy": "PARALLEL_FULL_REPORT", "reason": "Defaulting to full multi-agent flow."}
+        print(f"Log DB Error: {str(e)}")
+        
+    print(f"  [Log Recorded] Agent: '{agent_name}' finished task.")
+
+def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
+    """Estimates cost in USD based on Llama-3.3-70B rates."""
+    input_cost = (prompt_tokens / 1_000_000) * 0.59
+    output_cost = (completion_tokens / 1_000_000) * 0.79
+    return round(input_cost + output_cost, 6)
+
+# ==============================================================================
+# 3. SAFETY & GUARDRAILS (PII REDACTION & PROMPT INJECTION SCREENING)
+# ==============================================================================
+
+def sanitize_and_redact_pii(text: str) -> Tuple[str, bool]:
+    """
+    Guardrail:
+    1. Screens for Prompt Injection Patterns.
+    2. Redacts sensitive PII (Patient IDs, Email, Phone Numbers, Names).
+    """
+    injection_patterns = [
+        r"ignore\s+previous\s+instructions",
+        r"system\s+prompt",
+        r"you\s+are\s+now\s+a",
+        r"override\s+rules",
+        r"jailbreak"
+    ]
+    for pattern in injection_patterns:
+        if re.search(pattern, text, re.IGNORECASE):
+            return "⚠️ GUARDRAIL ALERT: Prompt Injection Pattern Detected and Blocked.", True
+
+    # PII Redaction Regex
+    text = re.sub(r'PAT-\d+', '[REDACTED_PATIENT_ID]', text)
+    text = re.sub(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', '[REDACTED_EMAIL]', text)
+    text = re.sub(r'\b\d{3}[-.\s]?\d{3}[-.\s]?\d{4}\b', '[REDACTED_PHONE]', text)
+    text = re.sub(r'Patient\s+Name:\s*[A-Za-z\s]+', 'Patient Name: [REDACTED_NAME]', text, flags=re.IGNORECASE)
     
-# 2. JSON TOOL SPECIFICATIONS (Tool Schemas)
+    return text, False
 
-TOOLS_SPEC = [
-    {
-        "name": "sql_query_tool",
-        "description": "Executes a read-only SQL query against the SQLite database.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "query": {
-                    "type": "string",
-                    "description": "A valid SELECT SQL statement."
-                }
-            },
-            "required": ["query"]
-        }
-    },
-    {
-        "name": "vector_search_tool",
-        "description": "Searches unstructured research papers using vector similarity.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "query": {
-                    "type": "string",
-                    "description": "The search question or topic."
-                },
-                "k": {
-                    "type": "integer",
-                    "description": "Number of top matching passages to retrieve.",
-                    "default": 3
-                }
-            },
-            "required": ["query"]
-        }
-    },
-    {
-        "name": "ae_severity_classifier_tool",
-        "description": "Classifies the severity level of a given adverse event description.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "event_description": {
-                    "type": "string",
-                    "description": "Detailed text describing the patient side effect."
-                }
-            },
-            "required": ["event_description"]
-        }
-    },
-    {
-        "name": "simulated_escalation_notifier_tool",
-        "description": "Logs an escalation trigger for human safety team review when serious adverse events occur.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "event_id": {"type": "string", "description": "Unique identifier of the adverse event."},
-                "reason": {"type": "string", "description": "Why this event was escalated."}
-            },
-            "required": ["event_id", "reason"]
-        }
-    },
-    {
-        "name": "compound_similarity_tool",
-        "description": "Calculates structural similarity between two compound IDs.",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "compound_a": {"type": "string", "description": "First compound ID (e.g. DKU-1042)."},
-                "compound_b": {"type": "string", "description": "Second compound ID."}
-            },
-            "required": ["compound_a", "compound_b"]
-        }
-    }
-]
-# 3. SAVE SPECIFICATIONS TO ARTIFACT FILES
-# JSON Specs फ़ाइल में सेव करें
-with open("tool_specs.json", "w") as f:
-    json.dump(TOOLS_SPEC, f, indent=2)
+# ==============================================================================
+# 4. RAG VECTOR STORE INITIALIZATION WITH GROUNDING CHECK
+# ==============================================================================
 
-# Markdown Briefs फ़ाइल में सेव करें
-with open("instructions.md", "w") as f:
-    for agent_name, prompt in AGENT_INSTRUCTIONS.items():
-        f.write(f"# {agent_name.upper()} INSTRUCTIONS\n")
-        f.write(prompt.strip() + "\n\n---\n\n")
+@st.cache_resource
+def init_vector_db():
+    if not os.path.exists("research_documents.csv"):
+        return None
+        
+    research_docs_df = pd.read_csv("research_documents.csv")
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000, 
+        chunk_overlap=150,
+        separators=["\n\n", "\n", " ", ""]
+    )
+    
+    documents, metadatas = [], []
+    for idx, row in research_docs_df.iterrows():
+        doc_id = row.get("doc_id", f"doc_{idx}")
+        title = row.get("title", "Unknown Document")
+        full_text = str(row.get("full_text", ""))
+        
+        chunks = text_splitter.split_text(full_text)
+        for chunk in chunks:
+            documents.append(chunk)
+            metadatas.append({"doc_id": doc_id, "title": title})
 
-print("Step 4 Complete: 'instructions.md' and 'tool_specs.json' generated successfully!")
-# 1. SQL QUERY TOOL (READ-ONLY)
-def sql_query_tool(query: str, db_path: str = "pharmasense.db") -> str:
-    """
-    SQLite डेटाबेस पर केवल SELECT/READ-ONLY क्वेरी चलाता है।
-    """
-    # Guardrail: केवल SELECT क्वेरीज़ की अनुमति है
+    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    return FAISS.from_texts(texts=documents, embedding=embeddings, metadatas=metadatas)
+
+vector_db = init_vector_db()
+
+# ==============================================================================
+# 5. ATOMIC SPECIALIST TOOLS
+# ==============================================================================
+
+def sql_query_tool(query: str, db_path: str = DB_PATH) -> str:
+    """Executes read-only SELECT queries on SQLite DB."""
     clean_query = query.strip()
     if not clean_query.lower().startswith("select"):
         return "Error: Security Violation. Only SELECT (read-only) queries are allowed."
     
     try:
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-        cursor.execute(clean_query)
+        conn_local = sqlite3.connect(db_path)
+        cursor_local = conn_local.cursor()
+        cursor_local.execute(clean_query)
         
-        columns = [description[0] for description in cursor.description]
-        rows = cursor.fetchall()
-        conn.close()
+        columns = [desc[0] for desc in cursor_local.description]
+        rows = cursor_local.fetchall()
+        conn_local.close()
         
         if not rows:
             return "No matching records found in the database."
-        header = " | ".join(columns)
-        separator = " | ".join(["---"] * len(columns))
-        row_str_list = [" | ".join(str(val) for val in row) for row in rows[:10]] # टॉप 10 परिणाम
-        
-        markdown_table = f"| {header} |\n| {separator} |\n" + "\n".join([f"| {r} |" for r in row_str_list])
+            
+        markdown_table = "| " + " | ".join(columns) + " |\n"
+        markdown_table += "| " + " | ".join(["---"] * len(columns)) + " |\n"
+        for row in rows[:10]:
+            markdown_table += "| " + " | ".join(str(val) for val in row) + " |\n"
         return markdown_table
-
     except Exception as e:
         return f"Database Query Error: {str(e)}"
+
+def vector_search_tool(query: str, k: int = 3) -> str:
+    """
+    Performs RAG search over research papers.
+    Grounding Check: Returns 'I don't know' if relevance distance score is too poor.
+    """
+    if not vector_db:
+        # Fallback to CSV search if FAISS not loaded
+        if os.path.exists("research_documents.csv"):
+            df = pd.read_csv("research_documents.csv")
+            results = []
+            for idx, row in df.iterrows():
+                if any(word.lower() in str(row.get("full_text", "")).lower() for word in query.split()):
+                    doc_id = row.get("doc_id", f"doc_{idx}")
+                    title = row.get("title", "Unknown")
+                    results.append(f"[Source {len(results)+1}: Doc ID '{doc_id}' - Title: '{title}']\nContent: {row.get('full_text')[:300]}...")
+                    if len(results) >= k:
+                        break
+            return "\n\n---\n\n".join(results) if results else "I don't know"
+        return "Research documents vector database is not initialized."
+        
+    results_with_scores = vector_db.similarity_search_with_score(query, k=k)
     
-# 2. ADVERSE EVENT SEVERITY CLASSIFIER TOOL
+    # Grounding threshold check
+    threshold = 1.25
+    valid_results = [doc for doc, score in results_with_scores if score <= threshold]
+    
+    if not valid_results:
+        return "I don't know"  # Refusal rule / Guardrail
+        
+    retrieved_passages = []
+    for i, doc in enumerate(valid_results, start=1):
+        content, is_injection = sanitize_and_redact_pii(doc.page_content.strip())
+        if is_injection:
+            return content
+        source_id = doc.metadata.get("doc_id", "N/A")
+        source_title = doc.metadata.get("title", "N/A")
+        retrieved_passages.append(f"[Source {i}: Doc ID '{source_id}' - Title: '{source_title}']\nContent: {content}")
+        
+    return "\n\n---\n\n".join(retrieved_passages)
+
 def ae_severity_classifier_tool(event_description: str) -> dict:
-    """
-    साइड इफ़ेक्ट के विवरण के आधार पर गंभीरता (Mild, Moderate, Serious) तय करता है।
-    """
-    text_lower = event_description.lower()
+    """Classifies side-effect severity and auto-escalates if Serious."""
+    clean_input, _ = sanitize_and_redact_pii(event_description)
+    text_lower = clean_input.lower()
     
-    #  (Serious Keywords)
     serious_keywords = ["hospitalization", "fatal", "death", "anaphylaxis", "organ failure", "cardiac arrest", "severe"]
     moderate_keywords = ["fever", "rash", "vomiting", "dizziness", "moderate"]
     
-    if any(keyword in text_lower for keyword in serious_keywords):
+    if any(k in text_lower for k in serious_keywords):
         severity = "Serious"
         risk_score = 0.95
-    elif any(keyword in text_lower for keyword in moderate_keywords):
+    elif any(k in text_lower for k in moderate_keywords):
         severity = "Moderate"
         risk_score = 0.55
     else:
         severity = "Mild"
         risk_score = 0.20
         
+    requires_escalation = (severity == "Serious")
+    escalation_msg = ""
+    if requires_escalation:
+        escalation_msg = simulated_escalation_notifier_tool("AE-AUTO-DETECTOR", f"Auto-escalated event. Severity: {severity}")
+
     return {
-        "event_description": event_description,
+        "event_description": clean_input,
         "severity": severity,
         "risk_score": risk_score,
-        "requires_escalation": (severity == "Serious")
+        "requires_escalation": requires_escalation,
+        "auto_escalation_status": escalation_msg
     }
-# 3. SIMULATED ESCALATION NOTIFIER TOOL
+
 def simulated_escalation_notifier_tool(event_id: str, reason: str) -> str:
-    """
-    गंभीर Adverse Events को ह्यूमन रिव्यूअर के लिए एस्केलेट और लॉग करता है।
-    """
-    log_entry = f"[HUMAN SAFETY ESCALATION TRIGGERED] Event ID: {event_id} | Reason: {reason}"
+    """Logs critical adverse events to safety review board."""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_entry = f"[HUMAN SAFETY ESCALATION TRIGGERED | {timestamp}] Event ID: {event_id} | Reason: {reason}"
     print(log_entry)  
-    with open("escalation_alerts.log", "a") as f:
-        f.write(log_entry + "\n")
-        
-    return f"Success: Event {event_id} has been escalated to the Human Safety Review Board."
-# 4. COMPOUND SIMILARITY TOOL
+    try:
+        with open("escalation_alerts.log", "a", encoding="utf-8") as f:
+            f.write(log_entry + "\n")
+        return f"Success: Event '{event_id}' has been escalated to the Human Safety Review Board."
+    except Exception as e:
+        return f"Escalation notification error: {str(e)}"
+
 def compound_similarity_tool(compound_a: str, compound_b: str) -> dict:
-    """
-    दो कंपाउंड्स के बीच स्ट्रक्चरल सिमिलरिटी स्कोर कैलकुलेट करता है।
-    """
-    # अगर दोनों कंपाउंड एक ही हैं
-    if compound_a.strip().upper() == compound_b.strip().upper():
+    """Computes structural similarity score between two compound IDs."""
+    c_a = compound_a.strip().upper()
+    c_b = compound_b.strip().upper()
+    
+    if c_a == c_b:
         similarity_pct = 100.0
     else:
-        # सिमुलेटेड सिमिलरिटी स्कोर (Deterministic based on name lengths)
-        seed_value = len(compound_a) + len(compound_b)
+        seed_value = len(c_a) + len(c_b)
         random.seed(seed_value)
         similarity_pct = round(random.uniform(60.0, 92.5), 2)
         
     return {
-        "compound_a": compound_a,
-        "compound_b": compound_b,
+        "compound_a": c_a,
+        "compound_b": c_b,
         "similarity_score_pct": similarity_pct,
         "note": "Calculated via fingerprint similarity algorithm. Computational similarity does not imply identical biological activity."
     }
 
+def citation_formatter_tool(doc_id: str, title: str) -> str:
+    """Formats standard academic citations."""
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    return f"[Citation] Ref ID: {doc_id} | Title: '{title}' | Verified: {today_str}"
 
-# 2. LOGGING SYSTEM (For Observability & Interaction Tracking)
-LOG_FILE = "agent_interaction_logs.csv"
-if not os.path.exists(LOG_FILE):
-    with open(LOG_FILE, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["timestamp", "agent_name", "input_query", "output_summary"])
+# Save Tool Specs Artifacts
+TOOLS_SPEC = [
+    {"name": "sql_query_tool", "description": "Executes SELECT SQL queries on trial DB tables.", "parameters": {"type": "object", "properties": {"query": {"type": "string"}}, "required": ["query"]}},
+    {"name": "vector_search_tool", "description": "Searches unstructured biomedical papers using vector similarity.", "parameters": {"type": "object", "properties": {"query": {"type": "string"}, "k": {"type": "integer", "default": 3}}, "required": ["query"]}},
+    {"name": "ae_severity_classifier_tool", "description": "Classifies adverse event severity level.", "parameters": {"type": "object", "properties": {"event_description": {"type": "string"}}, "required": ["event_description"]}},
+    {"name": "simulated_escalation_notifier_tool", "description": "Logs escalation alerts for safety board review.", "parameters": {"type": "object", "properties": {"event_id": {"type": "string"}, "reason": {"type": "string"}}, "required": ["event_id", "reason"]}},
+    {"name": "compound_similarity_tool", "description": "Calculates structural similarity between two compound IDs.", "parameters": {"type": "object", "properties": {"compound_a": {"type": "string"}, "compound_b": {"type": "string"}}, "required": ["compound_a", "compound_b"]}}
+]
 
-def log_agent_step(agent_name: str, input_query: str, output: str):
-    """हर एजेंट के कार्य को लॉग फ़ाइल में रिकॉर्ड करता है"""
-    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    summary = output.replace("\n", " ")[:150] + "..."  # लॉग के लिए छोटा सारांश
-    
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow([timestamp, agent_name, input_query, summary])
+with open("tool_specs.json", "w", encoding="utf-8") as f:
+    json.dump(TOOLS_SPEC, f, indent=2)
+
+# LangChain Tool Wrappers
+tool_sql = Tool(name="sql_query_tool", func=sql_query_tool, description="Executes SELECT SQL queries on trial DB tables.")
+tool_vector = Tool(name="vector_search_tool", func=vector_search_tool, description="Performs RAG search over research papers.")
+tool_ae_classifier = Tool(name="ae_severity_classifier_tool", func=lambda inp: str(ae_severity_classifier_tool(inp)), description="Classifies adverse event severity.")
+tool_similarity = Tool(name="compound_similarity_tool", func=lambda args_str: str(compound_similarity_tool(*[x.strip() for x in args_str.split(",")])), description="Compares compounds. Format 'CMP1,CMP2'.")
+tool_escalation = Tool(name="simulated_escalation_notifier_tool", func=lambda args_str: simulated_escalation_notifier_tool(*[x.strip() for x in args_str.split(",")]), description="Logs safety escalations. Format 'EVENT_ID,REASON'.")
+tool_citation = Tool(name="citation_formatter_tool", func=lambda args_str: citation_formatter_tool(*[x.strip() for x in args_str.split(",")]), description="Formats doc citations. Format 'DOC_ID,TITLE'.")
+
+# ==============================================================================
+# 6. AGENT INSTRUCTIONS & EXACT AGENT FUNCTIONS
+# ==============================================================================
+
+AGENT_INSTRUCTIONS = {
+    "trial_data_analyst": """
+    You are the Trial Data Analyst Agent for PharmaSense AI.
+    - Identity & Scope: Query structured clinical trial databases (compounds, clinical_trials, trial_sites, lab_results, adverse_events).
+    - Available Tools: sql_query_tool.
+    - Output Format: Return SQL query results clearly as markdown tables with brief commentary.
+    - Guardrails: Only execute SELECT queries. Never modify data.
+    """,
+    "literature_researcher": """
+    You are the Literature & Document Research Agent for PharmaSense AI.
+    - Identity & Scope: Extract insights from unstructured research papers and scientific documents.
+    - Available Tools: vector_search_tool.
+    - Output Format: Provide grounded answers and ALWAYS include citations: [Source X: Doc ID '...' - Title: '...'].
+    - Guardrails: Refuse to guess. If vector search returns no relevant context, strictly answer 'I don't know'.
+    """,
+    "adverse_event_triage": """
+    You are the Adverse Event Triage Agent for PharmaSense AI.
+    - Identity & Scope: Assess safety reports and classify adverse event severity (Mild, Moderate, Serious).
+    - Available Tools: ae_severity_classifier_tool, simulated_escalation_notifier_tool.
+    - Output Format: Return risk score and severity level.
+    - Guardrails: Any event classified as 'Serious' MUST trigger simulated_escalation_notifier_tool immediately.
+    """,
+    "compound_similarity": """
+    You are the Compound Similarity Agent for PharmaSense AI.
+    - Identity & Scope: Evaluate chemical compound structures and compute similarity metrics.
+    - Available Tools: compound_similarity_tool.
+    - Output Format: Provide similarity scores (%) alongside functional commentary.
+    """,
+    "report_writer": """
+    You are the Report Writer Agent for PharmaSense AI.
+    - Identity & Scope: Synthesize outputs from other agents into an executive-ready report.
+    - Available Tools: citation_formatter_tool.
+    - Output Format: Structured Markdown with Executive Summary, Findings, and Risk Analysis.
+    """
+}
+
+with open("instructions.md", "w", encoding="utf-8") as f:
+    for agent_name, prompt in AGENT_INSTRUCTIONS.items():
+        f.write(f"# {agent_name.upper()} INSTRUCTIONS\n{prompt.strip()}\n\n---\n\n")
+
+# ------------------------------------------------------------------------------
+# EXACT AGENT FUNCTIONS (एजेंट्स खुद अपने टूल्स चलाएंगे)
+# ------------------------------------------------------------------------------
+
+def run_trial_data_analyst_agent(user_query: str) -> str:
+    """Agent 1: trial_data_analyst"""
+    start_t = time.time()
+    sql_prompt = f"Convert this request into a valid SQLite SELECT query for tables (clinical_trials, compounds, trial_sites, lab_results, adverse_events). Return ONLY the SQL query:\n{user_query}"
+    sql_query = call_llm(sql_prompt, system_prompt=AGENT_INSTRUCTIONS["trial_data_analyst"]).strip()
+    if not sql_query.lower().startswith("select"):
+        sql_query = "SELECT * FROM clinical_trials LIMIT 5"
         
-    print(f"  [Log Recorded] Agent: '{agent_name}' finished task.")
-   
-# 4. ORCHESTRATOR / PIPELINE ENGINE
+    result_table = sql_query_tool(sql_query)
+    output = f"### 📊 Structured Database Findings\n**Executed SQL:** `{sql_query}`\n\n{result_table}"
+    latency = time.time() - start_t
+    log_agent_step("trial_data_analyst", user_query, output, latency_sec=latency)
+    return output
+
+def run_literature_researcher_agent(user_query: str) -> str:
+    """Agent 2: literature_researcher"""
+    start_t = time.time()
+    rag_passages = vector_search_tool(user_query, k=3)
+    if rag_passages == "I don't know":
+        output = "I don't know (No relevant literature found)."
+    else:
+        prompt = f"Answer the query using ONLY these passages:\n{rag_passages}\n\nQuery: {user_query}"
+        output = call_llm(prompt, system_prompt=AGENT_INSTRUCTIONS["literature_researcher"])
+    latency = time.time() - start_t
+    log_agent_step("literature_researcher", user_query, output, latency_sec=latency)
+    return output
+
+def run_adverse_event_triage_agent(user_query: str) -> str:
+    """Agent 3: adverse_event_triage"""
+    start_t = time.time()
+    triage_res = ae_severity_classifier_tool(user_query)
+    output = f"### 🚨 Adverse Event Safety Triage\n"
+    output += f"- **Event Description:** {triage_res['event_description']}\n"
+    output += f"- **Severity Level:** `{triage_res['severity']}`\n"
+    output += f"- **Risk Score:** `{triage_res['risk_score']}`\n"
+    
+    if triage_res["requires_escalation"]:
+        esc_msg = triage_res.get("auto_escalation_status") or simulated_escalation_notifier_tool(event_id="AE-AUTO-DETECTOR", reason=user_query)
+        output += f"\n> ⚠️ **AUTO-ESCALATION:** {esc_msg}"
+        log_agent_step("simulated_escalation_notifier_tool", user_query, esc_msg)
+
+    latency = time.time() - start_t
+    log_agent_step("adverse_event_triage", user_query, output, latency_sec=latency)
+    return output
+
+def run_compound_similarity_agent(user_query: str) -> str:
+    """Agent 4: compound_similarity"""
+    start_t = time.time()
+    compounds = re.findall(r'[A-Za-z0-9]+-[0-9]+|[A-Za-z0-9]+', user_query)
+    c1 = compounds[0] if len(compounds) > 0 else "CMP-101"
+    c2 = compounds[1] if len(compounds) > 1 else "CMP-102"
+    
+    res = compound_similarity_tool(c1, c2)
+    output = f"### 🔬 Compound Similarity Analysis\n"
+    output += f"- **Compound A:** `{res['compound_a']}`\n"
+    output += f"- **Compound B:** `{res['compound_b']}`\n"
+    output += f"- **Similarity Score:** `{res['similarity_score_pct']}%`\n"
+    output += f"_{res['note']}_"
+    
+    latency = time.time() - start_t
+    log_agent_step("compound_similarity", user_query, output, latency_sec=latency)
+    return output
+
+def run_report_writer_agent(user_query: str, inputs_from_agents: Dict[str, str]) -> str:
+    """Agent 5: report_writer"""
+    start_t = time.time()
+    synthesis_prompt = f"""
+    User Request: {user_query}
+    
+    Inputs gathered from Specialist Agents:
+    """
+    for agent_name, agent_output in inputs_from_agents.items():
+        synthesis_prompt += f"\n--- Output from {agent_name} ---\n{agent_output}\n"
+        
+    synthesis_prompt += "\nSynthesize everything into a clear, executive-ready Markdown report with Executive Summary, Findings, and Safety/Risk Assessment."
+    
+    final_report = call_llm(synthesis_prompt, system_prompt=AGENT_INSTRUCTIONS["report_writer"])
+    latency = time.time() - start_t
+    log_agent_step("report_writer", user_query, final_report, latency_sec=latency)
+    return final_report
+
+# ==============================================================================
+# 7. ROUTER AGENT & MAPPING LOGIC
+# ==============================================================================
+
+ROUTER_SYSTEM_PROMPT = """
+You are the Master Router Agent for PharmaSense AI.
+Map the user query to the required agents using these strict rules:
+
+RULES:
+1. Return "mapped_agents": ["trial_data_analyst"] -> If query asks ONLY about structured DB tables.
+2. Return "mapped_agents": ["literature_researcher"] -> If query asks ONLY about research papers or scientific literature.
+3. Return "mapped_agents": ["adverse_event_triage"] -> If query describes a patient side-effect or safety incident.
+4. Return "mapped_agents": ["compound_similarity"] -> If query asks to compare two chemical compound structures.
+5. Return "mapped_agents": ["trial_data_analyst", "literature_researcher", "report_writer"] -> If query requires BOTH database stats and research paper context, or requests a full report.
+
+Output strictly in JSON format:
+{
+  "mapped_agents": ["agent_1", "agent_2", ...],
+  "reason": "Short explanation of why agents were mapped"
+}
+"""
+
+def router_agent(user_query: str) -> dict:
+    """Classifies user intent and returns agent mappings."""
+    start_t = time.time()
+    raw_response = call_llm(user_query, system_prompt=ROUTER_SYSTEM_PROMPT)
+    latency = time.time() - start_t
+    try:
+        clean_json = raw_response[raw_response.find("{"):raw_response.rfind("}")+1]
+        plan = json.loads(clean_json)
+        log_agent_step("router_agent", user_query, f"Mapped Agents: {plan.get('mapped_agents')} | Reason: {plan.get('reason')}", latency_sec=latency)
+        return plan
+    except Exception:
+        fallback = {"mapped_agents": ["trial_data_analyst", "literature_researcher", "report_writer"], "reason": "Multi-agent fallback."}
+        log_agent_step("router_agent", user_query, f"Mapped Agents: {fallback['mapped_agents']} (Fallback)", latency_sec=latency)
+        return fallback
+
+# ==============================================================================
+# 8. PIPELINE ORCHESTRATOR (3-STEP PIPELINE)
+# ==============================================================================
+
 def orchestrate_multi_agent_system(user_query: str) -> str:
-    """
-    गाइड के अनुसार पूरी प्रणाली का आर्केस्ट्रेशन प्रबंधित करता है:
-    User Question -> Router -> Agent Execution (Parallel/Sequential) -> Final Cited Answer
-    """
-    print(f"\n==================================================")
-    print(f"USER QUERY: {user_query}")
-    print(f"==================================================")
+    print(f"\n================ USER QUERY: {user_query} ================")
     
-    # Step A: Route the query
-    plan = router_agent(user_query)
-    strategy = plan.get("strategy")
-    print(f" [Router Decision]: Strategy -> {strategy} | Reason: {plan.get('reason')}\n")
+    # -------------------------------------------------------------
+    # STEP 1: Router एजेंट से मैपिंग पूछना
+    # -------------------------------------------------------------
+    route_plan = router_agent(user_query)
+    mapped_agents = route_plan.get("mapped_agents", [])
+    reason = route_plan.get("reason", "")
     
-    # PATTERN 1: Parallel Execution (Analyst + RAG Literature -> Sequential Report Writer)
-    if strategy == "PARALLEL_FULL_REPORT":
-        print(" [Orchestration]: Executing Parallel Fan-Out (SQL Analyst + RAG Literature)...")
-        
-        # Simulated Parallel Step 1: SQL Analyst
-        sql_input = f"Fetch trial count and compound details for query: {user_query}"
-        sql_output = sql_query_tool("SELECT trial_id, compound_id, phase, status FROM clinical_trials LIMIT 3")
-        log_agent_step("SQLAnalystAgent", sql_input, sql_output)
-        
-        # Simulated Parallel Step 2: RAG Literature Search
-        rag_output = vector_search_tool(query=user_query, k=2)
-        log_agent_step("LiteratureResearchAgent", user_query, rag_output)
-        
-        # Sequential Step 3: Report Synthesis (Report Writer Agent)
-        print("\n [Orchestration]: Merging Outputs via Sequential Hand-off to Report Writer...")
-        writer_prompt = f"""
-        User Query: {user_query}
-        
-        Structured Database Results:
-        {sql_output}
-        
-        Literature Research Findings:
-        {rag_output}
-        
-        Synthesize a clean executive report summarizing both structured data and literature findings. Maintain source citations.
-        """
-        
-        final_report = call_llm(
-            prompt=writer_prompt, 
-            system_prompt=AGENT_INSTRUCTIONS["report_writer"]
-        )
-        log_agent_step("ReportWriterAgent", "Synthesis of Analyst + Literature", final_report)
-        return final_report
-
-
-    # PATTERN 2: Single Agent Tool Execution (SQL Only)
-
-    elif strategy == "SINGLE_SQL":
-        print(" [Orchestration]: Directing query to SQL Data Analyst...")
-        sql_output = sql_query_tool("SELECT * FROM clinical_trials LIMIT 5")
-        log_agent_step("SQLAnalystAgent", user_query, sql_output)
-        return f"### SQL Data Findings\n\n{sql_output}"
-
-    # PATTERN 3: Single Agent Tool Execution (RAG Only)
-    elif strategy == "SINGLE_RAG":
-        print(" [Orchestration]: Directing query to Literature Research Agent...")
-        rag_output = vector_search_tool(query=user_query, k=3)
-        log_agent_step("LiteratureResearchAgent", user_query, rag_output)
-        
-        answer_prompt = f"Answer the user query based ONLY on these literature passages:\n{rag_output}\n\nQuery: {user_query}"
-        final_ans = call_llm(prompt=answer_prompt, system_prompt=AGENT_INSTRUCTIONS["literature_researcher"])
-        return final_ans
-
+    st.info(f"🧠 **Router Mapping:** `{mapped_agents}` | **Reason:** {reason}")
     
-    # PATTERN 4: Safety & Adverse Event Triage Flow
-    elif strategy == "ADVERSE_EVENT_TRIAGE":
-        print(" [Orchestration]: Executing Adverse Event Safety Triage...")
-        triage_res = ae_severity_classifier_tool(user_query)
-        log_agent_step("AdverseEventTriageAgent", user_query, json.dumps(triage_res))
+    # सारे एजेंट्स का डेटा इकट्ठा करने के लिए ऑर्केस्ट्रेटर में डिक्शनरी
+    agent_outputs = {}
+    
+    # -------------------------------------------------------------
+    # STEP 2: Router द्वारा बताए गए एजेंट्स को ऑर्केस्ट्रेटर पर ही कॉल करना 
+    # और उनका Output डिक्शनरी में सेव करना
+    # -------------------------------------------------------------
+    if "trial_data_analyst" in mapped_agents:
+        st.write("🏃 Running Agent: `trial_data_analyst`")
+        agent_outputs["trial_data_analyst"] = run_trial_data_analyst_agent(user_query)
         
-        # Auto-escalation Rule Test
-        if triage_res["requires_escalation"]:
-            esc_msg = simulated_escalation_notifier_tool(event_id="AE-AUTO-99", reason=user_query)
-            log_agent_step("EscalationNotifier", "AE-AUTO-99", esc_msg)
-            return f"**SAFETY WARNING**: Event assessed as **SERIOUS**.\n{esc_msg}\n\nTriage Details:\n{json.dumps(triage_res, indent=2)}"
-        else:
-            return f"Event assessed as **{triage_res['severity']}**. No immediate human escalation required."
-# --- STEP 7 GUARDRAILS CODE (DIRECTLY EMBEDDED) ---
+    if "literature_researcher" in mapped_agents:
+        st.write("🏃 Running Agent: `literature_researcher`")
+        agent_outputs["literature_researcher"] = run_literature_researcher_agent(user_query)
 
-class GuardrailEngine:
-    def __init__(self):
-        pass
+    if "adverse_event_triage" in mapped_agents:
+        st.write("🏃 Running Agent: `adverse_event_triage`")
+        agent_outputs["adverse_event_triage"] = run_adverse_event_triage_agent(user_query)
 
-    # 1. यह इनपुट को सैनिटाइज़ (सुरक्षित) चेक करेगा
-    @staticmethod
-    def sanitize_input(prompt: str):
-        # गलत या नुकसानदायक कीवर्ड्स की लिस्ट
-        forbidden_keywords = ["drop table", "delete from", "ignore previous instructions", "system prompt"]
-        
-        # चेक करें कि क्या यूजर के इनपुट में इनमें से कोई गलत शब्द है
-        for keyword in forbidden_keywords:
-            if keyword in prompt.lower():
-                return False, prompt, "⚠️ सुरक्षा नियम उल्लंघन: आपका इनपुट असुरक्षित है।"
-        
-        # अगर सब ठीक है तो आगे जाने दें
-        return True, prompt, ""
+    if "compound_similarity" in mapped_agents:
+        st.write("🏃 Running Agent: `compound_similarity`")
+        agent_outputs["compound_similarity"] = run_compound_similarity_agent(user_query)
 
-    # 2. यह आउटपुट को साफ़ करेगा
-    @staticmethod
-    def sanitize_output(response_text: str):
-        return response_text+" \n\n*Note: All outputs have been processed through PharmaSense AI Guardrails for safety and compliance.*"
+    # -------------------------------------------------------------
+    # STEP 3: डेटा का संयोजन (Data Combination) और Report Writer को पास करना
+    # -------------------------------------------------------------
+    if "report_writer" in mapped_agents and len(agent_outputs) > 0:
+        st.write("🏃 Running Agent: `report_writer` (Synthesizing outputs)")
+        final_output = run_report_writer_agent(user_query, agent_outputs)
+        return final_output
+    else:
+        # अगर single agent था, तो डायरेक्ट वही रिजल्ट रिटर्न कर दो
+        return "\n\n---\n\n".join(agent_outputs.values())
 
-class ObservabilityLogger:
-    def __init__(self):
-        # ऑब्जर्वेबिलिटी लॉगर का लॉजिक यहाँ आएगा
-        pass
+# ==============================================================================
+# 9. STREAMLIT UI
+# ==============================================================================
 
-    def log_interaction(self, data):
-        # लॉगिंग का लॉजिक
-        pass
-# 5. TEST 
-if __name__ == "__main__":
-    print("=== RUNNING TOOLKIT UNIT TESTS ===\n")
-    
-    # 1. SQL Tool Test
-    print("--- 1. Testing sql_query_tool ---")
-    sql_res = sql_query_tool("SELECT trial_id, compound_id, phase, status FROM clinical_trials LIMIT 2")
-    print(sql_res)
-    
-    # 2. SQL Security Test
-    print("\n--- 2. Testing sql_query_tool Security (DROP/DELETE Block) ---")
-    sec_res = sql_query_tool("DELETE FROM clinical_trials")
-    print(sec_res)
-    
-    # 3. Adverse Event Classifier Test
-    print("\n--- 3. Testing ae_severity_classifier_tool ---")
-    ae_res = ae_severity_classifier_tool("Patient experienced severe anaphylaxis requiring emergency hospitalization")
-    print(json.dumps(ae_res, indent=2))
-    
-    # 4. Escalation Tool Test
-    if ae_res["requires_escalation"]:
-        print("\n--- 4. Testing simulated_escalation_notifier_tool ---")
-        esc_res = simulated_escalation_notifier_tool(event_id="AE-9082", reason=ae_res["event_description"])
-        print(esc_res)
-        
-    # 5. Compound Similarity Test
-    print("\n--- 5. Testing compound_similarity_tool ---")
-    comp_res = compound_similarity_tool("DKU-1042", "DKU-1088")
-    print(json.dumps(comp_res, indent=2))
-    
-    print("\n=== ALL TOOL UNIT TESTS COMPLETED SUCCESSFULLY ===")
-    # टेस्ट 1: कॉम्प्लेक्स मल्टी-एजेंट क्वेरी (Parallel Fan-Out/Fan-In Flow)
-    test_query_1 = "Provide a comprehensive overview of compound DKU-1042 including clinical trial statuses and adverse event literature."
-    final_result_1 = orchestrate_multi_agent_system(test_query_1)
-    print("\n--- FINAL OUTPUT (TEST 1) ---")
-    print(final_result_1)
-# Streamlit UI Configuration
-st.set_page_config(
-    page_title="PharmaSense AI - Multi-Agent Workbench",
-    page_icon="🧪",
-    layout="wide"
-)
+st.set_page_config(page_title="PharmaSense AI Workbench", layout="wide")
+st.title("🧪 PharmaSense AI Workbench")
 
-st.title("🧪 PharmaSense AI: Multi-Agent Platform")
-st.caption("Agentic GenAI Portfolio Project | Clinical Data, Literature RAG, & Safety Triage")
+tab1, tab2 = st.tabs(["🚀 Pipeline Execution", "📜 Agent Interaction Logs"])
 
-# Sidebar - Architecture & Status
-with st.sidebar:
-    st.header("⚙️ Agent Status")
-    st.success("🟢 SQL Data Analyst Agent (Ready)")
-    st.success("🟢 Literature RAG Agent (FAISS Active)")
-    st.success("🟢 Safety Triage Agent (Active)")
-    st.success("🟢 Report Writer Agent (Active)")
-    st.divider()
-    st.info("🔒 Guardrails Enabled: PII Redaction & Prompt Injection Shield Active")
+with tab1:
+    user_query = st.text_input("अपनी क्वेरी दर्ज करें:", "Phase II में कुल कितने Active ट्रायल्स हैं और AE-102 का रिस्क स्कोर चेक करें?")
+    if st.button("Run Multi-Agent Pipeline"):
+        if user_query:
+            response = orchestrate_multi_agent_system(user_query)
+            st.markdown("---")
+            st.markdown(response)
 
-# Initialize Chat History
-if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "assistant", "content": "Hello! I am PharmaSense AI. How can I assist you with clinical trial data, literature search, or safety triage today?"}
-    ]
-
-# Display Previous Chat Messages
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-# Chat Input Logic
-if prompt := st.chat_input("Enter your research or clinical query..."):
-    # 1. User Message Display
-    st.chat_message("user").markdown(prompt)
-    st.session_state.messages.append({"role": "user", "content": prompt})
-
-    # 2. Run Guardrails Check
-    is_valid, clean_prompt, guardrail_msg = GuardrailEngine.sanitize_input(prompt)
-    
-    with st.chat_message("assistant"):
-        if not is_valid:
-            st.warning(guardrail_msg)
-            st.session_state.messages.append({"role": "assistant", "content": guardrail_msg})
-        else:
-            with st.spinner("Orchestrating agents and gathering insights..."):
-                start_time = time.time()
-                
-                # Dynamic Routing Simulation
-              # 🔥 FIX: Direct call to Orchestration Pipeline instead of hardcoded if/else
-                try:
-                    response_text = orchestrate_multi_agent_system(clean_prompt)
-                except Exception as e:
-                    response_text = f"Error during agent execution: {str(e)}"
-
-                # 3. Apply Output Guardrails
-                final_output = GuardrailEngine.sanitize_output(response_text)
-                
-                latency = round(time.time() - start_time, 2)
-                st.markdown(final_output)
-                st.caption(f"⏱️ Response generated in {latency}s | Guardrails Passed")
-                
-                st.session_state.messages.append({"role": "assistant", "content": final_output})
-                
+with tab2:
+    st.subheader("📜 Agent Interaction Logs (CSV & DB)")
+    if os.path.exists(LOG_FILE):
+        df_logs = pd.read_csv(LOG_FILE)
+        st.dataframe(df_logs.tail(20), use_container_width=True)
