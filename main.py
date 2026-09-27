@@ -106,27 +106,46 @@ LOG_FILE = "agent_interaction_logs.csv"
 if not os.path.exists(LOG_FILE):
     with open(LOG_FILE, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["timestamp", "agent_name", "input_query", "output_summary", "latency_sec", "cost_usd"])
+        writer.writerow(["log_id", "session_id", "timestamp", "user_role", "user_query", "agent_invoked", "tool_called", "response_summary", "latency_ms", "tokens_used", "feedback", "rating", "escalated_flag"])
 
-def log_agent_step(agent_name: str, input_query: str, output: str, latency_sec: float = 0.0, cost_usd: float = 0.0):
+def log_agent_step(agent_invoked: str, user_query: str, output: str, latency_sec: float = 0.0, tokens_used: float = 0.0, session_id: str = "default_session", user_role: str = "user", tool_called: str = "N/A", feedback: str = "N/A", escalated_flag: bool = False):
     """Logs each agent's actions to a CSV file and SQLite database"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
-    
+    response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
+    latency_ms = round(latency_sec * 1000, 2)
+    file_exists = os.path.exists(LOG_FILE)
+    next_log_id = 1
+    if file_exists:
+        try:
+            existing_df = pd.read_csv(LOG_FILE)
+            if "log_id" in existing_df.columns and not existing_df.empty:
+                next_log_id = int(existing_df["log_id"].max()) + 1
+            else:
+                next_log_id = len(existing_df) + 1
+        except Exception:
+            next_log_id = 1
     # Log to CSV
     with open(LOG_FILE, "a", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow([timestamp, agent_name, input_query, summary, round(latency_sec, 3), round(cost_usd, 6)])
+        writer.writerow([next_log_id, session_id, timestamp, user_role, user_query, agent_invoked, tool_called, response_summary, latency_ms, tokens_used, feedback, rating, escalated_flag])
         
     # Log to SQLite
     try:
         log_df = pd.DataFrame([{
+            "log_id": next_log_id, 
+            "session_id": session_id,
             "timestamp": timestamp,
-            "agent_name": agent_name,
-            "input_query": input_query,
-            "output_summary": summary,
-            "latency_sec": round(latency_sec, 3),
-            "cost_usd": round(cost_usd, 6)
+            "user_role": user_role,
+            "user_query": input_query,
+            "agent_invoked": agent_name,
+            "tool_called": tool_called,
+            "response_summary": summary,
+            "latency_ms": latency_ms,
+            "tokens_used": tokens_used,
+            "feedback": feedback,
+            "rating": rating,
+            "escalated_flag": escalated_flag])
+
         }])
         cur_conn = sqlite3.connect(DB_PATH)
         log_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
@@ -134,7 +153,7 @@ def log_agent_step(agent_name: str, input_query: str, output: str, latency_sec: 
     except Exception as e:
         print(f"Log DB Error: {str(e)}")
         
-    print(f"  [Log Recorded] Agent: '{agent_name}' finished task.")
+    print(f"  [Log Recorded] Agent: '{agent_invoked}' finished task.")
 
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
     """Estimates cost in USD based on Llama-3.3-70B rates."""
@@ -278,7 +297,7 @@ def ae_severity_classifier_tool(event_description: str) -> dict:
     clean_input, _ = sanitize_and_redact_pii(event_description)
     text_lower = clean_input.lower()
     
-    serious_keywords = ["hospitalization", "fatal", "death", "anaphylaxis", "organ failure", "cardiac arrest", "severe"]
+    serious_keywords = ["hospitalization", "fatal", "death", "anaphylaxis", "organ failure", "serious", "adverse", "cardiac arrest", "severe"]
     moderate_keywords = ["fever", "rash", "vomiting", "dizziness", "moderate"]
     
     if any(k in text_lower for k in serious_keywords):
@@ -411,13 +430,43 @@ with open("instructions.md", "w", encoding="utf-8") as f:
 def run_trial_data_analyst_agent(user_query: str) -> str:
     """Agent 1: trial_data_analyst"""
     start_t = time.time()
-    sql_prompt = f"Convert this request into a valid SQLite SELECT query for tables (clinical_trials, compounds, trial_sites, lab_results, adverse_events). Return ONLY the SQL query:\n{user_query}"
-    sql_query = call_llm(sql_prompt, system_prompt=AGENT_INSTRUCTIONS["trial_data_analyst"]).strip()
+    
+    # Detailed schema prompt jisse LLM exact SQL bana sake
+    sql_prompt = f"""You are an expert SQLite generator for a clinical trial database.
+Database Table: clinical_trials
+Columns:
+- trial_id (TEXT)
+- compound_id (TEXT)
+- trial_phase (TEXT, e.g. 'Phase I', 'Phase II', 'Phase III')
+- therapeutic_area (TEXT, e.g. 'Oncology', 'Cardiology', 'Respiratory')
+- sponsor (TEXT)
+- status (TEXT)
+- target_enrollment (INTEGER)
+- actual_enrollment (INTEGER)
+
+Rules:
+1. Return ONLY a valid executable SQLite SELECT query without markdown, backticks, or extra text.
+2. Calculate enrollment rate as: (CAST(actual_enrollment AS FLOAT) / target_enrollment) < 0.60 for 60%.
+3. Handle minor typos in user input (e.g. 'ONCCOLOGY' should match 'Oncology').
+
+User Query: {user_query}
+SQL Query:"""
+
+    # LLM Call
+    raw_sql = call_llm(sql_prompt, system_prompt=AGENT_INSTRUCTIONS["trial_data_analyst"]).strip()
+    
+    # Clean Markdown blocks if present
+    sql_query = raw_sql.replace("```sql", "").replace("```", "").strip()
+    
+    # Fallback Handling
     if not sql_query.lower().startswith("select"):
-        sql_query = "SELECT * FROM clinical_trials LIMIT 5"
-        
+        # Default safety query for Oncology & Phase II if generation fails
+        sql_query = "SELECT * FROM clinical_trials WHERE lower(therapeutic_area) LIKE '%oncology%' AND lower(trial_phase) LIKE '%phase ii%'"
+
+    # Execute SQL Tool
     result_table = sql_query_tool(sql_query)
-    output = f"###  Structured Database Findings\n**Executed SQL:** `{sql_query}`\n\n{result_table}"
+    output = f"### Structured Database Findings\n**Executed SQL:** `{sql_query}`\n\n{result_table}"
+    
     latency = time.time() - start_t
     log_agent_step("trial_data_analyst", user_query, output, latency_sec=latency)
     return output
@@ -451,24 +500,6 @@ def run_adverse_event_triage_agent(user_query: str) -> str:
 
     latency = time.time() - start_t
     log_agent_step("adverse_event_triage", user_query, output, latency_sec=latency)
-    return output
-
-def run_compound_similarity_agent(user_query: str) -> str:
-    """Agent 4: compound_similarity"""
-    start_t = time.time()
-    compounds = re.findall(r'[A-Za-z0-9]+-[0-9]+|[A-Za-z0-9]+', user_query)
-    c1 = compounds[0] if len(compounds) > 0 else "CMP-101"
-    c2 = compounds[1] if len(compounds) > 1 else "CMP-102"
-    
-    res = compound_similarity_tool(c1, c2)
-    output = f"###  Compound Similarity Analysis\n"
-    output += f"- **Compound A:** `{res['compound_a']}`\n"
-    output += f"- **Compound B:** `{res['compound_b']}`\n"
-    output += f"- **Similarity Score:** `{res['similarity_score_pct']}%`\n"
-    output += f"_{res['note']}_"
-    
-    latency = time.time() - start_t
-    log_agent_step("compound_similarity", user_query, output, latency_sec=latency)
     return output
 
 def run_report_writer_agent(user_query: str, inputs_from_agents: Dict[str, str]) -> str:
