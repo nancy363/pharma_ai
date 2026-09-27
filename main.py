@@ -12,11 +12,10 @@ from typing import Dict, Any, List, Tuple
 import streamlit as st
 from groq import Groq
 
-# LangChain Imports
+# LangChain Imports (Removed create_tool_calling_agent to fix ImportError)
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.tools import Tool
-from langchain.agents import create_tool_calling_agent, AgentExecutor
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
