@@ -617,6 +617,14 @@ def orchestrate_multi_agent_system(user_query: str) -> str:
     else:
        
         return "\n\n---\n\n".join(agent_outputs.values())
+    # Pipeline execution ke end me ye line zaroor honi chahiye
+    log_agent_step(
+       agent_invoked=agent_name,
+       user_query=user_query,
+       output=response_text,
+       latency_sec=execution_time,
+       tool_called=tool_used
+    )
 
 
 # 9. STREAMLIT UI
@@ -636,11 +644,13 @@ with tab1:
 
 with tab2:
     st.subheader(" Agent Interaction Logs (CSV & DB)")
+    if st.button("Refresh logs"):
+        st.rerun()
     if os.path.exists("agent_interaction_logs.csv"):
         try:
             df_logs = pd.read_csv("agent_interaction_logs.csv", on_bad_lines='skip')
             if not df_logs.empty:
-                st.dataframe(df_logs)
+                st.dataframe(df_logs.tail(20), use_container_width=True)
             else:
                 st.info("Log file is empty")
                 
