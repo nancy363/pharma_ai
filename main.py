@@ -108,13 +108,26 @@ if not os.path.exists(LOG_FILE):
         writer = csv.writer(f)
         writer.writerow(["log_id", "session_id", "timestamp", "user_role", "user_query", "agent_invoked", "tool_called", "response_summary", "latency_ms", "tokens_used", "feedback", "rating", "escalated_flag"])
 
-def log_agent_step(agent_invoked: str, user_query: str, output: str, latency_sec: float = 0.0, tokens_used: float = 0.0, session_id: str = "default_session", user_role: str = "user", tool_called: str = "N/A", feedback: str = "N/A", escalated_flag: bool = False):
+def log_agent_step(
+    agent_invoked: str, 
+    user_query: str, 
+    output: str, 
+    latency_sec: float = 0.0, 
+    tokens_used: float = 0.0, 
+    session_id: str = "default_session", 
+    user_role: str = "user", 
+    tool_called: str = "N/A", 
+    feedback: str = "N/A", 
+    rating: str = "N/A",
+    escalated_flag: bool = False
+):
     """Logs each agent's actions to a CSV file and SQLite database"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     latency_ms = round(latency_sec * 1000, 2)
     file_exists = os.path.exists(LOG_FILE)
     next_log_id = 1
+
     if file_exists:
         try:
             existing_df = pd.read_csv(LOG_FILE)
@@ -124,29 +137,29 @@ def log_agent_step(agent_invoked: str, user_query: str, output: str, latency_sec
                 next_log_id = len(existing_df) + 1
         except Exception:
             next_log_id = 1
-    # Log to CSV
+
+    headers = [
+        "log_id", "session_id", "timestamp", "user_role", 
+        "user_query", "agent_invoked", "tool_called", "response_summary", 
+        "latency_ms", "tokens_used", "feedback", "rating", "escalated_flag"
+    ]
+
+    row_values = [
+        next_log_id, session_id, timestamp, user_role, 
+        user_query, agent_invoked, tool_called, response_summary, 
+        latency_ms, tokens_used, feedback, rating, escalated_flag
+    ]
+
+    # 1. CSV File Writing
     with open(LOG_FILE, "a", encoding="utf-8", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow([next_log_id, session_id, timestamp, user_role, user_query, agent_invoked, tool_called, response_summary, latency_ms, tokens_used, feedback, rating, escalated_flag])
+        if not file_exists:
+            writer.writerow(headers)
+        writer.writerow(row_values)
         
-    # Log to SQLite
+    # 2. SQLite DB Logging
     try:
-        log_df = pd.DataFrame([{
-            "log_id": next_log_id, 
-            "session_id": session_id,
-            "timestamp": timestamp,
-            "user_role": user_role,
-            "user_query": user_query,
-            "agent_invoked": agent_invoked,
-            "tool_called": tool_called,
-            "response_summary": response_summary,
-            "latency_ms": latency_ms,
-            "tokens_used": tokens_used,
-            "feedback": feedback,
-            "rating": rating,
-            "escalated_flag": escalated_flag
-
-        }])
+        log_df = pd.DataFrame([dict(zip(headers, row_values))])
         cur_conn = sqlite3.connect(DB_PATH)
         log_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.close()
