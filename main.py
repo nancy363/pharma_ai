@@ -109,7 +109,7 @@ if not os.path.exists(LOG_FILE):
         writer.writerow(["timestamp", "agent_name", "input_query", "output_summary", "latency_sec", "cost_usd"])
 
 def log_agent_step(agent_name: str, input_query: str, output: str, latency_sec: float = 0.0, cost_usd: float = 0.0):
-    """हर एजेंट के कार्य को CSV और SQLite DB में लॉग रिकॉर्ड करता है"""
+    """Logs each agent's actions to a CSV file and SQLite database"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     
@@ -161,7 +161,7 @@ def sanitize_and_redact_pii(text: str) -> Tuple[str, bool]:
     ]
     for pattern in injection_patterns:
         if re.search(pattern, text, re.IGNORECASE):
-            return "⚠️ GUARDRAIL ALERT: Prompt Injection Pattern Detected and Blocked.", True
+            return "GUARDRAIL ALERT: Prompt Injection Pattern Detected and Blocked.", True
 
     # PII Redaction Regex
     text = re.sub(r'PAT-\d+', '[REDACTED_PATIENT_ID]', text)
@@ -417,7 +417,7 @@ def run_trial_data_analyst_agent(user_query: str) -> str:
         sql_query = "SELECT * FROM clinical_trials LIMIT 5"
         
     result_table = sql_query_tool(sql_query)
-    output = f"### 📊 Structured Database Findings\n**Executed SQL:** `{sql_query}`\n\n{result_table}"
+    output = f"###  Structured Database Findings\n**Executed SQL:** `{sql_query}`\n\n{result_table}"
     latency = time.time() - start_t
     log_agent_step("trial_data_analyst", user_query, output, latency_sec=latency)
     return output
@@ -439,14 +439,14 @@ def run_adverse_event_triage_agent(user_query: str) -> str:
     """Agent 3: adverse_event_triage"""
     start_t = time.time()
     triage_res = ae_severity_classifier_tool(user_query)
-    output = f"### 🚨 Adverse Event Safety Triage\n"
+    output = f"###  Adverse Event Safety Triage\n"
     output += f"- **Event Description:** {triage_res['event_description']}\n"
     output += f"- **Severity Level:** `{triage_res['severity']}`\n"
     output += f"- **Risk Score:** `{triage_res['risk_score']}`\n"
     
     if triage_res["requires_escalation"]:
         esc_msg = triage_res.get("auto_escalation_status") or simulated_escalation_notifier_tool(event_id="AE-AUTO-DETECTOR", reason=user_query)
-        output += f"\n> ⚠️ **AUTO-ESCALATION:** {esc_msg}"
+        output += f"\n>  **AUTO-ESCALATION:** {esc_msg}"
         log_agent_step("simulated_escalation_notifier_tool", user_query, esc_msg)
 
     latency = time.time() - start_t
@@ -461,7 +461,7 @@ def run_compound_similarity_agent(user_query: str) -> str:
     c2 = compounds[1] if len(compounds) > 1 else "CMP-102"
     
     res = compound_similarity_tool(c1, c2)
-    output = f"### 🔬 Compound Similarity Analysis\n"
+    output = f"###  Compound Similarity Analysis\n"
     output += f"- **Compound A:** `{res['compound_a']}`\n"
     output += f"- **Compound B:** `{res['compound_b']}`\n"
     output += f"- **Similarity Score:** `{res['similarity_score_pct']}%`\n"
@@ -489,9 +489,8 @@ def run_report_writer_agent(user_query: str, inputs_from_agents: Dict[str, str])
     log_agent_step("report_writer", user_query, final_report, latency_sec=latency)
     return final_report
 
-# ==============================================================================
-# 7. ROUTER AGENT & MAPPING LOGIC
-# ==============================================================================
+
+#7. router system logic
 
 ROUTER_SYSTEM_PROMPT = """
 You are the Master Router Agent for PharmaSense AI.
@@ -526,29 +525,25 @@ def router_agent(user_query: str) -> dict:
         log_agent_step("router_agent", user_query, f"Mapped Agents: {fallback['mapped_agents']} (Fallback)", latency_sec=latency)
         return fallback
 
-# ==============================================================================
+
 # 8. PIPELINE ORCHESTRATOR (3-STEP PIPELINE)
-# ==============================================================================
 
 def orchestrate_multi_agent_system(user_query: str) -> str:
     print(f"\n================ USER QUERY: {user_query} ================")
     
-    # -------------------------------------------------------------
-    # STEP 1: Router एजेंट से मैपिंग पूछना
-    # -------------------------------------------------------------
+   
+    # STEP 1: ask mapping to Router agent
+   
     route_plan = router_agent(user_query)
     mapped_agents = route_plan.get("mapped_agents", [])
     reason = route_plan.get("reason", "")
     
     st.info(f"🧠 **Router Mapping:** `{mapped_agents}` | **Reason:** {reason}")
-    
-    # सारे एजेंट्स का डेटा इकट्ठा करने के लिए ऑर्केस्ट्रेटर में डिक्शनरी
+ 
     agent_outputs = {}
     
-    # -------------------------------------------------------------
-    # STEP 2: Router द्वारा बताए गए एजेंट्स को ऑर्केस्ट्रेटर पर ही कॉल करना 
-    # और उनका Output डिक्शनरी में सेव करना
-    # -------------------------------------------------------------
+   
+    # STEP 2: Call the agents identified by the Router on the orchestrator itself, and save their outputs in a dictionary.
     if "trial_data_analyst" in mapped_agents:
         st.write("🏃 Running Agent: `trial_data_analyst`")
         agent_outputs["trial_data_analyst"] = run_trial_data_analyst_agent(user_query)
@@ -562,31 +557,30 @@ def orchestrate_multi_agent_system(user_query: str) -> str:
         agent_outputs["adverse_event_triage"] = run_adverse_event_triage_agent(user_query)
 
     if "compound_similarity" in mapped_agents:
-        st.write("🏃 Running Agent: `compound_similarity`")
+        st.write(" Running Agent: `compound_similarity`")
         agent_outputs["compound_similarity"] = run_compound_similarity_agent(user_query)
 
-    # -------------------------------------------------------------
-    # STEP 3: डेटा का संयोजन (Data Combination) और Report Writer को पास करना
-    # -------------------------------------------------------------
+   
+    # STEP 3:Pass Data Combination and Report Writer
+   
     if "report_writer" in mapped_agents and len(agent_outputs) > 0:
-        st.write("🏃 Running Agent: `report_writer` (Synthesizing outputs)")
+        st.write(" Running Agent: `report_writer` (Synthesizing outputs)")
         final_output = run_report_writer_agent(user_query, agent_outputs)
         return final_output
     else:
-        # अगर single agent था, तो डायरेक्ट वही रिजल्ट रिटर्न कर दो
+       
         return "\n\n---\n\n".join(agent_outputs.values())
 
-# ==============================================================================
+
 # 9. STREAMLIT UI
-# ==============================================================================
 
 st.set_page_config(page_title="PharmaSense AI Workbench", layout="wide")
-st.title("🧪 PharmaSense AI Workbench")
+st.title(" PharmaSense AI Workbench")
 
-tab1, tab2 = st.tabs(["🚀 Pipeline Execution", "📜 Agent Interaction Logs"])
+tab1, tab2 = st.tabs([" Pipeline Execution", " Agent Interaction Logs"])
 
 with tab1:
-    user_query = st.text_input("अपनी क्वेरी दर्ज करें:", "Phase II में कुल कितने Active ट्रायल्स हैं और AE-102 का रिस्क स्कोर चेक करें?")
+    user_query = st.text_input("mention your query:", "how many active trial are in phase || and check result score of AE-102 ?")
     if st.button("Run Multi-Agent Pipeline"):
         if user_query:
             response = orchestrate_multi_agent_system(user_query)
@@ -594,7 +588,7 @@ with tab1:
             st.markdown(response)
 
 with tab2:
-    st.subheader("📜 Agent Interaction Logs (CSV & DB)")
+    st.subheader(" Agent Interaction Logs (CSV & DB)")
     if os.path.exists(LOG_FILE):
         df_logs = pd.read_csv(LOG_FILE)
         st.dataframe(df_logs.tail(20), use_container_width=True)
