@@ -144,7 +144,7 @@ def log_agent_step(agent_invoked: str, user_query: str, output: str, latency_sec
             "tokens_used": tokens_used,
             "feedback": feedback,
             "rating": rating,
-            "escalated_flag": escalated_flag])
+            "escalated_flag": escalated_flag
 
         }])
         cur_conn = sqlite3.connect(DB_PATH)
