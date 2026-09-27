@@ -130,7 +130,7 @@ def log_agent_step(
 
     if file_exists:
         try:
-            existing_df = pd.read_csv(LOG_FILE)
+            existing_df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
             if "log_id" in existing_df.columns and not existing_df.empty:
                 next_log_id = int(existing_df["log_id"].max()) + 1
             else:
@@ -634,5 +634,10 @@ with tab1:
 with tab2:
     st.subheader(" Agent Interaction Logs (CSV & DB)")
     if os.path.exists(LOG_FILE):
-        df_logs = pd.read_csv(LOG_FILE)
-        st.dataframe(df_logs.tail(20), use_container_width=True)
+        try:
+            df_logs = pd.read_csv(LOG_FILE, on_bad_lines='skip')
+        except Exception:
+            df_logs= pd.dataframe()
+    else:
+        df_logs = pd.DataFrame()
+ 
