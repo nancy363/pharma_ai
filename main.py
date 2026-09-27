@@ -136,10 +136,10 @@ def log_agent_step(agent_invoked: str, user_query: str, output: str, latency_sec
             "session_id": session_id,
             "timestamp": timestamp,
             "user_role": user_role,
-            "user_query": input_query,
-            "agent_invoked": agent_name,
+            "user_query": user_query,
+            "agent_invoked": agent_invoked,
             "tool_called": tool_called,
-            "response_summary": summary,
+            "response_summary": response_summary,
             "latency_ms": latency_ms,
             "tokens_used": tokens_used,
             "feedback": feedback,
@@ -468,7 +468,7 @@ SQL Query:"""
     output = f"### Structured Database Findings\n**Executed SQL:** `{sql_query}`\n\n{result_table}"
     
     latency = time.time() - start_t
-    log_agent_step("trial_data_analyst", user_query, output, latency_sec=latency)
+    log_agent_step(agent_invoked="trial_data_analyst", user_query=user_query, output=output, latency_sec=latency, tool_called="sql_query_tool")
     return output
 
 def run_literature_researcher_agent(user_query: str) -> str:
