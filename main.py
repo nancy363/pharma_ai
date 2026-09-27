@@ -636,11 +636,16 @@ with tab1:
 
 with tab2:
     st.subheader(" Agent Interaction Logs (CSV & DB)")
-    if os.path.exists(LOG_FILE):
+    if os.path.exists("agent_interaction_logs.csv"):
         try:
-            df_logs = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-        except Exception:
-            df_logs= pd.dataframe()
+            df_logs = pd.read_csv("agent_interaction_logs.csv", on_bad_lines='skip')
+            if not df_logs.empty:
+                st.dataframe(df_logs)
+            else:
+                st.info("Log file is empty")
+                
+        except Exception as e:
+            st.error(f"error loading csv logs {str(e)}")
     else:
-        df_logs = pd.DataFrame()
+        st.warning("No interaction log file found yet.")
  
