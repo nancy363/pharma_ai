@@ -40,8 +40,11 @@ data_files = {
 
 for table_name, file_path in data_files.items():
     if os.path.exists(file_path):
-        df = pd.read_csv(file_path)
-        df.to_sql(table_name, conn, if_exists="replace", index=False)
+        try:
+            df = pd.read_csv(file_path, on_bad_lines='skip')
+            df.to_sql(table_name, conn, if_exists="replace", index=False)
+        except Exception as e:
+            print(f"error loading {file_path}: {str(e)}")
 
 # Database Sanity Check
 cursor = conn.cursor()
