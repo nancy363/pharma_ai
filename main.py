@@ -60,7 +60,7 @@ except Exception as e:
     print(f"Database check warning: {str(e)}")
 
 # Initialize Groq Client & Secrets
-groq_api_key = st.secrets.get("GROQ_API_KEY", os.environ.get("GROQ_API_KEY", ""))
+groq_api_key = st.secrets.get("GROQ_API_KEY", os.environ.get("GROQ_API_KEY"))
 if not groq_api_key:
     st.error("GROQ_API_KEY is missing. Please configure it in st.secrets or environment variables.")
     st.stop()
@@ -77,7 +77,7 @@ llm = ChatGroq(
 def call_llm(
     prompt: str, 
     system_prompt: str = "You are a helpful assistant.", 
-    model: str = "llama-3.3-70b-versatile", 
+    model: str = "whisper-large-v3-turbo", 
     temperature: float = 0.0
 ) -> str:
     try:
