@@ -69,7 +69,7 @@ client = Groq(api_key=groq_api_key)
 
 llm = ChatGroq(
     groq_api_key=groq_api_key, 
-    model_name="whisper-large-v3-turbo", 
+    model_name="openai/gpt-oss-20b", 
     temperature=0.0
 )
 
@@ -77,7 +77,7 @@ llm = ChatGroq(
 def call_llm(
     prompt: str, 
     system_prompt: str = "You are a helpful assistant.", 
-    model: str = "whisper-large-v3-turbo", 
+    model: str = "openai/gpt-oss-20b", 
     temperature: float = 0.0
 ) -> str:
     try:
