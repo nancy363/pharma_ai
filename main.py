@@ -112,15 +112,15 @@ if not os.path.exists(LOG_FILE):
         writer.writerow(["log_id", "session_id", "timestamp", "user_role", "user_query", "agent_invoked", "tool_called", "response_summary", "latency_ms", "tokens_used", "feedback", "rating", "escalated_flag"])
 
 def log_agent_step(
-    agent_invoked: str, 
-    user_query: str, 
-    output: str, 
-    latency_sec: float = 0.0, 
-    tokens_used: float = 0.0, 
-    session_id: str = "default_session", 
-    user_role: str = "user", 
-    tool_called: str = "N/A", 
-    feedback: str = "N/A", 
+    agent_invoked: str,
+    user_query: str,
+    output: str,
+    latency_sec: float = 0.0,
+    tokens_used: float = 0.0,
+    session_id: str = "default_session",
+    user_role: str = "user",
+    tool_called: str = "N/A",
+    feedback: str = "N/A",
     rating: str = "N/A",
     escalated_flag: bool = False
 ):
@@ -142,34 +142,36 @@ def log_agent_step(
             next_log_id = 1
 
     headers = [
-        "log_id", "session_id", "timestamp", "user_role", 
-        "user_query", "agent_invoked", "tool_called", "response_summary", 
+        "log_id", "session_id", "timestamp", "user_role",
+        "user_query", "agent_invoked", "tool_called", "response_summary",
         "latency_ms", "tokens_used", "feedback", "rating", "escalated_flag"
     ]
 
     row_values = [
-        next_log_id, session_id, timestamp, user_role, 
-        user_query, agent_invoked, tool_called, response_summary, 
+        next_log_id, session_id, timestamp, user_role,
+        user_query, agent_invoked, tool_called, response_summary,
         latency_ms, tokens_used, feedback, rating, escalated_flag
     ]
 
     # 1. CSV File Writing
-    with open(LOG_FILE, "a", encoding="utf-8", newline="") as f:
-        writer = csv.writer(f)
-        if not file_exists:
-            writer.writerow(headers)
-        writer.writerow(row_values)
-        
-    # 2. SQLite DB Logging
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8", newline="") as f:
+            writer = csv.writer(f)
+            if not file_exists or os.path.getsize(LOG_FILE) == 0:
+                writer.writerow(headers)
+            writer.writerow(row_values)
+    except Exception as e:
+        print(f"CSV Logging Error: {str(e)}")
+
+    # 2. SQLite Database Insert
     try:
         log_df = pd.DataFrame([dict(zip(headers, row_values))])
         cur_conn = sqlite3.connect(DB_PATH)
         log_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.close()
+        print(f"  [Log Recorded] Agent: '{agent_invoked}' | Log ID: {next_log_id}")
     except Exception as e:
         print(f"Log DB Error: {str(e)}")
-        
-    print(f"  [Log Recorded] Agent: '{agent_invoked}' finished task.")
 
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
     """Estimates cost in USD based on Llama-3.3-70B rates."""
@@ -643,19 +645,35 @@ with tab1:
             st.markdown(response)
 
 with tab2:
-    st.subheader(" Agent Interaction Logs (CSV & DB)")
-    if st.button("Refresh logs"):
+    st.subheader("Agent Interaction Logs (CSV & DB)")
+    
+    # 1. Manual Refresh Button
+    if st.button("Refresh Logs"):
         st.rerun()
-    if os.path.exists("agent_interaction_logs.csv"):
-        try:
-            df_logs = pd.read_csv("agent_interaction_logs.csv", on_bad_lines='skip')
-            if not df_logs.empty:
-                st.dataframe(df_logs.tail(20), use_container_width=True)
-            else:
-                st.info("Log file is empty")
-                
-        except Exception as e:
-            st.error(f"error loading csv logs {str(e)}")
-    else:
-        st.warning("No interaction log file found yet.")
- 
+
+    # 2. Fetch directly from SQLite DB (Fallback to CSV if DB query fails)
+    try:
+        conn_logs = sqlite3.connect(DB_PATH)
+        # Sort by log_id descending so the latest logs stay at the top
+        df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs ORDER BY log_id DESC", conn_logs)
+        conn_logs.close()
+
+        if not df_logs.empty:
+            st.dataframe(df_logs, use_container_width=True)
+        else:
+            st.info("Log table is empty in the database.")
+            
+    except Exception as db_e:
+        # Fallback to CSV if SQLite fetch hits an error
+        if os.path.exists("agent_interaction_logs.csv"):
+            try:
+                df_logs = pd.read_csv("agent_interaction_logs.csv", on_bad_lines='skip')
+                if not df_logs.empty:
+                    # Reverse dataframe to show latest entries first
+                    st.dataframe(df_logs.iloc[::-1], use_container_width=True)
+                else:
+                    st.info("Log file is empty")
+            except Exception as csv_e:
+                st.error(f"Error loading CSV logs: {str(csv_e)}")
+        else:
+            st.warning("No interaction log file or DB table found yet.")
