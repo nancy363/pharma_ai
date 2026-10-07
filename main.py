@@ -154,7 +154,7 @@ def log_agent_step(
 
     new_row_df = pd.DataFrame([row_dict])
 
-    # 2. CSV में राइट करें
+    
     # CSV में राइट करें
     try:
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
@@ -163,15 +163,25 @@ def log_agent_step(
     except Exception as e:
         st.error(f"❌ CSV Error: {str(e)}") # अगर एरर आएगा तो लाल रंग में स्क्रीन पर दिखेगा
 
+    
     # SQLite Database में राइट करें
     try:
         cur_conn = sqlite3.connect(DB_PATH, timeout=10)
-        new_row_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
+        
+        # 💡 [यह नई लाइन यहाँ जोड़नी है] Dataframe के सभी Data Types को string में बदलें
+        df_to_save = new_row_df.copy()
+        for col in df_to_save.columns:
+            df_to_save[col] = df_to_save[col].astype(str)
+
+        # 💡 new_row_df की जगह df_to_save सेव करें
+        df_to_save.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.commit()
         cur_conn.close()
         st.toast(f"✅ DB Updated Successfully! ID: {formatted_log_id}")
+        
     except Exception as e:
-        st.error(f"❌ Log DB Error: {str(e)}") # अगर DB एरर आएगा तो स्क्रीन पर दिखेगा
+        # 💡 exact error जानने के लिए repr(e) लिखा है
+        st.error(f"❌ Log DB Error: {repr(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
     """Estimates cost in USD based on Llama-3.3-70B rates."""
     input_cost = (prompt_tokens / 1_000_000) * 0.59
