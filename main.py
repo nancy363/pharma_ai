@@ -117,38 +117,31 @@ def log_agent_step(
     output: str,
     latency_sec: float = 0.0,
     tokens_used: float = 0.0,
-    session_id: str = "default_session",
-    user_role: str = "user",
+    session_id: str = "SESS-CURRENT",
+    user_role: str = "Data Scientist",
     tool_called: str = "N/A",
     feedback: str = "N/A",
     rating: str = "N/A",
     escalated_flag: bool = False
 ):
-    """Safely appends log data to existing CSV and SQLite DB without deleting old data"""
+    """Safely appends log data using the exact same ID structure (e.g. LOG-00401) as existing data"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
-    latency_ms = round(latency_sec * 1000, 2)
+    latency_ms = round(float(latency_sec) * 1000, 2)
     
-    # 1. Get Next Log ID based on existing CSV rows
-    next_log_id = 1
+    # 1. Matching existing LOG-00XXX ID pattern
+    next_num = 1
     if os.path.exists(LOG_FILE):
         try:
             existing_df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-            if "log_id" in existing_df.columns and not existing_df.empty:
-                next_log_id = len(existing_df) + 1
-            else:
-                next_log_id = len(existing_df) + 1
+            next_num = len(existing_df) + 1
         except Exception:
-            next_log_id = 1
+            next_num = 1
 
-    headers = [
-        "log_id", "session_id", "timestamp", "user_role",
-        "user_query", "agent_invoked", "tool_called", "response_summary",
-        "latency_ms", "tokens_used", "feedback", "rating", "escalated_flag"
-    ]
+    formatted_log_id = f"LOG-{next_num:05d}"  # Creates ID like LOG-00401
 
     row_dict = {
-        "log_id": next_log_id,
+        "log_id": formatted_log_id,
         "session_id": session_id,
         "timestamp": timestamp,
         "user_role": user_role,
@@ -163,20 +156,21 @@ def log_agent_step(
         "escalated_flag": escalated_flag
     }
 
-    # 2. CSV File Writing (Safely Append)
+    new_row_df = pd.DataFrame([row_dict])
+
+    # 2. Append to CSV Safely
     try:
-        new_row_df = pd.DataFrame([row_dict])
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
         new_row_df.to_csv(LOG_FILE, mode='a', header=not file_exists, index=False)
     except Exception as e:
         print(f"CSV Append Error: {str(e)}")
 
-    # 3. SQLite Database Writing (Safely Append)
+    # 3. Append to SQLite Database Safely
     try:
         cur_conn = sqlite3.connect(DB_PATH)
         new_row_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.close()
-        print(f"  [Log Appended Successfully] Agent: '{agent_invoked}' | Log ID: {next_log_id}")
+        print(f"✅ [Log Appended Successfully] ID: {formatted_log_id} | Agent: '{agent_invoked}'")
     except Exception as e:
         print(f"Log DB Error: {str(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
@@ -661,7 +655,8 @@ with tab2:
     try:
         conn_logs = sqlite3.connect(DB_PATH)
         # Sort by log_id descending so the latest logs stay at the top
-        df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs ORDER BY log_id DESC", conn_logs)
+        df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs, conn_logs)
+        st.dataframe(df_logs.iloc[::-1], use_container_width=True)
         conn_logs.close()
 
         if not df_logs.empty:
