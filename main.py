@@ -165,47 +165,49 @@ def log_agent_step(
 
     
     # SQLite Database में राइट करें
-    # 3. Append to SQLite Database Safely (Fixed)
+    # SQLite Database में सेफ्टी के साथ राइट करें
     try:
         cur_conn = sqlite3.connect(DB_PATH, timeout=10)
+        cursor = cur_conn.cursor()
         
-        # 1. डेटा को पूरी तरह String में Convert करें
-        df_to_save = new_row_df.copy()
-        for col in df_to_save.columns:
-            df_to_save[col] = df_to_save[col].astype(str)
+        # 1. सुनिश्चित करें कि सही 13 कॉलम्स वाली टेबल मौजूद हो
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS agent_interaction_logs (
+                log_id TEXT, 
+                session_id TEXT, 
+                timestamp TEXT, 
+                user_role TEXT,
+                user_query TEXT, 
+                agent_invoked TEXT, 
+                tool_called TEXT,
+                response_summary TEXT, 
+                latency_ms REAL, 
+                tokens_used REAL,
+                feedback TEXT, 
+                rating TEXT, 
+                escalated_flag TEXT
+            )
+        """)
+        
+        # 2. अगर टेबल में कॉलम मिसिंग है तो auto-add (Alter Table) करें
+        existing_cols = [col[1] for col in cursor.execute("PRAGMA table_info(agent_interaction_logs)").fetchall()]
+        for col_name in row_dict.keys():
+            if col_name not in existing_cols:
+                cursor.execute(f"ALTER TABLE agent_interaction_logs ADD COLUMN {col_name} TEXT")
 
-        # 2. to_sql चलाएँ (अगर टेबल स्ट्रक्चर मैच न करे तो safe execution)
-        df_to_save.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
+        # 3. नाम (Column Names) के हिसाब से वैल्यूज़ इंसर्ट करें (12 vs 13 का इश्यू पूरी तरह खत्म)
+        cols = ", ".join(row_dict.keys())
+        placeholders = ", ".join(["?"] * len(row_dict))
+        vals = [str(v) for v in row_dict.values()]
+        
+        sql = f"INSERT INTO agent_interaction_logs ({cols}) VALUES ({placeholders})"
+        cursor.execute(sql, vals)
+        
         cur_conn.commit()
         cur_conn.close()
         st.toast(f"✅ DB Updated Successfully!")
     except Exception as e:
-        # अगर कॉलम मैच नहीं हो रहा है तो SQLite में सीधा INSERT SQL चलाएँ (Fallback)
-        try:
-            cur_conn = sqlite3.connect(DB_PATH, timeout=10)
-            cursor = cur_conn.cursor()
-            
-            # ऑटोमैटिक टेबल क्रिएट अगर नहीं बनी है
-            cursor.execute("""
-                CREATE TABLE IF NOT EXISTS agent_interaction_logs (
-                    log_id TEXT, session_id TEXT, timestamp TEXT, user_role TEXT,
-                    user_query TEXT, agent_invoked TEXT, tool_called TEXT,
-                    response_summary TEXT, latency_ms REAL, tokens_used REAL,
-                    feedback TEXT, rating TEXT, escalated_flag TEXT
-                )
-            """)
-            
-            # डायरेक्ट SQL Insert (ताकि DatabaseError कभी न आए)
-            vals = list(row_dict.values())
-            vals = [str(v) for v in vals]
-            placeholders = ", ".join(["?"] * len(vals))
-            cursor.execute(f"INSERT INTO agent_interaction_logs VALUES ({placeholders})", vals)
-            
-            cur_conn.commit()
-            cur_conn.close()
-            st.toast("✅ DB Inserted via Raw SQL!")
-        except Exception as raw_e:
-            st.error(f"❌ DB Final Error: {str(raw_e)}")
+        st.error(f"❌ DB Error: {str(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
     """Estimates cost in USD based on Llama-3.3-70B rates."""
     input_cost = (prompt_tokens / 1_000_000) * 0.59
