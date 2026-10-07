@@ -24,8 +24,13 @@ from langchain_community.vectorstores import FAISS
 # 1. DATABASE SETUP & INITIALIZATION
 # ==============================================================================
 
-DB_PATH = "pharmasense.db"
-conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+# 1. फ़ाइल का सही Absolute Path निकालें
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+DB_PATH = os.path.join(BASE_DIR, "pharmasense.db")
+LOG_FILE = os.path.join(BASE_DIR, "agent_interaction_logs.csv")
+
+conn = sqlite3.connect(DB_PATH, check_same_thread=False)# 1. फ़ाइल का सही Absolute Path निकालें
 
 # Load Datasets into SQLite DB
 data_files = {
@@ -128,29 +133,7 @@ def log_agent_step(
     response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     latency_ms = round(float(latency_sec) * 1000, 2)
 
-    # 1. डेटाबेस से सबसे बड़ी LOG ID निकालकर नई ID जनरेट करना
-    next_num = 1
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        df_db = pd.read_sql_query("SELECT log_id FROM agent_interaction_logs", conn)
-        conn.close()
-        
-        if not df_db.empty:
-            # आख़िरी LOG ID का नंबर निकालकर उसमें +1 करना (जैसे LOG-00400 -> 401)
-            ids = df_db['log_id'].str.extract(r'LOG-(\d+)')[0].dropna().astype(int)
-            if not ids.empty:
-                next_num = ids.max() + 1
-    except Exception:
-        if os.path.exists(LOG_FILE):
-            try:
-                existing_df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-                if not existing_df.empty and 'log_id' in existing_df.columns:
-                    ids = existing_df['log_id'].str.extract(r'LOG-(\d+)')[0].dropna().astype(int)
-                    if not ids.empty:
-                        next_num = ids.max() + 1
-            except Exception:
-                next_num = 1
-
+    # 1. सीधे Unique Timestamp आधारित ID बनाएँ (बिना किसी पुराना DB पढ़े)
     formatted_log_id = f"LOG-{int(time.time())}"
 
     row_dict = {
@@ -171,20 +154,20 @@ def log_agent_step(
 
     new_row_df = pd.DataFrame([row_dict])
 
-    # 2. Append to CSV Safely
+    # 2. CSV में राइट करें
     try:
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
         new_row_df.to_csv(LOG_FILE, mode='a', header=not file_exists, index=False)
     except Exception as e:
         print(f"CSV Append Error: {str(e)}")
 
-    # 3. Append to SQLite Database Safely
+    # 3. SQLite Database में राइट और COMMIT करें
     try:
-        cur_conn = sqlite3.connect(DB_PATH)
+        cur_conn = sqlite3.connect(DB_PATH, timeout=10)
         new_row_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.commit()
         cur_conn.close()
-        print(f"✅ [Log Appended Successfully] ID: {formatted_log_id} | Agent: '{agent_invoked}'")
+        print(f"✅ [Log Appended Successfully] ID: {formatted_log_id}")
     except Exception as e:
         print(f"Log DB Error: {str(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
