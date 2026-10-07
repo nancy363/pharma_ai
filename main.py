@@ -670,21 +670,39 @@ with tab1:
 with tab2:
     st.subheader("Agent Interaction Logs (CSV & DB)")
     
-    # Refresh बटन
+    # Refresh button
     if st.button("Refresh Logs"):
         st.cache_data.clear()
         st.rerun()
 
-    # सिर्फ SQLite से डेटा Fetch करके दिखाएगा
-    try:
-        conn_logs = sqlite3.connect(DB_PATH)
-        df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
-        conn_logs.close()
+    # Disable Streamlit Cache by reading directly inside a function with no cache
+    def load_latest_logs():
+        # 1. Try SQLite Database first
+        try:
+            conn_logs = sqlite3.connect(DB_PATH)
+            df_db = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
+            conn_logs.close()
+            if not df_db.empty:
+                return df_db
+        except Exception:
+            pass
 
-        if not df_logs.empty:
-            # iloc[::-1] से सबसे नया डेटा ऊपर दिखेगा
-            st.dataframe(df_logs.iloc[::-1], use_container_width=True)
-        else:
-            st.info("Log table is empty in the database.")
-    except Exception as db_e:
-        st.error(f"Error loading logs: {db_e}")
+        # 2. Fallback to CSV File if DB is empty or fails
+        if os.path.exists(LOG_FILE):
+            try:
+                df_csv = pd.read_csv(LOG_FILE, on_bad_lines='skip')
+                if not df_csv.empty:
+                    return df_csv
+            except Exception:
+                pass
+                
+        return pd.DataFrame()
+
+    # Load fresh logs every time the tab opens
+    logs_df = load_latest_logs()
+
+    if not logs_df.empty:
+        # Show newest logs at the TOP using iloc[::-1]
+        st.dataframe(logs_df.iloc[::-1], use_container_width=True)
+    else:
+        st.info("No interaction logs found in Database or CSV file.")
