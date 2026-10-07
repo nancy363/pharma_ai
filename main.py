@@ -134,12 +134,17 @@ def log_agent_step(
     if os.path.exists(LOG_FILE):
         try:
             existing_df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-            next_num = len(existing_df) + 1
+            # 💡 सही लॉजिक: सबसे बड़ी ID का नंबर निकालकर उसमें +1 करें
+            if not existing_df.empty and 'log_id' in existing_df.columns:
+                last_id_str = str(existing_df['log_id'].iloc[-1]) # e.g. "LOG-00400"
+                num_part = int(last_id_str.replace("LOG-", ""))   # 400
+                next_num = num_part + 1                         # 401
+            else:
+                next_num = len(existing_df) + 1
         except Exception:
             next_num = 1
 
-    formatted_log_id = f"LOG-{next_num:05d}"  # Creates ID like LOG-00401
-
+    formatted_log_id = f"LOG-{next_num:05d}"  # यह LOG-00401 बनाएगा
     row_dict = {
         "log_id": formatted_log_id,
         "session_id": session_id,
@@ -655,34 +660,21 @@ with tab1:
 with tab2:
     st.subheader("Agent Interaction Logs (CSV & DB)")
     
-    # 1. Manual Refresh Button
+    # Refresh बटन
     if st.button("Refresh Logs"):
+        st.cache_data.clear()
         st.rerun()
 
-    # 2. Fetch directly from SQLite DB (Fallback to CSV if DB query fails)
+    # सिर्फ SQLite से डेटा Fetch करके दिखाएगा
     try:
         conn_logs = sqlite3.connect(DB_PATH)
-        # Sort by log_id descending so the latest logs stay at the top
         df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
-        st.dataframe(df_logs.iloc[::-1], use_container_width=True)
         conn_logs.close()
 
         if not df_logs.empty:
-            st.dataframe(df_logs, use_container_width=True)
+            # iloc[::-1] से सबसे नया डेटा ऊपर दिखेगा
+            st.dataframe(df_logs.iloc[::-1], use_container_width=True)
         else:
             st.info("Log table is empty in the database.")
-            
     except Exception as db_e:
-        # Fallback to CSV if SQLite fetch hits an error
-        if os.path.exists("agent_interaction_logs.csv"):
-            try:
-                df_logs = pd.read_csv("agent_interaction_logs.csv", on_bad_lines='skip')
-                if not df_logs.empty:
-                    # Reverse dataframe to show latest entries first
-                    st.dataframe(df_logs.iloc[::-1], use_container_width=True)
-                else:
-                    st.info("Log file is empty")
-            except Exception as csv_e:
-                st.error(f"Error loading CSV logs: {str(csv_e)}")
-        else:
-            st.warning("No interaction log file or DB table found yet.")
+        st.error(f"Error loading logs: {db_e}")
