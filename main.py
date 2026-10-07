@@ -155,21 +155,23 @@ def log_agent_step(
     new_row_df = pd.DataFrame([row_dict])
 
     # 2. CSV में राइट करें
+    # CSV में राइट करें
     try:
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
         new_row_df.to_csv(LOG_FILE, mode='a', header=not file_exists, index=False)
+        st.toast("✅ CSV Updated Successfully!") # स्क्रीन पर छोटा मैसेज दिखेगा
     except Exception as e:
-        print(f"CSV Append Error: {str(e)}")
+        st.error(f"❌ CSV Error: {str(e)}") # अगर एरर आएगा तो लाल रंग में स्क्रीन पर दिखेगा
 
-    # 3. SQLite Database में राइट और COMMIT करें
+    # SQLite Database में राइट करें
     try:
         cur_conn = sqlite3.connect(DB_PATH, timeout=10)
         new_row_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.commit()
         cur_conn.close()
-        print(f"✅ [Log Appended Successfully] ID: {formatted_log_id}")
+        st.toast(f"✅ DB Updated Successfully! ID: {formatted_log_id}")
     except Exception as e:
-        print(f"Log DB Error: {str(e)}")
+        st.error(f"❌ Log DB Error: {str(e)}") # अगर DB एरर आएगा तो स्क्रीन पर दिखेगा
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
     """Estimates cost in USD based on Llama-3.3-70B rates."""
     input_cost = (prompt_tokens / 1_000_000) * 0.59
@@ -653,39 +655,43 @@ with tab1:
 with tab2:
     st.subheader("Agent Interaction Logs (CSV & DB)")
     
-    # Refresh button
+    # 1. Refresh button
     if st.button("Refresh Logs"):
         st.cache_data.clear()
         st.rerun()
 
-    # Disable Streamlit Cache by reading directly inside a function with no cache
+    # 2. Debugging function to find exact issue
     def load_latest_logs():
-        # 1. Try SQLite Database first
+        # SQLite Database से लोड करने की कोशिश करें
         try:
             conn_logs = sqlite3.connect(DB_PATH)
             df_db = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
             conn_logs.close()
             if not df_db.empty:
+                st.caption(f"📊 Loaded {len(df_db)} rows directly from Database (SQLite).")
                 return df_db
-        except Exception:
-            pass
+        except Exception as db_e:
+            st.error(f"⚠️ SQLite Read Error: {db_e}")
 
-        # 2. Fallback to CSV File if DB is empty or fails
+        # CSV File से लोड करने की कोशिश करें (Fallback)
         if os.path.exists(LOG_FILE):
             try:
                 df_csv = pd.read_csv(LOG_FILE, on_bad_lines='skip')
                 if not df_csv.empty:
+                    st.caption(f"📄 Loaded {len(df_csv)} rows from CSV File.")
                     return df_csv
-            except Exception:
-                pass
+            except Exception as csv_e:
+                st.error(f"⚠️ CSV Read Error: {csv_e}")
+        else:
+            st.warning("⚠️ CSV File not found on server path.")
                 
         return pd.DataFrame()
 
-    # Load fresh logs every time the tab opens
+    # Fresh logs लोड करें
     logs_df = load_latest_logs()
 
     if not logs_df.empty:
-        # Show newest logs at the TOP using iloc[::-1]
+        # सबसे नया डेटा ऊपर दिखाएँ
         st.dataframe(logs_df.iloc[::-1], use_container_width=True)
     else:
         st.info("No interaction logs found in Database or CSV file.")
