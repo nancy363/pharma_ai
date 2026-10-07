@@ -664,9 +664,9 @@ with tab1:
                 user_query=user_query,
                 output=str(response),
                 latency_sec=execution_time,
-                tokens_used=150.0
+                tokens_used=150.0 )
             st.success("new log generated successfully!")
-            )
+            
 with tab2:
     st.subheader("Agent Interaction Logs (CSV & DB)")
     
