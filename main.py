@@ -151,7 +151,7 @@ def log_agent_step(
             except Exception:
                 next_num = 1
 
-    formatted_log_id = f"LOG-{next_num:05d}"
+    formatted_log_id = f"LOG-{int(time.time())}"
 
     row_dict = {
         "log_id": formatted_log_id,
