@@ -182,6 +182,7 @@ def log_agent_step(
     try:
         cur_conn = sqlite3.connect(DB_PATH)
         new_row_df.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
+        cur_conn.commit()
         cur_conn.close()
         print(f"✅ [Log Appended Successfully] ID: {formatted_log_id} | Agent: '{agent_invoked}'")
     except Exception as e:
@@ -664,6 +665,7 @@ with tab1:
                 output=str(response),
                 latency_sec=execution_time,
                 tokens_used=150.0
+            st.success("new log generated successfully!")
             )
 with tab2:
     st.subheader("Agent Interaction Logs (CSV & DB)")
