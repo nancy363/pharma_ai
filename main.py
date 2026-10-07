@@ -620,14 +620,7 @@ def orchestrate_multi_agent_system(user_query: str) -> str:
        
         return "\n\n---\n\n".join(agent_outputs.values())
     # Pipeline execution ke end me ye line zaroor honi chahiye
-    log_agent_step(
-       agent_invoked=agent_name,
-       user_query=user_query,
-       output=response_text,
-       latency_sec=execution_time,
-       tool_called=tool_used
-    )
-
+    
 
 # 9. STREAMLIT UI
 
@@ -637,13 +630,28 @@ st.title(" PharmaSense AI Workbench")
 tab1, tab2 = st.tabs([" Pipeline Execution", " Agent Interaction Logs"])
 
 with tab1:
-    user_query = st.text_input("mention your query:", "how many active trial are in phase || and check result score of AE-102 ?")
+    user_query = st.text_input("mention your query:", "how many active trial are in phase II and check result score of AE-102?")
     if st.button("Run Multi-Agent Pipeline"):
         if user_query:
+            start_time = time.time()
+            
+            # 1. पाइपलाइन को रन करें
             response = orchestrate_multi_agent_system(user_query)
+            
+            # 2. स्क्रीन पर जवाब दिखाएँ
             st.markdown("---")
             st.markdown(response)
-
+            
+            execution_time = time.time() - start_time
+            
+            # 3. ✅ यहाँ लॉग सेव करें (क्योंकि यहाँ 'response' वेरिएबल में फ़ाइनल जवाब आ चुका है):
+            log_agent_step(
+                agent_invoked="orchestrator",
+                user_query=user_query,
+                output=str(response),
+                latency_sec=execution_time,
+                tokens_used=150.0
+            )
 with tab2:
     st.subheader("Agent Interaction Logs (CSV & DB)")
     
