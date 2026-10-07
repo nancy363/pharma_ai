@@ -165,23 +165,47 @@ def log_agent_step(
 
     
     # SQLite Database में राइट करें
+    # 3. Append to SQLite Database Safely (Fixed)
     try:
         cur_conn = sqlite3.connect(DB_PATH, timeout=10)
         
-        # 💡 [यह नई लाइन यहाँ जोड़नी है] Dataframe के सभी Data Types को string में बदलें
+        # 1. डेटा को पूरी तरह String में Convert करें
         df_to_save = new_row_df.copy()
         for col in df_to_save.columns:
             df_to_save[col] = df_to_save[col].astype(str)
 
-        # 💡 new_row_df की जगह df_to_save सेव करें
+        # 2. to_sql चलाएँ (अगर टेबल स्ट्रक्चर मैच न करे तो safe execution)
         df_to_save.to_sql("agent_interaction_logs", cur_conn, if_exists="append", index=False)
         cur_conn.commit()
         cur_conn.close()
-        st.toast(f"✅ DB Updated Successfully! ID: {formatted_log_id}")
-        
+        st.toast(f"✅ DB Updated Successfully!")
     except Exception as e:
-        # 💡 exact error जानने के लिए repr(e) लिखा है
-        st.error(f"❌ Log DB Error: {repr(e)}")
+        # अगर कॉलम मैच नहीं हो रहा है तो SQLite में सीधा INSERT SQL चलाएँ (Fallback)
+        try:
+            cur_conn = sqlite3.connect(DB_PATH, timeout=10)
+            cursor = cur_conn.cursor()
+            
+            # ऑटोमैटिक टेबल क्रिएट अगर नहीं बनी है
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS agent_interaction_logs (
+                    log_id TEXT, session_id TEXT, timestamp TEXT, user_role TEXT,
+                    user_query TEXT, agent_invoked TEXT, tool_called TEXT,
+                    response_summary TEXT, latency_ms REAL, tokens_used REAL,
+                    feedback TEXT, rating TEXT, escalated_flag TEXT
+                )
+            """)
+            
+            # डायरेक्ट SQL Insert (ताकि DatabaseError कभी न आए)
+            vals = list(row_dict.values())
+            vals = [str(v) for v in vals]
+            placeholders = ", ".join(["?"] * len(vals))
+            cursor.execute(f"INSERT INTO agent_interaction_logs VALUES ({placeholders})", vals)
+            
+            cur_conn.commit()
+            cur_conn.close()
+            st.toast("✅ DB Inserted via Raw SQL!")
+        except Exception as raw_e:
+            st.error(f"❌ DB Final Error: {str(raw_e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
     """Estimates cost in USD based on Llama-3.3-70B rates."""
     input_cost = (prompt_tokens / 1_000_000) * 0.59
