@@ -655,7 +655,7 @@ with tab2:
     try:
         conn_logs = sqlite3.connect(DB_PATH)
         # Sort by log_id descending so the latest logs stay at the top
-        df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs, conn_logs)
+        df_logs = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
         st.dataframe(df_logs.iloc[::-1], use_container_width=True)
         conn_logs.close()
 
