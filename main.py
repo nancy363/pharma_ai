@@ -124,27 +124,35 @@ def log_agent_step(
     rating: str = "N/A",
     escalated_flag: bool = False
 ):
-    """Safely appends log data using the exact same ID structure (e.g. LOG-00401) as existing data"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     latency_ms = round(float(latency_sec) * 1000, 2)
-    
-    # 1. Matching existing LOG-00XXX ID pattern
-    next_num = 1
-    if os.path.exists(LOG_FILE):
-        try:
-            existing_df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-            # 💡 सही लॉजिक: सबसे बड़ी ID का नंबर निकालकर उसमें +1 करें
-            if not existing_df.empty and 'log_id' in existing_df.columns:
-                last_id_str = str(existing_df['log_id'].iloc[-1]) # e.g. "LOG-00400"
-                num_part = int(last_id_str.replace("LOG-", ""))   # 400
-                next_num = num_part + 1                         # 401
-            else:
-                next_num = len(existing_df) + 1
-        except Exception:
-            next_num = 1
 
-    formatted_log_id = f"LOG-{next_num:05d}"  # यह LOG-00401 बनाएगा
+    # 1. डेटाबेस से सबसे बड़ी LOG ID निकालकर नई ID जनरेट करना
+    next_num = 1
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        df_db = pd.read_sql_query("SELECT log_id FROM agent_interaction_logs", conn)
+        conn.close()
+        
+        if not df_db.empty:
+            # आख़िरी LOG ID का नंबर निकालकर उसमें +1 करना (जैसे LOG-00400 -> 401)
+            ids = df_db['log_id'].str.extract(r'LOG-(\d+)')[0].dropna().astype(int)
+            if not ids.empty:
+                next_num = ids.max() + 1
+    except Exception:
+        if os.path.exists(LOG_FILE):
+            try:
+                existing_df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
+                if not existing_df.empty and 'log_id' in existing_df.columns:
+                    ids = existing_df['log_id'].str.extract(r'LOG-(\d+)')[0].dropna().astype(int)
+                    if not ids.empty:
+                        next_num = ids.max() + 1
+            except Exception:
+                next_num = 1
+
+    formatted_log_id = f"LOG-{next_num:05d}"
+
     row_dict = {
         "log_id": formatted_log_id,
         "session_id": session_id,
