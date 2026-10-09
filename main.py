@@ -736,34 +736,51 @@ with tab1:
 with tab2:
     st.subheader("System Observability & Agent Evaluation Metrics")
     
-    df_metrics = pd.DataFrame()
-    
-    # 1. पहले SQLite Database से ताजा मेट्रिक्स डेटा लोड करें
-    try:
-        with sqlite3.connect(DB_PATH, timeout=20) as conn_metrics:
-            df_metrics = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_metrics)
-    except Exception as db_err:
-        pass
-
-    # 2. अगर DB खाली या फेल हो तो CSV फ़ाइल से लोड करें (Fallback)
-    if df_metrics.empty and os.path.exists(LOG_FILE):
+    def fetch_fresh_metrics():
+        df = pd.DataFrame()
+        # 1. DB से ताजा डेटा उठाएं
         try:
-            df_metrics = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-        except Exception as e:
-            st.error(f"Error loading metrics CSV: {str(e)}")
+            with sqlite3.connect(DB_PATH, timeout=20) as conn_metrics:
+                df = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_metrics)
+        except Exception:
+            pass
+            
+        # 2. DB में न मिले तो CSV से उठाएं
+        if df.empty and os.path.exists(LOG_FILE):
+            try:
+                df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
+            except Exception:
+                pass
+        return df
+
+    df_metrics = fetch_fresh_metrics()
 
     if not df_metrics.empty:
+        # 💡 डुप्लीकेट आईडी क्लीन करें ताकि सही गिनती मिले
+        if "log_id" in df_metrics.columns:
+            df_metrics = df_metrics.drop_duplicates(subset=['log_id'], keep='last')
+        
         m1, m2, m3, m4 = st.columns(4)
         
+        # 💡 लाइव गिनती और न्यूमेरिकल डेटा टाइप कन्वर्ट करके एग्रीगेट करें
         total_requests = len(df_metrics)
-        avg_latency = round(df_metrics["latency_ms"].mean(), 2) if "latency_ms" in df_metrics.columns else 0
-        escalations = df_metrics["escalated_flag"].astype(str).str.lower().str.contains("true").sum() if "escalated_flag" in df_metrics.columns else 0
-        est_tokens = df_metrics["tokens_used"].sum() if "tokens_used" in df_metrics.columns else 0
+        
+        avg_latency = 0.0
+        if "latency_ms" in df_metrics.columns:
+            avg_latency = round(pd.to_numeric(df_metrics["latency_ms"], errors='coerce').fillna(0).mean(), 2)
+            
+        escalations = 0
+        if "escalated_flag" in df_metrics.columns:
+            escalations = df_metrics["escalated_flag"].astype(str).str.lower().str.contains("true").sum()
+            
+        est_tokens = 0
+        if "tokens_used" in df_metrics.columns:
+            est_tokens = int(pd.to_numeric(df_metrics["tokens_used"], errors='coerce').fillna(0).sum())
         
         m1.metric("Total Executions", total_requests)
         m2.metric("Avg Latency (ms)", f"{avg_latency} ms")
         m3.metric("Safety Escalations", escalations)
-        m4.metric("Est. Total Tokens", int(est_tokens))
+        m4.metric("Est. Total Tokens", est_tokens)
         
         st.markdown("---")
         col_chart1, col_chart2 = st.columns(2)
@@ -776,7 +793,9 @@ with tab2:
         with col_chart2:
             st.write("**Average Latency by Agent (ms)**")
             if "latency_ms" in df_metrics.columns and "agent_invoked" in df_metrics.columns:
-                st.line_chart(df_metrics.groupby("agent_invoked")["latency_ms"].mean())
+                temp_df = df_metrics.copy()
+                temp_df["latency_ms"] = pd.to_numeric(temp_df["latency_ms"], errors='coerce').fillna(0)
+                st.line_chart(temp_df.groupby("agent_invoked")["latency_ms"].mean())
     else:
         st.info("No metric data accumulated yet. Run queries in Tab 1.")
 
@@ -798,7 +817,6 @@ with tab3:
             with sqlite3.connect(DB_PATH, timeout=20) as conn_logs:
                 df_db = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
                 if not df_db.empty:
-                    st.caption(f"📊 Loaded {len(df_db)} rows directly from Database (SQLite).")
                     return df_db
         except Exception as db_e:
             st.error(f"⚠️ SQLite Read Error: {db_e}")
@@ -808,7 +826,6 @@ with tab3:
             try:
                 df_csv = pd.read_csv(LOG_FILE, on_bad_lines='skip')
                 if not df_csv.empty:
-                    st.caption(f"📄 Loaded {len(df_csv)} rows from CSV File.")
                     return df_csv
             except Exception as csv_e:
                 st.error(f"⚠️ CSV Read Error: {csv_e}")
@@ -821,6 +838,12 @@ with tab3:
     logs_df = load_latest_logs()
 
     if not logs_df.empty:
+        # 💡 डुप्लीकेट log_id हटाएं और सही लाइव काउंट दिखाएं
+        if "log_id" in logs_df.columns:
+            logs_df = logs_df.drop_duplicates(subset=['log_id'], keep='last')
+            
+        st.caption(f"📊 Live Total Logs Count: **{len(logs_df)}** (Latest updates on top)")
+        
         # सबसे नया डेटा ऊपर दिखाएँ
         st.dataframe(logs_df.iloc[::-1], use_container_width=True)
     else:
