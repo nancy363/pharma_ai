@@ -167,45 +167,49 @@ def log_agent_step(
     # SQLite Database में राइट करें
     # SQLite Database में सेफ्टी के साथ राइट करें
     try:
-        cur_conn = sqlite3.connect(DB_PATH, timeout=10)
-        cursor = cur_conn.cursor()
-        
-        # 1. सुनिश्चित करें कि सही 13 कॉलम्स वाली टेबल मौजूद हो
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS agent_interaction_logs (
-                log_id TEXT, 
-                session_id TEXT, 
-                timestamp TEXT, 
-                user_role TEXT,
-                user_query TEXT, 
-                agent_invoked TEXT, 
-                tool_called TEXT,
-                response_summary TEXT, 
-                latency_ms REAL, 
-                tokens_used REAL,
-                feedback TEXT, 
-                rating TEXT, 
-                escalated_flag TEXT
-            )
-        """)
-        
-        # 2. अगर टेबल में कॉलम मिसिंग है तो auto-add (Alter Table) करें
-        existing_cols = [col[1] for col in cursor.execute("PRAGMA table_info(agent_interaction_logs)").fetchall()]
-        for col_name in row_dict.keys():
-            if col_name not in existing_cols:
-                cursor.execute(f"ALTER TABLE agent_interaction_logs ADD COLUMN {col_name} TEXT")
+        # timeout को 20s किया और with ब्लॉक यूज़ किया ताकि कनेक्शन खुद ऑटो-क्लोज़ हो जाए
+        with sqlite3.connect(DB_PATH, timeout=20) as cur_conn:
+            cursor = cur_conn.cursor()
+            
+            # 1. सुनिश्चित करें कि सही 13 कॉलम्स वाली टेबल मौजूद हो
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS agent_interaction_logs (
+                    log_id TEXT, 
+                    session_id TEXT, 
+                    timestamp TEXT, 
+                    user_role TEXT,
+                    user_query TEXT, 
+                    agent_invoked TEXT, 
+                    tool_called TEXT,
+                    response_summary TEXT, 
+                    latency_ms REAL, 
+                    tokens_used REAL,
+                    feedback TEXT, 
+                    rating TEXT, 
+                    escalated_flag TEXT
+                )
+            """)
+            
+            # 2. अगर टेबल में कॉलम मिसिंग है तो auto-add (Alter Table) करें
+            cursor.execute("PRAGMA table_info(agent_interaction_logs)")
+            table_info_rows = cursor.fetchall()
+            existing_cols = [col[1] for col in table_info_rows]
+            
+            for col_name in row_dict.keys():
+                if col_name not in existing_cols:
+                    cursor.execute(f"ALTER TABLE agent_interaction_logs ADD COLUMN {col_name} TEXT")
 
-        # 3. नाम (Column Names) के हिसाब से वैल्यूज़ इंसर्ट करें (12 vs 13 का इश्यू पूरी तरह खत्म)
-        cols = ", ".join(row_dict.keys())
-        placeholders = ", ".join(["?"] * len(row_dict))
-        vals = [str(v) for v in row_dict.values()]
-        
-        sql = f"INSERT INTO agent_interaction_logs ({cols}) VALUES ({placeholders})"
-        cursor.execute(sql, vals)
-        
-        cur_conn.commit()
-        cur_conn.close()
-        st.toast(f"✅ DB Updated Successfully!")
+            # 3. कॉलम नेम्स के हिसाब से वैल्यूज़ सेफली इंसर्ट करें
+            cols = ", ".join(row_dict.keys())
+            placeholders = ", ".join(["?"] * len(row_dict))
+            vals = [str(v) for v in row_dict.values()]
+            
+            sql = f"INSERT INTO agent_interaction_logs ({cols}) VALUES ({placeholders})"
+            cursor.execute(sql, vals)
+            cur_conn.commit()
+            
+        # with ब्लॉक खत्म होते ही कनेक्शन अपने आप क्लोज़ हो चुका है
+        st.toast("✅ DB Updated Successfully!")
     except Exception as e:
         st.error(f"❌ DB Error: {str(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
@@ -682,7 +686,7 @@ st.title("🧪 PharmaSense AI Workbench")
 tab1, tab2, tab3 = st.tabs(["🚀 Pipeline Execution", "📊 Evaluation & Metrics", "📋 Interaction Logs"])
 
 # ==============================================================================
-# TAB 1: PIPELINE EXECUTION & PRESET BUTTONS
+# TAB 1: PIPELINE EXECUTION
 # ==============================================================================
 with tab1:
     st.subheader("Interactive Query Interface")
@@ -716,7 +720,7 @@ with tab1:
             
             execution_time = time.time() - start_time
             
-            # 3. फ़ाइनल लॉग सेव करें
+            # 3. फ़ाइनल आर्केस्ट्रेटर लॉग सेव करें
             log_agent_step(
                 agent_invoked="orchestrator",
                 user_query=user_query,
@@ -732,40 +736,49 @@ with tab1:
 with tab2:
     st.subheader("System Observability & Agent Evaluation Metrics")
     
-    if os.path.exists(LOG_FILE):
+    df_metrics = pd.DataFrame()
+    
+    # 1. पहले SQLite Database से ताजा मेट्रिक्स डेटा लोड करें
+    try:
+        with sqlite3.connect(DB_PATH, timeout=20) as conn_metrics:
+            df_metrics = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_metrics)
+    except Exception as db_err:
+        pass
+
+    # 2. अगर DB खाली या फेल हो तो CSV फ़ाइल से लोड करें (Fallback)
+    if df_metrics.empty and os.path.exists(LOG_FILE):
         try:
             df_metrics = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-            if not df_metrics.empty:
-                m1, m2, m3, m4 = st.columns(4)
-                
-                total_requests = len(df_metrics)
-                avg_latency = round(df_metrics["latency_ms"].mean(), 2) if "latency_ms" in df_metrics.columns else 0
-                escalations = df_metrics["escalated_flag"].astype(str).str.lower().str.contains("true").sum() if "escalated_flag" in df_metrics.columns else 0
-                est_tokens = df_metrics["tokens_used"].sum() if "tokens_used" in df_metrics.columns else 0
-                
-                m1.metric("Total Executions", total_requests)
-                m2.metric("Avg Latency (ms)", f"{avg_latency} ms")
-                m3.metric("Safety Escalations", escalations)
-                m4.metric("Est. Total Tokens", int(est_tokens))
-                
-                st.markdown("---")
-                col_chart1, col_chart2 = st.columns(2)
-                
-                with col_chart1:
-                    st.write("**Agent Invocation Breakdown**")
-                    if "agent_invoked" in df_metrics.columns:
-                        st.bar_chart(df_metrics["agent_invoked"].value_counts())
-                        
-                with col_chart2:
-                    st.write("**Average Latency by Agent (ms)**")
-                    if "latency_ms" in df_metrics.columns and "agent_invoked" in df_metrics.columns:
-                        st.line_chart(df_metrics.groupby("agent_invoked")["latency_ms"].mean())
-            else:
-                st.info("No metric data accumulated yet. Run queries in Tab 1.")
         except Exception as e:
-            st.error(f"Error loading metrics: {str(e)}")
+            st.error(f"Error loading metrics CSV: {str(e)}")
+
+    if not df_metrics.empty:
+        m1, m2, m3, m4 = st.columns(4)
+        
+        total_requests = len(df_metrics)
+        avg_latency = round(df_metrics["latency_ms"].mean(), 2) if "latency_ms" in df_metrics.columns else 0
+        escalations = df_metrics["escalated_flag"].astype(str).str.lower().str.contains("true").sum() if "escalated_flag" in df_metrics.columns else 0
+        est_tokens = df_metrics["tokens_used"].sum() if "tokens_used" in df_metrics.columns else 0
+        
+        m1.metric("Total Executions", total_requests)
+        m2.metric("Avg Latency (ms)", f"{avg_latency} ms")
+        m3.metric("Safety Escalations", escalations)
+        m4.metric("Est. Total Tokens", int(est_tokens))
+        
+        st.markdown("---")
+        col_chart1, col_chart2 = st.columns(2)
+        
+        with col_chart1:
+            st.write("**Agent Invocation Breakdown**")
+            if "agent_invoked" in df_metrics.columns:
+                st.bar_chart(df_metrics["agent_invoked"].value_counts())
+                
+        with col_chart2:
+            st.write("**Average Latency by Agent (ms)**")
+            if "latency_ms" in df_metrics.columns and "agent_invoked" in df_metrics.columns:
+                st.line_chart(df_metrics.groupby("agent_invoked")["latency_ms"].mean())
     else:
-        st.info("No metric log file found on server path.")
+        st.info("No metric data accumulated yet. Run queries in Tab 1.")
 
 # ==============================================================================
 # TAB 3: AGENT INTERACTION LOGS (CSV & DB)
@@ -778,16 +791,15 @@ with tab3:
         st.cache_data.clear()
         st.rerun()
 
-    # 2. Debugging function to find exact issue
+    # 2. Safely load logs without leaving connections open
     def load_latest_logs():
-        # SQLite Database से लोड करने की कोशिश करें
+        # SQLite Database से सेफली लोड करने की कोशिश करें
         try:
-            conn_logs = sqlite3.connect(DB_PATH)
-            df_db = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
-            conn_logs.close()
-            if not df_db.empty:
-                st.caption(f"📊 Loaded {len(df_db)} rows directly from Database (SQLite).")
-                return df_db
+            with sqlite3.connect(DB_PATH, timeout=20) as conn_logs:
+                df_db = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
+                if not df_db.empty:
+                    st.caption(f"📊 Loaded {len(df_db)} rows directly from Database (SQLite).")
+                    return df_db
         except Exception as db_e:
             st.error(f"⚠️ SQLite Read Error: {db_e}")
 
