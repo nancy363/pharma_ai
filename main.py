@@ -133,8 +133,8 @@ def log_agent_step(
     response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     latency_ms = round(float(latency_sec) * 1000, 2)
 
-    # 1. सीधे Unique Timestamp आधारित ID बनाएँ (बिना किसी पुराना DB पढ़े)
-    formatted_log_id = f"LOG-{int(time.time())}"
+    # 1. FIX: मिलीसेकंड्स (time.time() * 1000) यूज़ किया ताकि डुप्लीकेट ID न बने
+    formatted_log_id = f"LOG-{int(time.time() * 1000)}"
 
     row_dict = {
         "log_id": formatted_log_id,
@@ -154,20 +154,16 @@ def log_agent_step(
 
     new_row_df = pd.DataFrame([row_dict])
 
-    
     # CSV में राइट करें
     try:
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
         new_row_df.to_csv(LOG_FILE, mode='a', header=not file_exists, index=False)
-        st.toast("✅ CSV Updated Successfully!") # स्क्रीन पर छोटा मैसेज दिखेगा
+        st.toast("✅ CSV Updated Successfully!")
     except Exception as e:
-        st.error(f"❌ CSV Error: {str(e)}") # अगर एरर आएगा तो लाल रंग में स्क्रीन पर दिखेगा
+        st.error(f"❌ CSV Error: {str(e)}")
 
-    
     # SQLite Database में राइट करें
-    # SQLite Database में सेफ्टी के साथ राइट करें
     try:
-        # timeout को 20s किया और with ब्लॉक यूज़ किया ताकि कनेक्शन खुद ऑटो-क्लोज़ हो जाए
         with sqlite3.connect(DB_PATH, timeout=20) as cur_conn:
             cursor = cur_conn.cursor()
             
@@ -208,7 +204,8 @@ def log_agent_step(
             cursor.execute(sql, vals)
             cur_conn.commit()
             
-        # with ब्लॉक खत्म होते ही कनेक्शन अपने आप क्लोज़ हो चुका है
+        # 2. FIX: कैश क्लियर करें ताकि Tab 2 और Tab 3 में तुरंत नई रो दिखे
+        st.cache_data.clear()
         st.toast("✅ DB Updated Successfully!")
     except Exception as e:
         st.error(f"❌ DB Error: {str(e)}")
@@ -684,6 +681,28 @@ st.title("🧪 PharmaSense AI Workbench")
 
 # 1. टैब्स सेटअप (3 Tabs: Execution, Metrics, Logs)
 tab1, tab2, tab3 = st.tabs(["🚀 Pipeline Execution", "📊 Evaluation & Metrics", "📋 Interaction Logs"])
+def get_live_logs():
+    df = pd.DataFrame()
+    # 1. सबसे पहले SQLite DB से पढें
+    try:
+        conn = sqlite3.connect(DB_PATH, timeout=20)
+        df = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn)
+        conn.close()
+    except Exception:
+        pass
+
+    # 2. अगर DB खाली हो तो CSV से पढ़ें
+    if df.empty and os.path.exists(LOG_FILE):
+        try:
+            df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
+        except Exception:
+            pass
+
+    # 3. डुप्लीकेट ID हटाएं (ताकि सही लाइव काउंट मिले)
+    if not df.empty and "log_id" in df.columns:
+        df = df.drop_duplicates(subset=['log_id'], keep='last')
+
+    return df
 
 # ==============================================================================
 # TAB 1: PIPELINE EXECUTION
@@ -729,53 +748,21 @@ with tab1:
                 tokens_used=150.0
             )
             st.success(f"new log generated successfully! (Executed in {round(execution_time, 2)}s)")
-
 # ==============================================================================
 # TAB 2: SYSTEM OBSERVABILITY & EVALUATION METRICS
 # ==============================================================================
 with tab2:
     st.subheader("System Observability & Agent Evaluation Metrics")
     
-    def fetch_fresh_metrics():
-        df = pd.DataFrame()
-        # 1. DB से ताजा डेटा उठाएं
-        try:
-            with sqlite3.connect(DB_PATH, timeout=20) as conn_metrics:
-                df = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_metrics)
-        except Exception:
-            pass
-            
-        # 2. DB में न मिले तो CSV से उठाएं
-        if df.empty and os.path.exists(LOG_FILE):
-            try:
-                df = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-            except Exception:
-                pass
-        return df
-
-    df_metrics = fetch_fresh_metrics()
+    df_metrics = get_live_logs()
 
     if not df_metrics.empty:
-        # 💡 डुप्लीकेट आईडी क्लीन करें ताकि सही गिनती मिले
-        if "log_id" in df_metrics.columns:
-            df_metrics = df_metrics.drop_duplicates(subset=['log_id'], keep='last')
-        
         m1, m2, m3, m4 = st.columns(4)
         
-        # 💡 लाइव गिनती और न्यूमेरिकल डेटा टाइप कन्वर्ट करके एग्रीगेट करें
         total_requests = len(df_metrics)
-        
-        avg_latency = 0.0
-        if "latency_ms" in df_metrics.columns:
-            avg_latency = round(pd.to_numeric(df_metrics["latency_ms"], errors='coerce').fillna(0).mean(), 2)
-            
-        escalations = 0
-        if "escalated_flag" in df_metrics.columns:
-            escalations = df_metrics["escalated_flag"].astype(str).str.lower().str.contains("true").sum()
-            
-        est_tokens = 0
-        if "tokens_used" in df_metrics.columns:
-            est_tokens = int(pd.to_numeric(df_metrics["tokens_used"], errors='coerce').fillna(0).sum())
+        avg_latency = round(pd.to_numeric(df_metrics.get("latency_ms", 0), errors='coerce').fillna(0).mean(), 2)
+        escalations = df_metrics.get("escalated_flag", pd.Series()).astype(str).str.lower().str.contains("true").sum()
+        est_tokens = int(pd.to_numeric(df_metrics.get("tokens_used", 0), errors='coerce').fillna(0).sum())
         
         m1.metric("Total Executions", total_requests)
         m2.metric("Avg Latency (ms)", f"{avg_latency} ms")
@@ -800,51 +787,19 @@ with tab2:
         st.info("No metric data accumulated yet. Run queries in Tab 1.")
 
 # ==============================================================================
-# TAB 3: AGENT INTERACTION LOGS (CSV & DB)
+# TAB 3: AGENT INTERACTION LOGS
 # ==============================================================================
 with tab3:
     st.subheader("Agent Interaction Logs (CSV & DB)")
     
-    # 1. Refresh button
     if st.button("Refresh Logs"):
         st.cache_data.clear()
         st.rerun()
 
-    # 2. Safely load logs without leaving connections open
-    def load_latest_logs():
-        # SQLite Database से सेफली लोड करने की कोशिश करें
-        try:
-            with sqlite3.connect(DB_PATH, timeout=20) as conn_logs:
-                df_db = pd.read_sql_query("SELECT * FROM agent_interaction_logs", conn_logs)
-                if not df_db.empty:
-                    return df_db
-        except Exception as db_e:
-            st.error(f"⚠️ SQLite Read Error: {db_e}")
-
-        # CSV File से लोड करने की कोशिश करें (Fallback)
-        if os.path.exists(LOG_FILE):
-            try:
-                df_csv = pd.read_csv(LOG_FILE, on_bad_lines='skip')
-                if not df_csv.empty:
-                    return df_csv
-            except Exception as csv_e:
-                st.error(f"⚠️ CSV Read Error: {csv_e}")
-        else:
-            st.warning("⚠️ CSV File not found on server path.")
-            
-        return pd.DataFrame()
-
-    # Fresh logs लोड करें
-    logs_df = load_latest_logs()
+    logs_df = get_live_logs()
 
     if not logs_df.empty:
-        # 💡 डुप्लीकेट log_id हटाएं और सही लाइव काउंट दिखाएं
-        if "log_id" in logs_df.columns:
-            logs_df = logs_df.drop_duplicates(subset=['log_id'], keep='last')
-            
         st.caption(f"📊 Live Total Logs Count: **{len(logs_df)}** (Latest updates on top)")
-        
-        # सबसे नया डेटा ऊपर दिखाएँ
         st.dataframe(logs_df.iloc[::-1], use_container_width=True)
     else:
         st.info("No interaction logs found in Database or CSV file.")
