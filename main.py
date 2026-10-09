@@ -39,7 +39,6 @@ data_files = {
     "trial_sites": "trial_sites.csv",
     "lab_results": "lab_results.csv",
     "adverse_events": "adverse_events.csv",
-    "agent_interaction_logs": "agent_interaction_logs.csv",
     "research_documents": "research_documents.csv"
 }
 
@@ -133,7 +132,6 @@ def log_agent_step(
     response_summary = output.replace("\n", " ")[:150] + "..." if output else "No output"
     latency_ms = round(float(latency_sec) * 1000, 2)
 
-    # 1. FIX: मिलीसेकंड्स (time.time() * 1000) यूज़ किया ताकि डुप्लीकेट ID न बने
     formatted_log_id = f"LOG-{int(time.time() * 1000)}"
 
     row_dict = {
@@ -149,53 +147,34 @@ def log_agent_step(
         "tokens_used": tokens_used,
         "feedback": feedback,
         "rating": rating,
-        "escalated_flag": escalated_flag
+        "escalated_flag": str(escalated_flag)
     }
 
-    new_row_df = pd.DataFrame([row_dict])
+    # 1. Streamlit Session State Update (Instant UI Sync)
+    if "live_logs" not in st.session_state:
+        st.session_state.live_logs = []
+    st.session_state.live_logs.insert(0, row_dict)
 
-    # CSV में राइट करें
+    # 2. Local CSV Write
     try:
+        new_row_df = pd.DataFrame([row_dict])
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
         new_row_df.to_csv(LOG_FILE, mode='a', header=not file_exists, index=False)
-        st.toast("✅ CSV Updated Successfully!")
     except Exception as e:
-        st.error(f"❌ CSV Error: {str(e)}")
+        print(f"CSV Error: {str(e)}")
 
-    # SQLite Database में राइट करें
+    # 3. SQLite DB Write
     try:
         with sqlite3.connect(DB_PATH, timeout=20) as cur_conn:
             cursor = cur_conn.cursor()
-            
-            # 1. सुनिश्चित करें कि सही 13 कॉलम्स वाली टेबल मौजूद हो
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS agent_interaction_logs (
-                    log_id TEXT, 
-                    session_id TEXT, 
-                    timestamp TEXT, 
-                    user_role TEXT,
-                    user_query TEXT, 
-                    agent_invoked TEXT, 
-                    tool_called TEXT,
-                    response_summary TEXT, 
-                    latency_ms REAL, 
-                    tokens_used REAL,
-                    feedback TEXT, 
-                    rating TEXT, 
-                    escalated_flag TEXT
+                    log_id TEXT, session_id TEXT, timestamp TEXT, user_role TEXT,
+                    user_query TEXT, agent_invoked TEXT, tool_called TEXT,
+                    response_summary TEXT, latency_ms REAL, tokens_used REAL,
+                    feedback TEXT, rating TEXT, escalated_flag TEXT
                 )
             """)
-            
-            # 2. अगर टेबल में कॉलम मिसिंग है तो auto-add (Alter Table) करें
-            cursor.execute("PRAGMA table_info(agent_interaction_logs)")
-            table_info_rows = cursor.fetchall()
-            existing_cols = [col[1] for col in table_info_rows]
-            
-            for col_name in row_dict.keys():
-                if col_name not in existing_cols:
-                    cursor.execute(f"ALTER TABLE agent_interaction_logs ADD COLUMN {col_name} TEXT")
-
-            # 3. कॉलम नेम्स के हिसाब से वैल्यूज़ सेफली इंसर्ट करें
             cols = ", ".join(row_dict.keys())
             placeholders = ", ".join(["?"] * len(row_dict))
             vals = [str(v) for v in row_dict.values()]
@@ -204,9 +183,8 @@ def log_agent_step(
             cursor.execute(sql, vals)
             cur_conn.commit()
             
-        # 2. FIX: कैश क्लियर करें ताकि Tab 2 और Tab 3 में तुरंत नई रो दिखे
         st.cache_data.clear()
-        st.toast("✅ DB Updated Successfully!")
+        st.toast("✅ Logged Successfully!")
     except Exception as e:
         st.error(f"❌ DB Error: {str(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
