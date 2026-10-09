@@ -150,12 +150,12 @@ def log_agent_step(
         "escalated_flag": str(escalated_flag)
     }
 
-    # 1. Streamlit Session State Update (Instant UI Sync)
+    # 1. Streamlit Session State Update (Instant Live Metric Sync)
     if "live_logs" not in st.session_state:
         st.session_state.live_logs = []
     st.session_state.live_logs.insert(0, row_dict)
 
-    # 2. Local CSV Write
+    # 2. Append to Local CSV
     try:
         new_row_df = pd.DataFrame([row_dict])
         file_exists = os.path.exists(LOG_FILE) and os.path.getsize(LOG_FILE) > 0
@@ -163,10 +163,12 @@ def log_agent_step(
     except Exception as e:
         print(f"CSV Error: {str(e)}")
 
-    # 3. SQLite DB Write
+    # 3. Insert into SQLite Database with Safe Schema Migration
     try:
         with sqlite3.connect(DB_PATH, timeout=20) as cur_conn:
             cursor = cur_conn.cursor()
+            
+            # Step A: सुनिश्चित करें कि सही कॉलम्स वाली टेबल हो
             cursor.execute("""
                 CREATE TABLE IF NOT EXISTS agent_interaction_logs (
                     log_id TEXT, session_id TEXT, timestamp TEXT, user_role TEXT,
@@ -175,6 +177,16 @@ def log_agent_step(
                     feedback TEXT, rating TEXT, escalated_flag TEXT
                 )
             """)
+            
+            # Step B: अगर पुरानी टेबल में 'feedback' आदि कॉलम गायब हैं तो ऑटो-ऐड करें
+            cursor.execute("PRAGMA table_info(agent_interaction_logs)")
+            existing_cols = [col[1] for col in cursor.fetchall()]
+            
+            for col_name in row_dict.keys():
+                if col_name not in existing_cols:
+                    cursor.execute(f"ALTER TABLE agent_interaction_logs ADD COLUMN {col_name} TEXT")
+
+            # Step C: सुरक्षित रूप से डेटा इंसर्ट करें
             cols = ", ".join(row_dict.keys())
             placeholders = ", ".join(["?"] * len(row_dict))
             vals = [str(v) for v in row_dict.values()]
@@ -184,7 +196,7 @@ def log_agent_step(
             cur_conn.commit()
             
         st.cache_data.clear()
-        st.toast("✅ Logged Successfully!")
+        st.toast("✅ Log Saved Successfully!")
     except Exception as e:
         st.error(f"❌ DB Error: {str(e)}")
 def calculate_llm_cost(prompt_tokens: int, completion_tokens: int) -> float:
